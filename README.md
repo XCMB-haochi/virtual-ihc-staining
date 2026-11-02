@@ -2,7 +2,7 @@
 
 基于 ConvNeXt V2、域内 FCMAE 预训练和标记条件学习的虚拟染色项目。仓库包含最终半决赛方法，以及初赛、复赛和半决赛的实验过程。
 
-赛题：[2026 AIC · 基于虚拟染色的免疫组化图像生成](https://www.aicomp.cn/tracks/tracks-1/3759.html)。
+赛题：[2026 AIC · 基于虚拟染色的免疫组化图像生成](https://www.aicomp.cn/tracks/tracks-1/3759.html) · [赛题说明与规则（PDF存档）](docs/规则/赛题说明与规则.pdf)。
 
 团队：通信速通生物。
 
