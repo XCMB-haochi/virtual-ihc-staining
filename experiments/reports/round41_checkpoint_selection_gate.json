@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round41_cv5_official_checkpoint_selection.json",
+  "protocol_sha256": "fafcef6973f5142a5ec1a41236a00e5c54a1338c1221bb8d8b1aa45f2d051c50",
+  "baseline_report": "/workspace/virtual_ihc_staining_generation/reports/round35_cv5_base32_base48_shrink30_oof.json",
+  "baseline_report_sha256": "a06d052a8d5eb052adcc62034f4e2ea7528211a67d46ea42c019530399638996",
+  "candidate_report": "/workspace/virtual_ihc_staining_generation/reports/round41_cv5_official_checkpoint_selection_oof.json",
+  "candidate_report_sha256": "cbf1d21fe98758c24cbf809dca4bdf107f3ea0163ca8d3f2b8930cb56daf5df6",
+  "promotion_gate": {
+    "passed": false,
+    "checks": {
+      "overall_q95": false,
+      "overall_float": true,
+      "changed_folds": false,
+      "positive_changed_rois": false,
+      "changed_roi_floor": false,
+      "unchanged_folds_exact": true
+    },
+    "candidate": "base32_70_base48_30",
+    "q95_variant": "jpeg_q95",
+    "baseline_checkpoint_filename": "best_global_mse.pt",
+    "candidate_checkpoint_filename": "best_mean_image.pt",
+    "overall_q95_gain": 0.006269780760135291,
+    "overall_float_gain": 0.006408510481506369,
+    "fold_q95_deltas": {
+      "fold0": 5.684341886080802e-14,
+      "fold1": -8.526512829121202e-14,
+      "fold2": 0.028256649723417127,
+      "fold3": -2.5579538487363607e-13,
+      "fold4": 1.9895196601282805e-13
+    },
+    "changed_folds": [
+      "fold2"
+    ],
+    "changed_fold_q95_deltas": {
+      "fold2": 0.028256649723417127
+    },
+    "maximum_unchanged_fold_abs_delta": 2.5579538487363607e-13,
+    "changed_roi_q95_deltas": {
+      "ROI000": 0.19816841037375355,
+      "ROI007": -0.015164968404960177,
+      "ROI008": 0.11405200394491999,
+      "ROI014": -0.024395366911122096,
+      "ROI024": -0.13076804405041287
+    },
+    "positive_changed_rois": [
+      "ROI000",
+      "ROI008"
+    ],
+    "minimum_changed_roi_q95_gain": -0.13076804405041287,
+    "thresholds": {
+      "baseline_protocol_name": "round35_cv5_base32_base48_shrink30",
+      "candidate": "base32_70_base48_30",
+      "baseline_checkpoint_filename": "best_global_mse.pt",
+      "candidate_checkpoint_filename": "best_mean_image.pt",
+      "changed_folds": [
+        "fold2"
+      ],
+      "minimum_overall_q95_gain": 0.02,
+      "require_positive_float": true,
+      "minimum_changed_fold_q95_gain": 0.05,
+      "minimum_positive_changed_rois": 3,
+      "minimum_changed_roi_q95_gain": -0.1,
+      "maximum_unchanged_fold_abs_delta": 1e-06
+    }
+  }
+}

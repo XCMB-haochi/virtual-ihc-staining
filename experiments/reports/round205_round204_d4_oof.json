@@ -1,0 +1,1104 @@
+{
+  "mode": "models",
+  "elapsed_seconds": 662.502756729722,
+  "metric_profiles": {
+    "uniform7": {
+      "win_size": 7,
+      "gaussian_weights": false,
+      "use_sample_covariance": true
+    },
+    "gaussian11": {
+      "win_size": 11,
+      "gaussian_weights": true,
+      "sigma": 1.5,
+      "use_sample_covariance": false
+    }
+  },
+  "assumptions": "Gaussian sigma=1.5, population covariance, valid 11x11 window; organizer confirmed Gaussian11 only. Score retains preliminary 70*SSIM+0.6*clipped_PSNR pending confirmation.",
+  "inference": {
+    "tta": "d4",
+    "halo": 128,
+    "offset": [
+      0,
+      0
+    ],
+    "jpeg_quality": 95
+  },
+  "limitations": "Fixed CD68-selected fold checkpoints; not an unbiased comparison of separately optimized marker models. Cache mode uses rounded uint8 teacher predictions, models mode uses original float outputs before JPEG.",
+  "fold_sources": [
+    {
+      "name": "fold0",
+      "val_rois": [
+        "ROI005",
+        "ROI052",
+        "ROI087"
+      ],
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round204_fold0_stage2/epochs/epoch_012.pt",
+      "checkpoint_sha256": "661e5b935baa70073108667b84b9ff663befac691c415e91a3b27643647df496"
+    },
+    {
+      "name": "fold1",
+      "val_rois": [
+        "ROI010",
+        "ROI058",
+        "ROI093"
+      ],
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round204_fold1_stage2/epochs/epoch_012.pt",
+      "checkpoint_sha256": "90a7076368256228327bf79bffbbf259906d70f22ffb4044d5c541cb68f5151f"
+    },
+    {
+      "name": "fold2",
+      "val_rois": [
+        "ROI019",
+        "ROI061",
+        "ROI100"
+      ],
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round204_fold2_stage2/epochs/epoch_012.pt",
+      "checkpoint_sha256": "e795ebf0b6c6a7e6914a6fffc4eae6400f01ba817bf07e670006eca6348b86c3"
+    },
+    {
+      "name": "fold3",
+      "val_rois": [
+        "ROI044",
+        "ROI067",
+        "ROI074",
+        "ROI078"
+      ],
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round204_fold3_stage2/epochs/epoch_012.pt",
+      "checkpoint_sha256": "f58993f95e536e91d4967afb22d2095a4016e9ef7a77171f2c55a81c6f7ce2f5"
+    },
+    {
+      "name": "fold4",
+      "val_rois": [
+        "ROI045",
+        "ROI072",
+        "ROI076",
+        "ROI081"
+      ],
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round204_fold4_stage2/epochs/epoch_012.pt",
+      "checkpoint_sha256": "a2aaebabe1fdf0a8fd77e4a3ddc979f0ab38beb108d1cd6218d683b294a91af9"
+    }
+  ],
+  "markers": {
+    "CD68": {
+      "overall": {
+        "mse": 182.93340895837093,
+        "psnr": 31.943849671638937,
+        "psnr_capped": 28.2555367484666,
+        "uniform7_ssim": 0.7397450584792185,
+        "uniform7_score": 68.73547614262525,
+        "gaussian11_ssim": 0.7573344358916181,
+        "gaussian11_score": 69.96673256149322,
+        "images": 2380,
+        "psnr_global_mse": 25.507873333506318
+      },
+      "fold0": {
+        "mse": 235.9694257827032,
+        "psnr": 26.08581251492664,
+        "psnr_capped": 26.08581251492664,
+        "uniform7_ssim": 0.6909866870260422,
+        "uniform7_score": 64.02055560077893,
+        "gaussian11_ssim": 0.7096450068176305,
+        "gaussian11_score": 65.32663798619012,
+        "images": 420,
+        "psnr_global_mse": 24.40224625160697
+      },
+      "ROI005": {
+        "mse": 156.72609852382115,
+        "psnr": 27.103832112883353,
+        "psnr_capped": 27.103832112883353,
+        "uniform7_ssim": 0.7196462643757676,
+        "uniform7_score": 66.63753777403375,
+        "gaussian11_ssim": 0.7387897796843743,
+        "gaussian11_score": 67.97758384563622,
+        "images": 140,
+        "psnr_global_mse": 26.179390382914374
+      },
+      "ROI052": {
+        "mse": 126.23279593331473,
+        "psnr": 28.349644266741254,
+        "psnr_capped": 28.349644266741254,
+        "uniform7_ssim": 0.7403232947708754,
+        "uniform7_score": 68.83241719400601,
+        "gaussian11_ssim": 0.7565860026809992,
+        "gaussian11_score": 69.9708067477147,
+        "images": 140,
+        "psnr_global_mse": 27.11908159347334
+      },
+      "ROI087": {
+        "mse": 424.94938289097377,
+        "psnr": 22.803961165155307,
+        "psnr_capped": 22.803961165155307,
+        "uniform7_ssim": 0.6129905019314836,
+        "uniform7_score": 56.59171183429704,
+        "gaussian11_ssim": 0.633559238087518,
+        "gaussian11_score": 58.031523365219435,
+        "images": 140,
+        "psnr_global_mse": 21.847431579712588
+      },
+      "fold1": {
+        "mse": 121.08175757271903,
+        "psnr": 28.250098665549817,
+        "psnr_capped": 28.250098665549817,
+        "uniform7_ssim": 0.7371690739996032,
+        "uniform7_score": 68.55189437930213,
+        "gaussian11_ssim": 0.753076380678073,
+        "gaussian11_score": 69.665405846795,
+        "images": 420,
+        "psnr_global_mse": 27.30001644498526
+      },
+      "ROI010": {
+        "mse": 105.91173924037389,
+        "psnr": 28.349305412962412,
+        "psnr_capped": 28.349305412962412,
+        "uniform7_ssim": 0.7245923582538722,
+        "uniform7_score": 67.73104832554851,
+        "gaussian11_ssim": 0.7412241151424778,
+        "gaussian11_score": 68.89527130775087,
+        "images": 140,
+        "psnr_global_mse": 27.881362609610015
+      },
+      "ROI058": {
+        "mse": 105.00628356933593,
+        "psnr": 28.493672798455407,
+        "psnr_capped": 28.493672798455407,
+        "uniform7_ssim": 0.7251969407627121,
+        "uniform7_score": 67.8599895324631,
+        "gaussian11_ssim": 0.740698933875527,
+        "gaussian11_score": 68.94512905036014,
+        "images": 140,
+        "psnr_global_mse": 27.918650728661774
+      },
+      "ROI093": {
+        "mse": 152.32724990844727,
+        "psnr": 27.907317785231637,
+        "psnr_capped": 27.907317785231637,
+        "uniform7_ssim": 0.7617179229822254,
+        "uniform7_score": 70.06464527989476,
+        "gaussian11_ssim": 0.7773060930162143,
+        "gaussian11_score": 71.15581718227398,
+        "images": 140,
+        "psnr_global_mse": 26.30302759394842
+      },
+      "fold2": {
+        "mse": 106.57713034493582,
+        "psnr": 41.77181989909893,
+        "psnr_capped": 31.901129851104955,
+        "uniform7_ssim": 0.8201298613625262,
+        "uniform7_score": 76.5497682060398,
+        "gaussian11_ssim": 0.8344890052218353,
+        "gaussian11_score": 77.55490827619144,
+        "images": 420,
+        "psnr_global_mse": 27.854163384527673
+      },
+      "ROI019": {
+        "mse": 105.9013542175293,
+        "psnr": 55.71167182315464,
+        "psnr_capped": 33.00402437100972,
+        "uniform7_ssim": 0.7846959112765147,
+        "uniform7_score": 74.73112841196188,
+        "gaussian11_ssim": 0.7954792267231543,
+        "gaussian11_score": 75.48596049322664,
+        "images": 140,
+        "psnr_global_mse": 27.881788471679805
+      },
+      "ROI061": {
+        "mse": 112.89914016723633,
+        "psnr": 37.780752242554186,
+        "psnr_capped": 31.596592295668245,
+        "uniform7_ssim": 0.8455395705141265,
+        "uniform7_score": 78.14572531338982,
+        "gaussian11_ssim": 0.8628141788568543,
+        "gaussian11_score": 79.35494789738073,
+        "images": 140,
+        "psnr_global_mse": 27.603897264898567
+      },
+      "ROI100": {
+        "mse": 100.93089665004186,
+        "psnr": 31.823035631587963,
+        "psnr_capped": 31.102772886636895,
+        "uniform7_ssim": 0.8301541022969372,
+        "uniform7_score": 76.77245089276774,
+        "gaussian11_ssim": 0.8451736100854972,
+        "gaussian11_score": 77.82381643796694,
+        "images": 140,
+        "psnr_global_mse": 28.09056229411601
+      },
+      "fold3": {
+        "mse": 286.5872591836112,
+        "psnr": 26.39312844526073,
+        "psnr_capped": 25.79728164945697,
+        "uniform7_ssim": 0.6741001319011337,
+        "uniform7_score": 62.66537822275355,
+        "gaussian11_ssim": 0.693991570711709,
+        "gaussian11_score": 64.05777893949382,
+        "images": 560,
+        "psnr_global_mse": 23.558234818172163
+      },
+      "ROI044": {
+        "mse": 99.45615866524832,
+        "psnr": 28.70741012509276,
+        "psnr_capped": 28.70741012509276,
+        "uniform7_ssim": 0.7561021261512594,
+        "uniform7_score": 70.1515949056438,
+        "gaussian11_ssim": 0.7731695059320843,
+        "gaussian11_score": 71.34631149030156,
+        "images": 140,
+        "psnr_global_mse": 28.154486795761933
+      },
+      "ROI067": {
+        "mse": 106.55405513218471,
+        "psnr": 32.60569442954713,
+        "psnr_capped": 30.222307246332086,
+        "uniform7_ssim": 0.8160002787518489,
+        "uniform7_score": 75.25340386042868,
+        "gaussian11_ssim": 0.8322462527622828,
+        "gaussian11_score": 76.39062204115905,
+        "images": 140,
+        "psnr_global_mse": 27.855103785397052
+      },
+      "ROI074": {
+        "mse": 467.2766404288156,
+        "psnr": 22.20707667776512,
+        "psnr_capped": 22.20707667776512,
+        "uniform7_ssim": 0.552689985365468,
+        "uniform7_score": 52.01254498224183,
+        "gaussian11_ssim": 0.5764762466060881,
+        "gaussian11_score": 53.67758326908523,
+        "images": 140,
+        "psnr_global_mse": 21.43506290064949
+      },
+      "ROI078": {
+        "mse": 473.06218250819614,
+        "psnr": 22.052332548637917,
+        "psnr_capped": 22.052332548637917,
+        "uniform7_ssim": 0.5716081373359584,
+        "uniform7_score": 53.24396914269985,
+        "gaussian11_ssim": 0.594074277546381,
+        "gaussian11_score": 54.81659895742941,
+        "images": 140,
+        "psnr_global_mse": 21.381621297596798
+      },
+      "fold4": {
+        "mse": 143.15849361419677,
+        "psnr": 37.287434349523195,
+        "psnr_capped": 29.61096875784003,
+        "uniform7_ssim": 0.783602149844416,
+        "uniform7_score": 72.61873174381313,
+        "gaussian11_ssim": 0.8017719872895134,
+        "gaussian11_score": 73.89062036496996,
+        "images": 560,
+        "psnr_global_mse": 26.57263240991268
+      },
+      "ROI045": {
+        "mse": 135.14695826939175,
+        "psnr": 28.015389444138894,
+        "psnr_capped": 28.015389444138894,
+        "uniform7_ssim": 0.7588302414102525,
+        "uniform7_score": 69.92735056520102,
+        "gaussian11_ssim": 0.7771587189836177,
+        "gaussian11_score": 71.21034399533657,
+        "images": 140,
+        "psnr_global_mse": 26.822740853184367
+      },
+      "ROI072": {
+        "mse": 207.98182754516603,
+        "psnr": 59.08067568289284,
+        "psnr_capped": 32.69492111560129,
+        "uniform7_ssim": 0.8333975541188301,
+        "uniform7_score": 77.95478145767888,
+        "gaussian11_ssim": 0.8522709094120938,
+        "gaussian11_score": 79.27591632820734,
+        "images": 140,
+        "psnr_global_mse": 24.950549708168705
+      },
+      "ROI076": {
+        "mse": 108.05497425624303,
+        "psnr": 34.00862966944628,
+        "psnr_capped": 29.688521870005147,
+        "uniform7_ssim": 0.8069876727854953,
+        "uniform7_score": 74.30225021698776,
+        "gaussian11_ssim": 0.8244198957631343,
+        "gaussian11_score": 75.52250582542251,
+        "images": 140,
+        "psnr_global_mse": 27.794355966610226
+      },
+      "ROI081": {
+        "mse": 121.45021438598633,
+        "psnr": 28.045042601614806,
+        "psnr_capped": 28.045042601614806,
+        "uniform7_ssim": 0.7351931310630859,
+        "uniform7_score": 68.2905447353849,
+        "gaussian11_ssim": 0.7532384249992077,
+        "gaussian11_score": 69.55371531091343,
+        "images": 140,
+        "psnr_global_mse": 27.286820751020706
+      }
+    },
+    "CD45RO": {
+      "overall": {
+        "mse": 337.7160776987797,
+        "psnr": 28.003904324217245,
+        "psnr_capped": 26.978045429047903,
+        "uniform7_ssim": 0.859262635995046,
+        "uniform7_score": 76.33521177708195,
+        "gaussian11_ssim": 0.8762100752889829,
+        "gaussian11_score": 77.52153252765754,
+        "images": 2380,
+        "psnr_global_mse": 22.845286242193165
+      },
+      "fold0": {
+        "mse": 370.98052211943127,
+        "psnr": 25.43760138826319,
+        "psnr_capped": 25.43760138826319,
+        "uniform7_ssim": 0.8469122974668117,
+        "uniform7_score": 74.54642165563475,
+        "gaussian11_ssim": 0.8664573621166493,
+        "gaussian11_score": 75.91457618112337,
+        "images": 420,
+        "psnr_global_mse": 22.437292527572165
+      },
+      "ROI005": {
+        "mse": 319.8046673366002,
+        "psnr": 26.172733365482287,
+        "psnr_capped": 26.172733365482287,
+        "uniform7_ssim": 0.8664832513064096,
+        "uniform7_score": 76.35746761073803,
+        "gaussian11_ssim": 0.8833207818384322,
+        "gaussian11_score": 77.53609474797963,
+        "images": 140,
+        "psnr_global_mse": 23.08195563172081
+      },
+      "ROI052": {
+        "mse": 206.8169340951102,
+        "psnr": 27.503338198783545,
+        "psnr_capped": 27.503338198783545,
+        "uniform7_ssim": 0.8611022882838898,
+        "uniform7_score": 76.77916309914242,
+        "gaussian11_ssim": 0.8786324204771951,
+        "gaussian11_score": 78.00627235267379,
+        "images": 140,
+        "psnr_global_mse": 24.97494265116378
+      },
+      "ROI087": {
+        "mse": 586.3199649265835,
+        "psnr": 22.636732600523732,
+        "psnr_capped": 22.636732600523732,
+        "uniform7_ssim": 0.8131513528101362,
+        "uniform7_score": 70.50263425702379,
+        "gaussian11_ssim": 0.8374188840343204,
+        "gaussian11_score": 72.20136144271669,
+        "images": 140,
+        "psnr_global_mse": 20.449456781621823
+      },
+      "fold1": {
+        "mse": 225.6309579031808,
+        "psnr": 27.551970972353725,
+        "psnr_capped": 27.551970972353725,
+        "uniform7_ssim": 0.892835087267554,
+        "uniform7_score": 79.029638692141,
+        "gaussian11_ssim": 0.9063719411365383,
+        "gaussian11_score": 79.9772184629699,
+        "images": 420,
+        "psnr_global_mse": 24.596816736943524
+      },
+      "ROI010": {
+        "mse": 217.10075541904993,
+        "psnr": 27.294812047510934,
+        "psnr_capped": 27.294812047510934,
+        "uniform7_ssim": 0.8932483963485678,
+        "uniform7_score": 78.90427497290631,
+        "gaussian11_ssim": 0.907485970109271,
+        "gaussian11_score": 79.90090513615554,
+        "images": 140,
+        "psnr_global_mse": 24.764190262492612
+      },
+      "ROI058": {
+        "mse": 227.9618177141462,
+        "psnr": 27.830447839742604,
+        "psnr_capped": 27.830447839742604,
+        "uniform7_ssim": 0.9006931801106063,
+        "uniform7_score": 79.74679131158798,
+        "gaussian11_ssim": 0.9136134676909217,
+        "gaussian11_score": 80.65121144221007,
+        "images": 140,
+        "psnr_global_mse": 24.55218249589823
+      },
+      "ROI093": {
+        "mse": 231.83030057634627,
+        "psnr": 27.530653029807638,
+        "psnr_capped": 27.530653029807638,
+        "uniform7_ssim": 0.8845636853434877,
+        "uniform7_score": 78.43784979192871,
+        "gaussian11_ssim": 0.8980163856094219,
+        "gaussian11_score": 79.37953881054412,
+        "images": 140,
+        "psnr_global_mse": 24.479101625747028
+      },
+      "fold2": {
+        "mse": 242.72784202212378,
+        "psnr": 32.2486260570877,
+        "psnr_capped": 29.97291548691794,
+        "uniform7_ssim": 0.8628808476431583,
+        "uniform7_score": 78.38540862717186,
+        "gaussian11_ssim": 0.8775740692582888,
+        "gaussian11_score": 79.41393414023096,
+        "images": 420,
+        "psnr_global_mse": 24.279607660643517
+      },
+      "ROI019": {
+        "mse": 228.56179864065987,
+        "psnr": 39.15728534660041,
+        "psnr_capped": 32.330153636091126,
+        "uniform7_ssim": 0.8563226252083235,
+        "uniform7_score": 79.34067594623731,
+        "gaussian11_ssim": 0.8713926812626076,
+        "gaussian11_score": 80.39557987003721,
+        "images": 140,
+        "psnr_global_mse": 24.540767158495417
+      },
+      "ROI061": {
+        "mse": 269.75512706211634,
+        "psnr": 29.075936163698714,
+        "psnr_capped": 29.075936163698714,
+        "uniform7_ssim": 0.8508307954548007,
+        "uniform7_score": 77.00371738005529,
+        "gaussian11_ssim": 0.8666295580504034,
+        "gaussian11_score": 78.10963076174745,
+        "images": 140,
+        "psnr_global_mse": 23.821106530787635
+      },
+      "ROI100": {
+        "mse": 229.86660036359515,
+        "psnr": 28.512656660963977,
+        "psnr_capped": 28.512656660963977,
+        "uniform7_ssim": 0.881489122266351,
+        "uniform7_score": 78.81183255522296,
+        "gaussian11_ssim": 0.8946999684618553,
+        "gaussian11_score": 79.73659178890824,
+        "images": 140,
+        "psnr_global_mse": 24.51604488039459
+      },
+      "fold3": {
+        "mse": 490.6512955529349,
+        "psnr": 24.727274417131397,
+        "psnr_capped": 24.727274417131397,
+        "uniform7_ssim": 0.8459562018903034,
+        "uniform7_score": 74.05329878260007,
+        "gaussian11_ssim": 0.8649529335152089,
+        "gaussian11_score": 75.38306999634347,
+        "images": 560,
+        "psnr_global_mse": 21.223074109416086
+      },
+      "ROI044": {
+        "mse": 245.76520527430944,
+        "psnr": 27.20706765869107,
+        "psnr_capped": 27.20706765869107,
+        "uniform7_ssim": 0.8967972354848129,
+        "uniform7_score": 79.10004707915157,
+        "gaussian11_ssim": 0.9099611385124282,
+        "gaussian11_score": 80.02152029108463,
+        "images": 140,
+        "psnr_global_mse": 24.225599641198073
+      },
+      "ROI067": {
+        "mse": 340.236498260498,
+        "psnr": 26.093655309779432,
+        "psnr_capped": 26.093655309779432,
+        "uniform7_ssim": 0.8664917931779952,
+        "uniform7_score": 76.31061870832731,
+        "gaussian11_ssim": 0.8813565371720199,
+        "gaussian11_score": 77.35115078790906,
+        "images": 140,
+        "psnr_global_mse": 22.812994609302507
+      },
+      "ROI074": {
+        "mse": 726.3641560145787,
+        "psnr": 23.026197293580793,
+        "psnr_capped": 23.026197293580793,
+        "uniform7_ssim": 0.816659428602036,
+        "uniform7_score": 70.98187837829099,
+        "gaussian11_ssim": 0.8400140762788616,
+        "gaussian11_score": 72.61670371566879,
+        "images": 140,
+        "psnr_global_mse": 19.519259560117664
+      },
+      "ROI078": {
+        "mse": 650.2393226623535,
+        "psnr": 22.582177406474308,
+        "psnr_capped": 22.582177406474308,
+        "uniform7_ssim": 0.8038763502963694,
+        "uniform7_score": 69.82065096463045,
+        "gaussian11_ssim": 0.8284799820975257,
+        "gaussian11_score": 71.54290519071138,
+        "images": 140,
+        "psnr_global_mse": 20.000071313293244
+      },
+      "fold4": {
+        "mse": 315.1375431333269,
+        "psnr": 30.360670147513428,
+        "psnr_capped": 27.707552770671033,
+        "uniform7_ssim": 0.8539388268054988,
+        "uniform7_score": 76.40024953878755,
+        "gaussian11_ssim": 0.871137357079361,
+        "gaussian11_score": 77.6041466579579,
+        "images": 560,
+        "psnr_global_mse": 23.14580216010686
+      },
+      "ROI045": {
+        "mse": 365.6521787370954,
+        "psnr": 25.38793331289347,
+        "psnr_capped": 25.38793331289347,
+        "uniform7_ssim": 0.8847650914954263,
+        "uniform7_score": 77.16631639241592,
+        "gaussian11_ssim": 0.8986372085811476,
+        "gaussian11_score": 78.13736458841642,
+        "images": 140,
+        "psnr_global_mse": 22.50012195357941
+      },
+      "ROI072": {
+        "mse": 331.82593427385603,
+        "psnr": 41.1841390176196,
+        "psnr_capped": 30.613516824545183,
+        "uniform7_ssim": 0.7993872097120147,
+        "uniform7_score": 74.32521477456815,
+        "gaussian11_ssim": 0.8220592422321186,
+        "gaussian11_score": 75.91225705097541,
+        "images": 140,
+        "psnr_global_mse": 22.92170035020813
+      },
+      "ROI076": {
+        "mse": 358.00647604806085,
+        "psnr": 26.31482770955375,
+        "psnr_capped": 26.272980395258575,
+        "uniform7_ssim": 0.8499768097622992,
+        "uniform7_score": 75.2621649205161,
+        "gaussian11_ssim": 0.8666259335848417,
+        "gaussian11_score": 76.42760358809406,
+        "images": 140,
+        "psnr_global_mse": 22.591894781164964
+      },
+      "ROI081": {
+        "mse": 205.0655834742955,
+        "psnr": 28.555780549986896,
+        "psnr_capped": 28.555780549986896,
+        "uniform7_ssim": 0.8816261962522552,
+        "uniform7_score": 78.84730206765,
+        "gaussian11_ssim": 0.8972270439193365,
+        "gaussian11_score": 79.93936140434569,
+        "images": 140,
+        "psnr_global_mse": 25.011875828077486
+      }
+    },
+    "HLA-DR": {
+      "overall": {
+        "mse": 445.22526627869166,
+        "psnr": 26.251725350093334,
+        "psnr_capped": 24.653562534127804,
+        "uniform7_ssim": 0.8024906113208167,
+        "uniform7_score": 70.96648031293385,
+        "gaussian11_ssim": 0.8208806640034852,
+        "gaussian11_score": 72.25378400072064,
+        "images": 2380,
+        "psnr_global_mse": 21.645005585429477
+      },
+      "fold0": {
+        "mse": 517.1270278204055,
+        "psnr": 22.753870631128013,
+        "psnr_capped": 22.753870631128013,
+        "uniform7_ssim": 0.7804859968062338,
+        "uniform7_score": 68.28634215511318,
+        "gaussian11_ssim": 0.8014616783184842,
+        "gaussian11_score": 69.7546398609707,
+        "images": 420,
+        "psnr_global_mse": 20.99483123953492
+      },
+      "ROI005": {
+        "mse": 388.2871958051409,
+        "psnr": 23.24106189997757,
+        "psnr_capped": 23.24106189997757,
+        "uniform7_ssim": 0.7754892613614445,
+        "uniform7_score": 68.22888543528765,
+        "gaussian11_ssim": 0.7956770966260736,
+        "gaussian11_score": 69.6420339038117,
+        "images": 140,
+        "psnr_global_mse": 22.239272914211625
+      },
+      "ROI052": {
+        "mse": 282.1082800728934,
+        "psnr": 24.926448123194913,
+        "psnr_capped": 24.926448123194913,
+        "uniform7_ssim": 0.8189036394746038,
+        "uniform7_score": 72.27912363713922,
+        "gaussian11_ssim": 0.8372820746156918,
+        "gaussian11_score": 73.56561409701537,
+        "images": 140,
+        "psnr_global_mse": 23.626645276824327
+      },
+      "ROI087": {
+        "mse": 880.9856075831822,
+        "psnr": 20.094101870211553,
+        "psnr_capped": 20.094101870211553,
+        "uniform7_ssim": 0.7470650895826527,
+        "uniform7_score": 64.35101739291264,
+        "gaussian11_ssim": 0.7714258637136874,
+        "gaussian11_score": 66.05627158208505,
+        "images": 140,
+        "psnr_global_mse": 18.681115473460572
+      },
+      "fold1": {
+        "mse": 267.4966544015067,
+        "psnr": 25.603718415755733,
+        "psnr_capped": 25.603718415755733,
+        "uniform7_ssim": 0.824036900037715,
+        "uniform7_score": 73.04481405209349,
+        "gaussian11_ssim": 0.8413186115489392,
+        "gaussian11_score": 74.25453385787918,
+        "images": 420,
+        "psnr_global_mse": 23.857620062267397
+      },
+      "ROI010": {
+        "mse": 252.88129915509904,
+        "psnr": 25.325555574572093,
+        "psnr_capped": 25.325555574572093,
+        "uniform7_ssim": 0.8318146305953883,
+        "uniform7_score": 73.42235748642044,
+        "gaussian11_ssim": 0.8488098341107155,
+        "gaussian11_score": 74.61202173249336,
+        "images": 140,
+        "psnr_global_mse": 24.101636468815254
+      },
+      "ROI058": {
+        "mse": 258.96084943498886,
+        "psnr": 25.347582709606733,
+        "psnr_capped": 25.347582709606733,
+        "uniform7_ssim": 0.814230962012924,
+        "uniform7_score": 72.20471696666871,
+        "gaussian11_ssim": 0.8330490888937094,
+        "gaussian11_score": 73.5219858483237,
+        "images": 140,
+        "psnr_global_mse": 23.998462499123676
+      },
+      "ROI093": {
+        "mse": 290.6478146144322,
+        "psnr": 26.13801696308836,
+        "psnr_capped": 26.13801696308836,
+        "uniform7_ssim": 0.8260651075048328,
+        "uniform7_score": 73.5073677031913,
+        "gaussian11_ssim": 0.8420969116423925,
+        "gaussian11_score": 74.62959399282049,
+        "images": 140,
+        "psnr_global_mse": 23.49713299030384
+      },
+      "fold2": {
+        "mse": 299.2017889113653,
+        "psnr": 29.3237404210237,
+        "psnr_capped": 27.695927993621478,
+        "uniform7_ssim": 0.822654224631407,
+        "uniform7_score": 74.20335252037138,
+        "gaussian11_ssim": 0.8388124801243586,
+        "gaussian11_score": 75.33443040487799,
+        "images": 420,
+        "psnr_global_mse": 23.371161750444305
+      },
+      "ROI019": {
+        "mse": 295.46043930053713,
+        "psnr": 35.76219499300107,
+        "psnr_capped": 30.886071608891125,
+        "uniform7_ssim": 0.8513234301358,
+        "uniform7_score": 78.12428307484068,
+        "gaussian11_ssim": 0.8640393292536533,
+        "gaussian11_score": 79.0143960130904,
+        "images": 140,
+        "psnr_global_mse": 23.425810216528387
+      },
+      "ROI061": {
+        "mse": 317.7952645438058,
+        "psnr": 26.378254697405197,
+        "psnr_capped": 26.378254697405197,
+        "uniform7_ssim": 0.804362356931335,
+        "uniform7_score": 72.13231780363657,
+        "gaussian11_ssim": 0.8227992511567186,
+        "gaussian11_score": 73.42290039941342,
+        "images": 140,
+        "psnr_global_mse": 23.10932939355319
+      },
+      "ROI100": {
+        "mse": 284.34966288975306,
+        "psnr": 25.830771572664844,
+        "psnr_capped": 25.82345767456813,
+        "uniform7_ssim": 0.8122768868270862,
+        "uniform7_score": 72.35345668263692,
+        "gaussian11_ssim": 0.8295988599627038,
+        "gaussian11_score": 73.56599480213015,
+        "images": 140,
+        "psnr_global_mse": 23.59227643156484
+      },
+      "fold3": {
+        "mse": 658.2567453929356,
+        "psnr": 22.379198210923292,
+        "psnr_capped": 22.281965202838308,
+        "uniform7_ssim": 0.7882616902173402,
+        "uniform7_score": 68.5474974369168,
+        "gaussian11_ssim": 0.8078154456970991,
+        "gaussian11_score": 69.91626032049992,
+        "images": 560,
+        "psnr_global_mse": 19.946850426956985
+      },
+      "ROI044": {
+        "mse": 254.44056549072266,
+        "psnr": 25.041543726181988,
+        "psnr_capped": 25.041543726181988,
+        "uniform7_ssim": 0.8246847315412865,
+        "uniform7_score": 72.75285744359924,
+        "gaussian11_ssim": 0.8417849248178593,
+        "gaussian11_score": 73.94987097295933,
+        "images": 140,
+        "psnr_global_mse": 24.074940087487185
+      },
+      "ROI067": {
+        "mse": 387.26824199131556,
+        "psnr": 25.001826024765997,
+        "psnr_capped": 24.61289399242606,
+        "uniform7_ssim": 0.7934498183674453,
+        "uniform7_score": 70.3092236811768,
+        "gaussian11_ssim": 0.8108016520594524,
+        "gaussian11_score": 71.52385203961731,
+        "images": 140,
+        "psnr_global_mse": 22.250684768264023
+      },
+      "ROI074": {
+        "mse": 992.191158076695,
+        "psnr": 19.727610411347683,
+        "psnr_capped": 19.727610411347683,
+        "uniform7_ssim": 0.7645902056669016,
+        "uniform7_score": 65.35788064349171,
+        "gaussian11_ssim": 0.7868313959461856,
+        "gaussian11_score": 66.91476396304162,
+        "images": 140,
+        "psnr_global_mse": 18.164850083709393
+      },
+      "ROI078": {
+        "mse": 999.1270160130092,
+        "psnr": 19.745812681397496,
+        "psnr_capped": 19.745812681397496,
+        "uniform7_ssim": 0.7703220052937274,
+        "uniform7_score": 65.7700279793994,
+        "gaussian11_ssim": 0.7918438099648991,
+        "gaussian11_score": 67.27655430638144,
+        "images": 140,
+        "psnr_global_mse": 18.134596585807643
+      },
+      "fold4": {
+        "mse": 421.08153294154573,
+        "psnr": 30.9296374260428,
+        "psnr_capped": 25.45553778682595,
+        "uniform7_ssim": 0.8019405667896139,
+        "uniform7_score": 71.40916234736855,
+        "gaussian11_ssim": 0.8197327988238765,
+        "gaussian11_score": 72.65461858976693,
+        "images": 560,
+        "psnr_global_mse": 21.887141655588962
+      },
+      "ROI045": {
+        "mse": 407.5547185625349,
+        "psnr": 22.883649545848378,
+        "psnr_capped": 22.883649545848378,
+        "uniform7_ssim": 0.7772146667744,
+        "uniform7_score": 68.13521640171703,
+        "gaussian11_ssim": 0.797141563705429,
+        "gaussian11_score": 69.53009918688905,
+        "images": 140,
+        "psnr_global_mse": 22.028944352166704
+      },
+      "ROI072": {
+        "mse": 570.7943014962333,
+        "psnr": 51.24859455324435,
+        "psnr_capped": 29.445006675442684,
+        "uniform7_ssim": 0.806475229998679,
+        "uniform7_score": 74.12027010517313,
+        "gaussian11_ssim": 0.8234911959745433,
+        "gaussian11_score": 75.31138772348365,
+        "images": 140,
+        "psnr_global_mse": 20.566007321665317
+      },
+      "ROI076": {
+        "mse": 453.1658222743443,
+        "psnr": 24.415448326360632,
+        "psnr_capped": 24.322637647294908,
+        "uniform7_ssim": 0.7915233853855262,
+        "uniform7_score": 70.00021956536379,
+        "gaussian11_ssim": 0.8089006268787754,
+        "gaussian11_score": 71.21662646989121,
+        "images": 140,
+        "psnr_global_mse": 21.56823212892302
+      },
+      "ROI081": {
+        "mse": 252.81128943307058,
+        "psnr": 25.170857278717826,
+        "psnr_capped": 25.170857278717826,
+        "uniform7_ssim": 0.8325489849998509,
+        "uniform7_score": 73.38094331722026,
+        "gaussian11_ssim": 0.849397808736758,
+        "gaussian11_score": 74.56036097880377,
+        "images": 140,
+        "psnr_global_mse": 24.102838971554547
+      }
+    },
+    "Vimentin": {
+      "overall": {
+        "mse": 442.0751203328621,
+        "psnr": 25.068919016267717,
+        "psnr_capped": 25.041843434788095,
+        "uniform7_ssim": 0.8170943541831313,
+        "uniform7_score": 72.22171085369203,
+        "gaussian11_ssim": 0.8347712641231594,
+        "gaussian11_score": 73.45909454949401,
+        "images": 2380,
+        "psnr_global_mse": 21.675842870527298
+      },
+      "fold0": {
+        "mse": 497.0030841282436,
+        "psnr": 23.455953058252028,
+        "psnr_capped": 23.455953058252028,
+        "uniform7_ssim": 0.8180529329392872,
+        "uniform7_score": 71.33727714070132,
+        "gaussian11_ssim": 0.8370823859896677,
+        "gaussian11_score": 72.66933885422796,
+        "images": 420,
+        "psnr_global_mse": 21.167212771331258
+      },
+      "ROI005": {
+        "mse": 335.19943346296037,
+        "psnr": 23.802058754157365,
+        "psnr_capped": 23.802058754157365,
+        "uniform7_ssim": 0.8279034639148836,
+        "uniform7_score": 72.23447772653627,
+        "gaussian11_ssim": 0.8454456266466125,
+        "gaussian11_score": 73.4624291177573,
+        "images": 140,
+        "psnr_global_mse": 22.877770849315034
+      },
+      "ROI052": {
+        "mse": 284.95488608224053,
+        "psnr": 25.767791753115553,
+        "psnr_capped": 25.767791753115553,
+        "uniform7_ssim": 0.8411559086035939,
+        "uniform7_score": 74.3415886541209,
+        "gaussian11_ssim": 0.858296560818482,
+        "gaussian11_score": 75.54143430916307,
+        "images": 140,
+        "psnr_global_mse": 23.58304252706465
+      },
+      "ROI087": {
+        "mse": 870.8549328395299,
+        "psnr": 20.798008667483163,
+        "psnr_capped": 20.798008667483163,
+        "uniform7_ssim": 0.785099426299384,
+        "uniform7_score": 67.43576504144679,
+        "gaussian11_ssim": 0.8075049705039086,
+        "gaussian11_score": 69.0041531357635,
+        "images": 140,
+        "psnr_global_mse": 18.731345446827923
+      },
+      "fold1": {
+        "mse": 272.66938581920806,
+        "psnr": 25.924292732718424,
+        "psnr_capped": 25.924292732718424,
+        "uniform7_ssim": 0.8537528371887406,
+        "uniform7_score": 75.31727424284291,
+        "gaussian11_ssim": 0.8696779322294693,
+        "gaussian11_score": 76.4320308956939,
+        "images": 420,
+        "psnr_global_mse": 23.774439809612772
+      },
+      "ROI010": {
+        "mse": 260.273609488351,
+        "psnr": 26.609936842082302,
+        "psnr_capped": 26.609936842082302,
+        "uniform7_ssim": 0.8630235692101873,
+        "uniform7_score": 76.37761194996249,
+        "gaussian11_ssim": 0.878462876027276,
+        "gaussian11_score": 77.4583634271587,
+        "images": 140,
+        "psnr_global_mse": 23.976502259304866
+      },
+      "ROI058": {
+        "mse": 268.35089732578825,
+        "psnr": 25.128912629031124,
+        "psnr_capped": 25.128912629031124,
+        "uniform7_ssim": 0.8476820354765907,
+        "uniform7_score": 74.41509006078003,
+        "gaussian11_ssim": 0.8646606838904879,
+        "gaussian11_score": 75.60359544975283,
+        "images": 140,
+        "psnr_global_mse": 23.843773090257887
+      },
+      "ROI093": {
+        "mse": 289.38365064348494,
+        "psnr": 26.03402872704185,
+        "psnr_capped": 26.03402872704185,
+        "uniform7_ssim": 0.8505529068794444,
+        "uniform7_score": 75.15912071778622,
+        "gaussian11_ssim": 0.8659102367706438,
+        "gaussian11_score": 76.23413381017016,
+        "images": 140,
+        "psnr_global_mse": 23.516063697997865
+      },
+      "fold2": {
+        "mse": 303.9792433602469,
+        "psnr": 27.446529542324257,
+        "psnr_capped": 27.446529542324257,
+        "uniform7_ssim": 0.8080641207110855,
+        "uniform7_score": 73.03240617517054,
+        "gaussian11_ssim": 0.8238327711807082,
+        "gaussian11_score": 74.13621170804413,
+        "images": 420,
+        "psnr_global_mse": 23.30236431212674
+      },
+      "ROI019": {
+        "mse": 327.7013286045619,
+        "psnr": 29.87660697839236,
+        "psnr_capped": 29.87660697839236,
+        "uniform7_ssim": 0.7992976562880628,
+        "uniform7_score": 73.87680012719983,
+        "gaussian11_ssim": 0.8132988373783523,
+        "gaussian11_score": 74.85688280352008,
+        "images": 140,
+        "psnr_global_mse": 22.976021587151344
+      },
+      "ROI061": {
+        "mse": 322.1623317173549,
+        "psnr": 26.94540151732015,
+        "psnr_capped": 26.94540151732015,
+        "uniform7_ssim": 0.7945308528393021,
+        "uniform7_score": 71.78440060914325,
+        "gaussian11_ssim": 0.8116744528949789,
+        "gaussian11_score": 72.98445261304059,
+        "images": 140,
+        "psnr_global_mse": 23.050056009598812
+      },
+      "ROI100": {
+        "mse": 262.07406975882395,
+        "psnr": 25.517580131260257,
+        "psnr_capped": 25.517580131260257,
+        "uniform7_ssim": 0.8303638530058914,
+        "uniform7_score": 73.43601778916855,
+        "gaussian11_ssim": 0.8465250232687932,
+        "gaussian11_score": 74.56729970757169,
+        "images": 140,
+        "psnr_global_mse": 23.94656307940203
+      },
+      "fold3": {
+        "mse": 672.7113128389631,
+        "psnr": 22.798361581532582,
+        "psnr_capped": 22.73552430982396,
+        "uniform7_ssim": 0.7941300709693888,
+        "uniform7_score": 69.2304195537516,
+        "gaussian11_ssim": 0.8141477577822505,
+        "gaussian11_score": 70.6316576306519,
+        "images": 560,
+        "psnr_global_mse": 19.85251629688416
+      },
+      "ROI044": {
+        "mse": 233.82407411847797,
+        "psnr": 25.629479478690882,
+        "psnr_capped": 25.629479478690882,
+        "uniform7_ssim": 0.8448916305450094,
+        "uniform7_score": 74.5201018253652,
+        "gaussian11_ssim": 0.8615787252613323,
+        "gaussian11_score": 75.68819845550777,
+        "images": 140,
+        "psnr_global_mse": 24.441911375383864
+      },
+      "ROI067": {
+        "mse": 356.880549621582,
+        "psnr": 24.86804752958562,
+        "psnr_capped": 24.61669844275114,
+        "uniform7_ssim": 0.8198543931479781,
+        "uniform7_score": 72.15982658600915,
+        "gaussian11_ssim": 0.8362061393251816,
+        "gaussian11_score": 73.3044488184134,
+        "images": 140,
+        "psnr_global_mse": 22.60557481789258
+      },
+      "ROI074": {
+        "mse": 1060.1996346609933,
+        "psnr": 20.575029358182825,
+        "psnr_capped": 20.575029358182825,
+        "uniform7_ssim": 0.7396624430179156,
+        "uniform7_score": 64.12138862616378,
+        "gaussian11_ssim": 0.7643956669042333,
+        "gaussian11_score": 65.85271429820602,
+        "images": 140,
+        "psnr_global_mse": 17.876927106329845
+      },
+      "ROI078": {
+        "mse": 1039.9409929547992,
+        "psnr": 20.120889959670993,
+        "psnr_capped": 20.120889959670993,
+        "uniform7_ssim": 0.7721118171666521,
+        "uniform7_score": 66.12036117746824,
+        "gaussian11_ssim": 0.7944104996382547,
+        "gaussian11_score": 67.68126895048043,
+        "images": 140,
+        "psnr_global_mse": 17.960716630702283
+      },
+      "fold4": {
+        "mse": 400.8691635949271,
+        "psnr": 26.12446273763417,
+        "psnr_capped": 26.0722287880544,
+        "uniform7_ssim": 0.8186185161795838,
+        "uniform7_score": 72.9466334054035,
+        "gaussian11_ssim": 0.8356852976912931,
+        "gaussian11_score": 74.14130811122315,
+        "images": 560,
+        "psnr_global_mse": 22.100777109422506
+      },
+      "ROI045": {
+        "mse": 370.04895738874166,
+        "psnr": 24.271429543140588,
+        "psnr_capped": 24.271429543140588,
+        "uniform7_ssim": 0.8375704747164135,
+        "uniform7_score": 73.19279095603329,
+        "gaussian11_ssim": 0.8546499862071496,
+        "gaussian11_score": 74.38835676038484,
+        "images": 140,
+        "psnr_global_mse": 22.448211759435015
+      },
+      "ROI072": {
+        "mse": 550.149152483259,
+        "psnr": 28.365285702174297,
+        "psnr_capped": 28.365285702174297,
+        "uniform7_ssim": 0.7808168620985849,
+        "uniform7_score": 71.67635176820552,
+        "gaussian11_ssim": 0.7978778162528862,
+        "gaussian11_score": 72.8706185590066,
+        "images": 140,
+        "psnr_global_mse": 20.72599912612153
+      },
+      "ROI076": {
+        "mse": 417.7838132585798,
+        "psnr": 25.149628320871273,
+        "psnr_capped": 24.940692522552197,
+        "uniform7_ssim": 0.8055862287596401,
+        "uniform7_score": 71.35545152670613,
+        "gaussian11_ssim": 0.8229828529154731,
+        "gaussian11_score": 72.57321521761445,
+        "images": 140,
+        "psnr_global_mse": 21.92128751333385
+      },
+      "ROI081": {
+        "mse": 265.49473124912805,
+        "psnr": 26.711507384350508,
+        "psnr_capped": 26.711507384350508,
+        "uniform7_ssim": 0.8505004991436963,
+        "uniform7_score": 75.56193937066905,
+        "gaussian11_ssim": 0.8672305353896635,
+        "gaussian11_score": 76.73304190788676,
+        "images": 140,
+        "psnr_global_mse": 23.89024453951871
+      }
+    }
+  }
+}

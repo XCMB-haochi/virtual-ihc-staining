@@ -1,0 +1,758 @@
+{
+  "64": {
+    "prediction": {
+      "positive": 3591130,
+      "negative": 152384550,
+      "prevalence": 0.023023653431099002,
+      "auc": 0.8830799456323448,
+      "average_precision": 0.20460714674410366,
+      "mean_at_positive": 30.383017880165852,
+      "mean_at_negative": 14.613614687315742
+    },
+    "dapi": {
+      "positive": 3591130,
+      "negative": 152384550,
+      "prevalence": 0.023023653431099002,
+      "auc": 0.7965527672712455,
+      "average_precision": 0.08496449159076583,
+      "mean_at_positive": 43.71093639049547,
+      "mean_at_negative": 17.83202502484668
+    }
+  },
+  "128": {
+    "prediction": {
+      "positive": 1092198,
+      "negative": 154883482,
+      "prevalence": 0.007002360880875788,
+      "auc": 0.8705975602389023,
+      "average_precision": 0.05978306566905413,
+      "mean_at_positive": 29.89151509158596,
+      "mean_at_negative": 14.871508454336015
+    },
+    "dapi": {
+      "positive": 1092198,
+      "negative": 154883482,
+      "prevalence": 0.007002360880875788,
+      "auc": 0.8206378545505427,
+      "average_precision": 0.03380972665269338,
+      "mean_at_positive": 49.705199057313784,
+      "mean_at_negative": 18.20729240191023
+    }
+  },
+  "by_roi": {
+    "ROI005": {
+      "64": {
+        "prediction": {
+          "positive": 150726,
+          "negative": 9024314,
+          "prevalence": 0.016427830287388392,
+          "auc": 0.830936064394664,
+          "average_precision": 0.1278480125332496,
+          "mean_at_positive": 22.563160967583563,
+          "mean_at_negative": 14.321747669684367
+        },
+        "dapi": {
+          "positive": 150726,
+          "negative": 9024314,
+          "prevalence": 0.016427830287388392,
+          "auc": 0.7448016871550642,
+          "average_precision": 0.044782045948730524,
+          "mean_at_positive": 34.1884081047729,
+          "mean_at_negative": 17.50276242604147
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 56711,
+          "negative": 9118329,
+          "prevalence": 0.006181008475167411,
+          "auc": 0.8369998731773524,
+          "average_precision": 0.05336967661854453,
+          "mean_at_positive": 22.799210029800214,
+          "mean_at_negative": 14.405253089683427
+        },
+        "dapi": {
+          "positive": 56711,
+          "negative": 9118329,
+          "prevalence": 0.006181008475167411,
+          "auc": 0.7806367671229645,
+          "average_precision": 0.020136865014731668,
+          "mean_at_positive": 37.85639470296768,
+          "mean_at_negative": 17.651987771004972
+        }
+      }
+    },
+    "ROI010": {
+      "64": {
+        "prediction": {
+          "positive": 116762,
+          "negative": 9058278,
+          "prevalence": 0.012726048060825893,
+          "auc": 0.8653015026380108,
+          "average_precision": 0.10369723598664277,
+          "mean_at_positive": 24.302624141415873,
+          "mean_at_negative": 13.381812525515334
+        },
+        "dapi": {
+          "positive": 116762,
+          "negative": 9058278,
+          "prevalence": 0.012726048060825893,
+          "auc": 0.779581391995702,
+          "average_precision": 0.04565244853057159,
+          "mean_at_positive": 33.81684965999212,
+          "mean_at_negative": 15.80365661111306
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 41915,
+          "negative": 9133125,
+          "prevalence": 0.004568372453962054,
+          "auc": 0.8613436114498505,
+          "average_precision": 0.03266641923453312,
+          "mean_at_positive": 23.65112728140284,
+          "mean_at_negative": 13.474299760487238
+        },
+        "dapi": {
+          "positive": 41915,
+          "negative": 9133125,
+          "prevalence": 0.004568372453962054,
+          "auc": 0.8095260959449082,
+          "average_precision": 0.01982401945365139,
+          "mean_at_positive": 37.106596683764764,
+          "mean_at_negative": 15.936179018681996
+        }
+      }
+    },
+    "ROI019": {
+      "64": {
+        "prediction": {
+          "positive": 144192,
+          "negative": 9030848,
+          "prevalence": 0.015715680803571427,
+          "auc": 0.9128839828813703,
+          "average_precision": 0.17765474375154178,
+          "mean_at_positive": 27.69955337328007,
+          "mean_at_negative": 9.421598724726627
+        },
+        "dapi": {
+          "positive": 144192,
+          "negative": 9030848,
+          "prevalence": 0.015715680803571427,
+          "auc": 0.8381730251910402,
+          "average_precision": 0.06034253641416871,
+          "mean_at_positive": 36.270805592543276,
+          "mean_at_negative": 12.075765642384857
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 34869,
+          "negative": 9140171,
+          "prevalence": 0.003800419398716518,
+          "auc": 0.9010170579030986,
+          "average_precision": 0.04878909995034973,
+          "mean_at_positive": 28.154205741489577,
+          "mean_at_negative": 9.63848170893083
+        },
+        "dapi": {
+          "positive": 34869,
+          "negative": 9140171,
+          "prevalence": 0.003800419398716518,
+          "auc": 0.8539147369536965,
+          "average_precision": 0.01598216423781402,
+          "mean_at_positive": 39.23470704637357,
+          "mean_at_negative": 12.353848631497156
+        }
+      }
+    },
+    "ROI044": {
+      "64": {
+        "prediction": {
+          "positive": 128444,
+          "negative": 9046596,
+          "prevalence": 0.013999285016741072,
+          "auc": 0.8375927873941734,
+          "average_precision": 0.08034864815739381,
+          "mean_at_positive": 21.2588988197191,
+          "mean_at_negative": 14.097925230661344
+        },
+        "dapi": {
+          "positive": 128444,
+          "negative": 9046596,
+          "prevalence": 0.013999285016741072,
+          "auc": 0.7688835756354213,
+          "average_precision": 0.05495432365150231,
+          "mean_at_positive": 35.17145993584753,
+          "mean_at_negative": 16.18331071709182
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 46073,
+          "negative": 9128967,
+          "prevalence": 0.005021558489118304,
+          "auc": 0.8593726679470665,
+          "average_precision": 0.030550076270977115,
+          "mean_at_positive": 21.698587024938686,
+          "mean_at_negative": 14.160319891615337
+        },
+        "dapi": {
+          "positive": 46073,
+          "negative": 9128967,
+          "prevalence": 0.005021558489118304,
+          "auc": 0.7952533347864643,
+          "average_precision": 0.02037276658921301,
+          "mean_at_positive": 36.786577822151806,
+          "mean_at_negative": 16.34649013409732
+        }
+      }
+    },
+    "ROI045": {
+      "64": {
+        "prediction": {
+          "positive": 157428,
+          "negative": 9017612,
+          "prevalence": 0.017158290318080357,
+          "auc": 0.7835129501844078,
+          "average_precision": 0.06789714622914758,
+          "mean_at_positive": 20.454569708057015,
+          "mean_at_negative": 14.629693204808547
+        },
+        "dapi": {
+          "positive": 157428,
+          "negative": 9017612,
+          "prevalence": 0.017158290318080357,
+          "auc": 0.7378397564199346,
+          "average_precision": 0.05726116685572674,
+          "mean_at_positive": 38.74896460604213,
+          "mean_at_negative": 17.82534034509358
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 72262,
+          "negative": 9102778,
+          "prevalence": 0.007875932965959821,
+          "auc": 0.8062758733441446,
+          "average_precision": 0.03450923261611393,
+          "mean_at_positive": 20.96961058370928,
+          "mean_at_negative": 14.680102381932198
+        },
+        "dapi": {
+          "positive": 72262,
+          "negative": 9102778,
+          "prevalence": 0.007875932965959821,
+          "auc": 0.7943577230543524,
+          "average_precision": 0.032911870363694466,
+          "mean_at_positive": 43.8735434945061,
+          "mean_at_negative": 17.980421471335454
+        }
+      }
+    },
+    "ROI052": {
+      "64": {
+        "prediction": {
+          "positive": 126172,
+          "negative": 9048868,
+          "prevalence": 0.013751656668526785,
+          "auc": 0.880883291160716,
+          "average_precision": 0.1203941845650047,
+          "mean_at_positive": 23.420909552040072,
+          "mean_at_negative": 13.449293989038187
+        },
+        "dapi": {
+          "positive": 126172,
+          "negative": 9048868,
+          "prevalence": 0.013751656668526785,
+          "auc": 0.7507337691675396,
+          "average_precision": 0.03605201328638165,
+          "mean_at_positive": 30.57646704498621,
+          "mean_at_negative": 16.858361509970088
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 31448,
+          "negative": 9143592,
+          "prevalence": 0.003427559988839286,
+          "auc": 0.8747704231182779,
+          "average_precision": 0.02628457071644214,
+          "mean_at_positive": 22.791624268633935,
+          "mean_at_negative": 13.55476031738949
+        },
+        "dapi": {
+          "positive": 31448,
+          "negative": 9143592,
+          "prevalence": 0.003427559988839286,
+          "auc": 0.7946700837116167,
+          "average_precision": 0.012175930644805356,
+          "mean_at_positive": 36.1446196896464,
+          "mean_at_negative": 16.981324844765602
+        }
+      }
+    },
+    "ROI058": {
+      "64": {
+        "prediction": {
+          "positive": 116081,
+          "negative": 9058959,
+          "prevalence": 0.012651824951171875,
+          "auc": 0.8354420657037939,
+          "average_precision": 0.12270914569293437,
+          "mean_at_positive": 25.35012620497756,
+          "mean_at_negative": 14.243832762682777
+        },
+        "dapi": {
+          "positive": 116081,
+          "negative": 9058959,
+          "prevalence": 0.012651824951171875,
+          "auc": 0.7602188076659006,
+          "average_precision": 0.04745318224266299,
+          "mean_at_positive": 34.45171905824381,
+          "mean_at_negative": 16.061863178760387
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 44690,
+          "negative": 9130350,
+          "prevalence": 0.004870823451450893,
+          "auc": 0.855461915631639,
+          "average_precision": 0.06870764494240869,
+          "mean_at_positive": 26.928440366972477,
+          "mean_at_negative": 14.322948517855284
+        },
+        "dapi": {
+          "positive": 44690,
+          "negative": 9130350,
+          "prevalence": 0.004870823451450893,
+          "auc": 0.7944487602344122,
+          "average_precision": 0.018597447305429365,
+          "mean_at_positive": 36.282345043633924,
+          "mean_at_negative": 16.196694759784673
+        }
+      }
+    },
+    "ROI061": {
+      "64": {
+        "prediction": {
+          "positive": 228394,
+          "negative": 8946646,
+          "prevalence": 0.024892970493861608,
+          "auc": 0.8938959358604356,
+          "average_precision": 0.1687463843437869,
+          "mean_at_positive": 31.736183962801125,
+          "mean_at_negative": 14.11349784041975
+        },
+        "dapi": {
+          "positive": 228394,
+          "negative": 8946646,
+          "prevalence": 0.024892970493861608,
+          "auc": 0.8337490712353,
+          "average_precision": 0.1348576040164671,
+          "mean_at_positive": 46.43705176142981,
+          "mean_at_negative": 16.377373599000116
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 51004,
+          "negative": 9124036,
+          "prevalence": 0.0055589948381696425,
+          "auc": 0.8689647886732462,
+          "average_precision": 0.028792500925776485,
+          "mean_at_positive": 29.462551956709277,
+          "mean_at_negative": 14.46882881654566
+        },
+        "dapi": {
+          "positive": 51004,
+          "negative": 9124036,
+          "prevalence": 0.0055589948381696425,
+          "auc": 0.8237259499537308,
+          "average_precision": 0.028042255020295885,
+          "mean_at_positive": 44.747588424437296,
+          "mean_at_negative": 16.97123970137777
+        }
+      }
+    },
+    "ROI067": {
+      "64": {
+        "prediction": {
+          "positive": 147602,
+          "negative": 9027438,
+          "prevalence": 0.01608734130859375,
+          "auc": 0.855662110898571,
+          "average_precision": 0.10837915109689378,
+          "mean_at_positive": 22.83990054335307,
+          "mean_at_negative": 13.187789713980866
+        },
+        "dapi": {
+          "positive": 147602,
+          "negative": 9027438,
+          "prevalence": 0.01608734130859375,
+          "auc": 0.7659612904099425,
+          "average_precision": 0.05420567217831215,
+          "mean_at_positive": 35.93111204455224,
+          "mean_at_negative": 15.742444091003449
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 60337,
+          "negative": 9114703,
+          "prevalence": 0.006576211111886161,
+          "auc": 0.8691730841450653,
+          "average_precision": 0.044583395517402466,
+          "mean_at_positive": 23.144803354492268,
+          "mean_at_negative": 13.27818152714356
+        },
+        "dapi": {
+          "positive": 60337,
+          "negative": 9114703,
+          "prevalence": 0.006576211111886161,
+          "auc": 0.8049325850462321,
+          "average_precision": 0.026648126085124683,
+          "mean_at_positive": 40.11294893680495,
+          "mean_at_negative": 15.908049554659105
+        }
+      }
+    },
+    "ROI072": {
+      "64": {
+        "prediction": {
+          "positive": 313186,
+          "negative": 8861854,
+          "prevalence": 0.034134565080915176,
+          "auc": 0.8643437711558691,
+          "average_precision": 0.1544951621165946,
+          "mean_at_positive": 28.52824838913617,
+          "mean_at_negative": 12.674831812846387
+        },
+        "dapi": {
+          "positive": 313186,
+          "negative": 8861854,
+          "prevalence": 0.034134565080915176,
+          "auc": 0.8012293820718456,
+          "average_precision": 0.09367213927541644,
+          "mean_at_positive": 41.593484383082256,
+          "mean_at_negative": 16.701246262915188
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 48742,
+          "negative": 9126298,
+          "prevalence": 0.005312456403459821,
+          "auc": 0.8504636282893496,
+          "average_precision": 0.02227887396341691,
+          "mean_at_positive": 28.183086455213164,
+          "mean_at_negative": 13.136044538541258
+        },
+        "dapi": {
+          "positive": 48742,
+          "negative": 9126298,
+          "prevalence": 0.005312456403459821,
+          "auc": 0.8440675590758343,
+          "average_precision": 0.021697576189876836,
+          "mean_at_positive": 53.533892741372945,
+          "mean_at_negative": 17.358753132979
+        }
+      }
+    },
+    "ROI074": {
+      "64": {
+        "prediction": {
+          "positive": 448452,
+          "negative": 8726588,
+          "prevalence": 0.048877389090401784,
+          "auc": 0.8804044443361859,
+          "average_precision": 0.2640466152820466,
+          "mean_at_positive": 33.76703415304202,
+          "mean_at_negative": 20.366107349172438
+        },
+        "dapi": {
+          "positive": 448452,
+          "negative": 8726588,
+          "prevalence": 0.048877389090401784,
+          "auc": 0.7681379465170577,
+          "average_precision": 0.13672975533542842,
+          "mean_at_positive": 56.6360368556724,
+          "mean_at_negative": 26.6090980804869
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 158520,
+          "negative": 9016520,
+          "prevalence": 0.017277308872767856,
+          "auc": 0.8812372019950379,
+          "average_precision": 0.1030793043131356,
+          "mean_at_positive": 34.41874211455968,
+          "mean_at_negative": 20.785565051705092
+        },
+        "dapi": {
+          "positive": 158520,
+          "negative": 9016520,
+          "prevalence": 0.017277308872767856,
+          "auc": 0.8061039181497629,
+          "average_precision": 0.06482666626779299,
+          "mean_at_positive": 66.15651652788291,
+          "mean_at_negative": 27.40725346364229
+        }
+      }
+    },
+    "ROI076": {
+      "64": {
+        "prediction": {
+          "positive": 187335,
+          "negative": 8987705,
+          "prevalence": 0.020417894635881697,
+          "auc": 0.8523943360689491,
+          "average_precision": 0.10060639298491066,
+          "mean_at_positive": 24.587711853097392,
+          "mean_at_negative": 13.59861254903226
+        },
+        "dapi": {
+          "positive": 187335,
+          "negative": 8987705,
+          "prevalence": 0.020417894635881697,
+          "auc": 0.7857952810640095,
+          "average_precision": 0.06439110166682224,
+          "mean_at_positive": 39.10063255664985,
+          "mean_at_negative": 16.346910807597713
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 67410,
+          "negative": 9107630,
+          "prevalence": 0.00734710693359375,
+          "auc": 0.8457504785112887,
+          "average_precision": 0.032205081624080506,
+          "mean_at_positive": 24.12047174009791,
+          "mean_at_negative": 13.746770125707785
+        },
+        "dapi": {
+          "positive": 67410,
+          "negative": 9107630,
+          "prevalence": 0.00734710693359375,
+          "auc": 0.8162033143439864,
+          "average_precision": 0.028221820880310614,
+          "mean_at_positive": 44.019210799584634,
+          "mean_at_negative": 16.61011635299194
+        }
+      }
+    },
+    "ROI078": {
+      "64": {
+        "prediction": {
+          "positive": 486085,
+          "negative": 8688955,
+          "prevalence": 0.05297906058175223,
+          "auc": 0.907551639280276,
+          "average_precision": 0.3455653012019566,
+          "mean_at_positive": 38.08681403458243,
+          "mean_at_negative": 20.788548105036796
+        },
+        "dapi": {
+          "positive": 486085,
+          "negative": 8688955,
+          "prevalence": 0.05297906058175223,
+          "auc": 0.7689768595864207,
+          "average_precision": 0.13209340533857725,
+          "mean_at_positive": 52.64230330086302,
+          "mean_at_negative": 26.814855296177733
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 135318,
+          "negative": 9039722,
+          "prevalence": 0.014748491559709821,
+          "auc": 0.890571600485832,
+          "average_precision": 0.09649319017493611,
+          "mean_at_positive": 38.076900338461996,
+          "mean_at_negative": 21.459918568292256
+        },
+        "dapi": {
+          "positive": 135318,
+          "negative": 9039722,
+          "prevalence": 0.014748491559709821,
+          "auc": 0.7976656715668006,
+          "average_precision": 0.05284493044340227,
+          "mean_at_positive": 63.32541864349163,
+          "mean_at_negative": 27.65711556173962
+        }
+      }
+    },
+    "ROI081": {
+      "64": {
+        "prediction": {
+          "positive": 122368,
+          "negative": 9052672,
+          "prevalence": 0.013337053571428571,
+          "auc": 0.8948416354929345,
+          "average_precision": 0.12277141712155974,
+          "mean_at_positive": 24.12050536087866,
+          "mean_at_negative": 13.215793524828912
+        },
+        "dapi": {
+          "positive": 122368,
+          "negative": 9052672,
+          "prevalence": 0.013337053571428571,
+          "auc": 0.7808546765253578,
+          "average_precision": 0.041790896637928204,
+          "mean_at_positive": 33.41134120031381,
+          "mean_at_negative": 16.328675997539733
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 37209,
+          "negative": 9137831,
+          "prevalence": 0.0040554591587611604,
+          "auc": 0.8859661877306987,
+          "average_precision": 0.030735083634096962,
+          "mean_at_positive": 23.271412830229245,
+          "mean_at_negative": 13.320876256083091
+        },
+        "dapi": {
+          "positive": 37209,
+          "negative": 9137831,
+          "prevalence": 0.0040554591587611604,
+          "auc": 0.8104629408359466,
+          "average_precision": 0.01665798874545907,
+          "mean_at_positive": 37.969012873229595,
+          "mean_at_negative": 16.4693172810922
+        }
+      }
+    },
+    "ROI087": {
+      "64": {
+        "prediction": {
+          "positive": 469188,
+          "negative": 8705852,
+          "prevalence": 0.05113743373325893,
+          "auc": 0.9048335002107144,
+          "average_precision": 0.3382946918628855,
+          "mean_at_positive": 41.77076566323095,
+          "mean_at_negative": 21.13713867407808
+        },
+        "dapi": {
+          "positive": 469188,
+          "negative": 8705852,
+          "prevalence": 0.05113743373325893,
+          "auc": 0.7588830648842869,
+          "average_precision": 0.12170799597419078,
+          "mean_at_positive": 49.3899353777164,
+          "mean_at_negative": 26.26072037521428
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 121972,
+          "negative": 9053068,
+          "prevalence": 0.013293892996651785,
+          "auc": 0.8930081104940154,
+          "average_precision": 0.10851804922329385,
+          "mean_at_positive": 43.37931656445742,
+          "mean_at_negative": 21.90683655529816
+        },
+        "dapi": {
+          "positive": 121972,
+          "negative": 9053068,
+          "prevalence": 0.013293892996651785,
+          "auc": 0.7902832463845096,
+          "average_precision": 0.04583977980344545,
+          "mean_at_positive": 59.74723707080314,
+          "mean_at_negative": 27.008260625016845
+        }
+      }
+    },
+    "ROI093": {
+      "64": {
+        "prediction": {
+          "positive": 119828,
+          "negative": 9055212,
+          "prevalence": 0.013060215541294643,
+          "auc": 0.855075099942087,
+          "average_precision": 0.17910131621257364,
+          "mean_at_positive": 27.180925993924625,
+          "mean_at_negative": 13.231195801931529
+        },
+        "dapi": {
+          "positive": 119828,
+          "negative": 9055212,
+          "prevalence": 0.013060215541294643,
+          "auc": 0.7579473318236628,
+          "average_precision": 0.052696101651205904,
+          "mean_at_positive": 35.76936942951564,
+          "mean_at_negative": 15.589447602110255
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 41909,
+          "negative": 9133131,
+          "prevalence": 0.004567718505859375,
+          "auc": 0.8639324424362371,
+          "average_precision": 0.07727784511522702,
+          "mean_at_positive": 27.994106277887806,
+          "mean_at_negative": 13.34647603324643
+        },
+        "dapi": {
+          "positive": 41909,
+          "negative": 9133131,
+          "prevalence": 0.004567718505859375,
+          "auc": 0.794327853376447,
+          "average_precision": 0.023083811729404345,
+          "mean_at_positive": 40.113531699634926,
+          "mean_at_negative": 15.741677963449774
+        }
+      }
+    },
+    "ROI100": {
+      "64": {
+        "prediction": {
+          "positive": 128887,
+          "negative": 9046153,
+          "prevalence": 0.01404756818498884,
+          "auc": 0.8786777183767039,
+          "average_precision": 0.12047172785117519,
+          "mean_at_positive": 26.416698348165447,
+          "mean_at_negative": 13.205466124660948
+        },
+        "dapi": {
+          "positive": 128887,
+          "negative": 9046153,
+          "prevalence": 0.01404756818498884,
+          "auc": 0.8080183332310809,
+          "average_precision": 0.08514812451692555,
+          "mean_at_positive": 41.65986484284684,
+          "mean_at_negative": 14.989838000750153
+        }
+      },
+      "128": {
+        "prediction": {
+          "positive": 41809,
+          "negative": 9133231,
+          "prevalence": 0.004556819370814732,
+          "auc": 0.8725902817880837,
+          "average_precision": 0.04158599980130389,
+          "mean_at_positive": 26.51711354014686,
+          "mean_at_negative": 13.330964912636064
+        },
+        "dapi": {
+          "positive": 41809,
+          "negative": 9133231,
+          "prevalence": 0.004556819370814732,
+          "auc": 0.8143638796840881,
+          "average_precision": 0.03754371220090377,
+          "mean_at_positive": 44.903561434140975,
+          "mean_at_negative": 15.22926661988512
+        }
+      }
+    }
+  }
+}

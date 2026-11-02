@@ -1,0 +1,94 @@
+{
+  "protocol": "round113_cv2_dino_residual",
+  "source_commit": "496124768443b86ce518dd79a97a8ca6813f5b4b",
+  "protocol_sha256": "b5c467bbca5ef32ef4b21d0ded79d8074f0f33ef78cf2d575bdc9d2b54a28469",
+  "smoke": {
+    "protocol_sha256": "b5c467bbca5ef32ef4b21d0ded79d8074f0f33ef78cf2d575bdc9d2b54a28469",
+    "stages": [
+      {
+        "stage": 1,
+        "seconds": 21.655893655028194,
+        "peak_gib": 15.163052558898926,
+        "init": {
+          "version": 1,
+          "mode": "fold-local-dapi-fcmae",
+          "scope": "encoder",
+          "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round52_cv2_unext2_official_fcmae_fold0_dapi_officialfcmae800_pretraining/final_encoder.pt",
+          "checkpoint_sha256": "50231215826b6d533975594030e48c7dca1316f0f2593f426bf02732ff33b0c9",
+          "pretraining_epoch": 800,
+          "pretraining_val_rois": [
+            "ROI001",
+            "ROI011",
+            "ROI012",
+            "ROI020",
+            "ROI022"
+          ],
+          "pretraining_markers": [
+            "DAPI"
+          ],
+          "encoder_spec": {
+            "version": 1,
+            "architecture": "convnext-v2-tiny-dense-fcmae",
+            "input_channels": 1,
+            "stem_kernel": 2,
+            "stem_stride": 2,
+            "stage_blocks": [
+              3,
+              3,
+              9,
+              3
+            ],
+            "stage_dims": [
+              96,
+              192,
+              384,
+              768
+            ],
+            "total_stride": 16,
+            "block": "convnext-v2-grn"
+          },
+          "state_tensors_loaded": 196
+        },
+        "parameters": 53873813
+      },
+      {
+        "stage": 2,
+        "seconds": 21.814418070949614,
+        "peak_gib": 15.363770008087158,
+        "init": {
+          "version": 1,
+          "mode": "strict",
+          "source_markers": [
+            "CD68",
+            "CD45RO",
+            "HLA-DR",
+            "Vimentin"
+          ],
+          "target_markers": [
+            "CD68",
+            "CD45RO",
+            "HLA-DR",
+            "Vimentin"
+          ]
+        },
+        "parameters": 53873813
+      }
+    ]
+  },
+  "gpu_candidates": [
+    1
+  ],
+  "pending_folds": [
+    "fold2"
+  ],
+  "source_sha256": {
+    "src/ihc_dinov2.py": "e8211d29201dc81bca0be10949f2abf4e91a3fc53b272f4cafd93e777c8aa9a1",
+    "src/ihc_dino_residual.py": "c72cb83854a413078a9b98ad5c8d81348fd14c602e9c096214e9295a9459056f",
+    "src/ihc_torch.py": "afa864bc8d84c11ecf589603c2b9819098de1303886c5d5ce9a14b344f5a61f9",
+    "tools/train_unet.py": "57f275bdf4c7be48168bc569cdbb9635985614c0a629808de0af04c36595489b",
+    "tools/cv_protocol.py": "229898a5ef402adf0bc0201dbc494d945ad68e7712ca4a3e5cfb837f348c24d3",
+    "tools/run_cv_training.py": "796268db43bfde6f96bc4c729d63bbd87709de1887f3847d803d920ecddd5382",
+    "tools/run_training_screen.py": "eabfe55894d87207542f44ef2bb2cb7ba71dd94339c5818efbb708ca1dcde4b2"
+  },
+  "previous_launch_sha256": "1bb378287c5d97057e827825271f5e90bf25ec9750d8d05863fd410e7aca0e5a"
+}

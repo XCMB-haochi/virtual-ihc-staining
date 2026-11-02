@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "name": "round26_cv5",
+  "marker": "CD68",
+  "expected_rois": [
+    "ROI000",
+    "ROI001",
+    "ROI002",
+    "ROI003",
+    "ROI004",
+    "ROI005",
+    "ROI006",
+    "ROI007",
+    "ROI008",
+    "ROI009",
+    "ROI010",
+    "ROI011",
+    "ROI012",
+    "ROI013",
+    "ROI014",
+    "ROI015",
+    "ROI016",
+    "ROI017",
+    "ROI018",
+    "ROI019",
+    "ROI020",
+    "ROI021",
+    "ROI022",
+    "ROI023",
+    "ROI024"
+  ],
+  "folds": [
+    {
+      "name": "fold0",
+      "val_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022"]
+    },
+    {
+      "name": "fold1",
+      "val_rois": ["ROI002", "ROI009", "ROI018", "ROI015", "ROI005"]
+    },
+    {
+      "name": "fold2",
+      "val_rois": ["ROI008", "ROI000", "ROI007", "ROI024", "ROI014"]
+    },
+    {
+      "name": "fold3",
+      "val_rois": ["ROI023", "ROI017", "ROI004", "ROI019", "ROI010"]
+    },
+    {
+      "name": "fold4",
+      "val_rois": ["ROI016", "ROI021", "ROI013", "ROI006", "ROI003"]
+    }
+  ],
+  "recipes": {
+    "base32": {
+      "context_halo": 0,
+      "train_target_context_halo": 0
+    },
+    "fulltarget": {
+      "context_halo": 64,
+      "train_target_context_halo": 64
+    }
+  },
+  "training": {
+    "epochs_per_stage": 14,
+    "stage1_learning_rate": 0.0003,
+    "stage2_learning_rate": 0.0001,
+    "batch_size": 8,
+    "workers": 4,
+    "seed": 2026,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95
+  },
+  "inference": {
+    "context_halo": 64,
+    "tta": "d4",
+    "jpeg_quality": 95,
+    "batch_size": 8
+  },
+  "candidates": {
+    "base32": {"base32": 1.0},
+    "fulltarget": {"fulltarget": 1.0},
+    "base32_fulltarget_50": {"base32": 0.5, "fulltarget": 0.5}
+  },
+  "baseline_candidate": "base32",
+  "primary_candidate": "base32_fulltarget_50"
+}

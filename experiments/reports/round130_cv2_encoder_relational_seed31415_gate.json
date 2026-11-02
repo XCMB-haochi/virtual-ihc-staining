@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "protocol_name": "round130_cv2_encoder_relational_seed31415",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "feature_guidance": {
+      "passed": false,
+      "candidate": "encoderrelationalseed31415_context128",
+      "baseline": "officialauxiliary15_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": true,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.04537552081136198,
+      "overall_float_delta": 0.0517143166371028,
+      "fold_q95_deltas": {
+        "fold0": 0.034984454739628745,
+        "fold2": 0.055112031539991335
+      },
+      "positive_folds": [
+        "fold0",
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": -0.2608311853510372,
+        "ROI001": 0.23695714314185068,
+        "ROI007": 0.00937683950492385,
+        "ROI008": 0.29686168069126495,
+        "ROI011": -0.04382619036468327,
+        "ROI012": 0.12216532558741733,
+        "ROI014": 0.03790312983902311,
+        "ROI020": 0.0905478336309784,
+        "ROI022": -0.19110516682597734,
+        "ROI024": 0.13590864099371913
+      },
+      "positive_rois": [
+        "ROI001",
+        "ROI007",
+        "ROI008",
+        "ROI012",
+        "ROI014",
+        "ROI020",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.2608311853510372,
+      "thresholds": {
+        "candidate": "encoderrelationalseed31415_context128",
+        "baseline": "officialauxiliary15_context128",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round130_cv2_encoder_relational_seed31415.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round130_cv2_encoder_relational_seed31415_oof.json",
+  "oof_report_sha256": "f229a7cfda4b0fe161998b0dd3306fd084f96482c3c2f96d761c8b6a395d45dc"
+}

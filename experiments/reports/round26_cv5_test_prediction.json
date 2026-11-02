@@ -1,0 +1,134 @@
+{
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round26_cv5.json",
+  "protocol_name": "round26_cv5",
+  "candidate": "base32_fulltarget_50",
+  "marker": "CD68",
+  "test_images": 1346,
+  "context_halo": 64,
+  "tta": "d4",
+  "jpeg_quality": 95,
+  "output": "/workspace/virtual_ihc_staining_generation/predictions/round26_cv5_base32_fulltarget50_context64_d4_raw_q95",
+  "members": [
+    {
+      "id": "fold0/base32",
+      "fold": "fold0",
+      "recipe": "base32",
+      "weight": 0.1,
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round26_cv5_fold0_base32_stage2/best_global_mse.pt",
+      "sha256": "e633c1477d917a2784cc4f31846bcc5486f55d55f3611d20f1520e35aa51d980",
+      "conditioning": {
+        "version": 1,
+        "mode": "none"
+      }
+    },
+    {
+      "id": "fold0/fulltarget",
+      "fold": "fold0",
+      "recipe": "fulltarget",
+      "weight": 0.1,
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round26_cv5_fold0_fulltarget_stage2/best_global_mse.pt",
+      "sha256": "fc5bf9b7a2b3a08fbd66b4ab2dc054af63f98d7269eaf5782e19e17df1d77172",
+      "conditioning": {
+        "version": 1,
+        "mode": "none"
+      }
+    },
+    {
+      "id": "fold1/base32",
+      "fold": "fold1",
+      "recipe": "base32",
+      "weight": 0.1,
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round26_cv5_fold1_base32_stage2/best_global_mse.pt",
+      "sha256": "312e18d295f0785cc0f7aa112bd12f24b002219da51b33cecb1a30aa8f63574f",
+      "conditioning": {
+        "version": 1,
+        "mode": "none"
+      }
+    },
+    {
+      "id": "fold1/fulltarget",
+      "fold": "fold1",
+      "recipe": "fulltarget",
+      "weight": 0.1,
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round26_cv5_fold1_fulltarget_stage2/best_global_mse.pt",
+      "sha256": "767e9c7388af21dabde892b068c77f9f82f6ea306a494888e0b16e83febf02d3",
+      "conditioning": {
+        "version": 1,
+        "mode": "none"
+      }
+    },
+    {
+      "id": "fold2/base32",
+      "fold": "fold2",
+      "recipe": "base32",
+      "weight": 0.1,
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round26_cv5_fold2_base32_stage2/best_global_mse.pt",
+      "sha256": "e45efc332eb4f0635156cc3525843dd55859d1ee8dd1c8344029bf6aa916eb19",
+      "conditioning": {
+        "version": 1,
+        "mode": "none"
+      }
+    },
+    {
+      "id": "fold2/fulltarget",
+      "fold": "fold2",
+      "recipe": "fulltarget",
+      "weight": 0.1,
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round26_cv5_fold2_fulltarget_stage2/best_global_mse.pt",
+      "sha256": "7a41fb5d8b6b249c7e67b8f4f462d4eb47e6234b6d1ba84b77c69a5ccfbbb00c",
+      "conditioning": {
+        "version": 1,
+        "mode": "none"
+      }
+    },
+    {
+      "id": "fold3/base32",
+      "fold": "fold3",
+      "recipe": "base32",
+      "weight": 0.1,
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round26_cv5_fold3_base32_stage2/best_global_mse.pt",
+      "sha256": "7c273d0dc454d714a3573ca7a064a2c331904f97d2932a947f731bc3ebd58b32",
+      "conditioning": {
+        "version": 1,
+        "mode": "none"
+      }
+    },
+    {
+      "id": "fold3/fulltarget",
+      "fold": "fold3",
+      "recipe": "fulltarget",
+      "weight": 0.1,
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round26_cv5_fold3_fulltarget_stage2/best_global_mse.pt",
+      "sha256": "18693051c5e2f5819b57b827af0b596303a71100b6a1d13bf2045a13308351f3",
+      "conditioning": {
+        "version": 1,
+        "mode": "none"
+      }
+    },
+    {
+      "id": "fold4/base32",
+      "fold": "fold4",
+      "recipe": "base32",
+      "weight": 0.1,
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round26_cv5_fold4_base32_stage2/best_global_mse.pt",
+      "sha256": "139fc11f15657c82ef7762b531058a5ac698c27154e0e7473dd456075fed8a6c",
+      "conditioning": {
+        "version": 1,
+        "mode": "none"
+      }
+    },
+    {
+      "id": "fold4/fulltarget",
+      "fold": "fold4",
+      "recipe": "fulltarget",
+      "weight": 0.1,
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round26_cv5_fold4_fulltarget_stage2/best_global_mse.pt",
+      "sha256": "1f26ff2d6a2129f048715c7d7930df23f04221e36823fd36341e82e2a338f102",
+      "conditioning": {
+        "version": 1,
+        "mode": "none"
+      }
+    }
+  ],
+  "elapsed_seconds": 332.8442776390002
+}

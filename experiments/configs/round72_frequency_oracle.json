@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "name": "round72_frequency_oracle",
+  "cache_root": "runs/round37_cv5_crossfit_refiner_oof_cache",
+  "cache_manifest_sha256": "cb5a1dcaa733fe78a517e3cd0a43eda3a861f76e9f8748cb3456fb7021823522",
+  "fold_manifest_sha256": {
+    "fold0": "97196f4dd9062c238f243eb2cb95b8c7809da5a47786e6b820ac71f7a33e9174",
+    "fold1": "1396c153b8d0a270089cc0238155b3e00387d06d9e48fe32b6fae92512965b3b",
+    "fold2": "9605de726896445d54b01507a63f78995e72cd45742d4b7a9e98e56e771e2fb8",
+    "fold3": "4444267704ed2b8d1d65b948655f8a071d200f6403304fad8ee18587ebe7c92f",
+    "fold4": "f04ce0bc8da2ac1f71c7909cbf01452151d8191f46e547224169aede34e1f37e"
+  },
+  "recipe_order": ["thumbnailbase32", "thumbnailbase48continue"],
+  "baseline_weights": {"thumbnailbase32": 0.7, "thumbnailbase48continue": 0.3},
+  "analysis": {
+    "window_size": 7,
+    "alpha_min": 0.0,
+    "alpha_max": 1.0,
+    "dense_variance_threshold": 58.5225,
+    "variance_epsilon": 0.000001,
+    "chunk_images": 16,
+    "jpeg_quality": 95
+  },
+  "decision": {
+    "minimum_crossfit_q95_gain": 0.03,
+    "minimum_crossfit_positive_folds": 4,
+    "minimum_crossfit_positive_rois": 18,
+    "minimum_crossfit_roi_gain": -0.05,
+    "minimum_training_oracle_q95_gain": 0.15,
+    "minimum_training_oracle_positive_folds": 4
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round109_cross_modal_feature_diagnostic.json",
+  "protocol_name": "round109_cross_modal_feature_diagnostic",
+  "formal": true,
+  "data_root": "/workspace/virtual_ihc_staining_generation/dataset/初赛数据集（包含训练集和测试集输入）",
+  "marker": "CD68",
+  "embedding": {
+    "encoder_source": "round96_fold_local_multimarker_fcmae",
+    "feature": "stage4_spatial_mean",
+    "dimension": 768,
+    "input_size": 256,
+    "batch_size": 64,
+    "workers": 4
+  },
+  "mapping": {
+    "type": "standardized_ridge",
+    "alpha": 10.0,
+    "solver": "cholesky"
+  },
+  "folds": {
+    "fold0": {
+      "train_images": 4987,
+      "validation_images": 1309,
+      "train_rois": [
+        "ROI000",
+        "ROI002",
+        "ROI003",
+        "ROI004",
+        "ROI005",
+        "ROI006",
+        "ROI007",
+        "ROI008",
+        "ROI009",
+        "ROI010",
+        "ROI013",
+        "ROI014",
+        "ROI015",
+        "ROI016",
+        "ROI017",
+        "ROI018",
+        "ROI019",
+        "ROI021",
+        "ROI023",
+        "ROI024"
+      ],
+      "validation_rois": [
+        "ROI001",
+        "ROI011",
+        "ROI012",
+        "ROI020",
+        "ROI022"
+      ],
+      "encoder": {
+        "path": "/workspace/virtual_ihc_staining_generation/runs/round96_cv2_multimarker_fcmae_fold0_official_multimarker_fcmae160_pretraining/final_encoder.pt",
+        "sha256": "fa2d96bfa3196b913f954a15862987c94e45d7cc2e0088edde19be2029c9449c",
+        "epoch": 160,
+        "pretraining_markers": [
+          "DAPI",
+          "CD68",
+          "CD45RO",
+          "HLA-DR",
+          "Vimentin"
+        ],
+        "excluded_val_rois": [
+          "ROI001",
+          "ROI011",
+          "ROI012",
+          "ROI020",
+          "ROI022"
+        ]
+      },
+      "metrics": {
+        "standardized_r2": 0.6716126858937459,
+        "standardized_residual_sum": 360081.9176541148,
+        "standardized_baseline_sum": 1096515.9194231404,
+        "mapped_centered_cosine": 0.8121866367300034,
+        "paired_cosine": 0.980818147973799,
+        "within_roi_mismatched_cosine": 0.9703110981810036,
+        "paired_cosine_advantage": 0.010507049792795375
+      }
+    },
+    "fold2": {
+      "train_images": 4899,
+      "validation_images": 1397,
+      "train_rois": [
+        "ROI001",
+        "ROI002",
+        "ROI003",
+        "ROI004",
+        "ROI005",
+        "ROI006",
+        "ROI009",
+        "ROI010",
+        "ROI011",
+        "ROI012",
+        "ROI013",
+        "ROI015",
+        "ROI016",
+        "ROI017",
+        "ROI018",
+        "ROI019",
+        "ROI020",
+        "ROI021",
+        "ROI022",
+        "ROI023"
+      ],
+      "validation_rois": [
+        "ROI000",
+        "ROI007",
+        "ROI008",
+        "ROI014",
+        "ROI024"
+      ],
+      "encoder": {
+        "path": "/workspace/virtual_ihc_staining_generation/runs/round96_cv2_multimarker_fcmae_fold2_official_multimarker_fcmae160_pretraining/final_encoder.pt",
+        "sha256": "ce54525418ccd5ef3dc08085e2fa3614d76aa2b51bffdff57f48e00d52129c72",
+        "epoch": 160,
+        "pretraining_markers": [
+          "DAPI",
+          "CD68",
+          "CD45RO",
+          "HLA-DR",
+          "Vimentin"
+        ],
+        "excluded_val_rois": [
+          "ROI000",
+          "ROI007",
+          "ROI008",
+          "ROI014",
+          "ROI024"
+        ]
+      },
+      "metrics": {
+        "standardized_r2": 0.6380970162783932,
+        "standardized_residual_sum": 394915.64030615677,
+        "standardized_baseline_sum": 1091219.6308664447,
+        "mapped_centered_cosine": 0.7952584509066517,
+        "paired_cosine": 0.972783056663938,
+        "within_roi_mismatched_cosine": 0.9589416826428426,
+        "paired_cosine_advantage": 0.01384137402109542
+      }
+    }
+  },
+  "overall": {
+    "weighted_standardized_r2": 0.6548954201250081,
+    "fold_r2": {
+      "fold0": 0.6716126858937459,
+      "fold2": 0.6380970162783932
+    },
+    "fold_paired_cosine_advantage": {
+      "fold0": 0.010507049792795375,
+      "fold2": 0.01384137402109542
+    }
+  },
+  "gate": {
+    "thresholds": {
+      "minimum_weighted_r2": 0.05,
+      "minimum_fold_r2": 0.0,
+      "minimum_fold_paired_cosine_advantage": 0.01
+    },
+    "checks": {
+      "weighted_r2": true,
+      "fold_r2": true,
+      "paired_cosine_advantage": true
+    },
+    "feature_guidance_actionable": true
+  },
+  "elapsed_seconds": 97.9935284589883
+}

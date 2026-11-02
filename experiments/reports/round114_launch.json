@@ -1,0 +1,99 @@
+{
+  "protocol": "round114_cv2_dino_bottleneck_fusion",
+  "source_commit": "49e6bf84c56fa429041f134fa5afa0fe72d6921d",
+  "source_commit_argument_correction": {
+    "original_argument": "49e6bf8a4c0af114d6c8d41a8051826fe8021fe3",
+    "reason": "Transcription error; all eight recorded deployed source files match this Git commit after LF normalization."
+  },
+  "protocol_sha256": "f6949b5dcefe70013d3d39f063526206a6786c94f83b4562ce138f3535423086",
+  "smoke": {
+    "protocol_sha256": "f6949b5dcefe70013d3d39f063526206a6786c94f83b4562ce138f3535423086",
+    "stages": [
+      {
+        "stage": 1,
+        "seconds": 20.767898992984556,
+        "peak_gib": 14.582584857940674,
+        "init": {
+          "version": 1,
+          "mode": "fold-local-dapi-fcmae",
+          "scope": "encoder",
+          "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round52_cv2_unext2_official_fcmae_fold0_dapi_officialfcmae800_pretraining/final_encoder.pt",
+          "checkpoint_sha256": "50231215826b6d533975594030e48c7dca1316f0f2593f426bf02732ff33b0c9",
+          "pretraining_epoch": 800,
+          "pretraining_val_rois": [
+            "ROI001",
+            "ROI011",
+            "ROI012",
+            "ROI020",
+            "ROI022"
+          ],
+          "pretraining_markers": [
+            "DAPI"
+          ],
+          "encoder_spec": {
+            "version": 1,
+            "architecture": "convnext-v2-tiny-dense-fcmae",
+            "input_channels": 1,
+            "stem_kernel": 2,
+            "stem_stride": 2,
+            "stage_blocks": [
+              3,
+              3,
+              9,
+              3
+            ],
+            "stage_dims": [
+              96,
+              192,
+              384,
+              768
+            ],
+            "total_stride": 16,
+            "block": "convnext-v2-grn"
+          },
+          "state_tensors_loaded": 196
+        },
+        "parameters": 54107348
+      },
+      {
+        "stage": 2,
+        "seconds": 20.674848246970214,
+        "peak_gib": 14.784171104431152,
+        "init": {
+          "version": 1,
+          "mode": "strict",
+          "source_markers": [
+            "CD68",
+            "CD45RO",
+            "HLA-DR",
+            "Vimentin"
+          ],
+          "target_markers": [
+            "CD68",
+            "CD45RO",
+            "HLA-DR",
+            "Vimentin"
+          ]
+        },
+        "parameters": 54107348
+      }
+    ]
+  },
+  "gpu_candidates": [
+    1
+  ],
+  "pending_folds": [
+    "fold0",
+    "fold2"
+  ],
+  "source_sha256": {
+    "src/ihc_dinov2.py": "e8211d29201dc81bca0be10949f2abf4e91a3fc53b272f4cafd93e777c8aa9a1",
+    "src/ihc_dino_residual.py": "c72cb83854a413078a9b98ad5c8d81348fd14c602e9c096214e9295a9459056f",
+    "src/ihc_dino_fusion.py": "d234400232e4abed123305a4b0a76073bb86ae91b9431e02bdc039bb6504fe6d",
+    "src/ihc_torch.py": "b4b6bc3a3135fa0497e4b569ecf8a54e919b99973f3f3a7551a42c28f569cc8e",
+    "tools/train_unet.py": "d4aff36caf7f23e353309aea0e4d389f3585ff7402f59782ebe9fbeff4d08e06",
+    "tools/cv_protocol.py": "9bc3a4e1f9ba8439731fc39cd05ee061cceaf7f12f1ba116ad896ad0481fae76",
+    "tools/run_cv_training.py": "30bd3efa4f8445840985e196d0f80db9378b8d0e54397dbf9fc2626c76839295",
+    "tools/run_training_screen.py": "89950b74fa1aad76e9e2c42a0aff35da313d5de32d88a809665185fe1d198656"
+  }
+}

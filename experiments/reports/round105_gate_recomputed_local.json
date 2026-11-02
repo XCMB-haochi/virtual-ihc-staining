@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "protocol_name": "round105_cv2_unext2_activity_hard_mix",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "activity_hard_mix": {
+      "passed": false,
+      "candidate": "activity_d4_context128",
+      "baseline": "baseline_d4_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.04010112265531518,
+      "overall_float_delta": -0.03986419046518108,
+      "fold_q95_deltas": {
+        "fold0": -0.14792730086455208,
+        "fold2": 0.060932855351623516
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.3093106506124883,
+        "ROI001": -0.08225373518727963,
+        "ROI007": 0.05682766331226219,
+        "ROI008": -0.05639602015249068,
+        "ROI011": -0.16701017941888097,
+        "ROI012": -0.16612965234573096,
+        "ROI014": -0.22704713487796369,
+        "ROI020": -0.041968010144358914,
+        "ROI022": -0.27343930112121484,
+        "ROI024": 0.20160412833089936
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI007",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.27343930112121484,
+      "thresholds": {
+        "candidate": "activity_d4_context128",
+        "baseline": "baseline_d4_context128",
+        "minimum_q95_gain": 0.03,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\configs\\round105_cv2_unext2_activity_hard_mix.json",
+  "oof_report": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\reports\\round105_cv2_unext2_activity_hard_mix_oof.json",
+  "oof_report_sha256": "9e22225dd98c795e70df304454d51c82350ccfa3f717233faa98ae1a605f4e75"
+}

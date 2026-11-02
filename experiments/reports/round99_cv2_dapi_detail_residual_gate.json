@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "protocol_name": "round99_cv2_dapi_detail_residual",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "dapi_detail_residual": {
+      "passed": false,
+      "candidate": "detailresidual15_context128",
+      "baseline": "officialauxiliary15_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.08349215285869604,
+      "overall_float_delta": -0.0847761173333339,
+      "fold_q95_deltas": {
+        "fold0": -0.05259021497394656,
+        "fold2": -0.11244751197881442
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": 0.22161720289460618,
+        "ROI001": -0.28245947720417064,
+        "ROI007": -0.3513999179177034,
+        "ROI008": -0.3893145878594453,
+        "ROI011": 0.030911166283019043,
+        "ROI012": 0.14227941291385093,
+        "ROI014": -0.1437434326122542,
+        "ROI020": -0.18633754657007273,
+        "ROI022": 0.027022553556491857,
+        "ROI024": 0.16741072236806076
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI011",
+        "ROI012",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.3893145878594453,
+      "thresholds": {
+        "candidate": "detailresidual15_context128",
+        "baseline": "officialauxiliary15_context128",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round99_cv2_dapi_detail_residual.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round99_cv2_dapi_detail_residual_oof.json",
+  "oof_report_sha256": "c2446f26b9c4ed5acba46993dbf311c2994d68c784dbf0258ca2b623b57f0f9c"
+}

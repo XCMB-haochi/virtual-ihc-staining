@@ -1,0 +1,454 @@
+{
+  "dataset": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\dataset\\初赛数据集（包含训练集和测试集输入）",
+  "protocol": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\configs\\round26_cv5.json",
+  "marker": "CD68",
+  "images": 6296,
+  "rois": [
+    "ROI000",
+    "ROI001",
+    "ROI002",
+    "ROI003",
+    "ROI004",
+    "ROI005",
+    "ROI006",
+    "ROI007",
+    "ROI008",
+    "ROI009",
+    "ROI010",
+    "ROI011",
+    "ROI012",
+    "ROI013",
+    "ROI014",
+    "ROI015",
+    "ROI016",
+    "ROI017",
+    "ROI018",
+    "ROI019",
+    "ROI020",
+    "ROI021",
+    "ROI022",
+    "ROI023",
+    "ROI024"
+  ],
+  "radius_tiles": 2,
+  "local_features": [
+    "mean",
+    "std",
+    "q05",
+    "q25",
+    "q50",
+    "q75",
+    "q95",
+    "mean_abs_gradient",
+    "dark_fraction"
+  ],
+  "spatial_features": [
+    "row_position",
+    "col_position",
+    "distance_top",
+    "distance_bottom",
+    "distance_left",
+    "distance_right",
+    "roi_occupancy",
+    "roi_mean_mean",
+    "roi_mean_std",
+    "roi_std_mean",
+    "roi_std_std",
+    "radius1_mean",
+    "radius1_std",
+    "radius1_presence",
+    "radius2_mean",
+    "radius2_std",
+    "radius2_presence",
+    "grid_mean_r-2_c-2",
+    "grid_mean_r-2_c-1",
+    "grid_mean_r-2_c+0",
+    "grid_mean_r-2_c+1",
+    "grid_mean_r-2_c+2",
+    "grid_mean_r-1_c-2",
+    "grid_mean_r-1_c-1",
+    "grid_mean_r-1_c+0",
+    "grid_mean_r-1_c+1",
+    "grid_mean_r-1_c+2",
+    "grid_mean_r+0_c-2",
+    "grid_mean_r+0_c-1",
+    "grid_mean_r+0_c+0",
+    "grid_mean_r+0_c+1",
+    "grid_mean_r+0_c+2",
+    "grid_mean_r+1_c-2",
+    "grid_mean_r+1_c-1",
+    "grid_mean_r+1_c+0",
+    "grid_mean_r+1_c+1",
+    "grid_mean_r+1_c+2",
+    "grid_mean_r+2_c-2",
+    "grid_mean_r+2_c-1",
+    "grid_mean_r+2_c+0",
+    "grid_mean_r+2_c+1",
+    "grid_mean_r+2_c+2",
+    "grid_std_r-2_c-2",
+    "grid_std_r-2_c-1",
+    "grid_std_r-2_c+0",
+    "grid_std_r-2_c+1",
+    "grid_std_r-2_c+2",
+    "grid_std_r-1_c-2",
+    "grid_std_r-1_c-1",
+    "grid_std_r-1_c+0",
+    "grid_std_r-1_c+1",
+    "grid_std_r-1_c+2",
+    "grid_std_r+0_c-2",
+    "grid_std_r+0_c-1",
+    "grid_std_r+0_c+0",
+    "grid_std_r+0_c+1",
+    "grid_std_r+0_c+2",
+    "grid_std_r+1_c-2",
+    "grid_std_r+1_c-1",
+    "grid_std_r+1_c+0",
+    "grid_std_r+1_c+1",
+    "grid_std_r+1_c+2",
+    "grid_std_r+2_c-2",
+    "grid_std_r+2_c-1",
+    "grid_std_r+2_c+0",
+    "grid_std_r+2_c+1",
+    "grid_std_r+2_c+2",
+    "grid_present_r-2_c-2",
+    "grid_present_r-2_c-1",
+    "grid_present_r-2_c+0",
+    "grid_present_r-2_c+1",
+    "grid_present_r-2_c+2",
+    "grid_present_r-1_c-2",
+    "grid_present_r-1_c-1",
+    "grid_present_r-1_c+0",
+    "grid_present_r-1_c+1",
+    "grid_present_r-1_c+2",
+    "grid_present_r+0_c-2",
+    "grid_present_r+0_c-1",
+    "grid_present_r+0_c+0",
+    "grid_present_r+0_c+1",
+    "grid_present_r+0_c+2",
+    "grid_present_r+1_c-2",
+    "grid_present_r+1_c-1",
+    "grid_present_r+1_c+0",
+    "grid_present_r+1_c+1",
+    "grid_present_r+1_c+2",
+    "grid_present_r+2_c-2",
+    "grid_present_r+2_c-1",
+    "grid_present_r+2_c+0",
+    "grid_present_r+2_c+1",
+    "grid_present_r+2_c+2"
+  ],
+  "feature_groups": {
+    "geometry": [
+      "row_position",
+      "col_position",
+      "distance_top",
+      "distance_bottom",
+      "distance_left",
+      "distance_right",
+      "roi_occupancy",
+      "roi_mean_mean",
+      "roi_mean_std",
+      "roi_std_mean",
+      "roi_std_std"
+    ],
+    "neighborhood": [
+      "radius1_mean",
+      "radius1_std",
+      "radius1_presence",
+      "radius2_mean",
+      "radius2_std",
+      "radius2_presence",
+      "grid_mean_r-2_c-2",
+      "grid_mean_r-2_c-1",
+      "grid_mean_r-2_c+0",
+      "grid_mean_r-2_c+1",
+      "grid_mean_r-2_c+2",
+      "grid_mean_r-1_c-2",
+      "grid_mean_r-1_c-1",
+      "grid_mean_r-1_c+0",
+      "grid_mean_r-1_c+1",
+      "grid_mean_r-1_c+2",
+      "grid_mean_r+0_c-2",
+      "grid_mean_r+0_c-1",
+      "grid_mean_r+0_c+0",
+      "grid_mean_r+0_c+1",
+      "grid_mean_r+0_c+2",
+      "grid_mean_r+1_c-2",
+      "grid_mean_r+1_c-1",
+      "grid_mean_r+1_c+0",
+      "grid_mean_r+1_c+1",
+      "grid_mean_r+1_c+2",
+      "grid_mean_r+2_c-2",
+      "grid_mean_r+2_c-1",
+      "grid_mean_r+2_c+0",
+      "grid_mean_r+2_c+1",
+      "grid_mean_r+2_c+2",
+      "grid_std_r-2_c-2",
+      "grid_std_r-2_c-1",
+      "grid_std_r-2_c+0",
+      "grid_std_r-2_c+1",
+      "grid_std_r-2_c+2",
+      "grid_std_r-1_c-2",
+      "grid_std_r-1_c-1",
+      "grid_std_r-1_c+0",
+      "grid_std_r-1_c+1",
+      "grid_std_r-1_c+2",
+      "grid_std_r+0_c-2",
+      "grid_std_r+0_c-1",
+      "grid_std_r+0_c+0",
+      "grid_std_r+0_c+1",
+      "grid_std_r+0_c+2",
+      "grid_std_r+1_c-2",
+      "grid_std_r+1_c-1",
+      "grid_std_r+1_c+0",
+      "grid_std_r+1_c+1",
+      "grid_std_r+1_c+2",
+      "grid_std_r+2_c-2",
+      "grid_std_r+2_c-1",
+      "grid_std_r+2_c+0",
+      "grid_std_r+2_c+1",
+      "grid_std_r+2_c+2",
+      "grid_present_r-2_c-2",
+      "grid_present_r-2_c-1",
+      "grid_present_r-2_c+0",
+      "grid_present_r-2_c+1",
+      "grid_present_r-2_c+2",
+      "grid_present_r-1_c-2",
+      "grid_present_r-1_c-1",
+      "grid_present_r-1_c+0",
+      "grid_present_r-1_c+1",
+      "grid_present_r-1_c+2",
+      "grid_present_r+0_c-2",
+      "grid_present_r+0_c-1",
+      "grid_present_r+0_c+0",
+      "grid_present_r+0_c+1",
+      "grid_present_r+0_c+2",
+      "grid_present_r+1_c-2",
+      "grid_present_r+1_c-1",
+      "grid_present_r+1_c+0",
+      "grid_present_r+1_c+1",
+      "grid_present_r+1_c+2",
+      "grid_present_r+2_c-2",
+      "grid_present_r+2_c-1",
+      "grid_present_r+2_c+0",
+      "grid_present_r+2_c+1",
+      "grid_present_r+2_c+2"
+    ]
+  },
+  "regressor": {
+    "type": "HistGradientBoostingRegressor",
+    "learning_rate": 0.05,
+    "max_iter": 300,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "l2_regularization": 1.0,
+    "early_stopping": false,
+    "seed": 2026
+  },
+  "folds": [
+    {
+      "name": "fold0",
+      "val_rois": [
+        "ROI011",
+        "ROI012",
+        "ROI001",
+        "ROI020",
+        "ROI022"
+      ],
+      "train_images": 4987,
+      "validation_images": 1309,
+      "models": {
+        "local": {
+          "rmse_uint8": 7.606018763117204,
+          "mae_uint8": 5.537419114261866,
+          "r2": 0.5945168729355907
+        },
+        "local_geometry": {
+          "rmse_uint8": 6.94170334727892,
+          "mae_uint8": 5.14604059047997,
+          "r2": 0.6622540867966842
+        },
+        "local_neighborhood": {
+          "rmse_uint8": 7.6292500404027,
+          "mae_uint8": 5.593060003593564,
+          "r2": 0.5920361331498103
+        },
+        "local_spatial": {
+          "rmse_uint8": 6.846910799040957,
+          "mae_uint8": 5.130503224208951,
+          "r2": 0.6714152963893909
+        }
+      },
+      "relative_rmse_reduction": 0.09980358814749213
+    },
+    {
+      "name": "fold1",
+      "val_rois": [
+        "ROI002",
+        "ROI009",
+        "ROI018",
+        "ROI015",
+        "ROI005"
+      ],
+      "train_images": 5151,
+      "validation_images": 1145,
+      "models": {
+        "local": {
+          "rmse_uint8": 7.789814450601487,
+          "mae_uint8": 5.76790239661932,
+          "r2": 0.6181655145739098
+        },
+        "local_geometry": {
+          "rmse_uint8": 8.315727338248863,
+          "mae_uint8": 6.084232572466135,
+          "r2": 0.564867617301969
+        },
+        "local_neighborhood": {
+          "rmse_uint8": 7.497592753674427,
+          "mae_uint8": 5.576336150988936,
+          "r2": 0.6462759268503664
+        },
+        "local_spatial": {
+          "rmse_uint8": 7.773040894073273,
+          "mae_uint8": 5.742048108950257,
+          "r2": 0.6198081279699414
+        }
+      },
+      "relative_rmse_reduction": 0.002153267787645241
+    },
+    {
+      "name": "fold2",
+      "val_rois": [
+        "ROI008",
+        "ROI000",
+        "ROI007",
+        "ROI024",
+        "ROI014"
+      ],
+      "train_images": 4899,
+      "validation_images": 1397,
+      "models": {
+        "local": {
+          "rmse_uint8": 8.244872656874128,
+          "mae_uint8": 6.445383718237281,
+          "r2": 0.5528446677803363
+        },
+        "local_geometry": {
+          "rmse_uint8": 7.122171646761084,
+          "mae_uint8": 5.406082961708307,
+          "r2": 0.6663313673817217
+        },
+        "local_neighborhood": {
+          "rmse_uint8": 7.895104740177004,
+          "mae_uint8": 6.135897450149059,
+          "r2": 0.5899788104661579
+        },
+        "local_spatial": {
+          "rmse_uint8": 7.062534652775508,
+          "mae_uint8": 5.324685154482722,
+          "r2": 0.671895873214545
+        }
+      },
+      "relative_rmse_reduction": 0.1434028217661859
+    },
+    {
+      "name": "fold3",
+      "val_rois": [
+        "ROI023",
+        "ROI017",
+        "ROI004",
+        "ROI019",
+        "ROI010"
+      ],
+      "train_images": 5082,
+      "validation_images": 1214,
+      "models": {
+        "local": {
+          "rmse_uint8": 7.208960133458729,
+          "mae_uint8": 5.4362789914011955,
+          "r2": 0.6138665303141702
+        },
+        "local_geometry": {
+          "rmse_uint8": 6.5796296092169335,
+          "mae_uint8": 4.956384692341089,
+          "r2": 0.678341455463534
+        },
+        "local_neighborhood": {
+          "rmse_uint8": 7.263194334499047,
+          "mae_uint8": 5.517857288941741,
+          "r2": 0.6080347838353223
+        },
+        "local_spatial": {
+          "rmse_uint8": 6.58814647350416,
+          "mae_uint8": 5.014908201992512,
+          "r2": 0.677508188124149
+        }
+      },
+      "relative_rmse_reduction": 0.08611695008177456
+    },
+    {
+      "name": "fold4",
+      "val_rois": [
+        "ROI016",
+        "ROI021",
+        "ROI013",
+        "ROI006",
+        "ROI003"
+      ],
+      "train_images": 5065,
+      "validation_images": 1231,
+      "models": {
+        "local": {
+          "rmse_uint8": 8.852844735024277,
+          "mae_uint8": 5.793900126591325,
+          "r2": 0.5221255056281218
+        },
+        "local_geometry": {
+          "rmse_uint8": 8.069692983835191,
+          "mae_uint8": 5.293931029736996,
+          "r2": 0.6029344755434678
+        },
+        "local_neighborhood": {
+          "rmse_uint8": 8.54764957487862,
+          "mae_uint8": 5.581583194434643,
+          "r2": 0.5545062914917851
+        },
+        "local_spatial": {
+          "rmse_uint8": 7.817375858652708,
+          "mae_uint8": 5.059636551886797,
+          "r2": 0.6273765837198684
+        }
+      },
+      "relative_rmse_reduction": 0.11696453596152778
+    }
+  ],
+  "overall": {
+    "local": {
+      "rmse_uint8": 7.968133221725596,
+      "mae_uint8": 5.811446160078049,
+      "r2": 0.5793353020804756
+    },
+    "local_geometry": {
+      "rmse_uint8": 7.4114555824555115,
+      "mae_uint8": 5.3667075745761395,
+      "r2": 0.6360598959887613
+    },
+    "local_neighborhood": {
+      "rmse_uint8": 7.785416679769165,
+      "mae_uint8": 5.693722777068615,
+      "r2": 0.59840655364092
+    },
+    "local_spatial": {
+      "rmse_uint8": 7.219433789799589,
+      "mae_uint8": 5.248661683872342,
+      "r2": 0.6546740859143465
+    },
+    "relative_rmse_reduction": 0.09396171111755924
+  },
+  "decision": {
+    "minimum_overall_relative_rmse_reduction": 0.01,
+    "minimum_positive_folds": 4,
+    "positive_folds": 5,
+    "promote_spatial_context": true,
+    "scope": "Proxy decision for a neural spatial-context experiment; tile-mean regression is not a competition-score estimate."
+  }
+}

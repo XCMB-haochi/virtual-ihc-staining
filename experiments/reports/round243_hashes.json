@@ -1,0 +1,14 @@
+{
+  "model_sha256": "b33b9fb976acb1b5c58d0b80cb8f93cccec5192ec16dccb2cb0fa483d50da087",
+  "package_sha256": "a6397781724430a71698004e7c6de58934c9dc1156ccb8c3074cf98cd73527ce",
+  "views": 16,
+  "translation": [
+    8,
+    8
+  ],
+  "boundary": "replicate",
+  "inverse_translation": [
+    -8,
+    -8
+  ]
+}

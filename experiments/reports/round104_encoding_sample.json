@@ -1,0 +1,51 @@
+{
+  "jpeg_q75": {
+    "images": 500,
+    "ssim": 0.8388644880003158,
+    "psnr": 26.8142377032574,
+    "competition_score_official": 74.80905678197654
+  },
+  "jpeg_q90": {
+    "images": 500,
+    "ssim": 0.8414537698869865,
+    "psnr": 26.82831159879747,
+    "competition_score_official": 74.99875085136742
+  },
+  "jpeg_q95": {
+    "images": 500,
+    "ssim": 0.841971928930084,
+    "psnr": 26.83080790189181,
+    "competition_score_official": 75.03651976624094
+  },
+  "jpeg_q98": {
+    "images": 500,
+    "ssim": 0.8420116052211196,
+    "psnr": 26.831196044245974,
+    "competition_score_official": 75.03952999202605
+  },
+  "jpeg_q100": {
+    "images": 500,
+    "ssim": 0.841749199095441,
+    "psnr": 26.830005569940095,
+    "competition_score_official": 75.0204472786449
+  },
+  "jpeg_q95_optimize": {
+    "images": 500,
+    "ssim": 0.841971928930084,
+    "psnr": 26.83080790189181,
+    "competition_score_official": 75.03651976624094
+  },
+  "png_lossless": {
+    "images": 500,
+    "ssim": 0.8422492203621019,
+    "psnr": 26.83240059050871,
+    "competition_score_official": 75.05688577965229
+  },
+  "metadata": {
+    "cache_protocol": "round37_cv5_crossfit_refiner",
+    "selected_images": 500,
+    "source": "0.7*thumbnailbase32 + 0.3*thumbnailbase48continue",
+    "selection": "deterministic evenly spaced sample per fold; no test data",
+    "names_sha256": "6423d482679078e615c2ee07dee0af7b0f8f3a3d5a519089dbc63e0d7a97df23"
+  }
+}

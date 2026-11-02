@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "protocol_name": "round128_cv5_relational_seed_blend",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "seed_blend": {
+      "passed": false,
+      "candidate": "relational_seed_blend5050_context128",
+      "baseline": "relational_seed2027_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": true,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": true,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.10259344330277997,
+      "overall_float_delta": 0.10129953711799544,
+      "fold_q95_deltas": {
+        "fold0": 0.1308660483891515,
+        "fold1": 0.09711251639154739,
+        "fold2": 0.1190099559162121,
+        "fold3": 0.15157062099572727,
+        "fold4": 0.010696334786075568
+      },
+      "positive_folds": [
+        "fold0",
+        "fold1",
+        "fold2",
+        "fold3",
+        "fold4"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.019170846377761563,
+        "ROI001": 0.06354382564268235,
+        "ROI002": 0.17108525866613888,
+        "ROI003": 0.2353543247016745,
+        "ROI004": 0.19550640412703046,
+        "ROI005": -0.06840250863331221,
+        "ROI006": 0.21430229650509602,
+        "ROI007": 0.013964862165252612,
+        "ROI008": -0.036374758909232696,
+        "ROI009": -0.09116077906222131,
+        "ROI010": 0.16803923939166054,
+        "ROI011": 0.21854777009512816,
+        "ROI012": 0.1872445033474719,
+        "ROI013": 0.07681956053221484,
+        "ROI014": 0.15880585619217413,
+        "ROI015": 0.5067034235708263,
+        "ROI016": -0.4521993973856411,
+        "ROI017": 0.062365919151488924,
+        "ROI018": 0.03490374293184573,
+        "ROI019": 0.2578227978683856,
+        "ROI020": 0.14651226855168886,
+        "ROI021": 0.060652745283562126,
+        "ROI022": 0.031015628940025408,
+        "ROI023": 0.04386859468402804,
+        "ROI024": 0.45788394792289466
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI001",
+        "ROI002",
+        "ROI003",
+        "ROI004",
+        "ROI006",
+        "ROI007",
+        "ROI010",
+        "ROI011",
+        "ROI012",
+        "ROI013",
+        "ROI014",
+        "ROI015",
+        "ROI017",
+        "ROI018",
+        "ROI019",
+        "ROI020",
+        "ROI021",
+        "ROI022",
+        "ROI023",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.4521993973856411,
+      "thresholds": {
+        "candidate": "relational_seed_blend5050_context128",
+        "baseline": "relational_seed2027_context128",
+        "minimum_q95_gain": 0.0,
+        "require_positive_float": true,
+        "minimum_positive_folds": 4,
+        "minimum_positive_rois": 18,
+        "minimum_roi_q95_gain": -0.12
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/transfers/round128_runtime/configs/round128_cv5_relational_seed_blend.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/transfers/round128_runtime/reports/round128_cv5_relational_seed_blend_oof.json",
+  "oof_report_sha256": "a69bc6eb00b9507c3386beb1c288a4d58bc6ce2e0a5758a9050d702a01451edf"
+}

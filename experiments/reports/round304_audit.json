@@ -1,0 +1,7 @@
+{
+  "epochs": 27,
+  "samples": 279612,
+  "optimizer_updates": 17496,
+  "finite_weights": true,
+  "endpoint": "fixed by Round303 Val, no full-data checkpoint selection"
+}

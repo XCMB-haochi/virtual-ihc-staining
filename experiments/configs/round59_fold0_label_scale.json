@@ -1,0 +1,255 @@
+{
+  "version": 1,
+  "name": "round59_fold0_label_scale",
+  "marker": "CD68",
+  "roi_scope": "subset",
+  "expected_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022", "ROI008", "ROI000", "ROI007", "ROI024", "ROI014"],
+  "folds": [
+    {"name": "fold0", "val_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022"]},
+    {"name": "fold2", "val_rois": ["ROI008", "ROI000", "ROI007", "ROI024", "ROI014"]}
+  ],
+  "recipes": {
+    "full20": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-film",
+      "train_stages": []
+    },
+    "a15": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-film",
+      "fcmae_encoder_init": true,
+      "epochs_per_stage": 19,
+      "validation_evaluations": 14,
+      "train_rois_by_fold": {
+        "fold0": ["ROI009", "ROI004", "ROI014", "ROI006", "ROI005", "ROI003", "ROI010", "ROI002", "ROI016", "ROI007", "ROI015", "ROI013", "ROI000", "ROI024", "ROI019"],
+        "fold2": ["ROI009", "ROI004", "ROI012", "ROI017", "ROI021", "ROI003", "ROI010", "ROI001", "ROI006", "ROI005", "ROI015", "ROI013", "ROI002", "ROI022", "ROI011"]
+      },
+      "train_stages": [1, 2]
+    },
+    "a10": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-film",
+      "fcmae_encoder_init": true,
+      "epochs_per_stage": 28,
+      "validation_evaluations": 14,
+      "train_rois_by_fold": {
+        "fold0": ["ROI009", "ROI004", "ROI014", "ROI006", "ROI005", "ROI003", "ROI010", "ROI002", "ROI016", "ROI007"],
+        "fold2": ["ROI009", "ROI004", "ROI012", "ROI017", "ROI021", "ROI003", "ROI010", "ROI001", "ROI006", "ROI005"]
+      },
+      "train_stages": [1, 2]
+    },
+    "a5": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-film",
+      "fcmae_encoder_init": true,
+      "epochs_per_stage": 56,
+      "validation_evaluations": 14,
+      "train_rois_by_fold": {
+        "fold0": ["ROI009", "ROI004", "ROI014", "ROI006", "ROI005"],
+        "fold2": ["ROI009", "ROI004", "ROI012", "ROI017", "ROI021"]
+      },
+      "train_stages": [1, 2]
+    },
+    "b15": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-film",
+      "fcmae_encoder_init": true,
+      "epochs_per_stage": 19,
+      "validation_evaluations": 14,
+      "train_rois_by_fold": {
+        "fold0": ["ROI003", "ROI010", "ROI002", "ROI016", "ROI007", "ROI015", "ROI013", "ROI000", "ROI024", "ROI019", "ROI023", "ROI018", "ROI017", "ROI021", "ROI008"],
+        "fold2": ["ROI003", "ROI010", "ROI001", "ROI006", "ROI005", "ROI015", "ROI013", "ROI002", "ROI022", "ROI011", "ROI023", "ROI018", "ROI020", "ROI016", "ROI019"]
+      },
+      "train_stages": [1, 2]
+    },
+    "b10": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-film",
+      "fcmae_encoder_init": true,
+      "epochs_per_stage": 28,
+      "validation_evaluations": 14,
+      "train_rois_by_fold": {
+        "fold0": ["ROI003", "ROI010", "ROI002", "ROI016", "ROI007", "ROI015", "ROI013", "ROI000", "ROI024", "ROI019"],
+        "fold2": ["ROI003", "ROI010", "ROI001", "ROI006", "ROI005", "ROI015", "ROI013", "ROI002", "ROI022", "ROI011"]
+      },
+      "train_stages": [1, 2]
+    },
+    "b5": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-film",
+      "fcmae_encoder_init": true,
+      "epochs_per_stage": 56,
+      "validation_evaluations": 14,
+      "train_rois_by_fold": {
+        "fold0": ["ROI003", "ROI010", "ROI002", "ROI016", "ROI007"],
+        "fold2": ["ROI003", "ROI010", "ROI001", "ROI006", "ROI005"]
+      },
+      "train_stages": [1, 2]
+    },
+    "c15": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-film",
+      "fcmae_encoder_init": true,
+      "epochs_per_stage": 19,
+      "validation_evaluations": 14,
+      "train_rois_by_fold": {
+        "fold0": ["ROI015", "ROI013", "ROI000", "ROI024", "ROI019", "ROI023", "ROI018", "ROI017", "ROI021", "ROI008", "ROI009", "ROI004", "ROI014", "ROI006", "ROI005"],
+        "fold2": ["ROI015", "ROI013", "ROI002", "ROI022", "ROI011", "ROI023", "ROI018", "ROI020", "ROI016", "ROI019", "ROI009", "ROI004", "ROI012", "ROI017", "ROI021"]
+      },
+      "train_stages": [1, 2]
+    },
+    "c10": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-film",
+      "fcmae_encoder_init": true,
+      "epochs_per_stage": 28,
+      "validation_evaluations": 14,
+      "train_rois_by_fold": {
+        "fold0": ["ROI015", "ROI013", "ROI000", "ROI024", "ROI019", "ROI023", "ROI018", "ROI017", "ROI021", "ROI008"],
+        "fold2": ["ROI015", "ROI013", "ROI002", "ROI022", "ROI011", "ROI023", "ROI018", "ROI020", "ROI016", "ROI019"]
+      },
+      "train_stages": [1, 2]
+    },
+    "c5": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-film",
+      "fcmae_encoder_init": true,
+      "epochs_per_stage": 56,
+      "validation_evaluations": 14,
+      "train_rois_by_fold": {
+        "fold0": ["ROI015", "ROI013", "ROI000", "ROI024", "ROI019"],
+        "fold2": ["ROI015", "ROI013", "ROI002", "ROI022", "ROI011"]
+      },
+      "train_stages": [1, 2]
+    }
+  },
+  "run_sources": {
+    "full20": {"protocol_name": "round52_cv2_unext2_official_fcmae", "recipe_name": "officialfcmae800", "stage": 2},
+    "a15": {"protocol_name": "round59_fold0_label_scale", "recipe_name": "a15", "stage": 2},
+    "a10": {"protocol_name": "round59_fold0_label_scale", "recipe_name": "a10", "stage": 2},
+    "a5": {"protocol_name": "round59_fold0_label_scale", "recipe_name": "a5", "stage": 2},
+    "b15": {"protocol_name": "round59_fold0_label_scale", "recipe_name": "b15", "stage": 2},
+    "b10": {"protocol_name": "round59_fold0_label_scale", "recipe_name": "b10", "stage": 2},
+    "b5": {"protocol_name": "round59_fold0_label_scale", "recipe_name": "b5", "stage": 2},
+    "c15": {"protocol_name": "round59_fold0_label_scale", "recipe_name": "c15", "stage": 2},
+    "c10": {"protocol_name": "round59_fold0_label_scale", "recipe_name": "c10", "stage": 2},
+    "c5": {"protocol_name": "round59_fold0_label_scale", "recipe_name": "c5", "stage": 2}
+  },
+  "fcmae_pretraining": {
+    "name": "dapi_officialfcmae800_scale",
+    "epochs": 800,
+    "batch_size": 32,
+    "workers": 4,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 0.000001,
+    "warmup_epochs": 10,
+    "weight_decay": 0.05,
+    "mask_ratio": 0.5,
+    "checkpoint_interval": 25,
+    "seed": 2044,
+    "encoder_initialization": {
+      "mode": "official-convnextv2-fcmae-imagenet1k-tiny",
+      "checkpoint": "runs/public_checkpoints/convnextv2_tiny_1k_224_fcmae.pt",
+      "sha256": "b25eadb89ad634b5c925ea04cdacebafe3e462486baf9482dc2d832bb9af57ef",
+      "source_url": "https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_tiny_1k_224_fcmae.pt",
+      "license": "CC-BY-NC-4.0"
+    }
+  },
+  "training": {
+    "epochs_per_stage": 14,
+    "stage1_learning_rate": 0.0003,
+    "stage2_learning_rate": 0.0001,
+    "batch_size": 16,
+    "workers": 4,
+    "seed": 2044,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95,
+    "save_every_epoch": false
+  },
+  "inference": {
+    "context_halo": 64,
+    "tta": "d4",
+    "jpeg_quality": 95,
+    "batch_size": 2,
+    "checkpoint_filename": "best_global_mse.pt",
+    "test_like_diagnostic": false
+  },
+  "candidates": {
+    "full20": {"full20": 1.0},
+    "a15": {"a15": 1.0},
+    "a10": {"a10": 1.0},
+    "a5": {"a5": 1.0},
+    "b15": {"b15": 1.0},
+    "b10": {"b10": 1.0},
+    "b5": {"b5": 1.0},
+    "c15": {"c15": 1.0},
+    "c10": {"c10": 1.0},
+    "c5": {"c5": 1.0}
+  },
+  "baseline_candidate": "full20",
+  "primary_candidate": "a15",
+  "label_scale_study": {
+    "version": 1,
+    "initial_fold": "fold0",
+    "baseline_recipe": "full20",
+    "selection_evaluations_per_stage": 14,
+    "design": "Patch-count-stratified nested ROI subsets with three fixed rotations and approximately update-matched stage budgets.",
+    "recipes": {
+      "full20": {"draw": "baseline", "roi_count": 20, "expected_train_images": {"fold0": 4987, "fold2": 4899}, "expected_optimizer_updates_per_stage": {"fold0": 4368, "fold2": 4298}},
+      "a15": {"draw": "a", "roi_count": 15, "expected_train_images": {"fold0": 3680, "fold2": 3621}, "expected_optimizer_updates_per_stage": {"fold0": 4370, "fold2": 4313}},
+      "a10": {"draw": "a", "roi_count": 10, "expected_train_images": {"fold0": 2414, "fold2": 2388}, "expected_optimizer_updates_per_stage": {"fold0": 4228, "fold2": 4200}},
+      "a5": {"draw": "a", "roi_count": 5, "expected_train_images": {"fold0": 1186, "fold2": 1176}, "expected_optimizer_updates_per_stage": {"fold0": 4200, "fold2": 4144}},
+      "b15": {"draw": "b", "roi_count": 15, "expected_train_images": {"fold0": 3801, "fold2": 3723}, "expected_optimizer_updates_per_stage": {"fold0": 4522, "fold2": 4427}},
+      "b10": {"draw": "b", "roi_count": 10, "expected_train_images": {"fold0": 2494, "fold2": 2445}, "expected_optimizer_updates_per_stage": {"fold0": 4368, "fold2": 4284}},
+      "b5": {"draw": "b", "roi_count": 5, "expected_train_images": {"fold0": 1228, "fold2": 1212}, "expected_optimizer_updates_per_stage": {"fold0": 4312, "fold2": 4256}},
+      "c15": {"draw": "c", "roi_count": 15, "expected_train_images": {"fold0": 3759, "fold2": 3687}, "expected_optimizer_updates_per_stage": {"fold0": 4465, "fold2": 4389}},
+      "c10": {"draw": "c", "roi_count": 10, "expected_train_images": {"fold0": 2573, "fold2": 2511}, "expected_optimizer_updates_per_stage": {"fold0": 4508, "fold2": 4396}},
+      "c5": {"draw": "c", "roi_count": 5, "expected_train_images": {"fold0": 1266, "fold2": 1233}, "expected_optimizer_updates_per_stage": {"fold0": 4480, "fold2": 4368}}
+    }
+  }
+}

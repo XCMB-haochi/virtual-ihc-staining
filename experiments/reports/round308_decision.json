@@ -1,0 +1,103 @@
+{
+  "base_round": 307,
+  "base_score": 76.10351109126103,
+  "distilled_score": 76.22470990309701,
+  "difference": 0.12119881183598125,
+  "use_distillation": true,
+  "selected_epoch": 26,
+  "organs": {
+    "colon": {
+      "CD68": {
+        "ssim": 0.8358350178405597,
+        "psnr_capped": 26.547751968280227,
+        "score": 74.43710242980733,
+        "images": 1292,
+        "rois": {
+          "ROI004": {
+            "ssim": 0.8642765992092636,
+            "psnr_capped": 26.477663659669712,
+            "score": 76.3859601404503
+          },
+          "ROI005": {
+            "ssim": 0.7777107786574092,
+            "psnr_capped": 23.848506714155064,
+            "score": 68.7488585345117
+          },
+          "ROI006": {
+            "ssim": 0.8308097580030783,
+            "psnr_capped": 25.739552711822892,
+            "score": 73.60041468730921
+          },
+          "ROI011": {
+            "ssim": 0.8602210076044727,
+            "psnr_capped": 28.697035091976456,
+            "score": 77.43369158749896
+          },
+          "ROI023": {
+            "ssim": 0.8611038945862467,
+            "psnr_capped": 28.39347210943264,
+            "score": 77.31335588669685
+          }
+        }
+      }
+    },
+    "liver": {
+      "CD45RO": {
+        "ssim": 0.8734327230070319,
+        "psnr_capped": 27.401376398224045,
+        "score": 77.58111644942666,
+        "images": 560,
+        "rois": {
+          "ROI005": {
+            "ssim": 0.8951889612845012,
+            "psnr_capped": 26.882783419628726,
+            "score": 78.79289734169234
+          },
+          "ROI019": {
+            "ssim": 0.8719797798565456,
+            "psnr_capped": 32.583630806418455,
+            "score": 80.58876307380926
+          },
+          "ROI076": {
+            "ssim": 0.8722778567246028,
+            "psnr_capped": 26.447196584083713,
+            "score": 76.92776792117243
+          },
+          "ROI078": {
+            "ssim": 0.8542842941624778,
+            "psnr_capped": 23.69189478276529,
+            "score": 74.01503746103262
+          }
+        }
+      }
+    },
+    "stomach": {
+      "CD68": {
+        "ssim": 0.8364423732672419,
+        "psnr_capped": 29.235952571752595,
+        "score": 76.09253767175849,
+        "images": 420,
+        "rois": {
+          "ROI000": {
+            "ssim": 0.8362667219979423,
+            "psnr_capped": 29.086538889266635,
+            "score": 75.99059387341593
+          },
+          "ROI002": {
+            "ssim": 0.8098158787403787,
+            "psnr_capped": 27.97677594970442,
+            "score": 73.47317708164917
+          },
+          "ROI006": {
+            "ssim": 0.8632445190634046,
+            "psnr_capped": 30.64454287628672,
+            "score": 78.81384206021035
+          }
+        }
+      }
+    }
+  },
+  "scope": "five inner supervision folds; outer Val excluded throughout training",
+  "limitation": "shared DAPI pretraining; one outer split with3 Stomach ROIs",
+  "needs_full_refit": true
+}

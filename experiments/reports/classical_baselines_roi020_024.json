@@ -1,0 +1,163 @@
+{
+  "data_root": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\dataset\\初赛数据集（包含训练集和测试集输入）",
+  "validation_rois": [
+    "ROI020",
+    "ROI021",
+    "ROI022",
+    "ROI023",
+    "ROI024"
+  ],
+  "training_images": 4976,
+  "validation_images": 1320,
+  "note": "Official Normalize(PSNR) is undefined; raw SSIM and PSNR are reported.",
+  "markers": {
+    "CD45RO": {
+      "validation_images": 1320,
+      "metrics": {
+        "zero": {
+          "ssim": 0.029575276887356488,
+          "psnr": 16.36541550821653
+        },
+        "constant_mean": {
+          "ssim": 0.6104265823651784,
+          "psnr": 20.322247254134787
+        },
+        "identity": {
+          "ssim": 0.4187727951064643,
+          "psnr": 16.944302946251952
+        },
+        "quantile_map": {
+          "ssim": 0.5501984746808091,
+          "psnr": 18.526771590564177
+        },
+        "conditional_mean_lut": {
+          "ssim": 0.6444821894893141,
+          "psnr": 21.119831125246584
+        },
+        "multiscale_linear": {
+          "ssim": 0.6133293639582916,
+          "psnr": 21.00398424305758
+        }
+      },
+      "fit_images": 1000,
+      "linear_coefficients": [
+        0.756108,
+        -1.678314,
+        1.211086,
+        0.468367,
+        7.367163
+      ]
+    },
+    "CD68": {
+      "validation_images": 1320,
+      "metrics": {
+        "zero": {
+          "ssim": 0.1154679306824154,
+          "psnr": 15.086049817785963
+        },
+        "constant_mean": {
+          "ssim": 0.5287576544775153,
+          "psnr": 19.927113035526265
+        },
+        "identity": {
+          "ssim": 0.40435486533323123,
+          "psnr": 18.349539823700134
+        },
+        "quantile_map": {
+          "ssim": 0.5796672586915229,
+          "psnr": 20.838582939066377
+        },
+        "conditional_mean_lut": {
+          "ssim": 0.6524458725519553,
+          "psnr": 22.84183086639275
+        },
+        "multiscale_linear": {
+          "ssim": 0.5266310394187688,
+          "psnr": 21.457178910782652
+        }
+      },
+      "fit_images": 1000,
+      "linear_coefficients": [
+        1.070852,
+        -2.264067,
+        1.620347,
+        0.312182,
+        12.552045
+      ]
+    },
+    "HLA-DR": {
+      "validation_images": 1320,
+      "metrics": {
+        "zero": {
+          "ssim": 0.019982514903614745,
+          "psnr": 16.520625839721664
+        },
+        "constant_mean": {
+          "ssim": 0.696162252503227,
+          "psnr": 20.007499609411774
+        },
+        "identity": {
+          "ssim": 0.410142783549301,
+          "psnr": 15.887725786534853
+        },
+        "quantile_map": {
+          "ssim": 0.5922201876433411,
+          "psnr": 17.255331932559667
+        },
+        "conditional_mean_lut": {
+          "ssim": 0.7003950668251145,
+          "psnr": 20.436072191282847
+        },
+        "multiscale_linear": {
+          "ssim": 0.6886923737585565,
+          "psnr": 20.444942847587317
+        }
+      },
+      "fit_images": 1000,
+      "linear_coefficients": [
+        0.618006,
+        -1.300979,
+        0.772247,
+        0.572238,
+        9.61905
+      ]
+    },
+    "Vimentin": {
+      "validation_images": 1320,
+      "metrics": {
+        "zero": {
+          "ssim": 0.03029538870788047,
+          "psnr": 15.918399656679547
+        },
+        "constant_mean": {
+          "ssim": 0.5590370521119797,
+          "psnr": 18.3132531982414
+        },
+        "identity": {
+          "ssim": 0.40761732303040493,
+          "psnr": 15.454887656649719
+        },
+        "quantile_map": {
+          "ssim": 0.48583441821904705,
+          "psnr": 15.822844026204217
+        },
+        "conditional_mean_lut": {
+          "ssim": 0.583491680745018,
+          "psnr": 18.822408161066424
+        },
+        "multiscale_linear": {
+          "ssim": 0.5533569416690638,
+          "psnr": 18.593662757236828
+        }
+      },
+      "fit_images": 1000,
+      "linear_coefficients": [
+        0.641815,
+        -1.364283,
+        0.887491,
+        0.348786,
+        14.498692
+      ]
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "name": "round27_cv5_spatial_film",
+  "marker": "CD68",
+  "expected_rois": [
+    "ROI000",
+    "ROI001",
+    "ROI002",
+    "ROI003",
+    "ROI004",
+    "ROI005",
+    "ROI006",
+    "ROI007",
+    "ROI008",
+    "ROI009",
+    "ROI010",
+    "ROI011",
+    "ROI012",
+    "ROI013",
+    "ROI014",
+    "ROI015",
+    "ROI016",
+    "ROI017",
+    "ROI018",
+    "ROI019",
+    "ROI020",
+    "ROI021",
+    "ROI022",
+    "ROI023",
+    "ROI024"
+  ],
+  "folds": [
+    {
+      "name": "fold0",
+      "val_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022"]
+    },
+    {
+      "name": "fold1",
+      "val_rois": ["ROI002", "ROI009", "ROI018", "ROI015", "ROI005"]
+    },
+    {
+      "name": "fold2",
+      "val_rois": ["ROI008", "ROI000", "ROI007", "ROI024", "ROI014"]
+    },
+    {
+      "name": "fold3",
+      "val_rois": ["ROI023", "ROI017", "ROI004", "ROI019", "ROI010"]
+    },
+    {
+      "name": "fold4",
+      "val_rois": ["ROI016", "ROI021", "ROI013", "ROI006", "ROI003"]
+    }
+  ],
+  "recipes": {
+    "fulltarget": {
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "train_stages": []
+    },
+    "spatialfilm": {
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-stats-film",
+      "train_stages": [2],
+      "init_source": {
+        "protocol_name": "round26_cv5",
+        "recipe_name": "fulltarget",
+        "stage": 1
+      },
+      "init_add_conditioning": true
+    }
+  },
+  "run_sources": {
+    "fulltarget": {
+      "protocol_name": "round26_cv5",
+      "recipe_name": "fulltarget",
+      "stage": 2
+    },
+    "spatialfilm": {
+      "protocol_name": "round27_cv5_spatial_film",
+      "recipe_name": "spatialfilm",
+      "stage": 2
+    }
+  },
+  "training": {
+    "epochs_per_stage": 14,
+    "stage1_learning_rate": 0.0003,
+    "stage2_learning_rate": 0.0001,
+    "batch_size": 8,
+    "workers": 4,
+    "seed": 2026,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95
+  },
+  "inference": {
+    "context_halo": 64,
+    "tta": "d4",
+    "jpeg_quality": 95,
+    "batch_size": 8
+  },
+  "candidates": {
+    "fulltarget": {"fulltarget": 1.0},
+    "spatialfilm": {"spatialfilm": 1.0},
+    "fulltarget_spatialfilm_50": {"fulltarget": 0.5, "spatialfilm": 0.5}
+  },
+  "baseline_candidate": "fulltarget",
+  "primary_candidate": "fulltarget_spatialfilm_50"
+}

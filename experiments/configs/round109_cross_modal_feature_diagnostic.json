@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "name": "round109_cross_modal_feature_diagnostic",
+  "marker": "CD68",
+  "embedding": {
+    "encoder_source": "round96_fold_local_multimarker_fcmae",
+    "feature": "stage4_spatial_mean",
+    "dimension": 768,
+    "input_size": 256,
+    "batch_size": 64,
+    "workers": 4
+  },
+  "mapping": {
+    "type": "standardized_ridge",
+    "alpha": 10.0,
+    "solver": "cholesky"
+  },
+  "folds": [
+    {
+      "name": "fold0",
+      "val_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022"],
+      "encoder": "runs/round96_cv2_multimarker_fcmae_fold0_official_multimarker_fcmae160_pretraining/final_encoder.pt",
+      "encoder_sha256": "fa2d96bfa3196b913f954a15862987c94e45d7cc2e0088edde19be2029c9449c"
+    },
+    {
+      "name": "fold2",
+      "val_rois": ["ROI008", "ROI000", "ROI007", "ROI024", "ROI014"],
+      "encoder": "runs/round96_cv2_multimarker_fcmae_fold2_official_multimarker_fcmae160_pretraining/final_encoder.pt",
+      "encoder_sha256": "ce54525418ccd5ef3dc08085e2fa3614d76aa2b51bffdff57f48e00d52129c72"
+    }
+  ],
+  "gate": {
+    "minimum_weighted_r2": 0.05,
+    "minimum_fold_r2": 0.0,
+    "minimum_fold_paired_cosine_advantage": 0.01
+  }
+}

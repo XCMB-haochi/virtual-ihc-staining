@@ -1,0 +1,50 @@
+{
+  "fold1_fcmae800": {
+    "epochs": 800,
+    "hours": 5.854859980349817
+  },
+  "fold1_stage1": {
+    "epochs": 14,
+    "hours": 0.6098302222446849
+  },
+  "fold1_stage2": {
+    "epochs": 14,
+    "hours": 0.5928090737159881
+  },
+  "fold2_fcmae800": {
+    "epochs": 800,
+    "hours": 5.8139908322289635
+  },
+  "fold2_stage1": {
+    "epochs": 14,
+    "hours": 0.5990647510227023
+  },
+  "fold2_stage2": {
+    "epochs": 14,
+    "hours": 0.5954807366492848
+  },
+  "fold4_fcmae800": {
+    "epochs": 800,
+    "hours": 5.397527065620137
+  },
+  "fold4_stage1": {
+    "epochs": 14,
+    "hours": 0.5931462135860541
+  },
+  "fold4_stage2": {
+    "epochs": 14,
+    "hours": 0.593674669196286
+  },
+  "student": {
+    "epochs": 14,
+    "endpoint": 12,
+    "images": 2380,
+    "marker": "CD45RO",
+    "actual_updates": 2082.0,
+    "hours": 0.6154284519805676
+  },
+  "cache": {
+    "images": 2380,
+    "unique_fold_excluded_coverage": true
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "version": 1,
+  "protocol_name": "round60_cv2_unext2_marker_decoders",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "isolated_auxiliary_mechanism": {
+      "passed": false,
+      "candidate": "markerdecoderauxiliary15",
+      "baseline": "markerdecodercontrol",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.12466450556274822,
+      "overall_float_delta": -0.12323486794667815,
+      "fold_q95_deltas": {
+        "fold0": -0.08827029652807994,
+        "fold2": -0.15876616599697968
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": -0.14619394527622376,
+        "ROI001": -0.07130760088725197,
+        "ROI007": -0.027210977365896838,
+        "ROI008": -0.4519443519134967,
+        "ROI011": -0.13327368415208696,
+        "ROI012": -0.132004278029612,
+        "ROI014": -0.3412632839816325,
+        "ROI020": -0.2270215114226346,
+        "ROI022": 0.11776460654998289,
+        "ROI024": 0.15958006206551545
+      },
+      "positive_rois": [
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.4519443519134967,
+      "thresholds": {
+        "candidate": "markerdecoderauxiliary15",
+        "baseline": "markerdecodercontrol",
+        "minimum_q95_gain": 0.08,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    },
+    "decoder_isolation_direct_advance": {
+      "passed": false,
+      "candidate": "markerdecoderauxiliary15",
+      "baseline": "officialauxiliary15",
+      "requires": "isolated_auxiliary_mechanism",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": false
+      },
+      "overall_q95_delta": -0.1264381354421289,
+      "overall_float_delta": -0.12482945519931832,
+      "fold_q95_deltas": {
+        "fold0": -0.16401042565775015,
+        "fold2": -0.09123260366564523
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": -0.048375450285917054,
+        "ROI001": -0.1949699746589033,
+        "ROI007": -0.10279152435172989,
+        "ROI008": -0.1872641117630991,
+        "ROI011": -0.21306125710839297,
+        "ROI012": -0.2336021475428538,
+        "ROI014": -0.3792165247843826,
+        "ROI020": -0.21565838081791355,
+        "ROI022": 0.029089304424800844,
+        "ROI024": 0.21874167612548945
+      },
+      "positive_rois": [
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.3792165247843826,
+      "thresholds": {
+        "candidate": "markerdecoderauxiliary15",
+        "baseline": "officialauxiliary15",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12,
+        "requires": "isolated_auxiliary_mechanism"
+      }
+    },
+    "isolated_auxiliary_diversity_effect": {
+      "passed": false,
+      "candidate": "t70_markerdecoder_auxiliary_split",
+      "baseline": "t70_markerdecoder_control_split",
+      "requires": "isolated_auxiliary_mechanism",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": true,
+        "dependency": false
+      },
+      "overall_q95_delta": -0.0027926211846107662,
+      "overall_float_delta": -0.0029803410097173355,
+      "fold_q95_deltas": {
+        "fold0": -0.022106237459624367,
+        "fold2": 0.015304389340656144
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": -0.001898187641913296,
+        "ROI001": -0.01805124797479607,
+        "ROI007": 0.026682007922559592,
+        "ROI008": -0.04012514717344118,
+        "ROI011": -0.0209188166468266,
+        "ROI012": -0.03636122037104883,
+        "ROI014": -0.006638448024546051,
+        "ROI020": -0.05709529223760512,
+        "ROI022": 0.01875185831080728,
+        "ROI024": 0.09722306287524418
+      },
+      "positive_rois": [
+        "ROI007",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.05709529223760512,
+      "thresholds": {
+        "candidate": "t70_markerdecoder_auxiliary_split",
+        "baseline": "t70_markerdecoder_control_split",
+        "minimum_q95_gain": 0.02,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.06,
+        "requires": "isolated_auxiliary_mechanism"
+      }
+    },
+    "decoder_isolation_split_advance": {
+      "passed": false,
+      "candidate": "t70_markerdecoder_auxiliary_split",
+      "baseline": "t70_official_auxiliary_split",
+      "requires": "decoder_isolation_direct_advance",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": true,
+        "dependency": false
+      },
+      "overall_q95_delta": -0.01231758310629516,
+      "overall_float_delta": -0.012344721323430008,
+      "fold_q95_deltas": {
+        "fold0": -0.03198849542029336,
+        "fold2": 0.006114216620787261
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": -0.0052990871674154505,
+        "ROI001": -0.049061546050751303,
+        "ROI007": -0.005653038000659194,
+        "ROI008": -0.015683903820075784,
+        "ROI011": -0.03171698443370019,
+        "ROI012": -0.03731903801137548,
+        "ROI014": -0.011977882194955214,
+        "ROI020": -0.03947363644442703,
+        "ROI022": -0.004768692067344205,
+        "ROI024": 0.06718714966719119
+      },
+      "positive_rois": [
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.049061546050751303,
+      "thresholds": {
+        "candidate": "t70_markerdecoder_auxiliary_split",
+        "baseline": "t70_official_auxiliary_split",
+        "minimum_q95_gain": 0.01,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.06,
+        "requires": "decoder_isolation_direct_advance"
+      }
+    },
+    "decoder_isolation_deployment": {
+      "passed": false,
+      "candidate": "t70_markerdecoder_auxiliary_split",
+      "baseline": "t70_o50",
+      "requires": "decoder_isolation_split_advance",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": false,
+        "roi_floor": true,
+        "dependency": false
+      },
+      "overall_q95_delta": 0.0287027379471283,
+      "overall_float_delta": 0.02754589381954986,
+      "fold_q95_deltas": {
+        "fold0": 0.008960130722172721,
+        "fold2": 0.04720171637043791
+      },
+      "positive_folds": [
+        "fold0",
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.038326068421270065,
+        "ROI001": -0.05969786277820788,
+        "ROI007": 0.06337453876554378,
+        "ROI008": -0.03907112627867093,
+        "ROI011": -0.015598223403344491,
+        "ROI012": -0.005474404847944925,
+        "ROI014": 0.03770081978873918,
+        "ROI020": 0.025414804121552947,
+        "ROI022": 0.09638177622535693,
+        "ROI024": 0.1404494699138894
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI007",
+        "ROI014",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.05969786277820788,
+      "thresholds": {
+        "candidate": "t70_markerdecoder_auxiliary_split",
+        "baseline": "t70_o50",
+        "minimum_q95_gain": 0.06,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08,
+        "requires": "decoder_isolation_split_advance"
+      }
+    },
+    "decoder_isolation_replacement": {
+      "passed": false,
+      "candidate": "t70_markerdecoder_auxiliary_replace",
+      "baseline": "t70_o50",
+      "requires": "decoder_isolation_direct_advance",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": false
+      },
+      "overall_q95_delta": 0.011425098764320296,
+      "overall_float_delta": 0.009725766460618956,
+      "fold_q95_deltas": {
+        "fold0": -0.026450398094311822,
+        "fold2": 0.04691473755323727
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.03791492782167438,
+        "ROI001": -0.15670903131052683,
+        "ROI007": 0.08733214018401725,
+        "ROI008": -0.1267693559946821,
+        "ROI011": -0.07851834015373527,
+        "ROI012": -0.049691515737691816,
+        "ROI014": 0.02565929598819139,
+        "ROI020": 0.015386693980047994,
+        "ROI022": 0.13177098059718162,
+        "ROI024": 0.22010452326804852
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI007",
+        "ROI014",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.15670903131052683,
+      "thresholds": {
+        "candidate": "t70_markerdecoder_auxiliary_replace",
+        "baseline": "t70_o50",
+        "minimum_q95_gain": 0.08,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08,
+        "requires": "decoder_isolation_direct_advance"
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round60_cv2_unext2_marker_decoders.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round60_cv2_unext2_marker_decoders_oof.json",
+  "oof_report_sha256": "4d5005ece10677b5951bcf3103cdf6a744ec8c5a05bd08b703602c26e51dea04"
+}

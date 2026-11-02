@@ -1,0 +1,73 @@
+{
+  "protocol_sha256": "b5c467bbca5ef32ef4b21d0ded79d8074f0f33ef78cf2d575bdc9d2b54a28469",
+  "stages": [
+    {
+      "stage": 1,
+      "seconds": 21.655893655028194,
+      "peak_gib": 15.163052558898926,
+      "init": {
+        "version": 1,
+        "mode": "fold-local-dapi-fcmae",
+        "scope": "encoder",
+        "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round52_cv2_unext2_official_fcmae_fold0_dapi_officialfcmae800_pretraining/final_encoder.pt",
+        "checkpoint_sha256": "50231215826b6d533975594030e48c7dca1316f0f2593f426bf02732ff33b0c9",
+        "pretraining_epoch": 800,
+        "pretraining_val_rois": [
+          "ROI001",
+          "ROI011",
+          "ROI012",
+          "ROI020",
+          "ROI022"
+        ],
+        "pretraining_markers": [
+          "DAPI"
+        ],
+        "encoder_spec": {
+          "version": 1,
+          "architecture": "convnext-v2-tiny-dense-fcmae",
+          "input_channels": 1,
+          "stem_kernel": 2,
+          "stem_stride": 2,
+          "stage_blocks": [
+            3,
+            3,
+            9,
+            3
+          ],
+          "stage_dims": [
+            96,
+            192,
+            384,
+            768
+          ],
+          "total_stride": 16,
+          "block": "convnext-v2-grn"
+        },
+        "state_tensors_loaded": 196
+      },
+      "parameters": 53873813
+    },
+    {
+      "stage": 2,
+      "seconds": 21.814418070949614,
+      "peak_gib": 15.363770008087158,
+      "init": {
+        "version": 1,
+        "mode": "strict",
+        "source_markers": [
+          "CD68",
+          "CD45RO",
+          "HLA-DR",
+          "Vimentin"
+        ],
+        "target_markers": [
+          "CD68",
+          "CD45RO",
+          "HLA-DR",
+          "Vimentin"
+        ]
+      },
+      "parameters": 53873813
+    }
+  ]
+}

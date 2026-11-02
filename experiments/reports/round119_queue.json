@@ -1,0 +1,10 @@
+{
+  "state": "smoke_passed",
+  "protocol": "round119_cv2_primary_projection_corrected",
+  "protocol_sha256": "206854bee531ae32b711f38b36b0fccac122b391da96de920cfd3d7cc0359e12",
+  "source_commit": "852c38035968a6552e3161b4d980fa7bc376eabd",
+  "gpu_candidates": [
+    1
+  ],
+  "wait_for_empty_gpu": true
+}

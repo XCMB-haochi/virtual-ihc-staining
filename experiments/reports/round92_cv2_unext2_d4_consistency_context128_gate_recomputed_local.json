@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "protocol_name": "round92_cv2_unext2_d4_consistency_context128",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "d4_mechanism": {
+      "passed": false,
+      "candidate": "d4auxiliary15_context128",
+      "baseline": "officialauxiliary15_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "test_like_q95": true,
+        "float": false,
+        "folds": false,
+        "roi_floor": true,
+        "roi_count": true,
+        "dependency": true
+      },
+      "overall_q95_delta": [
+        -0.01784800746619908,
+        0.018556119518578384
+      ],
+      "test_like_q95_delta": [
+        0.12999805293289057,
+        0.15367663676889265
+      ],
+      "overall_float_delta": [
+        -0.018271498736822878,
+        0.018196716772280297
+      ],
+      "test_like_float_delta": [
+        0.13091929378357747,
+        0.15461528145412728
+      ],
+      "fold_q95_deltas": {
+        "fold0": [
+          -0.06658675744708376,
+          -0.03491521325415192
+        ],
+        "fold2": [
+          0.027820585035527756,
+          0.06863790536259273
+        ]
+      },
+      "dual_positive_folds": 1,
+      "test_like_roi_q95_deltas": {
+        "ROI007": [
+          0.09905717305557005,
+          0.11268310700270945
+        ],
+        "ROI020": [
+          0.12302279302114982,
+          0.1441371881915785
+        ],
+        "ROI022": [
+          -0.035168476683480776,
+          0.00974964032167236
+        ],
+        "ROI024": [
+          0.32309345358098085,
+          0.3344493770152468
+        ]
+      },
+      "dual_negative_test_like_rois": [],
+      "minimum_test_like_roi_q95_gain": -0.035168476683480776
+    },
+    "d4_replacement": {
+      "passed": false,
+      "candidate": "round90_d4_replace_context128",
+      "baseline": "round90_context128",
+      "requires": "d4_mechanism",
+      "checks": {
+        "overall_q95": false,
+        "test_like_q95": true,
+        "float": true,
+        "folds": true,
+        "roi_floor": true,
+        "roi_count": true,
+        "dependency": false
+      },
+      "overall_q95_delta": [
+        0.01589443792877887,
+        0.023076220379223855
+      ],
+      "test_like_q95_delta": [
+        0.04489864660038734,
+        0.04996539706890246
+      ],
+      "overall_float_delta": [
+        0.015455270505626117,
+        0.022661503142529682
+      ],
+      "test_like_float_delta": [
+        0.044580990620019634,
+        0.04965544331501803
+      ],
+      "fold_q95_deltas": {
+        "fold0": [
+          0.007829217118796805,
+          0.014058754352660685
+        ],
+        "fold2": [
+          0.023451613332824195,
+          0.031586781497836114
+        ]
+      },
+      "dual_positive_folds": 2,
+      "test_like_roi_q95_deltas": {
+        "ROI007": [
+          0.032935455904848254,
+          0.037715229502097714
+        ],
+        "ROI020": [
+          0.019369771937576274,
+          0.02390433110069523
+        ],
+        "ROI022": [
+          0.04363783428904355,
+          0.0506302878554834
+        ],
+        "ROI024": [
+          0.08162081267762744,
+          0.0834249110252614
+        ]
+      },
+      "dual_negative_test_like_rois": [],
+      "minimum_test_like_roi_q95_gain": 0.019369771937576274
+    },
+    "d4_split": {
+      "passed": false,
+      "candidate": "round90_d4_split_context128",
+      "baseline": "round90_context128",
+      "requires": "d4_mechanism",
+      "checks": {
+        "overall_q95": false,
+        "test_like_q95": true,
+        "float": true,
+        "folds": true,
+        "roi_floor": true,
+        "roi_count": true,
+        "dependency": false
+      },
+      "overall_q95_delta": [
+        0.011989333215367992,
+        0.015511822535813735
+      ],
+      "test_like_q95_delta": [
+        0.026493957979894844,
+        0.029001060517472865
+      ],
+      "overall_float_delta": [
+        0.011616060136603323,
+        0.015114447791390262
+      ],
+      "test_like_float_delta": [
+        0.02593868810549793,
+        0.02842195823188831
+      ],
+      "fold_q95_deltas": {
+        "fold0": [
+          0.007463365114816156,
+          0.010468171209794264
+        ],
+        "fold2": [
+          0.016230200962866093,
+          0.02028320020194485
+        ]
+      },
+      "dual_positive_folds": 2,
+      "test_like_roi_q95_deltas": {
+        "ROI007": [
+          0.020496017212778384,
+          0.022966901535170337
+        ],
+        "ROI020": [
+          0.013264370909823242,
+          0.015577343043418068
+        ],
+        "ROI022": [
+          0.025635439046325814,
+          0.02912347552070571
+        ],
+        "ROI024": [
+          0.04550361317689067,
+          0.04626206418362244
+        ]
+      },
+      "dual_negative_test_like_rois": [],
+      "minimum_test_like_roi_q95_gain": 0.013264370909823242
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\configs\\round92_cv2_unext2_d4_consistency_context128.json",
+  "oof_report": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\reports\\round92_cv2_unext2_d4_consistency_context128_oof.json",
+  "oof_report_sha256": "68e70ca9344d3e83dcb2b52798474a3d84baf01131418960a3fe35e7cc3d75a3"
+}

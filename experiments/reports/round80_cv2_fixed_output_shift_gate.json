@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "protocol_name": "round80_cv2_fixed_output_shift",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "fixed_output_shift": {
+      "passed": true,
+      "candidate": "t70_base_split_shift_xm1",
+      "baseline": "t70_base_split",
+      "requires": null,
+      "checks": {
+        "overall_q95": true,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": true,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.11690615211988131,
+      "overall_float_delta": 0.1169479446857764,
+      "fold_q95_deltas": {
+        "fold0": 0.13264414825175663,
+        "fold2": 0.1021595258233674
+      },
+      "positive_folds": [
+        "fold0",
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.2215540284274624,
+        "ROI001": 0.16415538083941783,
+        "ROI007": 0.04040966376186361,
+        "ROI008": 0.14534849241002235,
+        "ROI011": 0.2578953558376895,
+        "ROI012": 0.2112758066390228,
+        "ROI014": 0.04095249069639806,
+        "ROI020": 0.005306851039833305,
+        "ROI022": 0.018056031217668078,
+        "ROI024": 0.0614586359035485
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI001",
+        "ROI007",
+        "ROI008",
+        "ROI011",
+        "ROI012",
+        "ROI014",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": 0.005306851039833305,
+      "thresholds": {
+        "candidate": "t70_base_split_shift_xm1",
+        "baseline": "t70_base_split",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.05
+      }
+    }
+  },
+  "promotion": {
+    "allowed": true,
+    "gate": "fixed_output_shift",
+    "candidate": "t70_base_split_shift_xm1"
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round80_cv2_fixed_output_shift.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round80_cv2_fixed_output_shift_oof.json",
+  "oof_report_sha256": "29ba58e2c86db1caf9a87a05943a0c730d3753e9f6e465f61f47c2e78ce2b893"
+}

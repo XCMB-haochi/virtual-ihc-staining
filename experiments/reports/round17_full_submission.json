@@ -1,0 +1,80 @@
+{
+  "round": 17,
+  "marker": "CD68",
+  "runtime_git_commit": "d560ddcca57d5a542e27972f8ecd5aa764e24805",
+  "training": {
+    "train_images": 6296,
+    "seed": 2026,
+    "epochs_per_stage": 14,
+    "loss_profile": "hybrid",
+    "ssim_mode": "uniform7",
+    "loss_weights": {
+      "ssim": 0.7,
+      "l1": 0.2,
+      "mse": 0.1
+    },
+    "models": [
+      {
+        "name": "base32",
+        "base_channels": 32,
+        "stage1_selected_epoch": 13,
+        "stage1_checkpoint": "runs/round17_full_unet_base32_stage1/epochs/epoch_013.pt",
+        "stage1_checkpoint_sha256": "6c85c6ede79cee65af12199229e58c544f3fa2b0fd2358fe8bbf47190df08d9e",
+        "stage1_epoch14_train_loss": 0.12881116704421244,
+        "stage2_selected_epoch": 12,
+        "stage2_checkpoint": "runs/round17_full_unet_base32_stage2/epochs/epoch_012.pt",
+        "stage2_checkpoint_sha256": "966ba7d8c32c529e50c4f58719d97e061472a812433a80675bedc80b3349934f",
+        "stage2_epoch14_train_loss": 0.12421286845487439,
+        "peak_gpu_gib": 2.002579689025879
+      },
+      {
+        "name": "base48",
+        "base_channels": 48,
+        "stage1_selected_epoch": 13,
+        "stage1_checkpoint": "runs/round17_full_unet_base48_stage1/epochs/epoch_013.pt",
+        "stage1_checkpoint_sha256": "b25420a8824150a535b74b86862f2145b34ea9add32ec9a6583f101404ba073b",
+        "stage1_epoch14_train_loss": 0.1268366635924979,
+        "stage2_selected_epoch": 12,
+        "stage2_checkpoint": "runs/round17_full_unet_base48_stage2/epochs/epoch_012.pt",
+        "stage2_checkpoint_sha256": "e4a9e3b3b8aff6d97cc1957dfbffbc124dba3fbac067c9d5f93ca15435f7ddf5",
+        "stage2_epoch14_train_loss": 0.12148618320384201,
+        "peak_gpu_gib": 3.1549158096313477
+      }
+    ]
+  },
+  "inference": {
+    "blend_weight_base48": 0.5,
+    "calibration": "raw",
+    "context_halo": 64,
+    "tta": "d4",
+    "jpeg_quality": 95,
+    "roi_scale": false,
+    "test_images": 1346,
+    "prediction_directory": "predictions/round17_full_base32_base48_50_context64_d4_raw_q95"
+  },
+  "submission": {
+    "path": "submissions/cd68_round17_base32_base48_50_context64_d4_raw_q95_plain.zip",
+    "bytes": 11227293,
+    "sha256": "84abb4d664144eb5c8959c68047d31e29167b03db3aa746179679726cf3ba754",
+    "entries": 1346,
+    "unique_entries": 1346,
+    "bad_prefix_entries": 0,
+    "crc_check": "passed",
+    "image_validation": {
+      "expected": 1346,
+      "actual": 1346,
+      "missing": 0,
+      "extra": 0,
+      "image_errors": 0,
+      "rgb_images": 1346
+    }
+  },
+  "server_result": {
+    "score": 71.5953,
+    "displayed_ssim": 0.804,
+    "displayed_psnr": 25.523,
+    "delta_vs_raw_71_7440": -0.1487,
+    "delta_vs_best_72_0437": -0.4484,
+    "decision": "rejected"
+  }
+}

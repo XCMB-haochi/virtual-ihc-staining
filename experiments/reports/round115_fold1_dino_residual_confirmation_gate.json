@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "protocol_name": "round115_fold1_dino_residual_confirmation",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "residual_fold1_confirmation": {
+      "passed": false,
+      "candidate": "dinov2residual_context128",
+      "baseline": "officialauxiliary15_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.10796942736836002,
+      "overall_float_delta": -0.12097232686468828,
+      "fold_q95_deltas": {
+        "fold1": -0.10796942736836002
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI002": -0.02914557000401885,
+        "ROI005": -0.1863704677983975,
+        "ROI009": -0.2985798153350885,
+        "ROI015": -0.2854375006610894,
+        "ROI018": 0.20680299425951887
+      },
+      "positive_rois": [
+        "ROI018"
+      ],
+      "minimum_roi_q95_gain": -0.2985798153350885,
+      "thresholds": {
+        "candidate": "dinov2residual_context128",
+        "baseline": "officialauxiliary15_context128",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 1,
+        "minimum_positive_rois": 4,
+        "minimum_roi_q95_gain": -0.12
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "confirmation": {
+    "passed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round115_fold1_dino_residual_confirmation.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round115_fold1_dino_residual_confirmation_oof.json",
+  "oof_report_sha256": "b6887a39d97d033708a266fc6c6e7f1be642a877c0d5f9b60e45746fffec4ca4"
+}

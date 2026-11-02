@@ -1,0 +1,123 @@
+{
+  "config": {
+    "objective": "hybrid",
+    "updates": 2048,
+    "learning_rate": 0.0001,
+    "seed": 2026,
+    "images": [
+      "ROI005_04_09.jpg",
+      "ROI019_06_02.jpg",
+      "ROI052_00_11.jpg",
+      "ROI052_07_02.jpg",
+      "ROI052_09_07.jpg",
+      "ROI058_05_00.jpg",
+      "ROI058_09_00.jpg",
+      "ROI067_04_08.jpg",
+      "ROI072_08_12.jpg",
+      "ROI074_02_08.jpg",
+      "ROI074_06_04.jpg",
+      "ROI076_03_00.jpg",
+      "ROI078_03_07.jpg",
+      "ROI081_03_08.jpg",
+      "ROI081_05_12.jpg",
+      "ROI087_02_11.jpg"
+    ],
+    "initial_checkpoint_sha256": "31ec63e948636d35f64ad9f273c17bf0a9e50fdef6f422f6b0812ab4eb9fb3fb",
+    "scope": "selected seen TRAIN patches and their normal halos; no held-out estimate"
+  },
+  "actual_updates": 2046.0,
+  "peak_gpu_gib": 6.875340461730957,
+  "milestones": {
+    "0": {
+      "seen_patch_metrics": {
+        "mse": 301.3860321044922,
+        "psnr": 36.07371254408873,
+        "psnr_capped": 29.08220996961773,
+        "uniform7_ssim": 0.8699508762057562,
+        "uniform7_score": 78.34588731617357,
+        "gaussian11_ssim": 0.8854595343579099,
+        "gaussian11_score": 79.43149338682431,
+        "images": 16,
+        "psnr_global_mse": 23.339572400310054
+      },
+      "bright128_pixels": 13509,
+      "bright128_bias": -120.66363165297209,
+      "bright128_rmse": 131.116337811158,
+      "bright128_target_mean": 201.19172403582797,
+      "bright128_prediction_mean": 80.52809238285587
+    },
+    "64": {
+      "seen_patch_metrics": {
+        "mse": 52.58730125427246,
+        "psnr": 42.45416985202256,
+        "psnr_capped": 35.46266727755156,
+        "uniform7_ssim": 0.9413652664098378,
+        "uniform7_score": 87.17316901521957,
+        "gaussian11_ssim": 0.9453626266335637,
+        "gaussian11_score": 87.45298423088039,
+        "images": 16,
+        "psnr_global_mse": 30.921994771898675
+      },
+      "bright128_pixels": 13509,
+      "bright128_bias": -42.88985121030424,
+      "bright128_rmse": 54.41519931644246,
+      "bright128_target_mean": 201.19172403582797,
+      "bright128_prediction_mean": 158.30187282552373
+    },
+    "256": {
+      "seen_patch_metrics": {
+        "mse": 11.723724365234375,
+        "psnr": 48.010726016025046,
+        "psnr_capped": 41.019223441554054,
+        "uniform7_ssim": 0.9810168254479885,
+        "uniform7_score": 93.28271184629162,
+        "gaussian11_ssim": 0.9801052885464847,
+        "gaussian11_score": 93.21890426318636,
+        "images": 16,
+        "psnr_global_mse": 37.44014761615409
+      },
+      "bright128_pixels": 13509,
+      "bright128_bias": -20.05337182618995,
+      "bright128_rmse": 25.50383702239247,
+      "bright128_target_mean": 201.19172403582797,
+      "bright128_prediction_mean": 181.13835220963801
+    },
+    "1024": {
+      "seen_patch_metrics": {
+        "mse": 2.6137351989746094,
+        "psnr": 53.87128164459726,
+        "psnr_capped": 46.00768838287536,
+        "uniform7_ssim": 0.9950641567754621,
+        "uniform7_score": 97.25910400400758,
+        "gaussian11_ssim": 0.9946922004484701,
+        "gaussian11_score": 97.23306706111812,
+        "images": 16,
+        "psnr_global_mse": 43.958187743523126
+      },
+      "bright128_pixels": 13509,
+      "bright128_bias": -8.148419572137094,
+      "bright128_rmse": 11.977571138518291,
+      "bright128_target_mean": 201.19172403582797,
+      "bright128_prediction_mean": 193.04330446369087
+    },
+    "2048": {
+      "seen_patch_metrics": {
+        "mse": 1.5619640350341797,
+        "psnr": 55.88956915849561,
+        "psnr_capped": 47.20329807581208,
+        "uniform7_ssim": 0.9976374939408365,
+        "uniform7_score": 98.15660342134579,
+        "gaussian11_ssim": 0.9974940424553091,
+        "gaussian11_score": 98.14656181735889,
+        "images": 16,
+        "psnr_global_mse": 46.194093310487915
+      },
+      "bright128_pixels": 13509,
+      "bright128_bias": -6.705233548005034,
+      "bright128_rmse": 8.809954228486756,
+      "bright128_target_mean": 201.19172403582797,
+      "bright128_prediction_mean": 194.48649048782292
+    }
+  },
+  "limitation": "Intentional small-set overfitting. No generalization, leaderboard or architecture-ceiling conclusion."
+}

@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "method": "five-fold-crossfit-dapi-16x16-nearest-target",
+  "cache": "/workspace/virtual_ihc_staining_generation/runs/round37_cv5_crossfit_refiner_oof_cache",
+  "neighbors": 4,
+  "blend_weight": 0.1,
+  "feature_definition": "raw and per-image-standardized 16x16 average-pooled DAPI plus seven summaries",
+  "data_scope": "each holdout ROI retrieves only from the other four OOF folds; no test inputs or labels",
+  "folds": [
+    {
+      "fold": "fold0",
+      "images": 1309,
+      "nearest_distance_mean": 22.748945611774513,
+      "nearest_distance_median": 21.949634552001953,
+      "baseline": {
+        "images": 1309,
+        "ssim": 0.8375016409326612,
+        "psnr": 26.72367728239397,
+        "competition_score_official": 74.65932123472257
+      },
+      "knn": {
+        "images": 1309,
+        "ssim": 0.4915584910894667,
+        "psnr": 20.060890632656267,
+        "competition_score_official": 46.44562875585635
+      },
+      "fixed_blend": {
+        "images": 1309,
+        "ssim": 0.7918758173951783,
+        "psnr": 26.477296893755913,
+        "competition_score_official": 71.31768535391599
+      }
+    },
+    {
+      "fold": "fold1",
+      "images": 1145,
+      "nearest_distance_mean": 23.09291432976202,
+      "nearest_distance_median": 22.366270065307617,
+      "baseline": {
+        "images": 1145,
+        "ssim": 0.8421068031187072,
+        "psnr": 26.722811388608463,
+        "competition_score_official": 74.98116305147448
+      },
+      "knn": {
+        "images": 1145,
+        "ssim": 0.49764021542792924,
+        "psnr": 19.9661213177805,
+        "competition_score_official": 46.81448787062331
+      },
+      "fixed_blend": {
+        "images": 1145,
+        "ssim": 0.8045198285374104,
+        "psnr": 26.61296249665398,
+        "competition_score_official": 72.28416549561122
+      }
+    },
+    {
+      "fold": "fold2",
+      "images": 1397,
+      "nearest_distance_mean": 22.786968163447288,
+      "nearest_distance_median": 21.9611759185791,
+      "baseline": {
+        "images": 1397,
+        "ssim": 0.8355077973489163,
+        "psnr": 26.57362234879372,
+        "competition_score_official": 74.42971922370037
+      },
+      "knn": {
+        "images": 1397,
+        "ssim": 0.4803587321012642,
+        "psnr": 19.901977898405047,
+        "competition_score_official": 45.56629798613151
+      },
+      "fixed_blend": {
+        "images": 1397,
+        "ssim": 0.793814483240465,
+        "psnr": 26.487926622574697,
+        "competition_score_official": 71.45976980037736
+      }
+    },
+    {
+      "fold": "fold3",
+      "images": 1214,
+      "nearest_distance_mean": 22.47364546537792,
+      "nearest_distance_median": 21.659607887268066,
+      "baseline": {
+        "images": 1214,
+        "ssim": 0.8415842886216796,
+        "psnr": 27.301659884314137,
+        "competition_score_official": 75.29189613410597
+      },
+      "knn": {
+        "images": 1214,
+        "ssim": 0.5201024191769268,
+        "psnr": 20.541254254956783,
+        "competition_score_official": 48.73192189535902
+      },
+      "fixed_blend": {
+        "images": 1214,
+        "ssim": 0.8118468281670049,
+        "psnr": 27.214456521003502,
+        "competition_score_official": 73.1579518842924
+      }
+    },
+    {
+      "fold": "fold4",
+      "images": 1231,
+      "nearest_distance_mean": 22.54954006941119,
+      "nearest_distance_median": 21.611772537231445,
+      "baseline": {
+        "images": 1231,
+        "ssim": 0.8489876167227933,
+        "psnr": 27.06443683256078,
+        "competition_score_official": 75.66779527013185
+      },
+      "knn": {
+        "images": 1231,
+        "ssim": 0.5223128194396899,
+        "psnr": 20.64064375840919,
+        "competition_score_official": 48.9462836158238
+      },
+      "fixed_blend": {
+        "images": 1231,
+        "ssim": 0.8125541692436208,
+        "psnr": 26.94037014849706,
+        "competition_score_official": 73.04301393615152
+      }
+    }
+  ],
+  "overall": {
+    "baseline": {
+      "ssim": 0.8409297034658015,
+      "psnr": 26.868297310088135,
+      "competition_score_official": 74.9860576286589,
+      "images": 6296
+    },
+    "knn": {
+      "ssim": 0.5016964227855153,
+      "psnr": 20.21437309453571,
+      "competition_score_official": 47.24737345170749,
+      "images": 6296
+    },
+    "fixed_blend": {
+      "ssim": 0.8024993191655327,
+      "psnr": 26.737008108899346,
+      "competition_score_official": 72.21715720692686,
+      "images": 6296
+    },
+    "knn_delta_vs_baseline": -27.73868417695141,
+    "blend_delta_vs_baseline": -2.7689004217320417
+  }
+}

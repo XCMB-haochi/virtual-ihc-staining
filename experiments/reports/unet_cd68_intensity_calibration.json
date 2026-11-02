@@ -1,0 +1,62 @@
+{
+  "checkpoint": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\runs\\unet_cd68_ssim_10e\\best.pt",
+  "marker": "CD68",
+  "validation_rois": [
+    "ROI020",
+    "ROI021",
+    "ROI022",
+    "ROI023",
+    "ROI024"
+  ],
+  "validation_images": 1320,
+  "patch_mean_fit": {
+    "slope": 0.7342651893592298,
+    "intercept": 13.079206307550487
+  },
+  "roi_mean_fit": {
+    "slope": 1.1745672483134126,
+    "intercept": -2.2087424050842417
+  },
+  "metrics": {
+    "raw": {
+      "ssim": 0.7951216226738737,
+      "psnr": 25.552021790700074
+    },
+    "raw_jpeg_q95": {
+      "ssim": 0.7939988891845831,
+      "psnr": 25.54768898389158
+    },
+    "patch_shift": {
+      "ssim": 0.7292199444611578,
+      "psnr": 25.21207002062332
+    },
+    "patch_shift_jpeg_q95": {
+      "ssim": 0.7284212518847225,
+      "psnr": 25.208625668685173
+    },
+    "patch_scale": {
+      "ssim": 0.7866235469070253,
+      "psnr": 24.97588415506648
+    },
+    "patch_scale_jpeg_q95": {
+      "ssim": 0.7855894994762361,
+      "psnr": 24.973138445255774
+    },
+    "roi_shift": {
+      "ssim": 0.7478443466189801,
+      "psnr": 25.71183476835788
+    },
+    "roi_shift_jpeg_q95": {
+      "ssim": 0.7478921955169703,
+      "psnr": 25.709871872715095
+    },
+    "roi_scale": {
+      "ssim": 0.7956998063599094,
+      "psnr": 25.732961975261208
+    },
+    "roi_scale_jpeg_q95": {
+      "ssim": 0.7946338917476097,
+      "psnr": 25.729466439216925
+    }
+  }
+}

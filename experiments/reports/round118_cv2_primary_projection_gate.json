@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "protocol_name": "round118_cv2_primary_projection",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "primary_projection": {
+      "passed": false,
+      "candidate": "primaryprojection_context128",
+      "baseline": "officialauxiliary15_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.006165037811996399,
+      "overall_float_delta": -0.003648802525788142,
+      "fold_q95_deltas": {
+        "fold0": -0.10596043598052063,
+        "fold2": 0.08734403606217711
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.9407201075941884,
+        "ROI001": 0.0024465414041401345,
+        "ROI007": -0.8149808808031764,
+        "ROI008": 0.7530659559657238,
+        "ROI011": -0.17221356497078943,
+        "ROI012": -0.15027755352275562,
+        "ROI014": -0.27764349840312263,
+        "ROI020": -0.10786330388049237,
+        "ROI022": -0.09163474266554772,
+        "ROI024": -0.16847526582814965
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI001",
+        "ROI008"
+      ],
+      "minimum_roi_q95_gain": -0.8149808808031764,
+      "thresholds": {
+        "candidate": "primaryprojection_context128",
+        "baseline": "officialauxiliary15_context128",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/transfers/round118_runtime/configs/round118_cv2_primary_projection.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round118_cv2_primary_projection_oof.json",
+  "oof_report_sha256": "3f7c53c00144d8ed954eb8d43664f4d7fb080f8741ee36155a905f8bb0e296d9"
+}

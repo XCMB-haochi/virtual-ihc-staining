@@ -1,0 +1,54 @@
+{
+  "protocol": "round112_cv2_dinov2",
+  "source_commit": "76684bcb40794c7fa37c4566bf9f3c48dd6167d0",
+  "protocol_sha256": "5ec715f7cda7b8ba6daeacc5be84a9fefa6de6555a57a0b3d78cf6d2c39dd747",
+  "smoke": {
+    "protocol_sha256": "5ec715f7cda7b8ba6daeacc5be84a9fefa6de6555a57a0b3d78cf6d2c39dd747",
+    "stages": [
+      {
+        "stage": 1,
+        "seconds": 4.731077231001109,
+        "peak_gib": 4.8596272468566895,
+        "init": {
+          "mode": "official-dinov2-vits14-reg4",
+          "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/public_checkpoints/dinov2_vits14_reg4_pretrain.pth",
+          "checkpoint_sha256": "f433177089a681826f849f194ece3bb48f4d63fb38d32fc837e3dc7a4e5641fb",
+          "encoder_revision": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+          "loaded_tensors": 176,
+          "scope": "encoder"
+        },
+        "parameters": 28580676
+      },
+      {
+        "stage": 2,
+        "seconds": 17.503034046967514,
+        "peak_gib": 4.966108798980713,
+        "init": {
+          "version": 1,
+          "mode": "strict",
+          "source_markers": [
+            "CD68",
+            "CD45RO",
+            "HLA-DR",
+            "Vimentin"
+          ],
+          "target_markers": [
+            "CD68",
+            "CD45RO",
+            "HLA-DR",
+            "Vimentin"
+          ]
+        },
+        "parameters": 28580676
+      }
+    ]
+  },
+  "source_sha256": {
+    "src/ihc_dinov2.py": "e8211d29201dc81bca0be10949f2abf4e91a3fc53b272f4cafd93e777c8aa9a1",
+    "src/ihc_torch.py": "b9d82974aef7ea9fcd8aea032a235cdfb0b8bdf45d316f8579329cef3203411a",
+    "tools/train_unet.py": "e897bf0e239704795295d6e34be872c5c821b56ec45e923595f78e94046cab54",
+    "tools/cv_protocol.py": "a3a1e33fe287fad6f0279c4203991600e6e2f7d93e0fc2289548f9112f9dc788",
+    "tools/run_cv_training.py": "796268db43bfde6f96bc4c729d63bbd87709de1887f3847d803d920ecddd5382",
+    "tools/run_training_screen.py": "3946ca5b2eda12fe413c1b8dcf44f40174ef352fc46070e5938c75dd32903c52"
+  }
+}

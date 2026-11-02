@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "protocol_name": "round58_cv2_unext2_official_fcmae1200",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "longer_official_pretraining": {
+      "passed": false,
+      "candidate": "officialfcmae1200",
+      "baseline": "officialfcmae800",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.07775750633342682,
+      "overall_float_delta": -0.0808206682219037,
+      "fold_q95_deltas": {
+        "fold0": 0.01682153775729489,
+        "fold2": -0.16637881536316002
+      },
+      "positive_folds": [
+        "fold0"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": -0.3842317407454203,
+        "ROI001": -0.20917539707997435,
+        "ROI007": 0.04582969545293736,
+        "ROI008": -0.778242156149588,
+        "ROI011": -0.10710700953349317,
+        "ROI012": 0.04722523455141925,
+        "ROI014": -0.20103161147886794,
+        "ROI020": 0.2430869896299157,
+        "ROI022": 0.12034441927126238,
+        "ROI024": 0.5054209779972751
+      },
+      "positive_rois": [
+        "ROI007",
+        "ROI012",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.778242156149588,
+      "thresholds": {
+        "candidate": "officialfcmae1200",
+        "baseline": "officialfcmae800",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    },
+    "longer_official_replacement": {
+      "passed": false,
+      "candidate": "t70_official1200_replace",
+      "baseline": "t70_o50",
+      "requires": "longer_official_pretraining",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": false
+      },
+      "overall_q95_delta": 0.023188850587189336,
+      "overall_float_delta": 0.0217746226252018,
+      "fold_q95_deltas": {
+        "fold0": 0.04803442366062427,
+        "fold2": -9.16470168590422e-05
+      },
+      "positive_folds": [
+        "fold0"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": -0.1096527494116799,
+        "ROI001": -0.05349298775806233,
+        "ROI007": 0.07237506035690444,
+        "ROI008": -0.21581014026779144,
+        "ROI011": -0.0335680529675102,
+        "ROI012": 0.06214112749765377,
+        "ROI014": 0.010534890224320748,
+        "ROI020": 0.14350514365186484,
+        "ROI022": 0.12921353484870224,
+        "ROI024": 0.25036400211651255
+      },
+      "positive_rois": [
+        "ROI007",
+        "ROI012",
+        "ROI014",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.21581014026779144,
+      "thresholds": {
+        "candidate": "t70_official1200_replace",
+        "baseline": "t70_o50",
+        "minimum_q95_gain": 0.04,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08,
+        "requires": "longer_official_pretraining"
+      }
+    },
+    "longer_official_diversity": {
+      "passed": false,
+      "candidate": "t70_official1200_split",
+      "baseline": "t70_o50",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.034308781476013905,
+      "overall_float_delta": 0.033308979489959256,
+      "fold_q95_deltas": {
+        "fold0": 0.04723911203694797,
+        "fold2": 0.022192959926599087
+      },
+      "positive_folds": [
+        "fold0",
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": -0.034824902576474415,
+        "ROI001": -0.007023328051502631,
+        "ROI007": 0.05695323784611617,
+        "ROI008": -0.0861309995192272,
+        "ROI011": 0.004334118967165068,
+        "ROI012": 0.053698041708486244,
+        "ROI014": 0.032453912504962545,
+        "ROI020": 0.09515574043206243,
+        "ROI022": 0.09375202482779343,
+        "ROI024": 0.1475240478357307
+      },
+      "positive_rois": [
+        "ROI007",
+        "ROI011",
+        "ROI012",
+        "ROI014",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.0861309995192272,
+      "thresholds": {
+        "candidate": "t70_official1200_split",
+        "baseline": "t70_o50",
+        "minimum_q95_gain": 0.04,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round58_cv2_unext2_official_fcmae1200.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round58_cv2_unext2_official_fcmae1200_oof.json",
+  "oof_report_sha256": "096cbb89280d334d35fa6f91775c99167df6fe3ef91240e9959e0fc723654289"
+}

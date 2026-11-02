@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "protocol_name": "round129_cv5_base_relational_hybrid",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "hybrid_diversity": {
+      "passed": true,
+      "candidate": "hybrid_base_relational_context128",
+      "baseline": "relational_seedblend_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": true,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": true,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.18100297504788898,
+      "overall_float_delta": 0.18102125605022934,
+      "fold_q95_deltas": {
+        "fold0": 0.08644483892740595,
+        "fold1": 0.19521168853324866,
+        "fold2": 0.2000779256738241,
+        "fold3": 0.2077307660883605,
+        "fold4": 0.22033065895747939
+      },
+      "positive_folds": [
+        "fold0",
+        "fold1",
+        "fold2",
+        "fold3",
+        "fold4"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.06857672077588006,
+        "ROI001": 0.0639995808447793,
+        "ROI002": 0.3352950087525812,
+        "ROI003": 0.020350549361964454,
+        "ROI004": 0.3927568266442165,
+        "ROI005": 0.03964233197891076,
+        "ROI006": 0.20957718859197882,
+        "ROI007": 0.17346870823391214,
+        "ROI008": 0.29627874952386435,
+        "ROI009": 0.18146793173288245,
+        "ROI010": 0.3571841494490968,
+        "ROI011": 0.05894919082216177,
+        "ROI012": 0.10115950703513477,
+        "ROI013": 0.5375955335143061,
+        "ROI014": 0.3458041860983627,
+        "ROI015": 0.051916179008543395,
+        "ROI016": 0.19193279984813216,
+        "ROI017": 0.18872141779215212,
+        "ROI018": 0.3740255606869596,
+        "ROI019": 0.11516305991393949,
+        "ROI020": 0.10741962524402027,
+        "ROI021": 0.149797294667664,
+        "ROI022": 0.10517551455399143,
+        "ROI023": 0.033643814832032604,
+        "ROI024": 0.12389451754256697
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI001",
+        "ROI002",
+        "ROI003",
+        "ROI004",
+        "ROI005",
+        "ROI006",
+        "ROI007",
+        "ROI008",
+        "ROI009",
+        "ROI010",
+        "ROI011",
+        "ROI012",
+        "ROI013",
+        "ROI014",
+        "ROI015",
+        "ROI016",
+        "ROI017",
+        "ROI018",
+        "ROI019",
+        "ROI020",
+        "ROI021",
+        "ROI022",
+        "ROI023",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": 0.020350549361964454,
+      "thresholds": {
+        "candidate": "hybrid_base_relational_context128",
+        "baseline": "relational_seedblend_context128",
+        "minimum_q95_gain": 0.0,
+        "require_positive_float": true,
+        "minimum_positive_folds": 4,
+        "minimum_positive_rois": 18,
+        "minimum_roi_q95_gain": -0.12
+      }
+    }
+  },
+  "promotion": {
+    "allowed": true,
+    "gate": "hybrid_diversity",
+    "candidate": "hybrid_base_relational_context128"
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/transfers/round129_runtime/configs/round129_cv5_base_relational_hybrid.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/transfers/round129_runtime/reports/round129_cv5_base_relational_hybrid_oof.json",
+  "oof_report_sha256": "158974339fe0d9d2f5fdf7cac26d2a0fc55a454f7ef2a2a4228f97e736206f2b"
+}

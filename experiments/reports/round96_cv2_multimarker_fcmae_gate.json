@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "protocol_name": "round96_cv2_multimarker_fcmae",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "multimarker_representation": {
+      "passed": false,
+      "candidate": "multimarkerfcmae160_context128",
+      "baseline": "officialfcmae800_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.03967354885401164,
+      "overall_float_delta": -0.03556609151341661,
+      "fold_q95_deltas": {
+        "fold0": -0.1375452078309536,
+        "fold2": 0.0520329662507919
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.3861614422690991,
+        "ROI001": -0.05450906081314599,
+        "ROI007": -0.1683725439539785,
+        "ROI008": 0.08091884131303573,
+        "ROI011": -0.12860041310884185,
+        "ROI012": -0.5514344970222993,
+        "ROI014": -0.019228686344462176,
+        "ROI020": -0.11159580790817358,
+        "ROI022": 0.10629582843969843,
+        "ROI024": 0.00889789518485884
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI008",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.5514344970222993,
+      "thresholds": {
+        "candidate": "multimarkerfcmae160_context128",
+        "baseline": "officialfcmae800_context128",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    },
+    "multimarker_replacement": {
+      "passed": false,
+      "candidate": "base_multimarker_replace_context128",
+      "baseline": "base_context128",
+      "requires": "multimarker_representation",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": false
+      },
+      "overall_q95_delta": 0.010265325378171042,
+      "overall_float_delta": 0.010766664602329001,
+      "fold_q95_deltas": {
+        "fold0": -0.01458042217453226,
+        "fold2": 0.0335459864710117
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.06477599052510641,
+        "ROI001": -0.007294860426412697,
+        "ROI007": -0.017300802349453193,
+        "ROI008": 0.024238727597108323,
+        "ROI011": 0.016128597183623583,
+        "ROI012": -0.09526771879990292,
+        "ROI014": -0.007705300104433377,
+        "ROI020": -0.029606840385483224,
+        "ROI022": 0.02798338703522063,
+        "ROI024": 0.10225483010185599
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI008",
+        "ROI011",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.09526771879990292,
+      "thresholds": {
+        "candidate": "base_multimarker_replace_context128",
+        "baseline": "base_context128",
+        "minimum_q95_gain": 0.04,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08,
+        "requires": "multimarker_representation"
+      }
+    },
+    "multimarker_diversity": {
+      "passed": false,
+      "candidate": "base_multimarker_split_context128",
+      "baseline": "base_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.012356565049728374,
+      "overall_float_delta": 0.012739805731357023,
+      "fold_q95_deltas": {
+        "fold0": -0.0011935122824979771,
+        "fold2": 0.02505309420330093
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.0386531493410871,
+        "ROI001": 0.0013838040041633803,
+        "ROI007": -0.000825419479070888,
+        "ROI008": 0.01959590954241719,
+        "ROI011": 0.014189195602369864,
+        "ROI012": -0.041461803081233484,
+        "ROI014": 0.0028625194954514654,
+        "ROI020": -0.008245698858814876,
+        "ROI022": 0.02053042555155571,
+        "ROI024": 0.06383527641057185
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI001",
+        "ROI008",
+        "ROI011",
+        "ROI014",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.041461803081233484,
+      "thresholds": {
+        "candidate": "base_multimarker_split_context128",
+        "baseline": "base_context128",
+        "minimum_q95_gain": 0.04,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round96_cv2_multimarker_fcmae.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round96_cv2_multimarker_fcmae_oof.json",
+  "oof_report_sha256": "e5c1b182ddadd1d9c5ee604f68f71621f08008a6c69f569d52b6e038d1e04a06"
+}

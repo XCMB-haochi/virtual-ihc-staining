@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "protocol_name": "round87_cv2_context128_fulltarget",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "context128_fulltarget_mechanism": {
+      "passed": false,
+      "candidate": "context128fulltarget_shift_xm1",
+      "baseline": "official_context128_shift_xm1",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.20166909815227996,
+      "overall_float_delta": -0.20574126192933306,
+      "fold_q95_deltas": {
+        "fold0": -0.21893129253547272,
+        "fold2": -0.18549428609235008
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": 0.019352169830114008,
+        "ROI001": -0.37529070810698784,
+        "ROI007": -0.03903597491157029,
+        "ROI008": -0.5277704471814246,
+        "ROI011": -0.5942909690640619,
+        "ROI012": -0.007743471210929442,
+        "ROI014": -0.037558309340312235,
+        "ROI020": -0.07774866650493095,
+        "ROI022": 0.029340345031513948,
+        "ROI024": -0.26690416143016193
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI022"
+      ],
+      "minimum_roi_q95_gain": -0.5942909690640619,
+      "thresholds": {
+        "candidate": "context128fulltarget_shift_xm1",
+        "baseline": "official_context128_shift_xm1",
+        "minimum_q95_gain": 0.04,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    },
+    "context128_fulltarget_replacement": {
+      "passed": false,
+      "candidate": "t70_context128_fulltarget_replace_shift_xm1",
+      "baseline": "t70_context128_base_split_shift_xm1",
+      "requires": "context128_fulltarget_mechanism",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": false
+      },
+      "overall_q95_delta": -0.008421117628060415,
+      "overall_float_delta": -0.009666084958169563,
+      "fold_q95_deltas": {
+        "fold0": -0.028887590924114193,
+        "fold2": 0.010756129003780757
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.03947665725881677,
+        "ROI001": -0.06429165034873563,
+        "ROI007": 0.02310688978893438,
+        "ROI008": -0.030463889305181624,
+        "ROI011": -0.1187282607330502,
+        "ROI012": 0.018494008194451794,
+        "ROI014": 0.016422374842633758,
+        "ROI020": 0.001023311423296036,
+        "ROI022": 0.035127338128191354,
+        "ROI024": 0.012616287549022331
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI007",
+        "ROI012",
+        "ROI014",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.1187282607330502,
+      "thresholds": {
+        "candidate": "t70_context128_fulltarget_replace_shift_xm1",
+        "baseline": "t70_context128_base_split_shift_xm1",
+        "minimum_q95_gain": 0.03,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08,
+        "requires": "context128_fulltarget_mechanism"
+      }
+    },
+    "context128_fulltarget_diversity": {
+      "passed": false,
+      "candidate": "t70_context128_fulltarget_split_shift_xm1",
+      "baseline": "t70_context128_base_split_shift_xm1",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.0019090916807300573,
+      "overall_float_delta": 0.0011887990170151852,
+      "fold_q95_deltas": {
+        "fold0": -0.008115529042910907,
+        "fold2": 0.01130224023316373
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.02461018937046333,
+        "ROI001": -0.027281865027433128,
+        "ROI007": 0.017350920859996677,
+        "ROI008": -0.008674889740888148,
+        "ROI011": -0.051284801497899934,
+        "ROI012": 0.01623451789262731,
+        "ROI014": 0.013838285324411004,
+        "ROI020": 0.004446056490479577,
+        "ROI022": 0.025014805939392204,
+        "ROI024": 0.0128558430074861
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI007",
+        "ROI012",
+        "ROI014",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.051284801497899934,
+      "thresholds": {
+        "candidate": "t70_context128_fulltarget_split_shift_xm1",
+        "baseline": "t70_context128_base_split_shift_xm1",
+        "minimum_q95_gain": 0.02,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round87_cv2_context128_fulltarget.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round87_cv2_context128_fulltarget_oof.json",
+  "oof_report_sha256": "77b7bcecfd0f2531f53903731dbd0578eaa35087b6df05125b6517b5a19f8117"
+}

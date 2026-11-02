@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "name": "round95_cv5_unext2_texture_thumbnail",
+  "marker": "CD68",
+  "roi_scope": "complete",
+  "expected_rois": ["ROI000", "ROI001", "ROI002", "ROI003", "ROI004", "ROI005", "ROI006", "ROI007", "ROI008", "ROI009", "ROI010", "ROI011", "ROI012", "ROI013", "ROI014", "ROI015", "ROI016", "ROI017", "ROI018", "ROI019", "ROI020", "ROI021", "ROI022", "ROI023", "ROI024"],
+  "folds": [
+    {"name": "fold0", "val_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022"]},
+    {"name": "fold1", "val_rois": ["ROI002", "ROI009", "ROI018", "ROI015", "ROI005"]},
+    {"name": "fold2", "val_rois": ["ROI008", "ROI000", "ROI007", "ROI024", "ROI014"]},
+    {"name": "fold3", "val_rois": ["ROI023", "ROI017", "ROI004", "ROI019", "ROI010"]},
+    {"name": "fold4", "val_rois": ["ROI016", "ROI021", "ROI013", "ROI006", "ROI003"]}
+  ],
+  "recipes": {
+    "officialauxiliary15": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-film",
+      "train_stages": []
+    },
+    "textureauxiliary15": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-texture-film",
+      "fcmae_encoder_init": true,
+      "training_markers": ["CD68", "CD45RO", "HLA-DR", "Vimentin"],
+      "marker_loss_weights": [0.85, 0.05, 0.05, 0.05],
+      "train_stages": [1, 2]
+    }
+  },
+  "run_sources": {
+    "officialauxiliary15": {"protocol_name": "round55_cv2_unext2_official_auxiliary", "recipe_name": "officialauxiliary15", "stage": 2},
+    "textureauxiliary15": {"protocol_name": "round95_cv5_unext2_texture_thumbnail", "recipe_name": "textureauxiliary15", "stage": 2}
+  },
+  "fcmae_pretraining": {
+    "name": "dapi_officialfcmae800_reused",
+    "data_scope": "fold-train",
+    "shared_across_folds": false,
+    "epochs": 800,
+    "batch_size": 32,
+    "workers": 4,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 0.000001,
+    "warmup_epochs": 10,
+    "weight_decay": 0.05,
+    "mask_ratio": 0.5,
+    "checkpoint_interval": 25,
+    "seed": 2044,
+    "model_size": "tiny",
+    "encoder_initialization": {
+      "mode": "official-convnextv2-fcmae-imagenet1k-tiny",
+      "checkpoint": "runs/public_checkpoints/convnextv2_tiny_1k_224_fcmae.pt",
+      "sha256": "b25eadb89ad634b5c925ea04cdacebafe3e462486baf9482dc2d832bb9af57ef",
+      "source_url": "https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_tiny_1k_224_fcmae.pt",
+      "license": "CC-BY-NC-4.0"
+    }
+  },
+  "training": {
+    "epochs_per_stage": 14,
+    "stage1_learning_rate": 0.0003,
+    "stage2_learning_rate": 0.0001,
+    "batch_size": 16,
+    "workers": 4,
+    "seed": 2044,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95,
+    "save_every_epoch": true
+  },
+  "inference": {
+    "context_halo": 128,
+    "tta": "d4",
+    "jpeg_quality": 95,
+    "batch_size": 2,
+    "checkpoint_filename": "best_global_mse.pt",
+    "test_like_diagnostic": true
+  },
+  "candidates": {
+    "officialauxiliary15_context128": {"officialauxiliary15": 1.0},
+    "textureauxiliary15_context128": {"textureauxiliary15": 1.0}
+  },
+  "candidate_output_source_offsets": {
+    "officialauxiliary15_context128": [0, -1],
+    "textureauxiliary15_context128": [0, -1]
+  },
+  "baseline_candidate": "officialauxiliary15_context128",
+  "primary_candidate": "textureauxiliary15_context128",
+  "distribution_gates": {
+    "texture_mechanism_full": {
+      "candidate": "textureauxiliary15_context128",
+      "baseline": "officialauxiliary15_context128",
+      "minimum_q95_gain": 0.02,
+      "require_positive_float": true,
+      "minimum_positive_folds": 4,
+      "minimum_positive_rois": 18,
+      "minimum_roi_q95_gain": -0.20
+    }
+  },
+  "distribution_promotion_order": ["texture_mechanism_full"]
+}

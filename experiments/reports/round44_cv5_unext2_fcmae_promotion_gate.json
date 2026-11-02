@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "protocol_name": "round44_cv2_unext2_fcmae",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "five_fold_promotion": {
+      "passed": true,
+      "candidate": "round35_fcmae20",
+      "baseline": "round35",
+      "requires": null,
+      "checks": {
+        "overall_q95": true,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": true,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.14038575225397665,
+      "overall_float_delta": 0.13953685616141343,
+      "fold_q95_deltas": {
+        "fold0": 0.15284188580454838,
+        "fold1": 0.12635649969965357,
+        "fold2": 0.15718809571386316,
+        "fold3": 0.14815394350154065,
+        "fold4": 0.113460453607928
+      },
+      "positive_folds": [
+        "fold0",
+        "fold1",
+        "fold2",
+        "fold3",
+        "fold4"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.24028928388362658,
+        "ROI001": 0.1280150380562901,
+        "ROI002": 0.022255786880549522,
+        "ROI003": 0.2514959693264416,
+        "ROI004": 0.16039956730405436,
+        "ROI005": 0.13162359542147328,
+        "ROI006": 0.07740152640528208,
+        "ROI007": 0.16253620999451357,
+        "ROI008": 0.28131407598566227,
+        "ROI009": 0.2132409868788585,
+        "ROI010": 0.1210459641128665,
+        "ROI011": 0.08606290236815539,
+        "ROI012": 0.05132939416296267,
+        "ROI013": 0.20401724417904177,
+        "ROI014": 0.06785438398802057,
+        "ROI015": 0.24962875084857217,
+        "ROI016": -0.05002219286907916,
+        "ROI017": 0.2110693896488698,
+        "ROI018": 0.06668384084667878,
+        "ROI019": 0.10427862836108659,
+        "ROI020": 0.18931958689560702,
+        "ROI021": 0.143487165752461,
+        "ROI022": 0.3027525632245016,
+        "ROI023": 0.14986894762697034,
+        "ROI024": 0.012287370990520685
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI001",
+        "ROI002",
+        "ROI003",
+        "ROI004",
+        "ROI005",
+        "ROI006",
+        "ROI007",
+        "ROI008",
+        "ROI009",
+        "ROI010",
+        "ROI011",
+        "ROI012",
+        "ROI013",
+        "ROI014",
+        "ROI015",
+        "ROI017",
+        "ROI018",
+        "ROI019",
+        "ROI020",
+        "ROI021",
+        "ROI022",
+        "ROI023",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.05002219286907916,
+      "thresholds": {
+        "candidate": "round35_fcmae20",
+        "baseline": "round35",
+        "minimum_q95_gain": 0.08,
+        "require_positive_float": true,
+        "minimum_positive_folds": 4,
+        "minimum_positive_rois": 17,
+        "minimum_roi_q95_gain": -0.08
+      }
+    }
+  },
+  "promotion": {
+    "allowed": true,
+    "gate": "five_fold_promotion",
+    "candidate": "round35_fcmae20"
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round44_cv5_unext2_fcmae_promotion.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round44_cv5_unext2_fcmae_promotion_oof.json",
+  "oof_report_sha256": "5cb9cbb7bec92cda07868f066b683921f8cf0007f7bbf8e432a9bb8553894025"
+}

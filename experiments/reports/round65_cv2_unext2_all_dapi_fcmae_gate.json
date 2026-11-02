@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "protocol_name": "round65_cv2_unext2_all_dapi_fcmae",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "all_dapi_representation": {
+      "passed": false,
+      "candidate": "alldapiofficialfcmae630",
+      "baseline": "officialfcmae800",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.04064404867470728,
+      "overall_float_delta": 0.04028344133185158,
+      "fold_q95_deltas": {
+        "fold0": -0.0021388550542269513,
+        "fold2": 0.08073196634219926
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.6093027117078691,
+        "ROI001": -0.2429394738594084,
+        "ROI007": 0.04319680749516408,
+        "ROI008": 0.07820875598723376,
+        "ROI011": 0.041845836453632046,
+        "ROI012": 0.005903255992393497,
+        "ROI014": -0.044269267354394515,
+        "ROI020": 0.26531362154625526,
+        "ROI022": -0.09393343670004128,
+        "ROI024": -0.25209459776581866
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI007",
+        "ROI008",
+        "ROI011",
+        "ROI012",
+        "ROI020"
+      ],
+      "minimum_roi_q95_gain": -0.25209459776581866,
+      "thresholds": {
+        "candidate": "alldapiofficialfcmae630",
+        "baseline": "officialfcmae800",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    },
+    "all_dapi_replacement": {
+      "passed": false,
+      "candidate": "t70_all_dapi_replace",
+      "baseline": "t70_o50",
+      "requires": "all_dapi_representation",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": true,
+        "dependency": false
+      },
+      "overall_q95_delta": 0.03861592655415791,
+      "overall_float_delta": 0.038091817918811444,
+      "fold_q95_deltas": {
+        "fold0": -0.0010293715486682231,
+        "fold2": 0.07576388304407544
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.2335657078964175,
+        "ROI001": -0.06691068035047465,
+        "ROI007": 0.057282132827040755,
+        "ROI008": 0.06032632152489725,
+        "ROI011": 0.0032583912349508637,
+        "ROI012": -0.009562866059212638,
+        "ROI014": 0.07492434299459205,
+        "ROI020": 0.043407869656135745,
+        "ROI022": 0.019437736191989075,
+        "ROI024": -0.029092016710947632
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI007",
+        "ROI008",
+        "ROI011",
+        "ROI014",
+        "ROI020",
+        "ROI022"
+      ],
+      "minimum_roi_q95_gain": -0.06691068035047465,
+      "thresholds": {
+        "candidate": "t70_all_dapi_replace",
+        "baseline": "t70_o50",
+        "minimum_q95_gain": 0.04,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08,
+        "requires": "all_dapi_representation"
+      }
+    },
+    "all_dapi_diversity": {
+      "passed": true,
+      "candidate": "t70_all_dapi_split",
+      "baseline": "t70_o50",
+      "requires": null,
+      "checks": {
+        "overall_q95": true,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": true,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.0429657836979942,
+      "overall_float_delta": 0.042213378946982516,
+      "fold_q95_deltas": {
+        "fold0": 0.02122436311067588,
+        "fold2": 0.0633376659805549
+      },
+      "positive_folds": [
+        "fold0",
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.14239824256314648,
+        "ROI001": -0.011571687587817792,
+        "ROI007": 0.052723994019359566,
+        "ROI008": 0.05159870998480187,
+        "ROI011": 0.019454471863454614,
+        "ROI012": 0.01373769009914838,
+        "ROI014": 0.06872341134709359,
+        "ROI020": 0.04363572770552082,
+        "ROI022": 0.038297990491770406,
+        "ROI024": 0.011964944397732324
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI007",
+        "ROI008",
+        "ROI011",
+        "ROI012",
+        "ROI014",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.011571687587817792,
+      "thresholds": {
+        "candidate": "t70_all_dapi_split",
+        "baseline": "t70_o50",
+        "minimum_q95_gain": 0.04,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08
+      }
+    }
+  },
+  "promotion": {
+    "allowed": true,
+    "gate": "all_dapi_diversity",
+    "candidate": "t70_all_dapi_split"
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round65_cv2_unext2_all_dapi_fcmae.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round65_cv2_unext2_all_dapi_fcmae_oof.json",
+  "oof_report_sha256": "56a91690be0438569499f903ff0797ad233131c1af28b5c78c3e063477453316"
+}

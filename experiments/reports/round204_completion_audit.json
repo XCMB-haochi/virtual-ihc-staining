@@ -1,0 +1,82 @@
+[
+  {
+    "fold": 0,
+    "stage": 1,
+    "seconds": 3110.466267994605,
+    "peak_gib": 6.865819931030273,
+    "actual_optimizer_steps": 1718.0,
+    "init_checkpoint": null
+  },
+  {
+    "fold": 0,
+    "stage": 2,
+    "seconds": 2922.627389117144,
+    "peak_gib": 6.990235328674316,
+    "actual_optimizer_steps": 1718.0,
+    "init_checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round204_fold0_stage1/epochs/epoch_014.pt"
+  },
+  {
+    "fold": 1,
+    "stage": 1,
+    "seconds": 3008.325102998875,
+    "peak_gib": 6.865819931030273,
+    "actual_optimizer_steps": 1717.0,
+    "init_checkpoint": null
+  },
+  {
+    "fold": 1,
+    "stage": 2,
+    "seconds": 2144.2697720364667,
+    "peak_gib": 6.991944313049316,
+    "actual_optimizer_steps": 1718.0,
+    "init_checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round204_fold1_stage1/epochs/epoch_014.pt"
+  },
+  {
+    "fold": 2,
+    "stage": 1,
+    "seconds": 2989.424959653057,
+    "peak_gib": 6.865819931030273,
+    "actual_optimizer_steps": 1719.0,
+    "init_checkpoint": null
+  },
+  {
+    "fold": 2,
+    "stage": 2,
+    "seconds": 2140.9989936132915,
+    "peak_gib": 6.991944313049316,
+    "actual_optimizer_steps": 1719.0,
+    "init_checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round204_fold2_stage1/epochs/epoch_014.pt"
+  },
+  {
+    "fold": 3,
+    "stage": 1,
+    "seconds": 3000.1626389417797,
+    "peak_gib": 6.865819931030273,
+    "actual_optimizer_steps": 1592.0,
+    "init_checkpoint": null
+  },
+  {
+    "fold": 3,
+    "stage": 2,
+    "seconds": 2131.246979897842,
+    "peak_gib": 6.990235328674316,
+    "actual_optimizer_steps": 1591.0,
+    "init_checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round204_fold3_stage1/epochs/epoch_014.pt"
+  },
+  {
+    "fold": 4,
+    "stage": 1,
+    "seconds": 2955.7080462360755,
+    "peak_gib": 6.865819931030273,
+    "actual_optimizer_steps": 1591.0,
+    "init_checkpoint": null
+  },
+  {
+    "fold": 4,
+    "stage": 2,
+    "seconds": 2142.9642305872403,
+    "peak_gib": 6.990235328674316,
+    "actual_optimizer_steps": 1591.0,
+    "init_checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round204_fold4_stage1/epochs/epoch_014.pt"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "checkpoint": "runs\\round303\\best.pt",
+  "checkpoint_sha256": "9dc6d3c65c6c0ae11a7694665e8171baf657467048247c283f2fcf2016381df2",
+  "epoch": 27,
+  "markers": {
+    "colon": "CD68",
+    "liver": "CD45RO",
+    "stomach": "CD68"
+  },
+  "validation_score": 76.09081411743841,
+  "selection": "best grouped Val checkpoint within this run; no cross-run performance gate",
+  "images": {
+    "colon": 1346,
+    "liver": 560,
+    "stomach": 280
+  },
+  "package": "submissions\\semifinal_round303_mixed_q95.zip",
+  "bytes": 18218868,
+  "sha256": "e364ee4cc94bfd7450a1e5ff10a0e363c5c37db41b166affeda09d4bcc6fc843",
+  "jpeg_quality": 95,
+  "tta": false,
+  "context": false,
+  "postprocessing": false,
+  "seconds": 20.79001120000612
+}

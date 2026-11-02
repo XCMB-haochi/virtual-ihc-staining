@@ -1,0 +1,256 @@
+{
+  "purpose": "implementation audit, no optimizer step or checkpoint selection",
+  "folds": {
+    "fold0": {
+      "configuration_pairs": [
+        {
+          "stage": 1,
+          "different_fields": [
+            "feature_guidance_batch_samples",
+            "feature_guidance_checkpoint",
+            "feature_guidance_checkpoint_sha256",
+            "feature_guidance_marker",
+            "feature_guidance_marker_index",
+            "feature_guidance_mode",
+            "feature_guidance_report",
+            "feature_guidance_weight",
+            "output_dir"
+          ]
+        },
+        {
+          "stage": 2,
+          "different_fields": [
+            "feature_guidance_batch_samples",
+            "feature_guidance_checkpoint",
+            "feature_guidance_checkpoint_sha256",
+            "feature_guidance_marker",
+            "feature_guidance_marker_index",
+            "feature_guidance_mode",
+            "feature_guidance_report",
+            "feature_guidance_weight",
+            "init_checkpoint",
+            "output_dir"
+          ]
+        }
+      ],
+      "trajectories": [
+        {
+          "recipe": "control",
+          "stage": 1,
+          "actual_adam_steps": 1717.0,
+          "attempted_steps": 1722,
+          "initial_supervised_loss": 0.17572197804645617,
+          "final_supervised_loss": 0.09704065414107575,
+          "initial_guidance_loss": 0.0,
+          "final_guidance_loss": 0.0
+        },
+        {
+          "recipe": "relational",
+          "stage": 1,
+          "actual_adam_steps": 1717.0,
+          "attempted_steps": 1722,
+          "initial_supervised_loss": 0.19080509665061016,
+          "final_supervised_loss": 0.1076302535071665,
+          "initial_guidance_loss": 0.18804865290923994,
+          "final_guidance_loss": 0.05061413202510805
+        },
+        {
+          "recipe": "control",
+          "stage": 2,
+          "actual_adam_steps": 1718.0,
+          "attempted_steps": 1722,
+          "initial_supervised_loss": 0.09898895390179692,
+          "final_supervised_loss": 0.09257980214089763,
+          "initial_guidance_loss": 0.0,
+          "final_guidance_loss": 0.0
+        },
+        {
+          "recipe": "relational",
+          "stage": 2,
+          "actual_adam_steps": 1717.0,
+          "attempted_steps": 1722,
+          "initial_supervised_loss": 0.10877336412668229,
+          "final_supervised_loss": 0.10267703916345323,
+          "initial_guidance_loss": 0.06831499955483845,
+          "final_guidance_loss": 0.03990866176936091
+        }
+      ],
+      "real_batches": [
+        {
+          "batch_size": 16,
+          "pair_count": 120,
+          "teacher_input_matches_cd45ro": true,
+          "formula_scalar_error": 0.0,
+          "formula_gradient_max_error": 2.0372681319713593e-10,
+          "teacher_pair_distance_median": 3.6156530380249023,
+          "student_pair_distance_median": 23.77207374572754,
+          "teacher_near_zero_pair_fraction": 0.0,
+          "supervised_loss": 0.12274293601512909,
+          "relation_loss": 0.049991101026535034,
+          "diagnostic_gradient_scale": 32768.0,
+          "supervised_feature_gradient_norm": 8.408510439039674e-06,
+          "weighted_relation_feature_gradient_norm": 1.85367443918949e-05,
+          "weighted_relation_to_supervised_feature_gradient_norm": 2.204521894454956,
+          "feature_gradient_cosine": 0.01601516827940941
+        },
+        {
+          "batch_size": 16,
+          "pair_count": 120,
+          "teacher_input_matches_cd45ro": true,
+          "formula_scalar_error": 7.450580596923828e-09,
+          "formula_gradient_max_error": 7.275957614183426e-11,
+          "teacher_pair_distance_median": 3.286129951477051,
+          "student_pair_distance_median": 26.662616729736328,
+          "teacher_near_zero_pair_fraction": 0.0,
+          "supervised_loss": 0.10702518373727798,
+          "relation_loss": 0.046103306114673615,
+          "diagnostic_gradient_scale": 32768.0,
+          "supervised_feature_gradient_norm": 8.918425010051578e-06,
+          "weighted_relation_feature_gradient_norm": 8.839379916025791e-06,
+          "weighted_relation_to_supervised_feature_gradient_norm": 0.9911368489265442,
+          "feature_gradient_cosine": 0.015761110931634903
+        }
+      ],
+      "teacher": {
+        "epoch": 160,
+        "excluded_rois": [
+          "ROI005",
+          "ROI052",
+          "ROI087"
+        ],
+        "sha256": "ac32c2cf5e2e18507bc0a8744b447e000d883d3c6cc945472299aadf3a896e97",
+        "all_parameters_frozen": true
+      },
+      "control_same_batch_feature_distance_medians": [
+        48.7630729675293,
+        40.55025100708008
+      ]
+    },
+    "fold3": {
+      "configuration_pairs": [
+        {
+          "stage": 1,
+          "different_fields": [
+            "feature_guidance_batch_samples",
+            "feature_guidance_checkpoint",
+            "feature_guidance_checkpoint_sha256",
+            "feature_guidance_marker",
+            "feature_guidance_marker_index",
+            "feature_guidance_mode",
+            "feature_guidance_report",
+            "feature_guidance_weight",
+            "output_dir"
+          ]
+        },
+        {
+          "stage": 2,
+          "different_fields": [
+            "feature_guidance_batch_samples",
+            "feature_guidance_checkpoint",
+            "feature_guidance_checkpoint_sha256",
+            "feature_guidance_marker",
+            "feature_guidance_marker_index",
+            "feature_guidance_mode",
+            "feature_guidance_report",
+            "feature_guidance_weight",
+            "init_checkpoint",
+            "output_dir"
+          ]
+        }
+      ],
+      "trajectories": [
+        {
+          "recipe": "control",
+          "stage": 1,
+          "actual_adam_steps": 1590.0,
+          "attempted_steps": 1596,
+          "initial_supervised_loss": 0.18279509305298983,
+          "final_supervised_loss": 0.09260832970286463,
+          "initial_guidance_loss": 0.0,
+          "final_guidance_loss": 0.0
+        },
+        {
+          "recipe": "relational",
+          "stage": 1,
+          "actual_adam_steps": 1589.0,
+          "attempted_steps": 1596,
+          "initial_supervised_loss": 0.20292413814382237,
+          "final_supervised_loss": 0.11824629332993057,
+          "initial_guidance_loss": 0.9625350808704293,
+          "final_guidance_loss": 0.4036619806355172
+        },
+        {
+          "recipe": "control",
+          "stage": 2,
+          "actual_adam_steps": 1592.0,
+          "attempted_steps": 1596,
+          "initial_supervised_loss": 0.09423490176489065,
+          "final_supervised_loss": 0.0857625214935659,
+          "initial_guidance_loss": 0.0,
+          "final_guidance_loss": 0.0
+        },
+        {
+          "recipe": "relational",
+          "stage": 2,
+          "actual_adam_steps": 1589.0,
+          "attempted_steps": 1596,
+          "initial_supervised_loss": 0.11958046745467972,
+          "final_supervised_loss": 0.11515839630430871,
+          "initial_guidance_loss": 0.4541173675066822,
+          "final_guidance_loss": 0.3311533973930956
+        }
+      ],
+      "real_batches": [
+        {
+          "batch_size": 16,
+          "pair_count": 120,
+          "teacher_input_matches_cd45ro": true,
+          "formula_scalar_error": 0.0,
+          "formula_gradient_max_error": 4.76837158203125e-07,
+          "teacher_pair_distance_median": 3.8680360317230225,
+          "student_pair_distance_median": 0.12741512060165405,
+          "teacher_near_zero_pair_fraction": 0.0,
+          "supervised_loss": 0.10706993192434311,
+          "relation_loss": 0.4999535381793976,
+          "diagnostic_gradient_scale": 32768.0,
+          "supervised_feature_gradient_norm": 4.813630383182499e-09,
+          "weighted_relation_feature_gradient_norm": 0.05797502025961876,
+          "weighted_relation_to_supervised_feature_gradient_norm": 12043929.0,
+          "feature_gradient_cosine": -6.973453128011897e-05
+        },
+        {
+          "batch_size": 16,
+          "pair_count": 120,
+          "teacher_input_matches_cd45ro": true,
+          "formula_scalar_error": 0.0,
+          "formula_gradient_max_error": 1.7881393432617188e-07,
+          "teacher_pair_distance_median": 4.213425159454346,
+          "student_pair_distance_median": 0.12389601022005081,
+          "teacher_near_zero_pair_fraction": 0.0,
+          "supervised_loss": 0.12378157675266266,
+          "relation_loss": 0.3067815601825714,
+          "diagnostic_gradient_scale": 32768.0,
+          "supervised_feature_gradient_norm": 5.013791160024539e-09,
+          "weighted_relation_feature_gradient_norm": 0.02952570840716362,
+          "weighted_relation_to_supervised_feature_gradient_norm": 5888898.5,
+          "feature_gradient_cosine": 0.000960633042268455
+        }
+      ],
+      "teacher": {
+        "epoch": 160,
+        "excluded_rois": [
+          "ROI044",
+          "ROI067",
+          "ROI074",
+          "ROI078"
+        ],
+        "sha256": "20dece40d6458236fa85b07a714b7aa7f88d3f0741bde3ac49fb8860f1bc3950",
+        "all_parameters_frozen": true
+      },
+      "control_same_batch_feature_distance_medians": [
+        32.654136657714844,
+        29.51348876953125
+      ]
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "name": "round67_cv5_auxiliary_all_dapi_composition",
+  "marker": "CD68",
+  "roi_scope": "complete",
+  "expected_rois": ["ROI000", "ROI001", "ROI002", "ROI003", "ROI004", "ROI005", "ROI006", "ROI007", "ROI008", "ROI009", "ROI010", "ROI011", "ROI012", "ROI013", "ROI014", "ROI015", "ROI016", "ROI017", "ROI018", "ROI019", "ROI020", "ROI021", "ROI022", "ROI023", "ROI024"],
+  "folds": [
+    {"name": "fold0", "val_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022"]},
+    {"name": "fold1", "val_rois": ["ROI002", "ROI009", "ROI018", "ROI015", "ROI005"]},
+    {"name": "fold2", "val_rois": ["ROI008", "ROI000", "ROI007", "ROI024", "ROI014"]},
+    {"name": "fold3", "val_rois": ["ROI023", "ROI017", "ROI004", "ROI019", "ROI010"]},
+    {"name": "fold4", "val_rois": ["ROI016", "ROI021", "ROI013", "ROI006", "ROI003"]}
+  ],
+  "recipes": {
+    "round35base32": {"model_arch": "unet", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "round35base48": {"model_arch": "unet", "base_channels": 48, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "fcmae800": {"model_arch": "unext2-fcmae-tiny", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "officialfcmae800": {"model_arch": "unext2-fcmae-tiny", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "officialauxiliary15": {"model_arch": "unext2-fcmae-tiny", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "alldapiofficialfcmae630": {"model_arch": "unext2-fcmae-tiny", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []}
+  },
+  "run_sources": {
+    "round35base32": {"protocol_name": "round31_cv5_thumbnail_ring_film", "recipe_name": "thumbnailcontinue", "stage": 2},
+    "round35base48": {"protocol_name": "round34_cv5_thumbnail_base48_continue", "recipe_name": "thumbnailbase48continue", "stage": 2},
+    "fcmae800": {"protocol_name": "round46_cv2_unext2_fcmae800", "recipe_name": "fcmae800", "stage": 2},
+    "officialfcmae800": {"protocol_name": "round52_cv2_unext2_official_fcmae", "recipe_name": "officialfcmae800", "stage": 2},
+    "officialauxiliary15": {"protocol_name": "round55_cv2_unext2_official_auxiliary", "recipe_name": "officialauxiliary15", "stage": 2},
+    "alldapiofficialfcmae630": {"protocol_name": "round65_cv2_unext2_all_dapi_fcmae", "recipe_name": "alldapiofficialfcmae630", "stage": 2}
+  },
+  "training": {
+    "epochs_per_stage": 14,
+    "stage1_learning_rate": 0.0003,
+    "stage2_learning_rate": 0.0001,
+    "batch_size": 16,
+    "workers": 4,
+    "seed": 2044,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95
+  },
+  "inference": {"context_halo": 64, "tta": "d4", "jpeg_quality": 95, "batch_size": 2, "checkpoint_filename": "best_global_mse.pt", "test_like_diagnostic": false},
+  "candidates": {
+    "t70_o50": {"round35base32": 0.21, "round35base48": 0.09, "fcmae800": 0.35, "officialfcmae800": 0.35},
+    "tri_aux23_residual_half": {"round35base32": 0.21, "round35base48": 0.09, "fcmae800": 0.35, "officialfcmae800": 0.0583333333333333, "officialauxiliary15": 0.2333333333333333, "alldapiofficialfcmae630": 0.0583333333333334},
+    "tri_auxhalf_residual_half": {"round35base32": 0.21, "round35base48": 0.09, "fcmae800": 0.35, "officialfcmae800": 0.0875, "officialauxiliary15": 0.175, "alldapiofficialfcmae630": 0.0875},
+    "tri_no_official_aux2_dapi1": {"round35base32": 0.21, "round35base48": 0.09, "fcmae800": 0.35, "officialauxiliary15": 0.2333333333333333, "alldapiofficialfcmae630": 0.1166666666666667}
+  },
+  "baseline_candidate": "t70_o50",
+  "primary_candidate": "tri_aux23_residual_half",
+  "distribution_gates": {
+    "aux23_residual_half": {"candidate": "tri_aux23_residual_half", "baseline": "t70_o50", "minimum_q95_gain": 0.05, "require_positive_float": true, "minimum_positive_folds": 5, "minimum_positive_rois": 20, "minimum_roi_q95_gain": -0.05},
+    "auxhalf_residual_half": {"candidate": "tri_auxhalf_residual_half", "baseline": "t70_o50", "minimum_q95_gain": 0.05, "require_positive_float": true, "minimum_positive_folds": 5, "minimum_positive_rois": 20, "minimum_roi_q95_gain": -0.05},
+    "no_official_aux2_dapi1": {"candidate": "tri_no_official_aux2_dapi1", "baseline": "t70_o50", "minimum_q95_gain": 0.05, "require_positive_float": true, "minimum_positive_folds": 5, "minimum_positive_rois": 20, "minimum_roi_q95_gain": -0.05}
+  },
+  "distribution_promotion_order": ["aux23_residual_half", "auxhalf_residual_half", "no_official_aux2_dapi1"]
+}

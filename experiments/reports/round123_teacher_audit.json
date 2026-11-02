@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "mode": "frozen-fold-local-multimarker-fcmae-perceptual",
+  "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round123_fold1_teacher/final_encoder.pt",
+  "checkpoint_sha256": "09ad68e3f3d5d28377ed2033e06705e78dee8f9936a4ac8e1e3be0d51ae72341",
+  "pretraining_epoch": 160,
+  "pretraining_markers": [
+    "DAPI",
+    "CD68",
+    "CD45RO",
+    "HLA-DR",
+    "Vimentin"
+  ],
+  "excluded_val_rois": [
+    "ROI002",
+    "ROI005",
+    "ROI009",
+    "ROI015",
+    "ROI018"
+  ],
+  "parameters": 27860736
+}

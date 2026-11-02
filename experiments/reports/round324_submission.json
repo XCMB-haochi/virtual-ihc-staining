@@ -1,0 +1,25 @@
+{
+  "checkpoint": "runs\\round324\\final.pt",
+  "checkpoint_sha256": "1da44f962be3245c8985e7a935ab7e7f8edcb4cafa885246e84779e5551d79cb",
+  "epoch": 23,
+  "markers": {
+    "colon": "CD68",
+    "liver": "CD45RO",
+    "stomach": "CD68"
+  },
+  "validation_score": null,
+  "selection": "fixed full-data epoch23 from Round323 Val; no full-data validation",
+  "images": {
+    "colon": 1346,
+    "liver": 560,
+    "stomach": 280
+  },
+  "package": "submissions\\semifinal_round324_mixed_q95.zip",
+  "bytes": 18290109,
+  "sha256": "87cfc576211a8bf7a98861e8fa20e0a23aa7590bb326f07ae259aa3535a28b8e",
+  "jpeg_quality": 95,
+  "tta": false,
+  "context": false,
+  "postprocessing": false,
+  "seconds": 20.856663099955767
+}

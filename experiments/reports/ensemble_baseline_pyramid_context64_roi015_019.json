@@ -1,0 +1,259 @@
+{
+  "checkpoint_a": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\runs\\unet_cd68_fold015_019_10e\\best.pt",
+  "checkpoint_b": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\runs\\unet_cd68_pyramid01_fold015_019_7e\\best.pt",
+  "marker": "CD68",
+  "validation_rois": [
+    "ROI015",
+    "ROI016",
+    "ROI017",
+    "ROI018",
+    "ROI019"
+  ],
+  "validation_images": 1261,
+  "context_halo": 64,
+  "tta": "d4",
+  "jpeg_quality": 95,
+  "roi_fit": {
+    "slope": 1.1461330929123976,
+    "intercept": -1.2443928873430292
+  },
+  "ranking": [
+    {
+      "name": "weight_b_0.5_linear_half",
+      "weight_b": 0.5,
+      "calibration": "linear_half",
+      "ssim": 0.8061569601789407,
+      "psnr": 25.845943547977104,
+      "competition_score": 71.9385533413121
+    },
+    {
+      "name": "weight_b_0_log_half",
+      "weight_b": 0.0,
+      "calibration": "log_half",
+      "ssim": 0.8062227167516929,
+      "psnr": 25.833506515043418,
+      "competition_score": 71.93569408164456
+    },
+    {
+      "name": "weight_b_0_linear_half",
+      "weight_b": 0.0,
+      "calibration": "linear_half",
+      "ssim": 0.8062163867885419,
+      "psnr": 25.832318721274493,
+      "competition_score": 71.93453830796263
+    },
+    {
+      "name": "weight_b_0.5_log_half",
+      "weight_b": 0.5,
+      "calibration": "log_half",
+      "ssim": 0.8061095413284368,
+      "psnr": 25.843412129661193,
+      "competition_score": 71.93371517078728
+    },
+    {
+      "name": "weight_b_1_linear_half",
+      "weight_b": 1.0,
+      "calibration": "linear_half",
+      "ssim": 0.8042662126855877,
+      "psnr": 25.79407158662331,
+      "competition_score": 71.77507783996514
+    },
+    {
+      "name": "weight_b_1_log_half",
+      "weight_b": 1.0,
+      "calibration": "log_half",
+      "ssim": 0.8041657618515506,
+      "psnr": 25.788126110023075,
+      "competition_score": 71.76447899562238
+    },
+    {
+      "name": "weight_b_0.5_raw",
+      "weight_b": 0.5,
+      "calibration": "raw",
+      "ssim": 0.8024133934463598,
+      "psnr": 25.55291082864945,
+      "competition_score": 71.50068403843484
+    },
+    {
+      "name": "weight_b_0_raw",
+      "weight_b": 0.0,
+      "calibration": "raw",
+      "ssim": 0.8024848893271662,
+      "psnr": 25.521840256142042,
+      "competition_score": 71.48704640658686
+    },
+    {
+      "name": "weight_b_1_raw",
+      "weight_b": 1.0,
+      "calibration": "raw",
+      "ssim": 0.8000991967328024,
+      "psnr": 25.50185808204881,
+      "competition_score": 71.30805862052544
+    }
+  ],
+  "roi_metrics": {
+    "weight_b_0_raw": {
+      "ROI015": {
+        "ssim": 0.7937874953489,
+        "psnr": 24.648664749546985,
+        "competition_score": 70.35432352415118
+      },
+      "ROI016": {
+        "ssim": 0.8403139032559105,
+        "psnr": 27.317273380457156,
+        "competition_score": 75.21233725618802
+      },
+      "ROI017": {
+        "ssim": 0.8476941361676366,
+        "psnr": 27.145948983926168,
+        "competition_score": 75.62615892209026
+      },
+      "ROI018": {
+        "ssim": 0.8175639955905007,
+        "psnr": 24.79908733019071,
+        "competition_score": 72.10893208944947
+      },
+      "ROI019": {
+        "ssim": 0.7267137523066021,
+        "psnr": 23.65730827370883,
+        "competition_score": 65.06434762568745
+      }
+    },
+    "weight_b_0_log_half": {
+      "ROI015": {
+        "ssim": 0.8013311812430925,
+        "psnr": 25.291210520063082,
+        "competition_score": 71.26790899905433
+      },
+      "ROI016": {
+        "ssim": 0.8420766638915079,
+        "psnr": 27.38148468854612,
+        "competition_score": 75.37425728553322
+      },
+      "ROI017": {
+        "ssim": 0.8524844699806823,
+        "psnr": 27.62855812107386,
+        "competition_score": 76.25104777129206
+      },
+      "ROI018": {
+        "ssim": 0.8219563031163278,
+        "psnr": 25.21712065731965,
+        "competition_score": 72.66721361253474
+      },
+      "ROI019": {
+        "ssim": 0.7285155480901305,
+        "psnr": 23.76398352610999,
+        "competition_score": 65.25447848197513
+      }
+    },
+    "weight_b_0.5_raw": {
+      "ROI015": {
+        "ssim": 0.7892915122926157,
+        "psnr": 24.38673208533422,
+        "competition_score": 69.88244511168364
+      },
+      "ROI016": {
+        "ssim": 0.8346472396921993,
+        "psnr": 27.062829498016733,
+        "competition_score": 74.66300447726398
+      },
+      "ROI017": {
+        "ssim": 0.8505761480300451,
+        "psnr": 27.434846860591453,
+        "competition_score": 76.00123847845803
+      },
+      "ROI018": {
+        "ssim": 0.8201682137406501,
+        "psnr": 25.00546478529597,
+        "competition_score": 72.41505383302308
+      },
+      "ROI019": {
+        "ssim": 0.7297232503224295,
+        "psnr": 23.768717485768455,
+        "competition_score": 65.34185801403113
+      }
+    },
+    "weight_b_0.5_log_half": {
+      "ROI015": {
+        "ssim": 0.799390593708461,
+        "psnr": 25.233906784829554,
+        "competition_score": 71.09768563048999
+      },
+      "ROI016": {
+        "ssim": 0.8386855516912506,
+        "psnr": 27.232168415030493,
+        "competition_score": 75.04728966740583
+      },
+      "ROI017": {
+        "ssim": 0.8533544626619309,
+        "psnr": 27.729793426021907,
+        "competition_score": 76.3726884419483
+      },
+      "ROI018": {
+        "ssim": 0.823229883260126,
+        "psnr": 25.312830543252968,
+        "competition_score": 72.8137901541606
+      },
+      "ROI019": {
+        "ssim": 0.7305027566281348,
+        "psnr": 23.813403699989063,
+        "competition_score": 65.42323518396287
+      }
+    },
+    "weight_b_1_raw": {
+      "ROI015": {
+        "ssim": 0.7824934468696935,
+        "psnr": 24.055911346321228,
+        "competition_score": 69.20808808867127
+      },
+      "ROI016": {
+        "ssim": 0.8256406837027963,
+        "psnr": 26.706549064968907,
+        "competition_score": 73.81877729817708
+      },
+      "ROI017": {
+        "ssim": 0.8510618399153096,
+        "psnr": 27.60555423167223,
+        "competition_score": 76.137661333075
+      },
+      "ROI018": {
+        "ssim": 0.8207575045132365,
+        "psnr": 25.137049847681386,
+        "competition_score": 72.53525522453539
+      },
+      "ROI019": {
+        "ssim": 0.7314336246915638,
+        "psnr": 23.83199719451696,
+        "competition_score": 65.49955204511963
+      }
+    },
+    "weight_b_1_log_half": {
+      "ROI015": {
+        "ssim": 0.7953438792449916,
+        "psnr": 25.096422205551303,
+        "competition_score": 70.73192487048019
+      },
+      "ROI016": {
+        "ssim": 0.8328403863282363,
+        "psnr": 27.008754733622663,
+        "competition_score": 74.50407988315014
+      },
+      "ROI017": {
+        "ssim": 0.8523369367716781,
+        "psnr": 27.748868508988924,
+        "competition_score": 76.31290667941082
+      },
+      "ROI018": {
+        "ssim": 0.8227547462199725,
+        "psnr": 25.345091516865423,
+        "competition_score": 72.79988714551733
+      },
+      "ROI019": {
+        "ssim": 0.7313487888701633,
+        "psnr": 23.827246841834008,
+        "competition_score": 65.49076332601183
+      }
+    }
+  },
+  "elapsed_seconds": 329.65451380000013
+}

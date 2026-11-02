@@ -1,0 +1,21 @@
+{
+  "kind": "round302-fixed-marker-comparison",
+  "seed": 2026,
+  "domain_encoder": "runs/round302_pretrain/final_encoder.pt",
+  "domain_epochs": 800,
+  "public": "runs/public_checkpoints/convnextv2_tiny_1k_224_fcmae.pt",
+  "data": "dataset",
+  "output_root": "runs/round302_supervised",
+  "epochs": 192,
+  "validation_every": 16,
+  "jobs": [
+    {
+      "name": "mixed",
+      "organ_markers": {"colon": "CD68", "liver": "CD45RO", "stomach": "CD68"}
+    },
+    {
+      "name": "cd68",
+      "organ_markers": {"colon": "CD68", "liver": "CD68", "stomach": "CD68"}
+    }
+  ]
+}

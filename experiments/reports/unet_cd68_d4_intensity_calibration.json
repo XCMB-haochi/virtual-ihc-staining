@@ -1,0 +1,73 @@
+{
+  "checkpoint": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\runs\\unet_cd68_ssim_10e\\best.pt",
+  "marker": "CD68",
+  "validation_rois": [
+    "ROI020",
+    "ROI021",
+    "ROI022",
+    "ROI023",
+    "ROI024"
+  ],
+  "validation_images": 1320,
+  "tta": "d4",
+  "patch_mean_fit": {
+    "slope": 0.7342651893592298,
+    "intercept": 13.079206307550487
+  },
+  "roi_mean_fit": {
+    "slope": 1.1745672483134126,
+    "intercept": -2.2087424050842417
+  },
+  "metrics": {
+    "raw": {
+      "ssim": 0.7968617471115245,
+      "psnr": 25.593820937966413,
+      "competition_score": 71.13661486058656
+    },
+    "raw_jpeg_q95": {
+      "ssim": 0.7957025160250731,
+      "psnr": 25.589367461574174,
+      "competition_score": 71.05279659869962
+    },
+    "patch_shift": {
+      "ssim": 0.7308011957843666,
+      "psnr": 25.25106253893714,
+      "competition_score": 66.30672122826795
+    },
+    "patch_shift_jpeg_q95": {
+      "ssim": 0.7299767424354492,
+      "psnr": 25.2479088642416,
+      "competition_score": 66.2471172890264
+    },
+    "patch_scale": {
+      "ssim": 0.7886025182422532,
+      "psnr": 25.024363845355495,
+      "competition_score": 70.21679458417103
+    },
+    "patch_scale_jpeg_q95": {
+      "ssim": 0.7875284970475499,
+      "psnr": 25.021465418849335,
+      "competition_score": 70.13987404463808
+    },
+    "roi_shift": {
+      "ssim": 0.749659866807035,
+      "psnr": 25.753984889563704,
+      "competition_score": 67.92858161023068
+    },
+    "roi_shift_jpeg_q95": {
+      "ssim": 0.7494120991932671,
+      "psnr": 25.75185582137131,
+      "competition_score": 67.90996043635148
+    },
+    "roi_scale": {
+      "ssim": 0.7977110078576679,
+      "psnr": 25.7859954909327,
+      "competition_score": 71.31136784459638
+    },
+    "roi_scale_jpeg_q95": {
+      "ssim": 0.7966053355293248,
+      "psnr": 25.782278070180787,
+      "competition_score": 71.2317403291612
+    }
+  }
+}

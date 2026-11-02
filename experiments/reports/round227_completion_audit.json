@@ -1,0 +1,74 @@
+[
+  {
+    "fold": "fold0",
+    "recipe": "base",
+    "stage": 1,
+    "epochs": 17,
+    "actual_updates": 2086.0,
+    "attempted_updates": 2091,
+    "hours": 0.7977229945979909
+  },
+  {
+    "fold": "fold0",
+    "recipe": "base",
+    "stage": 2,
+    "epochs": 17,
+    "actual_updates": 2087.0,
+    "attempted_updates": 2091,
+    "hours": 0.7732533027392088
+  },
+  {
+    "fold": "fold0",
+    "recipe": "signal",
+    "stage": 1,
+    "epochs": 17,
+    "actual_updates": 2086.0,
+    "attempted_updates": 2091,
+    "hours": 0.7566740885999106
+  },
+  {
+    "fold": "fold0",
+    "recipe": "signal",
+    "stage": 2,
+    "epochs": 17,
+    "actual_updates": 2087.0,
+    "attempted_updates": 2091,
+    "hours": 0.7537078407690084
+  },
+  {
+    "fold": "fold3",
+    "recipe": "base",
+    "stage": 1,
+    "epochs": 18,
+    "actual_updates": 2048.0,
+    "attempted_updates": 2052,
+    "hours": 0.8378262026732166
+  },
+  {
+    "fold": "fold3",
+    "recipe": "base",
+    "stage": 2,
+    "epochs": 18,
+    "actual_updates": 2048.0,
+    "attempted_updates": 2052,
+    "hours": 0.814869285821656
+  },
+  {
+    "fold": "fold3",
+    "recipe": "signal",
+    "stage": 1,
+    "epochs": 18,
+    "actual_updates": 2048.0,
+    "attempted_updates": 2052,
+    "hours": 0.8048385351870416
+  },
+  {
+    "fold": "fold3",
+    "recipe": "signal",
+    "stage": 2,
+    "epochs": 18,
+    "actual_updates": 2047.0,
+    "attempted_updates": 2052,
+    "hours": 0.8309688606669402
+  }
+]

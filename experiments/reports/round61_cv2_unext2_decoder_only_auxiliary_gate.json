@@ -1,0 +1,330 @@
+{
+  "version": 1,
+  "protocol_name": "round61_cv2_unext2_decoder_only_auxiliary",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "decoder_only_mechanism": {
+      "passed": false,
+      "candidate": "decoderonlyauxiliary15",
+      "baseline": "officialauxcontrol",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.006394530471098392,
+      "overall_float_delta": -0.010250571321194002,
+      "fold_q95_deltas": {
+        "fold0": -0.022011560474368252,
+        "fold2": 0.008238749610882223
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.12966858853977214,
+        "ROI001": -0.07852852696825607,
+        "ROI007": -0.17904936960401585,
+        "ROI008": 0.007378253031944837,
+        "ROI011": 0.02734396521488236,
+        "ROI012": -0.05277768909833469,
+        "ROI014": 0.033165073434815895,
+        "ROI020": -0.10537301855565318,
+        "ROI022": 0.08136551122680657,
+        "ROI024": 0.07703009667689287
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI008",
+        "ROI011",
+        "ROI014",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.17904936960401585,
+      "thresholds": {
+        "candidate": "decoderonlyauxiliary15",
+        "baseline": "officialauxcontrol",
+        "minimum_q95_gain": 0.08,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    },
+    "decoder_only_diversity_effect": {
+      "passed": false,
+      "candidate": "t70_decoderonly_auxiliary_split",
+      "baseline": "t70_official_auxcontrol_split",
+      "requires": "decoder_only_mechanism",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": true,
+        "roi_floor": true,
+        "dependency": false
+      },
+      "overall_q95_delta": 0.008432952480887934,
+      "overall_float_delta": 0.007933891726651154,
+      "fold_q95_deltas": {
+        "fold0": 0.0122778905189449,
+        "fold2": 0.004830215264121307
+      },
+      "positive_folds": [
+        "fold0",
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.018944641098215698,
+        "ROI001": -0.00039052409378825814,
+        "ROI007": -0.026100549130347872,
+        "ROI008": 0.008552170998058273,
+        "ROI011": 0.010374145479417507,
+        "ROI012": 0.011149415546285013,
+        "ROI014": 0.014153192268551607,
+        "ROI020": 0.012043120270035956,
+        "ROI022": 0.02728971594294194,
+        "ROI024": 0.013117158390201666
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI008",
+        "ROI011",
+        "ROI012",
+        "ROI014",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.026100549130347872,
+      "thresholds": {
+        "candidate": "t70_decoderonly_auxiliary_split",
+        "baseline": "t70_official_auxcontrol_split",
+        "minimum_q95_gain": 0.02,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.06,
+        "requires": "decoder_only_mechanism"
+      }
+    },
+    "decoder_only_direct_advance": {
+      "passed": false,
+      "candidate": "decoderonlyauxiliary15",
+      "baseline": "officialauxiliary15",
+      "requires": "decoder_only_diversity_effect",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": false
+      },
+      "overall_q95_delta": -0.08534599146034338,
+      "overall_float_delta": -0.08641709230717254,
+      "fold_q95_deltas": {
+        "fold0": -0.1681949179546649,
+        "fold2": -0.007715894981231486
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": 0.3473779811897657,
+        "ROI001": -0.04895762637283951,
+        "ROI007": -0.5218318726335411,
+        "ROI008": 0.22330521680787285,
+        "ROI011": -0.1654476708537942,
+        "ROI012": -0.194427012460352,
+        "ROI014": -0.02851468282366909,
+        "ROI020": -0.22288283074040294,
+        "ROI022": -0.20602664172491814,
+        "ROI024": -0.022960075652790124
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI008"
+      ],
+      "minimum_roi_q95_gain": -0.5218318726335411,
+      "thresholds": {
+        "candidate": "decoderonlyauxiliary15",
+        "baseline": "officialauxiliary15",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.1,
+        "requires": "decoder_only_diversity_effect"
+      }
+    },
+    "decoder_only_split_advance": {
+      "passed": false,
+      "candidate": "t70_decoderonly_auxiliary_split",
+      "baseline": "t70_official_auxiliary_split",
+      "requires": "decoder_only_direct_advance",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": false
+      },
+      "overall_q95_delta": -0.017657935782395384,
+      "overall_float_delta": -0.017527511677485563,
+      "fold_q95_deltas": {
+        "fold0": -0.025845228962936062,
+        "fold2": -0.009986377605599728
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": 0.03930589850534716,
+        "ROI001": -0.015044455195507567,
+        "ROI007": -0.09869573742288651,
+        "ROI008": 0.021863518814242866,
+        "ROI011": -0.01612167197318115,
+        "ROI012": -0.025352709406547547,
+        "ROI014": -0.007889635192753985,
+        "ROI020": -0.017444529537215203,
+        "ROI022": -0.055230579424318194,
+        "ROI024": 0.0023862673454146943
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI008",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.09869573742288651,
+      "thresholds": {
+        "candidate": "t70_decoderonly_auxiliary_split",
+        "baseline": "t70_official_auxiliary_split",
+        "minimum_q95_gain": 0.01,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.06,
+        "requires": "decoder_only_direct_advance"
+      }
+    },
+    "decoder_only_deployment": {
+      "passed": false,
+      "candidate": "t70_decoderonly_auxiliary_split",
+      "baseline": "t70_o50",
+      "requires": "decoder_only_split_advance",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": false,
+        "roi_floor": true,
+        "dependency": false
+      },
+      "overall_q95_delta": 0.023362385271028074,
+      "overall_float_delta": 0.022363103465494305,
+      "fold_q95_deltas": {
+        "fold0": 0.01510339717953002,
+        "fold2": 0.03110112214405092
+      },
+      "positive_folds": [
+        "fold0",
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.08293105409403267,
+        "ROI001": -0.02568077192296414,
+        "ROI007": -0.02966816065668354,
+        "ROI008": -0.0015237036443522811,
+        "ROI011": -2.910942825451457e-06,
+        "ROI012": 0.006491923756883011,
+        "ROI014": 0.04178906679094041,
+        "ROI020": 0.047443911028764774,
+        "ROI022": 0.04591988886838294,
+        "ROI024": 0.0756485875921129
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI012",
+        "ROI014",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.02966816065668354,
+      "thresholds": {
+        "candidate": "t70_decoderonly_auxiliary_split",
+        "baseline": "t70_o50",
+        "minimum_q95_gain": 0.06,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08,
+        "requires": "decoder_only_split_advance"
+      }
+    },
+    "decoder_only_replacement": {
+      "passed": false,
+      "candidate": "t70_decoderonly_auxiliary_replace",
+      "baseline": "t70_o50",
+      "requires": "decoder_only_direct_advance",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": false
+      },
+      "overall_q95_delta": 0.0052770689908072654,
+      "overall_float_delta": 0.003390168008678529,
+      "fold_q95_deltas": {
+        "fold0": -0.008226341181952534,
+        "fold2": 0.017929870648728752
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.1248665961176556,
+        "ROI001": -0.08660597931935854,
+        "ROI007": -0.09593577161338374,
+        "ROI008": -0.045265846348840455,
+        "ROI011": -0.03535858371026279,
+        "ROI012": -0.02171973969207386,
+        "ROI014": 0.040416363032036884,
+        "ROI020": 0.059168822241375096,
+        "ROI022": 0.04119267454646547,
+        "ROI024": 0.0928609280775845
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI014",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.09593577161338374,
+      "thresholds": {
+        "candidate": "t70_decoderonly_auxiliary_replace",
+        "baseline": "t70_o50",
+        "minimum_q95_gain": 0.08,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08,
+        "requires": "decoder_only_direct_advance"
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round61_cv2_unext2_decoder_only_auxiliary.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round61_cv2_unext2_decoder_only_auxiliary_oof.json",
+  "oof_report_sha256": "47d167db08c26fc5b82524ace60dfdc4d7520c079702bdbb4944bb8961916b65"
+}

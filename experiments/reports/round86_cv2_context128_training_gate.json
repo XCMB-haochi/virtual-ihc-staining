@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "protocol_name": "round86_cv2_context128_training",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "context128_training_mechanism": {
+      "passed": false,
+      "candidate": "context128train_shift_xm1",
+      "baseline": "official_context128_shift_xm1",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.2676367030867226,
+      "overall_float_delta": -0.27155195080725036,
+      "fold_q95_deltas": {
+        "fold0": -0.4373098462910434,
+        "fold2": -0.10865163189509985
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": 0.27849151985306264,
+        "ROI001": -0.7798683946452769,
+        "ROI007": 0.08895399971486029,
+        "ROI008": -0.5657520806597773,
+        "ROI011": -0.6588731746086438,
+        "ROI012": -0.45618333540467404,
+        "ROI014": -0.3561366503667358,
+        "ROI020": -0.27443971733492845,
+        "ROI022": -0.013357958820819249,
+        "ROI024": 0.03533516809130788
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI007",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.7798683946452769,
+      "thresholds": {
+        "candidate": "context128train_shift_xm1",
+        "baseline": "official_context128_shift_xm1",
+        "minimum_q95_gain": 0.04,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    },
+    "context128_training_replacement": {
+      "passed": false,
+      "candidate": "t70_context128_train_replace_shift_xm1",
+      "baseline": "t70_context128_base_split_shift_xm1",
+      "requires": "context128_training_mechanism",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": false
+      },
+      "overall_q95_delta": -0.013721089748415238,
+      "overall_float_delta": -0.014923861367236668,
+      "fold_q95_deltas": {
+        "fold0": -0.05951667439173036,
+        "fold2": 0.029189733657204897
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.07922500685575073,
+        "ROI001": -0.13593187644221416,
+        "ROI007": 0.05252617079152344,
+        "ROI008": -0.04887364867887811,
+        "ROI011": -0.11473462618707231,
+        "ROI012": -0.058316748106918226,
+        "ROI014": -0.008425324216304375,
+        "ROI020": -0.03692597928046837,
+        "ROI022": 0.050143617597328216,
+        "ROI024": 0.07546414677193525
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI007",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.13593187644221416,
+      "thresholds": {
+        "candidate": "t70_context128_train_replace_shift_xm1",
+        "baseline": "t70_context128_base_split_shift_xm1",
+        "minimum_q95_gain": 0.03,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08,
+        "requires": "context128_training_mechanism"
+      }
+    },
+    "context128_training_diversity": {
+      "passed": false,
+      "candidate": "t70_context128_train_split_shift_xm1",
+      "baseline": "t70_context128_base_split_shift_xm1",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.0006222134216216091,
+      "overall_float_delta": -0.001444508520933141,
+      "fold_q95_deltas": {
+        "fold0": -0.023083567239027047,
+        "fold2": 0.020424251966673523
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.04469099928729747,
+        "ROI001": -0.06283644783641762,
+        "ROI007": 0.031658278908963666,
+        "ROI008": -0.018444408034895332,
+        "ROI011": -0.049466482707529735,
+        "ROI012": -0.02264574384163609,
+        "ROI014": 0.001006704855782914,
+        "ROI020": -0.015139456763577641,
+        "ROI022": 0.03516064481115677,
+        "ROI024": 0.04500394718743905
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI007",
+        "ROI014",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.06283644783641762,
+      "thresholds": {
+        "candidate": "t70_context128_train_split_shift_xm1",
+        "baseline": "t70_context128_base_split_shift_xm1",
+        "minimum_q95_gain": 0.02,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round86_cv2_context128_training.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round86_cv2_context128_training_oof.json",
+  "oof_report_sha256": "29e2d92a5b536be6c7802970a9a7debe524a29b4132f33b267e56cc3ec84cb59"
+}

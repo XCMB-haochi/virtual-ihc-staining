@@ -1,0 +1,36 @@
+{
+  "checkpoint": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\runs\\unet_cd68_ssim_10e\\best.pt",
+  "validation_rois": [
+    "ROI020",
+    "ROI021",
+    "ROI022",
+    "ROI023",
+    "ROI024"
+  ],
+  "validation_images": 1320,
+  "tta": "d4",
+  "markers": {
+    "CD68": {
+      "float": {
+        "ssim": 0.7968617471115245,
+        "psnr": 25.593820937966413,
+        "competition_score": 71.13661486058656
+      },
+      "jpeg_q75": {
+        "ssim": 0.7929107719360362,
+        "psnr": 25.577216742226025,
+        "competition_score": 70.85008408085814
+      },
+      "jpeg_q95": {
+        "ssim": 0.7957025160250731,
+        "psnr": 25.589367461574174,
+        "competition_score": 71.05279659869962
+      },
+      "jpeg_q100": {
+        "ssim": 0.7954820601650683,
+        "psnr": 25.588921629973193,
+        "competition_score": 71.03709718953868
+      }
+    }
+  }
+}

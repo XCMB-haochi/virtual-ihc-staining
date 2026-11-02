@@ -1,0 +1,330 @@
+{
+  "checkpoint": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\runs\\unet_cd68_hard_h2_uniform7_14e\\best.pt",
+  "marker": "CD68",
+  "validation_rois": [
+    "ROI020",
+    "ROI022",
+    "ROI024"
+  ],
+  "validation_images": 816,
+  "tta": "d4",
+  "context_halo": 64,
+  "jpeg_quality": 95,
+  "profile": "calibration",
+  "ranking_psnr_aggregation": "global-mse",
+  "ranking_key": "competition_score_global_mse_psnr",
+  "aggregation_note": "Legacy psnr/competition_score aliases use mean per-image PSNR; global_mse fields pool squared error before computing PSNR.",
+  "roi_fit": {
+    "slope": 1.1602583788688887,
+    "intercept": -1.6294298809053789
+  },
+  "roi_details": {
+    "ROI020": {
+      "source_mean": 39.11138297416068,
+      "prediction_mean": 40.29063452348746,
+      "expected_mean": 43.74987992401455,
+      "scale": 1.0858573075713294
+    },
+    "ROI022": {
+      "source_mean": 39.15502453204868,
+      "prediction_mean": 35.519940613814,
+      "expected_mean": 43.80051540722099,
+      "scale": 1.233124680118035
+    },
+    "ROI024": {
+      "source_mean": 38.47715065214369,
+      "prediction_mean": 34.10852289862103,
+      "expected_mean": 43.014006558244866,
+      "scale": 1.2610926215155414
+    }
+  },
+  "ranking": [
+    {
+      "name": "roi_scale_log_0.75",
+      "ssim": 0.789938980772764,
+      "psnr": 25.098416754626406,
+      "competition_score": 70.35477870686933,
+      "psnr_mean_image": 25.098416754626406,
+      "competition_score_mean_image_psnr": 70.35477870686933,
+      "psnr_global_mse": 24.11536460074789,
+      "competition_score_global_mse_psnr": 69.7649474145422,
+      "seconds": 2.5473309000008157
+    },
+    {
+      "name": "roi_scale_0.75",
+      "ssim": 0.7898874782551246,
+      "psnr": 25.09731282600265,
+      "competition_score": 70.35051117346032,
+      "psnr_mean_image": 25.09731282600265,
+      "competition_score_mean_image_psnr": 70.35051117346032,
+      "psnr_global_mse": 24.119594682148183,
+      "competition_score_global_mse_psnr": 69.76388028714763,
+      "seconds": 2.7096120000023802
+    },
+    {
+      "name": "roi_scale_0.5",
+      "ssim": 0.7898575690038958,
+      "psnr": 25.043567663233826,
+      "competition_score": 70.316170428213,
+      "psnr_mean_image": 25.043567663233826,
+      "competition_score_mean_image_psnr": 70.316170428213,
+      "psnr_global_mse": 23.99014843207687,
+      "competition_score_global_mse_psnr": 69.68411888951881,
+      "seconds": 2.6552259999989474
+    },
+    {
+      "name": "roi_scale_log_0.5",
+      "ssim": 0.7897350274497947,
+      "psnr": 25.026620513785925,
+      "competition_score": 70.29742422975718,
+      "psnr_mean_image": 25.026620513785925,
+      "competition_score_mean_image_psnr": 70.29742422975718,
+      "psnr_global_mse": 23.967535970292097,
+      "competition_score_global_mse_psnr": 69.66197350366087,
+      "seconds": 2.477142700001423
+    },
+    {
+      "name": "roi_scale_sqrt",
+      "ssim": 0.7897350274497947,
+      "psnr": 25.026620513785925,
+      "competition_score": 70.29742422975718,
+      "psnr_mean_image": 25.026620513785925,
+      "competition_score_mean_image_psnr": 70.29742422975718,
+      "psnr_global_mse": 23.967535970292097,
+      "competition_score_global_mse_psnr": 69.66197350366087,
+      "seconds": 2.4606671999972605
+    },
+    {
+      "name": "roi_scale_1",
+      "ssim": 0.7884477785106492,
+      "psnr": 24.982806686930843,
+      "competition_score": 70.18102850790396,
+      "psnr_mean_image": 24.982806686930843,
+      "competition_score_mean_image_psnr": 70.18102850790396,
+      "psnr_global_mse": 24.08683589369062,
+      "competition_score_global_mse_psnr": 69.64344603195981,
+      "seconds": 2.545053199999529
+    },
+    {
+      "name": "roi_scale_0.25",
+      "ssim": 0.7881163779291669,
+      "psnr": 24.825305593947768,
+      "competition_score": 70.06332981141034,
+      "psnr_mean_image": 24.825305593947768,
+      "competition_score_mean_image_psnr": 70.06332981141034,
+      "psnr_global_mse": 23.71203591595345,
+      "competition_score_global_mse_psnr": 69.39536800461374,
+      "seconds": 3.4481596000005084
+    },
+    {
+      "name": "roi_scale_log_0.25",
+      "ssim": 0.7878834606827765,
+      "psnr": 24.801036379996642,
+      "competition_score": 70.03246407579233,
+      "psnr_mean_image": 24.801036379996642,
+      "competition_score_mean_image_psnr": 70.03246407579233,
+      "psnr_global_mse": 23.68487515054123,
+      "competition_score_global_mse_psnr": 69.36276733811908,
+      "seconds": 2.6454680999995617
+    },
+    {
+      "name": "roi_scale_1.25",
+      "ssim": 0.7857153378613774,
+      "psnr": 24.715956797368825,
+      "competition_score": 69.8296477287177,
+      "psnr_mean_image": 24.715956797368825,
+      "competition_score_mean_image_psnr": 69.8296477287177,
+      "psnr_global_mse": 23.895352177993622,
+      "competition_score_global_mse_psnr": 69.33728495709258,
+      "seconds": 2.524501699997927
+    },
+    {
+      "name": "raw",
+      "ssim": 0.7844635425278216,
+      "psnr": 24.465062798863848,
+      "competition_score": 69.59148565626582,
+      "psnr_mean_image": 24.465062798863848,
+      "competition_score_mean_image_psnr": 69.59148565626582,
+      "psnr_global_mse": 23.31188183341524,
+      "competition_score_global_mse_psnr": 68.89957707699665,
+      "seconds": 3.8380749999996624
+    }
+  ],
+  "key_roi_metrics": {
+    "raw": {
+      "ROI020": {
+        "ssim": 0.8023269217144692,
+        "psnr": 25.410552986853396,
+        "competition_score": 71.40921631212487,
+        "psnr_mean_image": 25.410552986853396,
+        "competition_score_mean_image_psnr": 71.40921631212487,
+        "psnr_global_mse": 24.120186653989293,
+        "competition_score_global_mse_psnr": 70.63499651240642
+      },
+      "ROI022": {
+        "ssim": 0.7825474475629342,
+        "psnr": 24.164143048244192,
+        "competition_score": 69.2768071583519,
+        "psnr_mean_image": 24.164143048244192,
+        "competition_score_mean_image_psnr": 69.2768071583519,
+        "psnr_global_mse": 22.983630649207857,
+        "competition_score_global_mse_psnr": 68.5684997189301
+      },
+      "ROI024": {
+        "ssim": 0.7701885923063395,
+        "psnr": 23.895845626042156,
+        "competition_score": 68.25070883706906,
+        "psnr_mean_image": 23.895845626042156,
+        "competition_score_mean_image_psnr": 68.25070883706906,
+        "psnr_global_mse": 22.980089529136386,
+        "competition_score_global_mse_psnr": 67.70125517892559
+      }
+    },
+    "roi_scale_0.5": {
+      "ROI020": {
+        "ssim": 0.8022973379993095,
+        "psnr": 25.46306716597817,
+        "competition_score": 71.43865395953856,
+        "psnr_mean_image": 25.46306716597817,
+        "competition_score_mean_image_psnr": 71.43865395953856,
+        "psnr_global_mse": 24.32174099669367,
+        "competition_score_global_mse_psnr": 70.75385825796786
+      },
+      "ROI022": {
+        "ssim": 0.7883915643448954,
+        "psnr": 24.80220870321755,
+        "competition_score": 70.06873472607322,
+        "psnr_mean_image": 24.80220870321755,
+        "competition_score_mean_image_psnr": 70.06873472607322,
+        "psnr_global_mse": 23.72980804797384,
+        "competition_score_global_mse_psnr": 69.425294332927
+      },
+      "ROI024": {
+        "ssim": 0.7800397047103467,
+        "psnr": 24.891745402933804,
+        "competition_score": 69.53782657148454,
+        "psnr_mean_image": 24.891745402933804,
+        "competition_score_mean_image_psnr": 69.53782657148454,
+        "psnr_global_mse": 23.953799183518605,
+        "competition_score_global_mse_psnr": 68.97505883983543
+      }
+    },
+    "roi_scale_1": {
+      "ROI020": {
+        "ssim": 0.800927589950184,
+        "psnr": 25.35191069176585,
+        "competition_score": 71.27607771157238,
+        "psnr_mean_image": 25.35191069176585,
+        "competition_score_mean_image_psnr": 71.27607771157238,
+        "psnr_global_mse": 24.381960034448042,
+        "competition_score_global_mse_psnr": 70.6941073171817
+      },
+      "ROI022": {
+        "ssim": 0.7860897691346174,
+        "psnr": 24.715170526315713,
+        "competition_score": 69.85538615521263,
+        "psnr_mean_image": 24.715170526315713,
+        "competition_score_mean_image_psnr": 69.85538615521263,
+        "psnr_global_mse": 23.80385229318034,
+        "competition_score_global_mse_psnr": 69.30859521533141
+      },
+      "ROI024": {
+        "ssim": 0.7794270610082621,
+        "psnr": 24.900849013157213,
+        "competition_score": 69.50040367847268,
+        "psnr_mean_image": 24.900849013157213,
+        "competition_score_mean_image_psnr": 69.50040367847268,
+        "psnr_global_mse": 24.103393582986058,
+        "competition_score_global_mse_psnr": 69.02193042036998
+      }
+    },
+    "roi_scale_log_0.5": {
+      "ROI020": {
+        "ssim": 0.8023054347786481,
+        "psnr": 25.463669641114034,
+        "competition_score": 71.43958221917379,
+        "psnr_mean_image": 25.463669641114034,
+        "competition_score_mean_image_psnr": 71.43958221917379,
+        "psnr_global_mse": 24.318946713687247,
+        "competition_score_global_mse_psnr": 70.75274846271772
+      },
+      "ROI022": {
+        "ssim": 0.7883062567565464,
+        "psnr": 24.786234882903898,
+        "competition_score": 70.05317890270058,
+        "psnr_mean_image": 24.786234882903898,
+        "competition_score_mean_image_psnr": 70.05317890270058,
+        "psnr_global_mse": 23.705527929802503,
+        "competition_score_global_mse_psnr": 69.40475473083974
+      },
+      "ROI024": {
+        "ssim": 0.7797649018189281,
+        "psnr": 24.85810666215151,
+        "competition_score": 69.49840712461587,
+        "psnr_mean_image": 24.85810666215151,
+        "competition_score_mean_image_psnr": 69.49840712461587,
+        "psnr_global_mse": 23.916514404455533,
+        "competition_score_global_mse_psnr": 68.93345176999827
+      }
+    },
+    "roi_scale_log_0.75": {
+      "ROI020": {
+        "ssim": 0.8018014557824449,
+        "psnr": 25.428820716071844,
+        "competition_score": 71.38339433441425,
+        "psnr_mean_image": 25.428820716071844,
+        "competition_score_mean_image_psnr": 71.38339433441425,
+        "psnr_global_mse": 24.369175928082875,
+        "competition_score_global_mse_psnr": 70.74760746162086
+      },
+      "ROI022": {
+        "ssim": 0.7882162658758691,
+        "psnr": 24.85277449244891,
+        "competition_score": 70.08680330678018,
+        "psnr_mean_image": 24.85277449244891,
+        "competition_score_mean_image_psnr": 70.08680330678018,
+        "psnr_global_mse": 23.857359229738005,
+        "competition_score_global_mse_psnr": 69.48955414915365
+      },
+      "ROI024": {
+        "ssim": 0.780880054660807,
+        "psnr": 25.030719332790937,
+        "competition_score": 69.68003542593105,
+        "psnr_mean_image": 25.030719332790937,
+        "competition_score_mean_image_psnr": 69.68003542593105,
+        "psnr_global_mse": 24.142020326627403,
+        "competition_score_global_mse_psnr": 69.14681602223293
+      }
+    },
+    "roi_scale_sqrt": {
+      "ROI020": {
+        "ssim": 0.8023054347786481,
+        "psnr": 25.463669641114034,
+        "competition_score": 71.43958221917379,
+        "psnr_mean_image": 25.463669641114034,
+        "competition_score_mean_image_psnr": 71.43958221917379,
+        "psnr_global_mse": 24.318946713687247,
+        "competition_score_global_mse_psnr": 70.75274846271772
+      },
+      "ROI022": {
+        "ssim": 0.7883062567565464,
+        "psnr": 24.786234882903898,
+        "competition_score": 70.05317890270058,
+        "psnr_mean_image": 24.786234882903898,
+        "competition_score_mean_image_psnr": 70.05317890270058,
+        "psnr_global_mse": 23.705527929802503,
+        "competition_score_global_mse_psnr": 69.40475473083974
+      },
+      "ROI024": {
+        "ssim": 0.7797649018189281,
+        "psnr": 24.85810666215151,
+        "competition_score": 69.49840712461587,
+        "psnr_mean_image": 24.85810666215151,
+        "competition_score_mean_image_psnr": 69.49840712461587,
+        "psnr_global_mse": 23.916514404455533,
+        "competition_score_global_mse_psnr": 68.93345176999827
+      }
+    }
+  },
+  "elapsed_seconds": 132.10451169999942
+}

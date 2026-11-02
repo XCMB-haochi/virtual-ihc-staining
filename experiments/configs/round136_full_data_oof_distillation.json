@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "name": "round136_full_data_oof_distillation",
+  "purpose": "Distill leakage-safe Round127 OOF predictions into one full-data student",
+  "teacher": {
+    "protocol": "configs/round127_cv5_relational_seed2027_expansion.json",
+    "candidate": "encoderrelationalrobust15_context128",
+    "folds": 5,
+    "tta": "d4",
+    "target_storage": "uint8-png",
+    "output_source_offset_applied": false
+  },
+  "student": {
+    "initialization": "runs/round131_full_data_relational_stage1/final.pt",
+    "initialization_sha256": "f527448ced1cfa09750b7c1f06c4f6d8368e2b6c2089b13cdc1f7597e323cf87",
+    "feature_teacher": "runs/round131_full_data_multimarker_fcmae160/final_encoder.pt",
+    "feature_teacher_sha256": "0600e7ef8739e6adb34e9a7d74cb477a96773b84120065fa24bb4c0d538309eb",
+    "distillation_weight": 0.2,
+    "hard_supervision_weight": 0.8,
+    "epochs": 14,
+    "package_epochs": [5, 6, 7],
+    "package_weights": [0.25, 0.5, 0.25],
+    "seed": 2027
+  },
+  "inference": {"context_halo": 128, "tta": "d4", "output_source_offset": [0, -1], "jpeg_quality": 95},
+  "submission": {"model_files": 1, "marker": "CD68"}
+}

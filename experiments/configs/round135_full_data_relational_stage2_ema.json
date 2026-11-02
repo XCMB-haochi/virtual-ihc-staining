@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "name": "round135_full_data_relational_stage2_ema",
+  "purpose": "Matched stage2-only EMA test against Round133 online epoch6",
+  "train_scope": {"rois": "ROI000-ROI024", "train_images": 6296},
+  "initialization": {
+    "checkpoint": "runs/round131_full_data_relational_stage1/final.pt",
+    "sha256": "f527448ced1cfa09750b7c1f06c4f6d8368e2b6c2089b13cdc1f7597e323cf87"
+  },
+  "teacher": {
+    "checkpoint": "runs/round131_full_data_multimarker_fcmae160/final_encoder.pt",
+    "sha256": "0600e7ef8739e6adb34e9a7d74cb477a96773b84120065fa24bb4c0d538309eb"
+  },
+  "training": {
+    "stage": 2,
+    "epochs": 14,
+    "package_epoch": 6,
+    "seed": 2027,
+    "batch_size": 16,
+    "optimizer_steps_per_epoch": 394,
+    "ema_decay": 0.995,
+    "ema_half_life_updates": 138.29,
+    "ema_half_life_epochs": 0.351
+  },
+  "inference": {"context_halo": 128, "tta": "d4", "output_source_offset": [0, -1], "jpeg_quality": 95},
+  "submission": {"model_files": 1, "marker": "CD68"}
+}

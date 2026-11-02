@@ -1,0 +1,9 @@
+{
+  "control": 76.05616105902736,
+  "gain_augmented": 76.06235159052014,
+  "gain_vs_matched_control": 0.0061905314927770405,
+  "original_round307": 76.10351109126103,
+  "gain_vs_original": -0.04115950074088914,
+  "candidate_for_review": false,
+  "scope": "Train/Val only; input gain used in training only; no automated submission/refit"
+}

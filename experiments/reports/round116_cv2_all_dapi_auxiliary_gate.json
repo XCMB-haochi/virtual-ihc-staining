@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "protocol_name": "round116_cv2_all_dapi_auxiliary",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "all_dapi_auxiliary": {
+      "passed": false,
+      "candidate": "alldapiauxiliary15_context128",
+      "baseline": "officialauxiliary15_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.009937047072881455,
+      "overall_float_delta": 0.011407050470694458,
+      "fold_q95_deltas": {
+        "fold0": -0.13933265464417843,
+        "fold2": 0.1498039329339207
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.7436730982283137,
+        "ROI001": 0.10235893853077016,
+        "ROI007": -0.02869142008938752,
+        "ROI008": 0.24073865395243388,
+        "ROI011": -0.11180708524894101,
+        "ROI012": -0.10068450196395418,
+        "ROI014": -0.10819505118321615,
+        "ROI020": -0.400201014722839,
+        "ROI022": -0.17507635380277975,
+        "ROI024": -0.08931283219072839
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI001",
+        "ROI008"
+      ],
+      "minimum_roi_q95_gain": -0.400201014722839,
+      "thresholds": {
+        "candidate": "alldapiauxiliary15_context128",
+        "baseline": "officialauxiliary15_context128",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round116_cv2_all_dapi_auxiliary.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round116_cv2_all_dapi_auxiliary_oof.json",
+  "oof_report_sha256": "14bd4f973cef5ee013e519f7b19593be5d15659c4655c866aa861cd1ac1ff915"
+}

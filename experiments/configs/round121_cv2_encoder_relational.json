@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "name": "round121_cv2_encoder_relational",
+  "marker": "CD68",
+  "roi_scope": "subset",
+  "expected_rois": [
+    "ROI011",
+    "ROI012",
+    "ROI001",
+    "ROI020",
+    "ROI022",
+    "ROI008",
+    "ROI000",
+    "ROI007",
+    "ROI024",
+    "ROI014"
+  ],
+  "folds": [
+    {
+      "name": "fold0",
+      "val_rois": [
+        "ROI011",
+        "ROI012",
+        "ROI001",
+        "ROI020",
+        "ROI022"
+      ]
+    },
+    {
+      "name": "fold2",
+      "val_rois": [
+        "ROI008",
+        "ROI000",
+        "ROI007",
+        "ROI024",
+        "ROI014"
+      ]
+    }
+  ],
+  "recipes": {
+    "officialauxiliary15": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "inference_context_halo": 128,
+      "condition_mode": "spatial-thumbnail-film",
+      "train_stages": []
+    },
+    "encoderrelational15": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "inference_context_halo": 128,
+      "condition_mode": "spatial-thumbnail-film",
+      "fcmae_encoder_init": true,
+      "training_markers": [
+        "CD68",
+        "CD45RO",
+        "HLA-DR",
+        "Vimentin"
+      ],
+      "marker_loss_weights": [
+        0.85,
+        0.05,
+        0.05,
+        0.05
+      ],
+      "feature_guidance": {
+        "marker": "CD68",
+        "weight": 0.05,
+        "stage": 4,
+        "crop_size": 256,
+        "batch_samples": 16,
+        "teachers": {
+          "fold0": {
+            "checkpoint": "runs/round96_cv2_multimarker_fcmae_fold0_official_multimarker_fcmae160_pretraining/final_encoder.pt",
+            "sha256": "fa2d96bfa3196b913f954a15862987c94e45d7cc2e0088edde19be2029c9449c"
+          },
+          "fold2": {
+            "checkpoint": "runs/round96_cv2_multimarker_fcmae_fold2_official_multimarker_fcmae160_pretraining/final_encoder.pt",
+            "sha256": "ce54525418ccd5ef3dc08085e2fa3614d76aa2b51bffdff57f48e00d52129c72"
+          }
+        },
+        "mode": "encoder-relational"
+      },
+      "train_stages": [
+        1,
+        2
+      ]
+    }
+  },
+  "run_sources": {
+    "officialauxiliary15": {
+      "protocol_name": "round55_cv2_unext2_official_auxiliary",
+      "recipe_name": "officialauxiliary15",
+      "stage": 2
+    },
+    "encoderrelational15": {
+      "protocol_name": "round121_cv2_encoder_relational",
+      "recipe_name": "encoderrelational15",
+      "stage": 2
+    }
+  },
+  "fcmae_pretraining": {
+    "name": "reused_round52_official_fcmae800",
+    "data_scope": "fold-train",
+    "pretraining_markers": [
+      "DAPI"
+    ],
+    "epochs": 800,
+    "batch_size": 32,
+    "workers": 4,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 1e-06,
+    "warmup_epochs": 10,
+    "weight_decay": 0.05,
+    "mask_ratio": 0.5,
+    "checkpoint_interval": 25,
+    "seed": 2044,
+    "model_size": "tiny",
+    "shared_across_folds": false
+  },
+  "training": {
+    "epochs_per_stage": 14,
+    "stage1_learning_rate": 0.0003,
+    "stage2_learning_rate": 0.0001,
+    "batch_size": 16,
+    "workers": 4,
+    "seed": 2044,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "loss_profile": "hybrid",
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95,
+    "save_every_epoch": true
+  },
+  "inference": {
+    "context_halo": 128,
+    "tta": "d4",
+    "jpeg_quality": 95,
+    "batch_size": 2,
+    "checkpoint_filename": "best_global_mse.pt",
+    "test_like_diagnostic": false
+  },
+  "candidate_output_source_offsets": {
+    "officialauxiliary15_context128": [
+      0,
+      -1
+    ],
+    "encoderrelational15_context128": [
+      0,
+      -1
+    ]
+  },
+  "candidates": {
+    "officialauxiliary15_context128": {
+      "officialauxiliary15": 1.0
+    },
+    "encoderrelational15_context128": {
+      "encoderrelational15": 1.0
+    }
+  },
+  "baseline_candidate": "officialauxiliary15_context128",
+  "primary_candidate": "encoderrelational15_context128",
+  "distribution_gates": {
+    "feature_guidance": {
+      "candidate": "encoderrelational15_context128",
+      "baseline": "officialauxiliary15_context128",
+      "minimum_q95_gain": 0.05,
+      "require_positive_float": true,
+      "minimum_positive_folds": 2,
+      "minimum_positive_rois": 7,
+      "minimum_roi_q95_gain": -0.12
+    }
+  },
+  "distribution_promotion_order": [
+    "feature_guidance"
+  ]
+}

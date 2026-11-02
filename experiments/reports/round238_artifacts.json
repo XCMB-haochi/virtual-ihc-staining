@@ -1,0 +1,162 @@
+{
+  "fold_averages": [
+    {
+      "output": "/workspace/virtual_ihc_staining_generation/runs/round238_fold0/model.pt",
+      "sha256": "0d4705249dd652aa64bf91399a471a7d1a38fec9d0e8342c6b0b8889f7a4cd86",
+      "epoch": 13,
+      "buffer_policy": "error",
+      "inputs": [
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round207_fold0_stage2/epochs/epoch_011.pt",
+          "sha256": "c84709363fc92530d3fec89e80e6fef1edeecfad905bcbf2959f896389b0aed1",
+          "epoch": 11,
+          "weight": 0.25
+        },
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round207_fold0_stage2/epochs/epoch_012.pt",
+          "sha256": "f8f59ade9a2ae2afcebae1aee8614a4e0371f3516da54553a99ddf91dc772e59",
+          "epoch": 12,
+          "weight": 0.5
+        },
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round207_fold0_stage2/epochs/epoch_013.pt",
+          "sha256": "365dd57440a091ed11713c0bb421f66b1c1a685b966f9fd7f78c0178b6d0b391",
+          "epoch": 13,
+          "weight": 0.25
+        }
+      ]
+    },
+    {
+      "output": "/workspace/virtual_ihc_staining_generation/runs/round238_fold1/model.pt",
+      "sha256": "9d80aefd2673ba5fae692c795655377e4e2087ce78342f30f65e0af5c766dcd8",
+      "epoch": 13,
+      "buffer_policy": "error",
+      "inputs": [
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round216_fold1_stage2/epochs/epoch_011.pt",
+          "sha256": "41d8411e32e9c8879418923a1420eeedf36c057a60e140d9bf8742c41b6663f8",
+          "epoch": 11,
+          "weight": 0.25
+        },
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round216_fold1_stage2/epochs/epoch_012.pt",
+          "sha256": "ef0909f3e2d2d46fbf5aa1709b5ce1688c1f960de3663cda044149227425c9d3",
+          "epoch": 12,
+          "weight": 0.5
+        },
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round216_fold1_stage2/epochs/epoch_013.pt",
+          "sha256": "607698253b9a17ff9373ab85fc3913a352b9c3da4775150deddcd31da86a6fcb",
+          "epoch": 13,
+          "weight": 0.25
+        }
+      ]
+    },
+    {
+      "output": "/workspace/virtual_ihc_staining_generation/runs/round238_fold2/model.pt",
+      "sha256": "4f312c96beb43eff44baea2327238ee0de9dc8226a1944ad2a1d62b071adbfd9",
+      "epoch": 13,
+      "buffer_policy": "error",
+      "inputs": [
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round216_fold2_stage2/epochs/epoch_011.pt",
+          "sha256": "e52fbf305372552e16531b48779f0d917e657d90f87e9444a5ab4c88909e6528",
+          "epoch": 11,
+          "weight": 0.25
+        },
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round216_fold2_stage2/epochs/epoch_012.pt",
+          "sha256": "e143cf75fab00578e441f2fc94381d3268cfa54eac2bc1c9a64a619a77ad5d3f",
+          "epoch": 12,
+          "weight": 0.5
+        },
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round216_fold2_stage2/epochs/epoch_013.pt",
+          "sha256": "727eaaedc9d6790f212bee841f6addc0492c14b66ebd20fbf9621eb24dd1284a",
+          "epoch": 13,
+          "weight": 0.25
+        }
+      ]
+    },
+    {
+      "output": "/workspace/virtual_ihc_staining_generation/runs/round238_fold3/model.pt",
+      "sha256": "c51806301f1bc58c3c8fdc1e57d1cc112054eec0fcf18a0096a8c4e886a13fb0",
+      "epoch": 13,
+      "buffer_policy": "error",
+      "inputs": [
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round207_fold3_stage2/epochs/epoch_011.pt",
+          "sha256": "d6ef36091bbf700cbc437d835f4146a4ba222947ade2966341e15709662c0ed6",
+          "epoch": 11,
+          "weight": 0.25
+        },
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round207_fold3_stage2/epochs/epoch_012.pt",
+          "sha256": "ded53cc8b8d352f168ee0436a767e82fa330599e515a6026a317fc3c4c620669",
+          "epoch": 12,
+          "weight": 0.5
+        },
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round207_fold3_stage2/epochs/epoch_013.pt",
+          "sha256": "31824b6247027d5c4b24f3ac332016d4b4071658ca310eca940f946a348410ef",
+          "epoch": 13,
+          "weight": 0.25
+        }
+      ]
+    },
+    {
+      "output": "/workspace/virtual_ihc_staining_generation/runs/round238_fold4/model.pt",
+      "sha256": "c6aff27886f5ecd79ed7c481a86a73205f5a7e17a61995cef260a3f8fd61ecc7",
+      "epoch": 13,
+      "buffer_policy": "error",
+      "inputs": [
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round216_fold4_stage2/epochs/epoch_011.pt",
+          "sha256": "a558fa740b0781321892a5ea8ea675518e9bcdc190b7f28c6b59f778b337e838",
+          "epoch": 11,
+          "weight": 0.25
+        },
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round216_fold4_stage2/epochs/epoch_012.pt",
+          "sha256": "5a9eb76a62bdbe980ec409e21f61273065ae68325947e079acc146b38c0dc396",
+          "epoch": 12,
+          "weight": 0.5
+        },
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round216_fold4_stage2/epochs/epoch_013.pt",
+          "sha256": "3b72e89a17f2d565a6aa4b3868207fac9cf7e177f008f6d3d4d0288edbe11504",
+          "epoch": 13,
+          "weight": 0.25
+        }
+      ]
+    }
+  ],
+  "full_average": {
+    "output": "/workspace/virtual_ihc_staining_generation/runs/round238_full/model.pt",
+    "sha256": "e60088357ab41068ef6bb4b4c3a3a239e30f2a085614e486721a4d918b52b519",
+    "epoch": 13,
+    "buffer_policy": "error",
+    "inputs": [
+      {
+        "path": "/workspace/virtual_ihc_staining_generation/runs/round216_full_stage2/epochs/epoch_011.pt",
+        "sha256": "6b8a65049eeefdef92cff16a0f8fcc3907f5f0876afa7e7665c1a731531124f4",
+        "epoch": 11,
+        "weight": 0.25
+      },
+      {
+        "path": "/workspace/virtual_ihc_staining_generation/runs/round216_full_stage2/epochs/epoch_012.pt",
+        "sha256": "b1248f1b71b62509eded72b02d6d293f5619a4c5fd14f5f40d37383280038cfb",
+        "epoch": 12,
+        "weight": 0.5
+      },
+      {
+        "path": "/workspace/virtual_ihc_staining_generation/runs/round216_full_stage2/epochs/epoch_013.pt",
+        "sha256": "b523b607593640c0ebc975ecf37caacb92528f21b63745d3b74ae37d679be23e",
+        "epoch": 13,
+        "weight": 0.25
+      }
+    ]
+  },
+  "package": "submissions/semifinal_round238_cd45ro_q95.zip",
+  "package_sha256": "b2183831864bed7bca108ce8da04ccc2a639f6e7040613c8eb8d0c8ec8d3e3f0"
+}

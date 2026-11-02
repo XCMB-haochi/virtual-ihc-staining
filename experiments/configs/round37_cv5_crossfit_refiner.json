@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "name": "round37_cv5_crossfit_refiner",
+  "marker": "CD68",
+  "base_protocol": "configs/round35_cv5_base32_base48_shrink30.json",
+  "base_candidate": "base32_70_base48_30",
+  "recipe_order": [
+    "thumbnailbase32",
+    "thumbnailbase48continue"
+  ],
+  "baseline_weights": {
+    "thumbnailbase32": 0.7,
+    "thumbnailbase48continue": 0.3
+  },
+  "cache": {
+    "prediction_dtype": "float32",
+    "dapi_dtype": "uint8",
+    "target_dtype": "uint8"
+  },
+  "model": {
+    "width": 48,
+    "dilations": [1, 2, 4, 8, 4, 2, 1],
+    "residual_scale": 0.25
+  },
+  "training": {
+    "epochs": 14,
+    "batch_size": 16,
+    "workers": 4,
+    "seed": 2037,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95,
+    "selection_tta": "d4"
+  },
+  "inference": {
+    "tta": "d4",
+    "jpeg_quality": 95,
+    "batch_size": 16
+  },
+  "promotion_gate": {
+    "minimum_overall_q95_gain": 0.15,
+    "minimum_test_like_q95_gain": 0.15,
+    "minimum_dual_positive_folds": 4,
+    "minimum_float_gain": 0.0,
+    "minimum_test_like_roi_q95_gain": -0.1,
+    "maximum_dual_negative_test_like_rois": 1
+  }
+}

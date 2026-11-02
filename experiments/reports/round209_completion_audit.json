@@ -1,0 +1,77 @@
+{
+  "round209": [
+    {
+      "fold": "fold0",
+      "recipe": "public",
+      "stage": 1,
+      "epochs": 14,
+      "seconds": 2125.9055160125718,
+      "peak_gib": 6.865819931030273
+    },
+    {
+      "fold": "fold0",
+      "recipe": "public",
+      "stage": 2,
+      "epochs": 14,
+      "seconds": 2169.432921828702,
+      "peak_gib": 6.991944313049316
+    },
+    {
+      "fold": "fold0",
+      "recipe": "domain",
+      "stage": 1,
+      "epochs": 14,
+      "seconds": 2477.4201863291673,
+      "peak_gib": 6.865819931030273
+    },
+    {
+      "fold": "fold0",
+      "recipe": "domain",
+      "stage": 2,
+      "epochs": 14,
+      "seconds": 2122.491208360996,
+      "peak_gib": 6.991944313049316
+    },
+    {
+      "fold": "fold3",
+      "recipe": "public",
+      "stage": 1,
+      "epochs": 14,
+      "seconds": 2169.0805079145357,
+      "peak_gib": 6.865819931030273
+    },
+    {
+      "fold": "fold3",
+      "recipe": "public",
+      "stage": 2,
+      "epochs": 14,
+      "seconds": 2193.78471257817,
+      "peak_gib": 6.991944313049316
+    },
+    {
+      "fold": "fold3",
+      "recipe": "domain",
+      "stage": 1,
+      "epochs": 14,
+      "seconds": 2252.916742492933,
+      "peak_gib": 6.867528915405273
+    },
+    {
+      "fold": "fold3",
+      "recipe": "domain",
+      "stage": 2,
+      "epochs": 14,
+      "seconds": 2118.5334849730134,
+      "peak_gib": 6.991944313049316
+    }
+  ],
+  "round207_fcmae_seconds": {
+    "fold0": 21224.278002205305,
+    "fold3": 19650.52494574152
+  },
+  "round208_platform_user_report": {
+    "score": 78.9741,
+    "ssim": 0.898,
+    "psnr": 26.894
+  }
+}

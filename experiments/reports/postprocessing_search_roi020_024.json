@@ -1,0 +1,326 @@
+{
+  "checkpoint": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\runs\\unet_cd68_ssim_10e\\best.pt",
+  "marker": "CD68",
+  "validation_rois": [
+    "ROI020",
+    "ROI021",
+    "ROI022",
+    "ROI023",
+    "ROI024"
+  ],
+  "validation_images": 1320,
+  "tta": "d4",
+  "jpeg_quality": 95,
+  "roi_fit": {
+    "slope": 1.1745672483134126,
+    "intercept": -2.2087424050842417
+  },
+  "roi_details": {
+    "ROI020": {
+      "source_mean": 39.11138297416068,
+      "prediction_mean": 40.439747202810636,
+      "expected_mean": 43.730207072607726,
+      "scale": 1.0813669742616094
+    },
+    "ROI021": {
+      "source_mean": 29.192903173661477,
+      "prediction_mean": 31.11163279302291,
+      "expected_mean": 32.08028554588321,
+      "scale": 1.031134744978011
+    },
+    "ROI022": {
+      "source_mean": 39.15502453204868,
+      "prediction_mean": 36.09897961669695,
+      "expected_mean": 43.78146701716834,
+      "scale": 1.2128173007116796
+    },
+    "ROI023": {
+      "source_mean": 28.73277246556576,
+      "prediction_mean": 30.50487532321876,
+      "expected_mean": 31.53983108621072,
+      "scale": 1.0339275526297336
+    },
+    "ROI024": {
+      "source_mean": 38.47715065214369,
+      "prediction_mean": 34.770906653669144,
+      "expected_mean": 42.9852585593448,
+      "scale": 1.2362420970926522
+    }
+  },
+  "ranking": [
+    {
+      "name": "roi_scale_0.5",
+      "ssim": 0.7978926277436997,
+      "psnr": 25.853435524256714,
+      "competition_score": 71.364545256613,
+      "seconds": 4.527951400003076
+    },
+    {
+      "name": "roi_scale_0.75",
+      "ssim": 0.7976347388490145,
+      "psnr": 25.860190108319607,
+      "competition_score": 71.35054578442276,
+      "seconds": 5.393620299997565
+    },
+    {
+      "name": "roi_scale_1_gamma_1.02",
+      "ssim": 0.7973470433189964,
+      "psnr": 25.820496220282593,
+      "competition_score": 71.3065907644993,
+      "seconds": 3.7187943999997515
+    },
+    {
+      "name": "roi_scale_0.25",
+      "ssim": 0.797284486187609,
+      "psnr": 25.760799767117962,
+      "competition_score": 71.26639389340342,
+      "seconds": 4.84347870000056
+    },
+    {
+      "name": "roi_scale_1_gamma_1.04",
+      "ssim": 0.7971091943288715,
+      "psnr": 25.77813082547417,
+      "competition_score": 71.26452209830549,
+      "seconds": 3.712127700000565
+    },
+    {
+      "name": "roi_scale_1_blur_1_0.4",
+      "ssim": 0.796854194270266,
+      "psnr": 25.787573815246077,
+      "competition_score": 71.25233788806626,
+      "seconds": 4.106457499998214
+    },
+    {
+      "name": "roi_scale_1_blur_1_0.25",
+      "ssim": 0.7967861733844536,
+      "psnr": 25.78572812540665,
+      "competition_score": 71.24646901215574,
+      "seconds": 3.868043900001794
+    },
+    {
+      "name": "roi_scale_1_blur_0.8_0.4",
+      "ssim": 0.7967838285471046,
+      "psnr": 25.785788373158727,
+      "competition_score": 71.24634102219255,
+      "seconds": 3.715728199997102
+    },
+    {
+      "name": "roi_scale_1_lut_0.025",
+      "ssim": 0.7965928695936019,
+      "psnr": 25.807578072165345,
+      "competition_score": 71.24604771485133,
+      "seconds": 4.305634200001805
+    },
+    {
+      "name": "roi_scale_1_lut_0.01",
+      "ssim": 0.7966559902038529,
+      "psnr": 25.793272744460353,
+      "competition_score": 71.24188296094592,
+      "seconds": 4.323977600000944
+    },
+    {
+      "name": "roi_scale_1_blur_0.8_0.25",
+      "ssim": 0.7967290465967599,
+      "psnr": 25.784588284561444,
+      "competition_score": 71.24178623251007,
+      "seconds": 3.6573253000024124
+    },
+    {
+      "name": "roi_scale_1_blur_1_0.1",
+      "ssim": 0.7966825159735902,
+      "psnr": 25.783720893571846,
+      "competition_score": 71.23800865429442,
+      "seconds": 3.795001399998
+    },
+    {
+      "name": "roi_scale_1_blur_0.5_0.4",
+      "ssim": 0.7966720274003812,
+      "psnr": 25.78354497093002,
+      "competition_score": 71.23716890058469,
+      "seconds": 3.6249161000014283
+    },
+    {
+      "name": "roi_scale_1_blur_0.8_0.1",
+      "ssim": 0.796656737971515,
+      "psnr": 25.783186124095252,
+      "competition_score": 71.2358833324632,
+      "seconds": 3.6431870000014897
+    },
+    {
+      "name": "roi_scale_1_blur_0.5_0.25",
+      "ssim": 0.7966474609556129,
+      "psnr": 25.783063805023648,
+      "competition_score": 71.23516054990709,
+      "seconds": 3.716023299999506
+    },
+    {
+      "name": "roi_scale_1_blur_0.5_0.1",
+      "ssim": 0.7966215057472933,
+      "psnr": 25.7826067691707,
+      "competition_score": 71.23306946381295,
+      "seconds": 3.7504540000009
+    },
+    {
+      "name": "roi_scale_1",
+      "ssim": 0.7966053355293248,
+      "psnr": 25.782278070180787,
+      "competition_score": 71.2317403291612,
+      "seconds": 4.358176099998673
+    },
+    {
+      "name": "roi_scale_1_blur_0.5_-0.1",
+      "ssim": 0.7965808982706641,
+      "psnr": 25.78188719406172,
+      "competition_score": 71.22979519538352,
+      "seconds": 3.725490400000126
+    },
+    {
+      "name": "roi_scale_1_blur_0.5_-0.25",
+      "ssim": 0.7965512480461656,
+      "psnr": 25.781370650940264,
+      "competition_score": 71.22740975379575,
+      "seconds": 3.6276516999969317
+    },
+    {
+      "name": "roi_scale_1_lut_0.05",
+      "ssim": 0.796160366070515,
+      "psnr": 25.82599592792338,
+      "competition_score": 71.22682318169007,
+      "seconds": 4.068200300000171
+    },
+    {
+      "name": "roi_scale_1_blur_0.8_-0.1",
+      "ssim": 0.7965412193412924,
+      "psnr": 25.781213368059998,
+      "competition_score": 71.22661337472647,
+      "seconds": 3.7554234999988694
+    },
+    {
+      "name": "roi_scale_1_blur_1_-0.1",
+      "ssim": 0.796511226535238,
+      "psnr": 25.780708080218684,
+      "competition_score": 71.22421070559787,
+      "seconds": 3.618674800000008
+    },
+    {
+      "name": "roi_scale_1_blur_0.8_-0.25",
+      "ssim": 0.7964471905294417,
+      "psnr": 25.77981982291725,
+      "competition_score": 71.21919523081127,
+      "seconds": 3.756788000002416
+    },
+    {
+      "name": "roi_scale_1_blur_1_-0.25",
+      "ssim": 0.7963578588486477,
+      "psnr": 25.778439947093997,
+      "competition_score": 71.21211408766173,
+      "seconds": 3.706051800003479
+    },
+    {
+      "name": "roi_scale_1_hard_threshold_1",
+      "ssim": 0.7963120565878004,
+      "psnr": 25.780941149164704,
+      "competition_score": 71.21040865064484,
+      "seconds": 4.180215000000317
+    },
+    {
+      "name": "roi_scale_1_lut_0.075",
+      "ssim": 0.7954479226246113,
+      "psnr": 25.837502613192306,
+      "competition_score": 71.18385615163817,
+      "seconds": 4.298449699999765
+    },
+    {
+      "name": "roi_scale_1_hard_threshold_2",
+      "ssim": 0.7957024720391189,
+      "psnr": 25.777816344748846,
+      "competition_score": 71.16586284958764,
+      "seconds": 4.115032199999405
+    },
+    {
+      "name": "roi_scale_1_lut_0.1",
+      "ssim": 0.7943612586954139,
+      "psnr": 25.842056840341254,
+      "competition_score": 71.11052221288372,
+      "seconds": 4.327084200001991
+    },
+    {
+      "name": "roi_scale_1_hard_threshold_3",
+      "ssim": 0.794907590524762,
+      "psnr": 25.77333070122093,
+      "competition_score": 71.1075297574659,
+      "seconds": 4.116948700000648
+    },
+    {
+      "name": "raw",
+      "ssim": 0.7957025160250731,
+      "psnr": 25.589367461574174,
+      "competition_score": 71.05279659869962,
+      "seconds": 4.684928599999694
+    },
+    {
+      "name": "roi_scale_1_gamma_0.98",
+      "ssim": 0.7948613707421588,
+      "psnr": 25.65709016444947,
+      "competition_score": 71.0345500506208,
+      "seconds": 4.049137599999085
+    },
+    {
+      "name": "roi_scale_1_hard_threshold_4",
+      "ssim": 0.793867139466643,
+      "psnr": 25.767298289728977,
+      "competition_score": 71.0310787365024,
+      "seconds": 4.1686897999970824
+    },
+    {
+      "name": "roi_scale_1.25",
+      "ssim": 0.7948888523596525,
+      "psnr": 25.629506729720777,
+      "competition_score": 71.01992370300813,
+      "seconds": 4.463384599999699
+    },
+    {
+      "name": "roi_scale_1_hard_threshold_5",
+      "ssim": 0.7925048227864226,
+      "psnr": 25.759362565383967,
+      "competition_score": 70.93095513427996,
+      "seconds": 4.211128799997823
+    },
+    {
+      "name": "roi_scale_1_hard_threshold_6",
+      "ssim": 0.7907621629346564,
+      "psnr": 25.749108300520444,
+      "competition_score": 70.80281638573821,
+      "seconds": 4.143680799999856
+    },
+    {
+      "name": "roi_scale_1_gamma_0.96",
+      "ssim": 0.7921170913951343,
+      "psnr": 25.442809939581974,
+      "competition_score": 70.7138823614086,
+      "seconds": 4.022640400002274
+    },
+    {
+      "name": "roi_scale_1_hard_threshold_8",
+      "ssim": 0.7861872148673739,
+      "psnr": 25.720757721017737,
+      "competition_score": 70.46555967332682,
+      "seconds": 4.139802300000156
+    },
+    {
+      "name": "roi_scale_1_hard_threshold_10",
+      "ssim": 0.780089739086578,
+      "psnr": 25.679929230578647,
+      "competition_score": 70.01423927440764,
+      "seconds": 4.0128948999990826
+    },
+    {
+      "name": "roi_scale_1_hard_threshold_12",
+      "ssim": 0.772281463563219,
+      "psnr": 25.62289197051696,
+      "competition_score": 69.4334376317355,
+      "seconds": 3.828551899998274
+    }
+  ],
+  "elapsed_seconds": 236.0501762999993
+}

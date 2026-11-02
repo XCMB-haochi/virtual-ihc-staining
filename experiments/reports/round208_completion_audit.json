@@ -1,0 +1,17 @@
+{
+  "fcmae": {
+    "epochs": 800,
+    "seconds": 27464.25700645754,
+    "train_images": 2380
+  },
+  "stage1": {
+    "epochs": 14,
+    "seconds": 2160.5348462243564,
+    "train_images": 2380
+  },
+  "stage2": {
+    "epochs": 14,
+    "seconds": 2445.176734669134,
+    "train_images": 2380
+  }
+}

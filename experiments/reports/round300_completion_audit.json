@@ -1,0 +1,15 @@
+{
+  "epochs": 48,
+  "best_epoch": 48,
+  "optimizer_steps": [
+    12288
+  ],
+  "training_seconds": 3587.115818600003,
+  "validation_seconds": 973.7205213999987,
+  "seed": 2026,
+  "markers": {
+    "colon": "CD68",
+    "liver": "CD45RO",
+    "stomach": "CD68"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "name": "round117_cv2_unext2_groupdro",
+  "marker": "CD68",
+  "roi_scope": "subset",
+  "expected_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022", "ROI008", "ROI000", "ROI007", "ROI024", "ROI014"],
+  "folds": [
+    {"name": "fold0", "val_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022"]},
+    {"name": "fold2", "val_rois": ["ROI008", "ROI000", "ROI007", "ROI024", "ROI014"]}
+  ],
+  "recipes": {
+    "officialfcmae800": {
+      "model_arch": "unext2-fcmae-tiny", "context_halo": 64,
+      "train_target_context_halo": 64, "inference_context_halo": 128,
+      "condition_mode": "spatial-thumbnail-film", "train_stages": []
+    },
+    "groupdro": {
+      "model_arch": "unext2-fcmae-tiny", "base_channels": 32,
+      "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64,
+      "inference_context_halo": 128, "condition_mode": "spatial-thumbnail-film",
+      "fcmae_encoder_init": true,
+      "robust_objective": "group-dro", "group_dro_eta": 5.0,
+      "batch_size": 8, "gradient_accumulation_steps": 2, "train_stages": [1, 2]
+    }
+  },
+  "run_sources": {
+    "officialfcmae800": {"protocol_name": "round52_cv2_unext2_official_fcmae", "recipe_name": "officialfcmae800", "stage": 2},
+    "groupdro": {"protocol_name": "round117_cv2_unext2_groupdro", "recipe_name": "groupdro", "stage": 2}
+  },
+  "fcmae_pretraining": {
+    "name": "reused_round52_official_fcmae800", "data_scope": "fold-train",
+    "pretraining_markers": ["DAPI"], "epochs": 800, "batch_size": 32, "workers": 4,
+    "learning_rate": 0.0002, "minimum_learning_rate": 0.000001, "warmup_epochs": 10,
+    "weight_decay": 0.05, "mask_ratio": 0.5, "checkpoint_interval": 25,
+    "seed": 2044, "model_size": "tiny", "shared_across_folds": false
+  },
+  "training": {
+    "epochs_per_stage": 14, "stage1_learning_rate": 0.0003, "stage2_learning_rate": 0.0001,
+    "batch_size": 16, "workers": 4, "seed": 2044, "weight_decay": 0.0001,
+    "ssim_weight": 0.7, "l1_weight": 0.2, "mse_weight": 0.1, "loss_profile": "hybrid",
+    "ssim_mode": "uniform7", "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95, "save_every_epoch": true
+  },
+  "inference": {
+    "context_halo": 128, "tta": "d4", "jpeg_quality": 95, "batch_size": 2,
+    "checkpoint_filename": "best_global_mse.pt", "test_like_diagnostic": false
+  },
+  "candidate_output_source_offsets": {
+    "officialfcmae800_context128": [0, -1],
+    "groupdro_context128": [0, -1]
+  },
+  "candidates": {
+    "officialfcmae800_context128": {"officialfcmae800": 1.0},
+    "groupdro_context128": {"groupdro": 1.0}
+  },
+  "baseline_candidate": "officialfcmae800_context128",
+  "primary_candidate": "groupdro_context128",
+  "distribution_gates": {
+    "groupdro": {
+      "candidate": "groupdro_context128", "baseline": "officialfcmae800_context128",
+      "minimum_q95_gain": 0.05, "require_positive_float": true,
+      "minimum_positive_folds": 2, "minimum_positive_rois": 7, "minimum_roi_q95_gain": -0.12
+    }
+  },
+  "distribution_promotion_order": ["groupdro"]
+}

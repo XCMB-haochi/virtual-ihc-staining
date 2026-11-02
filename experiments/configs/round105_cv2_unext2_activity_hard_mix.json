@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "name": "round105_cv2_unext2_activity_hard_mix",
+  "marker": "CD68",
+  "roi_scope": "subset",
+  "expected_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022", "ROI008", "ROI000", "ROI007", "ROI024", "ROI014"],
+  "folds": [
+    {"name": "fold0", "val_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022"]},
+    {"name": "fold2", "val_rois": ["ROI008", "ROI000", "ROI007", "ROI024", "ROI014"]}
+  ],
+  "recipes": {
+    "baselineauxiliary15": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "inference_context_halo": 128,
+      "condition_mode": "spatial-thumbnail-film",
+      "train_stages": []
+    },
+    "activityauxiliary15": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "inference_context_halo": 128,
+      "condition_mode": "spatial-thumbnail-film",
+      "fcmae_encoder_init": true,
+      "training_markers": ["CD68", "CD45RO", "HLA-DR", "Vimentin"],
+      "marker_loss_weights": [0.85, 0.05, 0.05, 0.05],
+      "activity_sampler": {
+        "mode": "hard-mix",
+        "start_ratio": 0.75,
+        "hard_fraction": 0.30,
+        "num_bins": 4
+      },
+      "train_stages": [1, 2]
+    }
+  },
+  "run_sources": {
+    "baselineauxiliary15": {
+      "protocol_name": "round55_cv2_unext2_official_auxiliary",
+      "recipe_name": "officialauxiliary15",
+      "stage": 2
+    },
+    "activityauxiliary15": {
+      "protocol_name": "round105_cv2_unext2_activity_hard_mix",
+      "recipe_name": "activityauxiliary15",
+      "stage": 2
+    }
+  },
+  "fcmae_pretraining": {
+    "name": "dapi_officialfcmae800_reused",
+    "epochs": 800,
+    "batch_size": 32,
+    "workers": 4,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 0.000001,
+    "warmup_epochs": 10,
+    "weight_decay": 0.05,
+    "mask_ratio": 0.5,
+    "checkpoint_interval": 25,
+    "seed": 2044,
+    "encoder_initialization": {
+      "mode": "official-convnextv2-fcmae-imagenet1k-tiny",
+      "checkpoint": "runs/public_checkpoints/convnextv2_tiny_1k_224_fcmae.pt",
+      "sha256": "b25eadb89ad634b5c925ea04cdacebafe3e462486baf9482dc2d832bb9af57ef",
+      "source_url": "https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_tiny_1k_224_fcmae.pt",
+      "license": "CC-BY-NC-4.0"
+    }
+  },
+  "training": {
+    "epochs_per_stage": 14,
+    "stage1_learning_rate": 0.0003,
+    "stage2_learning_rate": 0.0001,
+    "batch_size": 16,
+    "workers": 4,
+    "seed": 2044,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95
+  },
+  "inference": {
+    "context_halo": 128,
+    "tta": "d4",
+    "jpeg_quality": 95,
+    "batch_size": 2,
+    "checkpoint_filename": "best_global_mse.pt",
+    "test_like_diagnostic": false
+  },
+  "candidate_output_source_offsets": {
+    "baseline_d4_context128": [0, -1],
+    "activity_d4_context128": [0, -1]
+  },
+  "candidates": {
+    "baseline_d4_context128": {"baselineauxiliary15": 1.0},
+    "activity_d4_context128": {"activityauxiliary15": 1.0}
+  },
+  "baseline_candidate": "baseline_d4_context128",
+  "primary_candidate": "activity_d4_context128",
+  "distribution_gates": {
+    "activity_hard_mix": {
+      "candidate": "activity_d4_context128",
+      "baseline": "baseline_d4_context128",
+      "minimum_q95_gain": 0.03,
+      "require_positive_float": true,
+      "minimum_positive_folds": 2,
+      "minimum_positive_rois": 7,
+      "minimum_roi_q95_gain": -0.12
+    }
+  },
+  "distribution_promotion_order": ["activity_hard_mix"]
+}

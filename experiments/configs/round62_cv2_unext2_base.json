@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "name": "round62_cv2_unext2_base",
+  "marker": "CD68",
+  "roi_scope": "subset",
+  "expected_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022", "ROI008", "ROI000", "ROI007", "ROI024", "ROI014"],
+  "folds": [
+    {"name": "fold0", "val_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022"]},
+    {"name": "fold2", "val_rois": ["ROI008", "ROI000", "ROI007", "ROI024", "ROI014"]}
+  ],
+  "recipes": {
+    "round35base32": {"model_arch": "unet", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "round35base48": {"model_arch": "unet", "base_channels": 48, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "fcmae800": {"model_arch": "unext2-fcmae-tiny", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "officialfcmae800": {"model_arch": "unext2-fcmae-tiny", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "officialbasefcmae800": {
+      "model_arch": "unext2-fcmae-base",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-film",
+      "fcmae_encoder_init": true,
+      "batch_size": 8,
+      "gradient_accumulation_steps": 2,
+      "train_stages": [1, 2]
+    }
+  },
+  "run_sources": {
+    "round35base32": {"protocol_name": "round31_cv5_thumbnail_ring_film", "recipe_name": "thumbnailcontinue", "stage": 2},
+    "round35base48": {"protocol_name": "round34_cv5_thumbnail_base48_continue", "recipe_name": "thumbnailbase48continue", "stage": 2},
+    "fcmae800": {"protocol_name": "round46_cv2_unext2_fcmae800", "recipe_name": "fcmae800", "stage": 2},
+    "officialfcmae800": {"protocol_name": "round52_cv2_unext2_official_fcmae", "recipe_name": "officialfcmae800", "stage": 2},
+    "officialbasefcmae800": {"protocol_name": "round62_cv2_unext2_base", "recipe_name": "officialbasefcmae800", "stage": 2}
+  },
+  "fcmae_pretraining": {
+    "name": "dapi_officialbasefcmae800",
+    "epochs": 800,
+    "batch_size": 16,
+    "gradient_accumulation_steps": 2,
+    "model_size": "base",
+    "workers": 4,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 0.000001,
+    "warmup_epochs": 10,
+    "weight_decay": 0.05,
+    "mask_ratio": 0.5,
+    "checkpoint_interval": 25,
+    "seed": 2044,
+    "encoder_initialization": {
+      "mode": "official-convnextv2-fcmae-imagenet1k-base",
+      "checkpoint": "runs/public_checkpoints/convnextv2_base_1k_224_fcmae.pt",
+      "sha256": "cd59ca7d4db45a8d7bc2128dc447c0a5aee209d2b4920e79e1da4196afca6405",
+      "source_url": "https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_base_1k_224_fcmae.pt",
+      "license": "CC-BY-NC-4.0"
+    }
+  },
+  "training": {
+    "epochs_per_stage": 14,
+    "stage1_learning_rate": 0.0003,
+    "stage2_learning_rate": 0.0001,
+    "batch_size": 16,
+    "workers": 4,
+    "seed": 2044,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95
+  },
+  "inference": {"context_halo": 64, "tta": "d4", "jpeg_quality": 95, "batch_size": 2, "checkpoint_filename": "best_global_mse.pt", "test_like_diagnostic": false},
+  "candidates": {
+    "officialfcmae800": {"officialfcmae800": 1.0},
+    "officialbasefcmae800": {"officialbasefcmae800": 1.0},
+    "t70_o50": {"round35base32": 0.21, "round35base48": 0.09, "fcmae800": 0.35, "officialfcmae800": 0.35},
+    "t70_base_replace": {"round35base32": 0.21, "round35base48": 0.09, "fcmae800": 0.35, "officialbasefcmae800": 0.35},
+    "t70_base_split": {"round35base32": 0.21, "round35base48": 0.09, "fcmae800": 0.35, "officialfcmae800": 0.175, "officialbasefcmae800": 0.175}
+  },
+  "baseline_candidate": "t70_o50",
+  "primary_candidate": "t70_base_split",
+  "distribution_gates": {
+    "base_capacity": {"candidate": "officialbasefcmae800", "baseline": "officialfcmae800", "minimum_q95_gain": 0.10, "require_positive_float": true, "minimum_positive_folds": 2, "minimum_positive_rois": 7, "minimum_roi_q95_gain": -0.12},
+    "base_replacement": {"candidate": "t70_base_replace", "baseline": "t70_o50", "minimum_q95_gain": 0.06, "require_positive_float": true, "minimum_positive_folds": 2, "minimum_positive_rois": 8, "minimum_roi_q95_gain": -0.08, "requires": "base_capacity"},
+    "base_diversity": {"candidate": "t70_base_split", "baseline": "t70_o50", "minimum_q95_gain": 0.04, "require_positive_float": true, "minimum_positive_folds": 2, "minimum_positive_rois": 8, "minimum_roi_q95_gain": -0.08}
+  },
+  "distribution_promotion_order": ["base_replacement", "base_diversity"]
+}

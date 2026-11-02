@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "protocol_name": "round117_cv2_unext2_groupdro",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "groupdro": {
+      "passed": false,
+      "candidate": "groupdro_context128",
+      "baseline": "officialfcmae800_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.1503188939660305,
+      "overall_float_delta": -0.15026788453776874,
+      "fold_q95_deltas": {
+        "fold0": -0.2556036138281712,
+        "fold2": -0.05166628244143112
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": 0.1644998143193419,
+        "ROI001": -0.33301406300905967,
+        "ROI007": -0.12075196908729424,
+        "ROI008": -0.41388149228276916,
+        "ROI011": -0.30800821545177826,
+        "ROI012": -0.4244665466554096,
+        "ROI014": -0.01985206306449072,
+        "ROI020": 0.2103569543418189,
+        "ROI022": -0.4290328650759676,
+        "ROI024": 0.1985311676503585
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI020",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.4290328650759676,
+      "thresholds": {
+        "candidate": "groupdro_context128",
+        "baseline": "officialfcmae800_context128",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round117_cv2_unext2_groupdro.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round117_cv2_unext2_groupdro_oof.json",
+  "oof_report_sha256": "07d1ed3967b017f1aab8f65943e95a3119becb4d04e5b704624a591e496c93dc"
+}

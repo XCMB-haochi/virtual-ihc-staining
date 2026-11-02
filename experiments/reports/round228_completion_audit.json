@@ -1,0 +1,72 @@
+[
+  {
+    "fold": "fold0",
+    "stage": 1,
+    "epochs": 17,
+    "actual_updates": 2086.0,
+    "attempted_updates": 2091
+  },
+  {
+    "fold": "fold0",
+    "stage": 2,
+    "epochs": 17,
+    "actual_updates": 2087.0,
+    "attempted_updates": 2091
+  },
+  {
+    "fold": "fold1",
+    "stage": 1,
+    "epochs": 17,
+    "actual_updates": 2087.0,
+    "attempted_updates": 2091
+  },
+  {
+    "fold": "fold1",
+    "stage": 2,
+    "epochs": 17,
+    "actual_updates": 2086.0,
+    "attempted_updates": 2091
+  },
+  {
+    "fold": "fold2",
+    "stage": 1,
+    "epochs": 17,
+    "actual_updates": 2086.0,
+    "attempted_updates": 2091
+  },
+  {
+    "fold": "fold2",
+    "stage": 2,
+    "epochs": 17,
+    "actual_updates": 2088.0,
+    "attempted_updates": 2091
+  },
+  {
+    "fold": "fold3",
+    "stage": 1,
+    "epochs": 18,
+    "actual_updates": 2048.0,
+    "attempted_updates": 2052
+  },
+  {
+    "fold": "fold3",
+    "stage": 2,
+    "epochs": 18,
+    "actual_updates": 2048.0,
+    "attempted_updates": 2052
+  },
+  {
+    "fold": "fold4",
+    "stage": 1,
+    "epochs": 18,
+    "actual_updates": 2048.0,
+    "attempted_updates": 2052
+  },
+  {
+    "fold": "fold4",
+    "stage": 2,
+    "epochs": 18,
+    "actual_updates": 2048.0,
+    "attempted_updates": 2052
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "name": "round45_cv2_unext2_photoaug",
+  "marker": "CD68",
+  "roi_scope": "subset",
+  "expected_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022", "ROI008", "ROI000", "ROI007", "ROI024", "ROI014"],
+  "folds": [
+    {"name": "fold0", "val_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022"]},
+    {"name": "fold2", "val_rois": ["ROI008", "ROI000", "ROI007", "ROI024", "ROI014"]}
+  ],
+  "recipes": {
+    "round35base32": {"model_arch": "unet", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "round35base48": {"model_arch": "unet", "base_channels": 48, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "round44fcmae": {"model_arch": "unext2-fcmae-tiny", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "photo_plain": {"model_arch": "unext2-fcmae-tiny", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": [2], "init_source": {"protocol_name": "round44_cv2_unext2_fcmae", "recipe_name": "unext2fcmae", "stage": 1}},
+    "photo_aug": {"model_arch": "unext2-fcmae-tiny", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": [2], "init_source": {"protocol_name": "round44_cv2_unext2_fcmae", "recipe_name": "unext2fcmae", "stage": 1}, "source_photometric_augmentation": true}
+  },
+  "run_sources": {
+    "round35base32": {"protocol_name": "round31_cv5_thumbnail_ring_film", "recipe_name": "thumbnailcontinue", "stage": 2},
+    "round35base48": {"protocol_name": "round34_cv5_thumbnail_base48_continue", "recipe_name": "thumbnailbase48continue", "stage": 2},
+    "round44fcmae": {"protocol_name": "round44_cv2_unext2_fcmae", "recipe_name": "unext2fcmae", "stage": 2},
+    "photo_plain": {"protocol_name": "round45_cv2_unext2_photoaug", "recipe_name": "photo_plain", "stage": 2},
+    "photo_aug": {"protocol_name": "round45_cv2_unext2_photoaug", "recipe_name": "photo_aug", "stage": 2}
+  },
+  "training": {
+    "epochs_per_stage": 14,
+    "stage1_learning_rate": 0.0003,
+    "stage2_learning_rate": 0.0001,
+    "batch_size": 16,
+    "workers": 4,
+    "seed": 2045,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95
+  },
+  "inference": {"context_halo": 64, "tta": "d4", "jpeg_quality": 95, "batch_size": 2, "checkpoint_filename": "best_global_mse.pt", "test_like_diagnostic": false},
+  "candidates": {
+    "round35": {"round35base32": 0.7, "round35base48": 0.3},
+    "round44fcmae": {"round44fcmae": 1.0},
+    "photo_plain": {"photo_plain": 1.0},
+    "photo_aug": {"photo_aug": 1.0},
+    "round44_photo20": {"round44fcmae": 0.8, "photo_aug": 0.2}
+  },
+  "baseline_candidate": "round35",
+  "primary_candidate": "round44_photo20",
+  "distribution_gates": {
+    "photo_direct": {"candidate": "photo_aug", "baseline": "photo_plain", "minimum_q95_gain": 0.03, "require_positive_float": true, "minimum_positive_folds": 2, "minimum_positive_rois": 7, "minimum_roi_q95_gain": -0.12},
+    "photo_blend": {"candidate": "round44_photo20", "baseline": "round44fcmae", "minimum_q95_gain": 0.02, "require_positive_float": true, "minimum_positive_folds": 2, "minimum_positive_rois": 7, "minimum_roi_q95_gain": -0.08, "requires": "photo_direct"},
+    "primary": {"candidate": "round44_photo20", "baseline": "round35", "minimum_q95_gain": 0.08, "require_positive_float": true, "minimum_positive_folds": 2, "minimum_positive_rois": 7, "minimum_roi_q95_gain": -0.08, "requires": "photo_blend"}
+  },
+  "distribution_promotion_order": ["primary"]
+}

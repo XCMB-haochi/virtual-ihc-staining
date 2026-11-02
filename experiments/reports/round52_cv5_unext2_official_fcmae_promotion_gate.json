@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "protocol_name": "round52_cv2_unext2_official_fcmae",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "official_diversity_full": {
+      "passed": true,
+      "candidate": "round47_official_split30",
+      "baseline": "round47w060",
+      "requires": null,
+      "checks": {
+        "overall_q95": true,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": true,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.20582745334147035,
+      "overall_float_delta": 0.20513476787613172,
+      "fold_q95_deltas": {
+        "fold0": 0.23269871215529747,
+        "fold1": 0.2666289335952001,
+        "fold2": 0.12691032778877798,
+        "fold3": 0.2006672111442498,
+        "fold4": 0.2153478316922275
+      },
+      "positive_folds": [
+        "fold0",
+        "fold1",
+        "fold2",
+        "fold3",
+        "fold4"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": -0.007322945184299101,
+        "ROI001": 0.294345659306245,
+        "ROI002": 0.33466595248353315,
+        "ROI003": 0.4000750009824401,
+        "ROI004": 0.15974698146781918,
+        "ROI005": 0.2991588427568388,
+        "ROI006": 0.26755804157006935,
+        "ROI007": 0.16264490888401895,
+        "ROI008": 0.12057925571649264,
+        "ROI009": 0.2738901962352429,
+        "ROI010": 0.2540919418355685,
+        "ROI011": 0.26685476680606257,
+        "ROI012": 0.15657578329452804,
+        "ROI013": 0.13388912945623588,
+        "ROI014": 0.19591255757794102,
+        "ROI015": 0.03380500718466806,
+        "ROI016": 0.19816782989069281,
+        "ROI017": 0.28756397150736746,
+        "ROI018": 0.33589236926538035,
+        "ROI019": 0.2969741770954073,
+        "ROI020": 0.26359500403961533,
+        "ROI021": 0.1265606607070282,
+        "ROI022": 0.17313992245591692,
+        "ROI023": -0.06439626385807173,
+        "ROI024": 0.16163235321215552
+      },
+      "positive_rois": [
+        "ROI001",
+        "ROI002",
+        "ROI003",
+        "ROI004",
+        "ROI005",
+        "ROI006",
+        "ROI007",
+        "ROI008",
+        "ROI009",
+        "ROI010",
+        "ROI011",
+        "ROI012",
+        "ROI013",
+        "ROI014",
+        "ROI015",
+        "ROI016",
+        "ROI017",
+        "ROI018",
+        "ROI019",
+        "ROI020",
+        "ROI021",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.06439626385807173,
+      "thresholds": {
+        "candidate": "round47_official_split30",
+        "baseline": "round47w060",
+        "minimum_q95_gain": 0.06,
+        "require_positive_float": true,
+        "minimum_positive_folds": 4,
+        "minimum_positive_rois": 20,
+        "minimum_roi_q95_gain": -0.08
+      }
+    }
+  },
+  "promotion": {
+    "allowed": true,
+    "gate": "official_diversity_full",
+    "candidate": "round47_official_split30"
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round52_cv5_unext2_official_fcmae_promotion.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round52_cv5_unext2_official_fcmae_promotion_oof.json",
+  "oof_report_sha256": "2c7ca6f5054845f2b9ddb2cde2c43229daabf5769a8716a75ce4c64fd14734fb"
+}

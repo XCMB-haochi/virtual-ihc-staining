@@ -1,0 +1,36 @@
+{
+  "formal": false,
+  "device": "cpu",
+  "training": false,
+  "conditioning": {
+    "formal_validation_images": 2706,
+    "formal_vs_all_roi_max_abs": 0.0,
+    "sparse_images": 80,
+    "sparse_changed": 80,
+    "sparse_condition_mean_abs": 0.3804175853729248
+  },
+  "synthetic_metric": {
+    "before_fix": 65.0139944012335,
+    "after_fix": 51.82017437521739,
+    "official": 51.82017437521739
+  },
+  "two_image_probe": {
+    "purpose": "Verify input-contract effect only; not an accuracy estimate or model selection.",
+    "names": [
+      "ROI001_00_00.jpg",
+      "ROI022_15_18.jpg"
+    ],
+    "checkpoint_sha256": "7e6c49129b1013596f486449bdf77c403471240a438476d1e85fdcfb24f99fd6",
+    "prediction_rms_uint8": 6.9505085945129395,
+    "q95": {
+      "full_roi": 75.55971673080131,
+      "sparse_roi": 71.00575271323001
+    }
+  },
+  "elapsed_seconds": 114.92263026,
+  "source_sha256": {
+    "src/ihc_spatial.py": "067a70fba49689d6bbdb796cf5386f284c8239d80cb1a260d92f070707b19b2f",
+    "tools/train_unet.py": "c8e024b6cf8a1ccfbdf400ba1160eee81f6a3e4cf253e7145a74bddb94ff327b",
+    "tools/reassess_pipeline.py": "a418610956256c9996858aeeb241f9cf8a42dce8bb330c147c3ea6b5b45fbfcd"
+  }
+}

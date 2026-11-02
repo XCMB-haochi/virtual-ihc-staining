@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.idea/
+**/dataset/
+**/runs/
+**/predictions/
+**/submissions/
+**/transfers/
+**/checkpoints/
+**/assets/*.pt
+*.aux
+*.log
+*.out

@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "name": "round200_semifinal_cv5_baseline",
+  "marker": "CD68",
+  "roi_scope": "complete",
+  "expected_rois": ["ROI005", "ROI010", "ROI019", "ROI044", "ROI045", "ROI052", "ROI058", "ROI061", "ROI067", "ROI072", "ROI074", "ROI076", "ROI078", "ROI081", "ROI087", "ROI093", "ROI100"],
+  "folds": [
+    {"name": "fold0", "val_rois": ["ROI005", "ROI052", "ROI087"]},
+    {"name": "fold1", "val_rois": ["ROI010", "ROI058", "ROI093"]},
+    {"name": "fold2", "val_rois": ["ROI019", "ROI061", "ROI100"]},
+    {"name": "fold3", "val_rois": ["ROI044", "ROI067", "ROI074", "ROI078"]},
+    {"name": "fold4", "val_rois": ["ROI045", "ROI072", "ROI076", "ROI081"]}
+  ],
+  "recipes": {
+    "semifinalstudent": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "inference_context_halo": 128,
+      "condition_mode": "spatial-thumbnail-film",
+      "fcmae_encoder_init": true,
+      "fcmae_encoder_source": {
+        "checkpoint": "runs/semifinal_public_fcmae_tiny/final_encoder.pt",
+        "sha256": "98256dc1aca47cb6e553a1c82d7f343d328e14d2c7a1b1019dc34273669d1578"
+      },
+      "training_markers": ["CD68", "CD45RO", "HLA-DR", "Vimentin"],
+      "marker_loss_weights": [0.85, 0.05, 0.05, 0.05],
+      "train_stages": [1, 2],
+      "epochs_per_stage": 14
+    },
+    "baselinecopy": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "inference_context_halo": 128,
+      "condition_mode": "spatial-thumbnail-film",
+      "train_stages": []
+    }
+  },
+  "run_sources": {
+    "semifinalstudent": {"protocol_name": "round200_semifinal_cv5_baseline", "recipe_name": "semifinalstudent", "stage": 2},
+    "baselinecopy": {"protocol_name": "round200_semifinal_cv5_baseline", "recipe_name": "semifinalstudent", "stage": 2}
+  },
+  "fcmae_pretraining": {
+    "name": "public_convnextv2_fcmae_tiny",
+    "data_scope": "all-train",
+    "pretraining_markers": ["DAPI"],
+    "epochs": 1,
+    "batch_size": 32,
+    "workers": 4,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 0.000001,
+    "warmup_epochs": 0,
+    "weight_decay": 0.05,
+    "mask_ratio": 0.5,
+    "checkpoint_interval": 1,
+    "seed": 2026,
+    "model_size": "tiny",
+    "shared_across_folds": true
+  },
+  "training": {
+    "epochs_per_stage": 14,
+    "stage1_learning_rate": 0.0003,
+    "stage2_learning_rate": 0.0001,
+    "batch_size": 16,
+    "workers": 4,
+    "seed": 2026,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "loss_profile": "hybrid",
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95,
+    "save_every_epoch": true
+  },
+  "inference": {"context_halo": 128, "tta": "d4", "jpeg_quality": 95, "batch_size": 2, "checkpoint_filename": "best_global_mse.pt", "test_like_diagnostic": false},
+  "candidate_output_source_offsets": {"semifinalstudent_context128": [0, 0], "baseline_context128": [0, 0]},
+  "candidates": {"semifinalstudent_context128": {"semifinalstudent": 1.0}, "baseline_context128": {"baselinecopy": 1.0}},
+  "baseline_candidate": "baseline_context128",
+  "primary_candidate": "semifinalstudent_context128",
+  "description": "Grouped five-fold convergence baseline; OOF is recorded without promotion gate."
+}

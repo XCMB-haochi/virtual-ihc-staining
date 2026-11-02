@@ -1,0 +1,14 @@
+{
+  "1": {
+    "epochs": 14,
+    "actual_updates": 2081.0,
+    "hours": 0.6011554244612085,
+    "final_auxiliary_loss": 0.12375001223961345
+  },
+  "2": {
+    "epochs": 14,
+    "actual_updates": 2083.0,
+    "hours": 0.7070580189704844,
+    "final_auxiliary_loss": 0.10206376706727413
+  }
+}

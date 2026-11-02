@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "method": "training-oof-target-activity-vs-dapi-activity-audit",
+  "images": 6296,
+  "activity_definition": "std + mean_abs_neighbor_difference + 0.25*foreground_fraction_above_mean + 0.25*p95",
+  "correlation": {
+    "dapi_target_activity_pearson": 0.29076574379936776,
+    "target_activity_error_mse_pearson": 0.5855765437722624,
+    "dapi_activity_error_mse_pearson": 0.10241493241932155
+  },
+  "train_target_activity_quantiles": [
+    17.410606026649475,
+    36.34058552980423,
+    44.791473388671875,
+    52.900996685028076,
+    158.2580361366272
+  ],
+  "train_target_activity_bins": [
+    {
+      "bin": 0,
+      "target_activity_range": [
+        17.410606026649475,
+        36.34058552980423
+      ],
+      "images": 1574,
+      "dapi_activity_mean": 48.57999879059298,
+      "baseline_mse_mean": 86.95288710551765
+    },
+    {
+      "bin": 1,
+      "target_activity_range": [
+        36.34058552980423,
+        44.791473388671875
+      ],
+      "images": 1574,
+      "dapi_activity_mean": 59.12660751689647,
+      "baseline_mse_mean": 123.06744106539928
+    },
+    {
+      "bin": 2,
+      "target_activity_range": [
+        44.791473388671875,
+        52.900996685028076
+      ],
+      "images": 1574,
+      "dapi_activity_mean": 65.9847486672078,
+      "baseline_mse_mean": 166.2982712264588
+    },
+    {
+      "bin": 3,
+      "target_activity_range": [
+        52.900996685028076,
+        158.2580361366272
+      ],
+      "images": 1574,
+      "dapi_activity_mean": 65.43122418001388,
+      "baseline_mse_mean": 354.32417210599516
+    }
+  ],
+  "train_dapi_activity": {
+    "mean": 59.78064478867778,
+    "std": 15.81493153042244,
+    "min": 5.706341505050659,
+    "max": 118.94223165512085
+  },
+  "data_scope": "OOF targets and predictions only; no test inputs, labels, or model fitting"
+}

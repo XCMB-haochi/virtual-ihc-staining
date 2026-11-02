@@ -1,0 +1,62 @@
+{
+  "overall": {
+    "signal_minus_base_long": -0.029598152688507184,
+    "signal_minus_base_original": 0.2469199019749908,
+    "signal_long_minus_original": -0.08657183877583918,
+    "base_long_minus_original": 0.1899462158876588
+  },
+  "fold0": {
+    "signal_minus_base_long": -0.01474624222387888,
+    "signal_minus_base_original": 0.10176484485776882,
+    "signal_long_minus_original": -0.052261309864604755,
+    "base_long_minus_original": 0.06424977721704295
+  },
+  "ROI005": {
+    "signal_minus_base_long": -0.001680866961294214,
+    "signal_minus_base_original": 0.21322131813505507,
+    "signal_long_minus_original": -0.08334978080841893,
+    "base_long_minus_original": 0.13155240428793036
+  },
+  "ROI052": {
+    "signal_minus_base_long": -0.08650566294477358,
+    "signal_minus_base_original": 0.139117054664041,
+    "signal_long_minus_original": -0.12770082578094843,
+    "base_long_minus_original": 0.09792189182786615
+  },
+  "ROI087": {
+    "signal_minus_base_long": 0.04394780323441694,
+    "signal_minus_base_original": -0.047043838225789614,
+    "signal_long_minus_original": 0.054266676995524676,
+    "base_long_minus_original": -0.036724964464681875
+  },
+  "fold3": {
+    "signal_minus_base_long": -0.04073708553697486,
+    "signal_minus_base_original": 0.3557861948128789,
+    "signal_long_minus_original": -0.11230473545921882,
+    "base_long_minus_original": 0.2842185448906349
+  },
+  "ROI044": {
+    "signal_minus_base_long": -0.13409145293312008,
+    "signal_minus_base_original": 0.12075791145834103,
+    "signal_long_minus_original": -0.1617703768732497,
+    "base_long_minus_original": 0.09307898751821142
+  },
+  "ROI067": {
+    "signal_minus_base_long": -0.019641816001964685,
+    "signal_minus_base_original": 0.19108168724346797,
+    "signal_long_minus_original": 0.014815192194745919,
+    "base_long_minus_original": 0.22553869544017857
+  },
+  "ROI074": {
+    "signal_minus_base_long": -0.1325557845420633,
+    "signal_minus_base_original": 0.287536112264263,
+    "signal_long_minus_original": -0.16509424485225566,
+    "base_long_minus_original": 0.25499765195407065
+  },
+  "ROI078": {
+    "signal_minus_base_long": 0.12334071132916336,
+    "signal_minus_base_original": 0.8237690682854861,
+    "signal_long_minus_original": -0.13716951230625796,
+    "base_long_minus_original": 0.5632588446500648
+  }
+}

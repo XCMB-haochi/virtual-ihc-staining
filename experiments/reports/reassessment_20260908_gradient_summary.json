@@ -1,0 +1,31 @@
+{
+  "formal": false,
+  "device": "cpu",
+  "gradient_scale": 1.0,
+  "conditioning_scope": "complete training DAPI ROIs",
+  "selection": "64 seed2044 training-only images per fold; four batch16 groups at each saved stage endpoint",
+  "summary": {
+    "all": {
+      "batches": 16,
+      "negative_batches": 6,
+      "median_cosine": 0.5012343723363946,
+      "median_opposing_primary_fraction": 0.0
+    },
+    "encoder": {
+      "batches": 16,
+      "negative_batches": 6,
+      "median_cosine": 0.5653073684342084,
+      "median_opposing_primary_fraction": 0.0
+    },
+    "decoder": {
+      "batches": 16,
+      "negative_batches": 10,
+      "median_cosine": -0.00840283788842762,
+      "median_opposing_primary_fraction": 0.0017733018379640303
+    }
+  },
+  "elapsed_seconds": 1975.555864670081,
+  "raw_report": "/workspace/virtual_ihc_staining_generation/reports/reassessment_20260908_gradient_cpu.json",
+  "raw_sha256": "1acd79e328c4e348c5110d5300e7474d1b848d57b81b654c003e9873684534f0",
+  "meaning": "Training-endpoint diagnostic only; no promotion or training authorization."
+}

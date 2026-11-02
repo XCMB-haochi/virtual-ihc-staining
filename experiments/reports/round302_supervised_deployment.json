@@ -1,0 +1,12 @@
+{
+    "source_commit":  "f4dfb9e8e13c5524cdad3f20200b2a2ba81670f1",
+    "archive_sha256":  "d61e124ef3045c1de34fea575a9ceb33f649577d7b34d601a457e732578b9459",
+    "pretraining_processes_preserved":  true,
+    "pretraining_and_model_sources_unchanged":  true,
+    "tests_passed":  9,
+    "supervised_split_matches_pretraining":  true,
+    "queued_handoff_validated":  true,
+    "plan":  "configs/round302_supervised.json",
+    "pretraining_restarted":  false,
+    "supervised_started":  false
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "fold1",
+    "init_sha256": "aaf1f50e840f2ab3afa4fbe3588f12b7452671861cec9568eac9c9cdeca4fe86",
+    "actual_steps": 1716.0,
+    "peak_gpu_gib": 6.991944313049316
+  },
+  {
+    "name": "fold4",
+    "init_sha256": "580d43241bd2beb1ccc349e67e691c18799a838e9ed2f59c0547415882cc83c1",
+    "actual_steps": 1590.0,
+    "peak_gpu_gib": 6.990235328674316
+  },
+  {
+    "name": "full",
+    "init_sha256": "d21ccfb36ec9e4c7d9f58a5d243857f46381c6507320525a29fecbcd1cac0c35",
+    "actual_steps": 2081.0,
+    "peak_gpu_gib": 6.992066383361816
+  },
+  {
+    "name": "fold0",
+    "init_sha256": "8ca46bdff533c741b2bc029f076834f9b26ad630dc224f7213065a3b1d32ae2e",
+    "actual_steps": 1716.0,
+    "peak_gpu_gib": 6.990235328674316
+  },
+  {
+    "name": "fold2",
+    "init_sha256": "04a770ae77285ef8a96b501c8fe4f8ec1dcad679136a79c8617af9c290de46d7",
+    "actual_steps": 1719.0,
+    "peak_gpu_gib": 6.990235328674316
+  },
+  {
+    "name": "fold3",
+    "init_sha256": "adbd66246ba06c6d3862fc574bd08d7707518f9c9b34846c10875d2c2160fe27",
+    "actual_steps": 1592.0,
+    "peak_gpu_gib": 6.990235328674316
+  }
+]

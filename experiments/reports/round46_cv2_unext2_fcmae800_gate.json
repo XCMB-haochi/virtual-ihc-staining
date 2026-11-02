@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "protocol_name": "round46_cv2_unext2_fcmae800",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "longer_pretraining": {
+      "passed": true,
+      "candidate": "fcmae800",
+      "baseline": "fcmae100",
+      "requires": null,
+      "checks": {
+        "overall_q95": true,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": true,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.6061991252365573,
+      "overall_float_delta": 0.6067528919489149,
+      "fold_q95_deltas": {
+        "fold0": 0.49086708683546476,
+        "fold2": 0.7142661533447097
+      },
+      "positive_folds": [
+        "fold0",
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.7499622939781716,
+        "ROI001": 0.32771973229280604,
+        "ROI007": 0.5502250930576764,
+        "ROI008": 0.20634294489934746,
+        "ROI011": 0.7525145249307315,
+        "ROI012": 0.7509613163056201,
+        "ROI014": 0.7973362598484783,
+        "ROI020": 0.5578366268462958,
+        "ROI022": 0.05970032011143189,
+        "ROI024": 1.3454247648344762
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI001",
+        "ROI007",
+        "ROI008",
+        "ROI011",
+        "ROI012",
+        "ROI014",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": 0.05970032011143189,
+      "thresholds": {
+        "candidate": "fcmae800",
+        "baseline": "fcmae100",
+        "minimum_q95_gain": 0.1,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    },
+    "ensemble_increment": {
+      "passed": true,
+      "candidate": "round35_fcmae800_20",
+      "baseline": "round35_fcmae100_20",
+      "requires": "longer_pretraining",
+      "checks": {
+        "overall_q95": true,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": true,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.12200534549148756,
+      "overall_float_delta": 0.12203680666458183,
+      "fold_q95_deltas": {
+        "fold0": 0.10855147783273367,
+        "fold2": 0.13461172542400845
+      },
+      "positive_folds": [
+        "fold0",
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.06107489173717795,
+        "ROI001": 0.09535160650270313,
+        "ROI007": 0.12514690989804933,
+        "ROI008": 0.0554670978637688,
+        "ROI011": 0.19268243793580098,
+        "ROI012": 0.18433901760799642,
+        "ROI014": 0.16368320485621268,
+        "ROI020": 0.08383829119907205,
+        "ROI022": -0.015017995071247014,
+        "ROI024": 0.2742230781649653
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI001",
+        "ROI007",
+        "ROI008",
+        "ROI011",
+        "ROI012",
+        "ROI014",
+        "ROI020",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.015017995071247014,
+      "thresholds": {
+        "candidate": "round35_fcmae800_20",
+        "baseline": "round35_fcmae100_20",
+        "minimum_q95_gain": 0.02,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.08,
+        "requires": "longer_pretraining"
+      }
+    },
+    "primary": {
+      "passed": true,
+      "candidate": "round35_fcmae800_20",
+      "baseline": "round35",
+      "requires": "ensemble_increment",
+      "checks": {
+        "overall_q95": true,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": true,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.2770910063305081,
+      "overall_float_delta": 0.27673254431623207,
+      "fold_q95_deltas": {
+        "fold0": 0.26139336363728205,
+        "fold2": 0.2917998211378716
+      },
+      "positive_folds": [
+        "fold0",
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.30136417562080453,
+        "ROI001": 0.22336664455899324,
+        "ROI007": 0.2876831198925629,
+        "ROI008": 0.33678117384943107,
+        "ROI011": 0.27874534030395637,
+        "ROI012": 0.2356684117709591,
+        "ROI014": 0.23153758884423326,
+        "ROI020": 0.27315787809467906,
+        "ROI022": 0.2877345681532546,
+        "ROI024": 0.28651044915548596
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI001",
+        "ROI007",
+        "ROI008",
+        "ROI011",
+        "ROI012",
+        "ROI014",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": 0.22336664455899324,
+      "thresholds": {
+        "candidate": "round35_fcmae800_20",
+        "baseline": "round35",
+        "minimum_q95_gain": 0.16,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08,
+        "requires": "ensemble_increment"
+      }
+    }
+  },
+  "promotion": {
+    "allowed": true,
+    "gate": "primary",
+    "candidate": "round35_fcmae800_20"
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round46_cv2_unext2_fcmae800.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round46_cv2_unext2_fcmae800_oof.json",
+  "oof_report_sha256": "b6b48529e7c5b10552526ff557bfa63d5cf5b6cecdd65dc3c5097f817bc1d57b"
+}

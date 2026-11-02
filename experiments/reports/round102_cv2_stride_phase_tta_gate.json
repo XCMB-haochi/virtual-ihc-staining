@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "protocol_name": "round102_cv2_stride_phase_tta",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "stride_phase_tta": {
+      "passed": false,
+      "candidate": "stride_phase4_d4_context128",
+      "baseline": "standard_d4_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.002869811727791216,
+      "overall_float_delta": -0.0003687669495775481,
+      "fold_q95_deltas": {
+        "fold0": 0.005609383508030419,
+        "fold2": -0.010814884428853588
+      },
+      "positive_folds": [
+        "fold0"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": -0.08728373728010297,
+        "ROI001": -0.015114317943115907,
+        "ROI007": -0.0023552044245604975,
+        "ROI008": -0.06308004999475259,
+        "ROI011": 0.0001630635605209818,
+        "ROI012": -0.00717667927806076,
+        "ROI014": 0.02916405988212034,
+        "ROI020": 0.056412734741925874,
+        "ROI022": -0.0071051922615339436,
+        "ROI024": 0.07433374762055678
+      },
+      "positive_rois": [
+        "ROI011",
+        "ROI014",
+        "ROI020",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.08728373728010297,
+      "thresholds": {
+        "candidate": "stride_phase4_d4_context128",
+        "baseline": "standard_d4_context128",
+        "minimum_q95_gain": 0.02,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.05
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round102_cv2_stride_phase_tta.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round102_cv2_stride_phase_tta_oof.json",
+  "oof_report_sha256": "f69478acdea97bcfec2d192bd49ce82974358c19499f561641bc10434feb95b8"
+}

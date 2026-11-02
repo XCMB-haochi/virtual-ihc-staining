@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "fold": {
+    "name": "fold1",
+    "val_rois": [
+      "ROI002",
+      "ROI009",
+      "ROI018",
+      "ROI015",
+      "ROI005"
+    ]
+  },
+  "pretraining": {
+    "name": "official_multimarker_fcmae160",
+    "data_scope": "fold-train",
+    "pretraining_markers": [
+      "DAPI",
+      "CD68",
+      "CD45RO",
+      "HLA-DR",
+      "Vimentin"
+    ],
+    "epochs": 160,
+    "batch_size": 32,
+    "workers": 4,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 1e-06,
+    "warmup_epochs": 2,
+    "weight_decay": 0.05,
+    "mask_ratio": 0.5,
+    "checkpoint_interval": 5,
+    "seed": 2044,
+    "model_size": "tiny",
+    "encoder_initialization": {
+      "mode": "official-convnextv2-fcmae-imagenet1k-tiny",
+      "checkpoint": "runs/public_checkpoints/convnextv2_tiny_1k_224_fcmae.pt",
+      "sha256": "b25eadb89ad634b5c925ea04cdacebafe3e462486baf9482dc2d832bb9af57ef",
+      "source_url": "https://dl.fbaipublicfiles.com/convnext/convnextv2/pt_only/convnextv2_tiny_1k_224_fcmae.pt",
+      "license": "CC-BY-NC-4.0"
+    }
+  },
+  "baseline": {
+    "checkpoint": "runs/round55_cv2_unext2_official_auxiliary_fold1_officialauxiliary15_stage2/best_global_mse.pt",
+    "sha256": "21f4b66d1a649577c25ead124bdb5e3643a94b94fc3ffb593c042ca0f5eb27d2"
+  }
+}

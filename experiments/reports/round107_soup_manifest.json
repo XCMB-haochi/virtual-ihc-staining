@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "rule": "best-neighborhood-1-2-1",
+  "folds": {
+    "fold0": {
+      "version": 1,
+      "source_dir": "/workspace/virtual_ihc_staining_generation/runs/round55_cv2_unext2_official_auxiliary_fold0_officialauxiliary15_stage2",
+      "source_best_epoch": 7,
+      "input_epochs": [
+        6,
+        7,
+        8
+      ],
+      "input_weights": [
+        0.25,
+        0.5,
+        0.25
+      ],
+      "output": "/workspace/virtual_ihc_staining_generation/runs/round107_cv2_unext2_checkpoint_swa_fold0_swaauxiliary15_stage2/best_global_mse.pt",
+      "output_sha256": "52d5abd16ccdb1b637abc3045c4cda7ea0798825de870c1668b64856b3d85ab7",
+      "inputs": [
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round55_cv2_unext2_official_auxiliary_fold0_officialauxiliary15_stage2/epochs/epoch_006.pt",
+          "sha256": "148b2c5f96d8fd81d14ff5fba472717b3878ef8b13bdc86892d8611dea337731",
+          "epoch": 6,
+          "weight": 0.25
+        },
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round55_cv2_unext2_official_auxiliary_fold0_officialauxiliary15_stage2/epochs/epoch_007.pt",
+          "sha256": "b2a2b5404d6486aef76e94023691e1aab2f68381a55441d0bc0f56f252f9594f",
+          "epoch": 7,
+          "weight": 0.5
+        },
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round55_cv2_unext2_official_auxiliary_fold0_officialauxiliary15_stage2/epochs/epoch_008.pt",
+          "sha256": "416ef13c2120c44015c93ee6db26fb6e6bfbcbe032d891b511386cb565d310cd",
+          "epoch": 8,
+          "weight": 0.25
+        }
+      ],
+      "average_result": {
+        "output": "/workspace/virtual_ihc_staining_generation/runs/round107_cv2_unext2_checkpoint_swa_fold0_swaauxiliary15_stage2/best_global_mse.pt",
+        "sha256": "52d5abd16ccdb1b637abc3045c4cda7ea0798825de870c1668b64856b3d85ab7",
+        "epoch": 8,
+        "buffer_policy": "error",
+        "inputs": [
+          {
+            "path": "/workspace/virtual_ihc_staining_generation/runs/round55_cv2_unext2_official_auxiliary_fold0_officialauxiliary15_stage2/epochs/epoch_006.pt",
+            "sha256": "148b2c5f96d8fd81d14ff5fba472717b3878ef8b13bdc86892d8611dea337731",
+            "epoch": 6,
+            "weight": 0.25
+          },
+          {
+            "path": "/workspace/virtual_ihc_staining_generation/runs/round55_cv2_unext2_official_auxiliary_fold0_officialauxiliary15_stage2/epochs/epoch_007.pt",
+            "sha256": "b2a2b5404d6486aef76e94023691e1aab2f68381a55441d0bc0f56f252f9594f",
+            "epoch": 7,
+            "weight": 0.5
+          },
+          {
+            "path": "/workspace/virtual_ihc_staining_generation/runs/round55_cv2_unext2_official_auxiliary_fold0_officialauxiliary15_stage2/epochs/epoch_008.pt",
+            "sha256": "416ef13c2120c44015c93ee6db26fb6e6bfbcbe032d891b511386cb565d310cd",
+            "epoch": 8,
+            "weight": 0.25
+          }
+        ]
+      }
+    },
+    "fold2": {
+      "version": 1,
+      "source_dir": "/workspace/virtual_ihc_staining_generation/runs/round55_cv2_unext2_official_auxiliary_fold2_officialauxiliary15_stage2",
+      "source_best_epoch": 6,
+      "input_epochs": [
+        5,
+        6,
+        7
+      ],
+      "input_weights": [
+        0.25,
+        0.5,
+        0.25
+      ],
+      "output": "/workspace/virtual_ihc_staining_generation/runs/round107_cv2_unext2_checkpoint_swa_fold2_swaauxiliary15_stage2/best_global_mse.pt",
+      "output_sha256": "63387eccbb2728c6a9fcfab17760f0e4a0f2f76fa444f37b47a793c1d609911f",
+      "inputs": [
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round55_cv2_unext2_official_auxiliary_fold2_officialauxiliary15_stage2/epochs/epoch_005.pt",
+          "sha256": "c0097e11499cb10b9df02df494bd03de8fec2477b93db6a881d59f8c6fab81e9",
+          "epoch": 5,
+          "weight": 0.25
+        },
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round55_cv2_unext2_official_auxiliary_fold2_officialauxiliary15_stage2/epochs/epoch_006.pt",
+          "sha256": "2e4bf701377902938ec697d73761ee27de54fe33ba57f80865e9cb1d668724ed",
+          "epoch": 6,
+          "weight": 0.5
+        },
+        {
+          "path": "/workspace/virtual_ihc_staining_generation/runs/round55_cv2_unext2_official_auxiliary_fold2_officialauxiliary15_stage2/epochs/epoch_007.pt",
+          "sha256": "dd989c707cea0a5c137dc49ff04faec41d94e4662f321699de4d26cd737d6bcc",
+          "epoch": 7,
+          "weight": 0.25
+        }
+      ],
+      "average_result": {
+        "output": "/workspace/virtual_ihc_staining_generation/runs/round107_cv2_unext2_checkpoint_swa_fold2_swaauxiliary15_stage2/best_global_mse.pt",
+        "sha256": "63387eccbb2728c6a9fcfab17760f0e4a0f2f76fa444f37b47a793c1d609911f",
+        "epoch": 7,
+        "buffer_policy": "error",
+        "inputs": [
+          {
+            "path": "/workspace/virtual_ihc_staining_generation/runs/round55_cv2_unext2_official_auxiliary_fold2_officialauxiliary15_stage2/epochs/epoch_005.pt",
+            "sha256": "c0097e11499cb10b9df02df494bd03de8fec2477b93db6a881d59f8c6fab81e9",
+            "epoch": 5,
+            "weight": 0.25
+          },
+          {
+            "path": "/workspace/virtual_ihc_staining_generation/runs/round55_cv2_unext2_official_auxiliary_fold2_officialauxiliary15_stage2/epochs/epoch_006.pt",
+            "sha256": "2e4bf701377902938ec697d73761ee27de54fe33ba57f80865e9cb1d668724ed",
+            "epoch": 6,
+            "weight": 0.5
+          },
+          {
+            "path": "/workspace/virtual_ihc_staining_generation/runs/round55_cv2_unext2_official_auxiliary_fold2_officialauxiliary15_stage2/epochs/epoch_007.pt",
+            "sha256": "dd989c707cea0a5c137dc49ff04faec41d94e4662f321699de4d26cd737d6bcc",
+            "epoch": 7,
+            "weight": 0.25
+          }
+        ]
+      }
+    }
+  }
+}

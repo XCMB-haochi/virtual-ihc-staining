@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "protocol_name": "round123_fold1_relational_confirmation",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "relational_fold1_confirmation": {
+      "passed": true,
+      "candidate": "encoderrelationalrobust15_context128",
+      "baseline": "officialauxiliary15_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": true,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": true,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.1362670635342198,
+      "overall_float_delta": 0.1296091693156569,
+      "fold_q95_deltas": {
+        "fold1": 0.1362670635342198
+      },
+      "positive_folds": [
+        "fold1"
+      ],
+      "roi_q95_deltas": {
+        "ROI002": 0.14274692979418546,
+        "ROI005": 0.025728567771537314,
+        "ROI009": -0.08585326754935352,
+        "ROI015": 0.597518835881786,
+        "ROI018": 0.061360328264967734
+      },
+      "positive_rois": [
+        "ROI002",
+        "ROI005",
+        "ROI015",
+        "ROI018"
+      ],
+      "minimum_roi_q95_gain": -0.08585326754935352,
+      "thresholds": {
+        "candidate": "encoderrelationalrobust15_context128",
+        "baseline": "officialauxiliary15_context128",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 1,
+        "minimum_positive_rois": 4,
+        "minimum_roi_q95_gain": -0.12
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "confirmation": {
+    "passed": true,
+    "gate": "relational_fold1_confirmation",
+    "candidate": "encoderrelationalrobust15_context128"
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/transfers/round123_runtime/reports/round123_resolved_protocol.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/transfers/round123_runtime/reports/round123_fold1_relational_confirmation_oof.json",
+  "oof_report_sha256": "02facbe92fef2d015f3636c0c9e1bf8911e76aedd75e72bf16a5ae0f4b5a3e95"
+}

@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "name": "round102_cv2_stride_phase_tta",
+  "marker": "CD68",
+  "roi_scope": "subset",
+  "expected_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022", "ROI008", "ROI000", "ROI007", "ROI024", "ROI014"],
+  "folds": [
+    {"name": "fold0", "val_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022"]},
+    {"name": "fold2", "val_rois": ["ROI008", "ROI000", "ROI007", "ROI024", "ROI014"]}
+  ],
+  "recipes": {
+    "standardauxiliary15": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-film",
+      "inference_context_halo": 128,
+      "train_stages": []
+    },
+    "phaseauxiliary15": {
+      "model_arch": "unext2-fcmae-tiny",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "spatial-thumbnail-film",
+      "inference_context_halo": 128,
+      "train_stages": []
+    }
+  },
+  "run_sources": {
+    "standardauxiliary15": {"protocol_name": "round55_cv2_unext2_official_auxiliary", "recipe_name": "officialauxiliary15", "stage": 2},
+    "phaseauxiliary15": {"protocol_name": "round55_cv2_unext2_official_auxiliary", "recipe_name": "officialauxiliary15", "stage": 2}
+  },
+  "training": {
+    "epochs_per_stage": 14,
+    "stage1_learning_rate": 0.0003,
+    "stage2_learning_rate": 0.0001,
+    "batch_size": 16,
+    "workers": 4,
+    "seed": 2044,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95
+  },
+  "inference": {
+    "context_halo": 129,
+    "tta": "d4",
+    "jpeg_quality": 95,
+    "batch_size": 2,
+    "checkpoint_filename": "best_global_mse.pt",
+    "test_like_diagnostic": false
+  },
+  "phase_tta": {
+    "model_context_halo": 128,
+    "outer_margin": 1,
+    "phase_offsets": [[0, 0], [0, 1], [1, 0], [1, 1]],
+    "alignment": "crop-to-fixed-center-before-average"
+  },
+  "candidates": {
+    "standard_d4_context128": {"standardauxiliary15": 1.0},
+    "stride_phase4_d4_context128": {"phaseauxiliary15": 1.0}
+  },
+  "candidate_output_source_offsets": {
+    "standard_d4_context128": [0, -1],
+    "stride_phase4_d4_context128": [0, -1]
+  },
+  "baseline_candidate": "standard_d4_context128",
+  "primary_candidate": "stride_phase4_d4_context128",
+  "distribution_gates": {
+    "stride_phase_tta": {
+      "candidate": "stride_phase4_d4_context128",
+      "baseline": "standard_d4_context128",
+      "minimum_q95_gain": 0.02,
+      "require_positive_float": true,
+      "minimum_positive_folds": 2,
+      "minimum_positive_rois": 7,
+      "minimum_roi_q95_gain": -0.05
+    }
+  },
+  "distribution_promotion_order": ["stride_phase_tta"]
+}

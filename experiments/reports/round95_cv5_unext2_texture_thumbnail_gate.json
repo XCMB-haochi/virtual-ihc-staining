@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "protocol_name": "round95_cv5_unext2_texture_thumbnail",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "texture_mechanism_full": {
+      "passed": false,
+      "candidate": "textureauxiliary15_context128",
+      "baseline": "officialauxiliary15_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.019837411270231087,
+      "overall_float_delta": 0.021885295819046746,
+      "fold_q95_deltas": {
+        "fold0": 0.002875379735542083,
+        "fold1": -0.05366776929614048,
+        "fold2": 0.14209014356613636,
+        "fold3": 0.015370984425572942,
+        "fold4": -0.0280895536349135
+      },
+      "positive_folds": [
+        "fold0",
+        "fold2",
+        "fold3"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.10794571630127336,
+        "ROI001": -0.10036256872589888,
+        "ROI002": 0.1854849048638556,
+        "ROI003": -0.04265694121654917,
+        "ROI004": -0.00431814947063458,
+        "ROI005": -0.08183288015845847,
+        "ROI006": -0.06475930963129883,
+        "ROI007": 0.05833753725136148,
+        "ROI008": 0.4143406002878862,
+        "ROI009": -0.09641785435971428,
+        "ROI010": -0.04876217288082785,
+        "ROI011": -0.12879866549721442,
+        "ROI012": 0.05447468486700302,
+        "ROI013": -0.010195942141081105,
+        "ROI014": -0.16128154253175353,
+        "ROI015": -0.935750986966525,
+        "ROI016": 0.03864508620050344,
+        "ROI017": 0.06313240910340312,
+        "ROI018": 0.48874353709558704,
+        "ROI019": 0.060757969715496074,
+        "ROI020": 0.10192153677540716,
+        "ROI021": -0.05997698679951213,
+        "ROI022": 0.10620689914048853,
+        "ROI023": -0.02792565418307902,
+        "ROI024": 0.20552126002320392
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI002",
+        "ROI007",
+        "ROI008",
+        "ROI012",
+        "ROI016",
+        "ROI017",
+        "ROI018",
+        "ROI019",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.935750986966525,
+      "thresholds": {
+        "candidate": "textureauxiliary15_context128",
+        "baseline": "officialauxiliary15_context128",
+        "minimum_q95_gain": 0.02,
+        "require_positive_float": true,
+        "minimum_positive_folds": 4,
+        "minimum_positive_rois": 18,
+        "minimum_roi_q95_gain": -0.2
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round95_cv5_unext2_texture_thumbnail.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round95_cv5_unext2_texture_thumbnail_oof.json",
+  "oof_report_sha256": "7a2e2d304632683bb48387787bcf8a3afed42bf38662baf99434af9b334f4dae"
+}

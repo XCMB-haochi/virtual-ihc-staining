@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="Electron" agent="draw.io Desktop" version="31.7.0">
+  <diagram name="Training and deployment" id="Training and deployment">
+    <mxGraphModel dx="1280" dy="950" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1280" pageHeight="950" math="1" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pretraining-panel" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=24;rounded=1;absoluteArcSize=1;arcSize=28;dashed=1;dashPattern=5 4;strokeColor=#657786;strokeWidth=3.5;" vertex="1" parent="1">
+          <mxGeometry x="-15" y="-15" width="1280" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="distillation-panel" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=24;rounded=1;absoluteArcSize=1;arcSize=28;dashed=1;dashPattern=5 4;strokeColor=#657786;strokeWidth=3.5;" vertex="1" parent="1">
+          <mxGeometry x="-15" y="285" width="1280" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="deployment-panel" value="" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=24;rounded=1;absoluteArcSize=1;arcSize=28;dashed=1;dashPattern=5 4;strokeColor=#657786;strokeWidth=3.5;" vertex="1" parent="1">
+          <mxGeometry x="-15" y="645" width="1280" height="285" as="geometry" />
+        </mxCell>
+        <mxCell id="a" value="a  DAPI domain pretraining" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=30;strokeColor=none;align=left;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="15" y="5" width="1180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="train-dapi" value="DAPI" vertex="1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=#DCECF0;fontSize=26;">
+          <mxGeometry x="25" y="75" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="train-l" value="8,084 images" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=22;strokeColor=none;align=center;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="211" width="160" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="masked" value="50%&lt;br&gt;masked" vertex="1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=#DCECF0;fontSize=26;">
+          <mxGeometry x="245" y="75" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="mask-l" value="50% masked" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=22;strokeColor=none;align=center;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="225" y="211" width="170" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="mask-edge" value="" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;endSize=9;strokeWidth=2;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#303030;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="train-dapi" target="masked">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fcmae" value="FCMAE&lt;br&gt;Masked reconstruction" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=#DCECF0;fontSize=26;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="475" y="90" width="250" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="pretrain-edge" value="" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;endSize=9;strokeWidth=2;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#303030;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="masked" target="fcmae">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="init" value="Shared encoder initialization&lt;br&gt;800 epochs" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=#DCECF0;fontSize=25;" vertex="1" parent="1">
+          <mxGeometry x="845" y="90" width="345" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="init-edge" value="" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;endSize=9;strokeWidth=2;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#303030;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="fcmae" target="init">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b" value="b  ROI-excluded knowledge distillation" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=30;strokeColor=none;align=left;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="15" y="300" width="1180" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="teachers" value="Five ROI-held-out teachers&lt;br&gt;14 + 3 epochs" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=#DCECF0;fontSize=25;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="25" y="387" width="250" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-init" value="Shared domain encoder" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=21;strokeColor=none;align=center;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="25" y="349" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="teacher-target" value="Teacher&lt;br&gt;target" vertex="1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=#DCECF0;fontSize=26;">
+          <mxGeometry x="340" y="375" width="125" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="target-l" value="Held-out target" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=22;strokeColor=none;align=center;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="305" y="507" width="195" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="target-edge" value="" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;endSize=9;strokeWidth=2;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#303030;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="teachers" target="teacher-target">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="stage1" value="Student: stage 1&lt;br&gt;True labels / 14 epochs" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=#F6E6D2;fontSize=25;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="550" y="387" width="235" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="student-init" value="Shared domain encoder" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=21;strokeColor=none;align=center;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="550" y="349" width="235" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="stage2" value="Student: stage 2&lt;br&gt;Distill + consistency&lt;br&gt;12 epochs" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=#F6E6D2;fontSize=25;fontSize=21;" vertex="1" parent="1">
+          <mxGeometry x="945" y="387" width="250" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="student-edge" value="" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;endSize=9;strokeWidth=2;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#303030;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="stage1" target="stage2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="warmstart" value="Initialize" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=21;strokeColor=none;align=center;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="795" y="398" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="distill-edge" value="" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;endSize=9;strokeWidth=2;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#303030;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0.5;entryY=1;entryPerimeter=1;dashed=1;" edge="1" parent="1" source="teacher-target" target="stage2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="437.5" />
+              <mxPoint x="500" y="581" />
+              <mxPoint x="1070" y="581" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="loss" value="0.8 label + 0.2 distillation + 0.4 consistency" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=24;strokeColor=none;align=center;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="565" y="535" width="530" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="c" value="c  Single-student deployment" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=30;strokeColor=none;align=left;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="15" y="669" width="1180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="test-dapi" value="DAPI" vertex="1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=#DCECF0;fontSize=26;">
+          <mxGeometry x="25" y="741" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="test-l" value="Test DAPI" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=22;strokeColor=none;align=center;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="875" width="160" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="student" value="One fixed student&lt;br&gt;DAPI + target marker" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=#F6E6D2;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="250" y="754" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tta" value="Single forward prediction&lt;br&gt;RGB / JPEG95" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=#F2F5F7;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="635" y="754" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="test-output" value="CD68 /&lt;br&gt;CD45RO" vertex="1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=#DCECF0;fontSize=26;">
+          <mxGeometry x="1060" y="741" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="output-l" value="Target prediction" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontColor=#243442;strokeColor=#7F929C;strokeWidth=1.3;spacing=4;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;fontSize=22;strokeColor=none;align=center;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="875" width="225" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="test-input" value="" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;endSize=9;strokeWidth=2;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#303030;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="test-dapi" target="student">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="single-forward" value="" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;endSize=9;strokeWidth=2;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#303030;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="student" target="tta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tta-output" value="" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endFill=1;endSize=9;strokeWidth=2;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#303030;exitX=1;exitY=0.5;exitPerimeter=1;entryX=0;entryY=0.5;entryPerimeter=1;" edge="1" parent="1" source="tta" target="test-output">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,6 @@
+{
+  "mean_gain": 0.18102129801977185,
+  "positive_folds": 4,
+  "train_candidate": true,
+  "rule": "One fixed confirmation if mean >=0.05 and at least3 folds positive; not automatic promotion."
+}

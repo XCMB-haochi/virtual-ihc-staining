@@ -1,0 +1,34 @@
+[
+  {
+    "fold": "fold0",
+    "stage": 1,
+    "epochs": 14,
+    "actual_optimizer_steps": 1717.0,
+    "seconds": 2129.5986101287417,
+    "peak_gib": 6.873134613037109
+  },
+  {
+    "fold": "fold0",
+    "stage": 2,
+    "epochs": 14,
+    "actual_optimizer_steps": 1718.0,
+    "seconds": 2125.229273135774,
+    "peak_gib": 6.997794151306152
+  },
+  {
+    "fold": "fold3",
+    "stage": 1,
+    "epochs": 14,
+    "actual_optimizer_steps": 1591.0,
+    "seconds": 2141.694608825259,
+    "peak_gib": 6.873134613037109
+  },
+  {
+    "fold": "fold3",
+    "stage": 2,
+    "epochs": 14,
+    "actual_optimizer_steps": 1592.0,
+    "seconds": 2160.3906136327423,
+    "peak_gib": 6.997794151306152
+  }
+]

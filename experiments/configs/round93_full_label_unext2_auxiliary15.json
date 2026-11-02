@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "name": "round93_full_label_unext2_auxiliary15",
+  "purpose": "preliminary full-label endpoint diagnostic",
+  "marker": "CD68",
+  "train_scope": {
+    "rois": "ROI000-ROI024",
+    "train_images": 6296,
+    "validation_images": 0,
+    "selection": "fixed epoch clocks from Round55 five-fold auxiliary15 trajectories"
+  },
+  "model": {
+    "architecture": "unext2-fcmae-tiny",
+    "base_channels": 32,
+    "block_type": "residual",
+    "condition_mode": "spatial-thumbnail-film",
+    "context_halo": 64,
+    "train_target_context_halo": 64,
+    "markers": ["CD68", "CD45RO", "HLA-DR", "Vimentin"],
+    "marker_loss_weights": [0.85, 0.05, 0.05, 0.05]
+  },
+  "initialization": {
+    "mode": "all-train-DAPI FCMAE encoder",
+    "checkpoint": "runs/round65_cv2_unext2_all_dapi_fcmae_shared_dapi_alltrain_officialfcmae630_pretraining/final_encoder.pt",
+    "sha256": "f4a8c93c616310ce4a981f9b1fe6830ba82bf78ff91bdbe52d471cf1c0164554",
+    "source_protocol": "round65_cv2_unext2_all_dapi_fcmae"
+  },
+  "training": {
+    "epochs_per_stage": 14,
+    "stage1_learning_rate": 0.0003,
+    "stage2_learning_rate": 0.0001,
+    "stage1_selected_epoch": 13,
+    "stage2_selected_epoch": 6,
+    "stage1_source_best_epochs": [13, 14, 10, 13, 13],
+    "stage2_source_best_epochs": [7, 12, 6, 4, 6],
+    "batch_size": 16,
+    "gradient_accumulation_steps": 1,
+    "workers": 4,
+    "seed": 2044,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95
+  },
+  "inference": {
+    "context_halo": 128,
+    "tta": "d4",
+    "output_source_offset": [0, -1],
+    "jpeg_quality": 95,
+    "batch_size": 2
+  },
+  "submission": {
+    "marker": "CD68",
+    "archive_suffix": "",
+    "diagnostic_only": true,
+    "no_test_label_or_leaderboard_selection": true
+  }
+}

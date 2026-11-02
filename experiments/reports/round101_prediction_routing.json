@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "method": "five-fold-crossfit-ridge-dapi-and-disagreement-routing",
+  "images": 6296,
+  "overall": {
+    "fixed_70_30": 74.869164026092,
+    "oracle_0p1_convex_grid": 75.2277021636409,
+    "crossfit_ridge_routing": 74.85771612125075,
+    "oracle_gain": 0.35853813754890496,
+    "crossfit_gain": -0.011447904841247691
+  },
+  "weight_grid": [
+    0.0,
+    0.10000000149011612,
+    0.20000000298023224,
+    0.30000001192092896,
+    0.4000000059604645,
+    0.5,
+    0.6000000238418579,
+    0.699999988079071,
+    0.800000011920929,
+    0.8999999761581421,
+    1.0
+  ],
+  "folds": [
+    {
+      "fold": "fold0",
+      "images": 1309,
+      "base_mean": 74.51835169005405,
+      "oracle_grid_mean": 74.92561023046942,
+      "oracle_weight_a_mean": 0.6061115369963409,
+      "routing_mean": 74.48522685178423,
+      "routing_weight_a_mean": 0.5560465564959592
+    },
+    {
+      "fold": "fold1",
+      "images": 1145,
+      "base_mean": 74.9127639763542,
+      "oracle_grid_mean": 75.24258274137549,
+      "oracle_weight_a_mean": 0.5565065515223548,
+      "routing_mean": 74.90779625212687,
+      "routing_weight_a_mean": 0.5872654633518766
+    },
+    {
+      "fold": "fold2",
+      "images": 1397,
+      "base_mean": 74.32062331098145,
+      "oracle_grid_mean": 74.72255900717693,
+      "oracle_weight_a_mean": 0.5563350043225561,
+      "routing_mean": 74.32175907408833,
+      "routing_weight_a_mean": 0.595809766901603
+    },
+    {
+      "fold": "fold3",
+      "images": 1214,
+      "base_mean": 75.19605467315694,
+      "oracle_grid_mean": 75.50801729441298,
+      "oracle_weight_a_mean": 0.5719110392451384,
+      "routing_mean": 75.18865144357505,
+      "routing_weight_a_mean": 0.5830228447327629
+    },
+    {
+      "fold": "fold4",
+      "images": 1231,
+      "base_mean": 75.50178590935444,
+      "oracle_grid_mean": 75.83191215538598,
+      "oracle_weight_a_mean": 0.5969130797515935,
+      "routing_mean": 75.48909160253639,
+      "routing_weight_a_mean": 0.5642037260291655
+    }
+  ]
+}

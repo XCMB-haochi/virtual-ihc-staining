@@ -1,0 +1,8 @@
+{
+  "epochs": 800,
+  "images_seen": 6467200,
+  "optimizer_steps": 202400,
+  "val_excluded": true,
+  "seconds": 213232.35009829974,
+  "encoder_sha256": "17ef9ef244a3a4af6a004b3ddcbc27c0c870a14d0f41f5a6d6f98554b64a1cb9"
+}

@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "name": "round137_colon_seed2026_complete",
+  "dataset": "dataset/初赛数据集（包含训练集和测试集输入）",
+  "seed": 2026,
+  "train_images": 6296,
+  "test_images": 1346,
+  "folds": [
+    {
+      "name": "fold0",
+      "val_rois": [
+        "ROI011",
+        "ROI012",
+        "ROI001",
+        "ROI020",
+        "ROI022"
+      ]
+    },
+    {
+      "name": "fold1",
+      "val_rois": [
+        "ROI002",
+        "ROI009",
+        "ROI018",
+        "ROI015",
+        "ROI005"
+      ]
+    },
+    {
+      "name": "fold2",
+      "val_rois": [
+        "ROI008",
+        "ROI000",
+        "ROI007",
+        "ROI024",
+        "ROI014"
+      ]
+    },
+    {
+      "name": "fold3",
+      "val_rois": [
+        "ROI023",
+        "ROI017",
+        "ROI004",
+        "ROI019",
+        "ROI010"
+      ]
+    },
+    {
+      "name": "fold4",
+      "val_rois": [
+        "ROI016",
+        "ROI021",
+        "ROI013",
+        "ROI006",
+        "ROI003"
+      ]
+    }
+  ],
+  "arms": {
+    "control": 1.0,
+    "stage_decay": 0.8
+  },
+  "public_checkpoint": "runs/public_checkpoints/convnextv2_tiny_1k_224_fcmae.pt",
+  "public_sha256": "b25eadb89ad634b5c925ea04cdacebafe3e462486baf9482dc2d832bb9af57ef",
+  "dapi_epochs_full": 630,
+  "dapi_epochs_fold": 800,
+  "feature_teacher_epochs": 160,
+  "student_epochs": 14,
+  "final_epochs": [
+    5,
+    6,
+    7
+  ],
+  "final_weights": [
+    1,
+    2,
+    1
+  ],
+  "shift_diagnostic": [
+    0,
+    -1
+  ],
+  "submission_offset": [
+    0,
+    0
+  ],
+  "pretrain_batch": 32,
+  "student_batch": 16,
+  "wait_for_round241": true
+}

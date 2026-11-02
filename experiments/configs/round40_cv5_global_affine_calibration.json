@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "name": "round40_cv5_global_affine_calibration",
+  "marker": "CD68",
+  "cache_protocol": "configs/round37_cv5_crossfit_refiner.json",
+  "fit": {
+    "method": "global-affine-ols",
+    "clip_min": 0.0,
+    "clip_max": 255.0,
+    "chunk_images": 32
+  },
+  "inference": {
+    "jpeg_quality": 95
+  },
+  "promotion_gate": {
+    "minimum_overall_q95_gain": 0.03,
+    "minimum_float_gain": 0.0,
+    "minimum_positive_folds": 4,
+    "minimum_roi_q95_gain": -0.1,
+    "maximum_negative_rois": 3
+  }
+}

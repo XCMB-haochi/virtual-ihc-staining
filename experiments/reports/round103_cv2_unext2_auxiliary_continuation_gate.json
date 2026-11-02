@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "protocol_name": "round103_cv2_unext2_auxiliary_continuation",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "continuation_cycle": {
+      "passed": false,
+      "candidate": "continuation_cycle_d4_context128",
+      "baseline": "baseline_d4_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.04436238067094678,
+      "overall_float_delta": -0.04237529981564592,
+      "fold_q95_deltas": {
+        "fold0": -0.12267178478907681,
+        "fold2": 0.029014147597351325
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.025673352880872358,
+        "ROI001": 0.07067572867163108,
+        "ROI007": -0.005503890111711485,
+        "ROI008": -0.0010043326516324669,
+        "ROI011": -0.03597906029455089,
+        "ROI012": -0.10511308927985397,
+        "ROI014": 0.056812873835980326,
+        "ROI020": -0.34512156778778547,
+        "ROI022": -0.19915115654252702,
+        "ROI024": 0.07897444362127715
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI001",
+        "ROI014",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.34512156778778547,
+      "thresholds": {
+        "candidate": "continuation_cycle_d4_context128",
+        "baseline": "baseline_d4_context128",
+        "minimum_q95_gain": 0.03,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round103_cv2_unext2_auxiliary_continuation.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round103_cv2_unext2_auxiliary_continuation_oof.json",
+  "oof_report_sha256": "921e8cccd266523e0d532a4407e336be2a4c72487989defc538fc62a2e94e115"
+}

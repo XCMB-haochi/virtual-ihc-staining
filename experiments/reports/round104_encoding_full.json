@@ -1,0 +1,51 @@
+{
+  "jpeg_q75": {
+    "images": 6296,
+    "ssim": 0.836413072991015,
+    "psnr": 26.82037528246258,
+    "competition_score_official": 74.64114027884851
+  },
+  "jpeg_q90": {
+    "images": 6296,
+    "ssim": 0.8390140393858305,
+    "psnr": 26.83421924220075,
+    "competition_score_official": 74.83151430232873
+  },
+  "jpeg_q95": {
+    "images": 6296,
+    "ssim": 0.8395288795073272,
+    "psnr": 26.83690471605549,
+    "competition_score_official": 74.8691643951464
+  },
+  "jpeg_q98": {
+    "images": 6296,
+    "ssim": 0.8395712700575793,
+    "psnr": 26.837193217917143,
+    "competition_score_official": 74.87230483478137
+  },
+  "jpeg_q100": {
+    "images": 6296,
+    "ssim": 0.839310836892655,
+    "psnr": 26.83607487687102,
+    "competition_score_official": 74.85340350860834
+  },
+  "jpeg_q95_optimize": {
+    "images": 6296,
+    "ssim": 0.8395288795073272,
+    "psnr": 26.83690471605549,
+    "competition_score_official": 74.8691643951464
+  },
+  "png_lossless": {
+    "images": 6296,
+    "ssim": 0.8398098484093269,
+    "psnr": 26.838494751555793,
+    "competition_score_official": 74.8897862395861
+  },
+  "metadata": {
+    "cache_protocol": "round37_cv5_crossfit_refiner",
+    "selected_images": 6296,
+    "source": "0.7*thumbnailbase32 + 0.3*thumbnailbase48continue",
+    "selection": "deterministic evenly spaced sample per fold; no test data",
+    "names_sha256": "d91daad31e762cc4c67c83453de797cd867f351b01eec524cdc786ecabf11a3a"
+  }
+}

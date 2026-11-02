@@ -1,0 +1,66 @@
+{
+  "stage1_sha256": "d21ccfb36ec9e4c7d9f58a5d243857f46381c6507320525a29fecbcd1cac0c35",
+  "checkpoint_sha256": "b33b9fb976acb1b5c58d0b80cb8f93cccec5192ec16dccb2cb0fa483d50da087",
+  "package": "submissions/semifinal_round240_cd45ro_q95.zip",
+  "package_sha256": "a4de7fcf2f74444ceb178bc2b39b98d5c8844ac722af8ff755bf1006ccd3259b",
+  "actual_updates": 2081.0,
+  "teachers": [
+    {
+      "name": "fold0",
+      "val_rois": [
+        "ROI005",
+        "ROI052",
+        "ROI087"
+      ],
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round239_fold0_stage2/epochs/epoch_012.pt",
+      "sha256": "c76c04f839a7bd14a774af29b32bf8c32a04cac64beaecf87c8541488708270a",
+      "images": 420
+    },
+    {
+      "name": "fold1",
+      "val_rois": [
+        "ROI010",
+        "ROI058",
+        "ROI093"
+      ],
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round239_fold1_stage2/epochs/epoch_012.pt",
+      "sha256": "307e1ef58333f775f0a9f88e1eac44a6f4ee18b925c57eab314f969286ff80d2",
+      "images": 420
+    },
+    {
+      "name": "fold2",
+      "val_rois": [
+        "ROI019",
+        "ROI061",
+        "ROI100"
+      ],
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round239_fold2_stage2/epochs/epoch_012.pt",
+      "sha256": "fdbf27dfc61855d256a2ea16c576bd72db08d066c3a67ce27d72f648bbb8a159",
+      "images": 420
+    },
+    {
+      "name": "fold3",
+      "val_rois": [
+        "ROI044",
+        "ROI067",
+        "ROI074",
+        "ROI078"
+      ],
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round239_fold3_stage2/epochs/epoch_012.pt",
+      "sha256": "de6a54ce60901d5dea95012d830e101bf88fcb0a53fe2cb07c2d10c018edfaca",
+      "images": 560
+    },
+    {
+      "name": "fold4",
+      "val_rois": [
+        "ROI045",
+        "ROI072",
+        "ROI076",
+        "ROI081"
+      ],
+      "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round239_fold4_stage2/epochs/epoch_012.pt",
+      "sha256": "7a117c5b6a6306fde4bc43e6d27caf1c017f63dad4bd49675fbd9e77f2302b5c",
+      "images": 560
+    }
+  ]
+}

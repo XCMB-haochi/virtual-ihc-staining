@@ -1,0 +1,170 @@
+{
+  "CD68": {
+    "overall": {
+      "candidate_minus_control": 0.012907029325802455,
+      "candidate_minus_prior": 0.10131025657301507
+    },
+    "fold0": {
+      "candidate_minus_control": 0.037318393776502035,
+      "candidate_minus_prior": -0.6868514692415033
+    },
+    "ROI005": {
+      "candidate_minus_control": -0.0008589267973349024,
+      "candidate_minus_prior": -0.8547140294006965
+    },
+    "ROI052": {
+      "candidate_minus_control": -0.010795254152469624,
+      "candidate_minus_prior": -0.5841093619896469
+    },
+    "ROI087": {
+      "candidate_minus_control": 0.123609362279268,
+      "candidate_minus_prior": -0.6217310163341878
+    },
+    "fold3": {
+      "candidate_minus_control": -0.005401494012218677,
+      "candidate_minus_prior": 0.6924315509338896
+    },
+    "ROI044": {
+      "candidate_minus_control": -0.008895606645538123,
+      "candidate_minus_prior": 0.5923325841454385
+    },
+    "ROI067": {
+      "candidate_minus_control": -0.03040017693162156,
+      "candidate_minus_prior": -0.333950403554951
+    },
+    "ROI074": {
+      "candidate_minus_control": 0.0037178973123417336,
+      "candidate_minus_prior": 1.2927209638363948
+    },
+    "ROI078": {
+      "candidate_minus_control": 0.013971910215929029,
+      "candidate_minus_prior": 1.2186230593086833
+    }
+  },
+  "CD45RO": {
+    "overall": {
+      "candidate_minus_control": 0.002773929004888487,
+      "candidate_minus_prior": 0.15575149879346384
+    },
+    "fold0": {
+      "candidate_minus_control": 0.0100437817322927,
+      "candidate_minus_prior": -0.10308738329379707
+    },
+    "ROI005": {
+      "candidate_minus_control": 0.001890075632530852,
+      "candidate_minus_prior": -0.10500581691930222
+    },
+    "ROI052": {
+      "candidate_minus_control": 0.004724460797845609,
+      "candidate_minus_prior": -0.03362693563144603
+    },
+    "ROI087": {
+      "candidate_minus_control": 0.02351680876647322,
+      "candidate_minus_prior": -0.1706293973306856
+    },
+    "fold3": {
+      "candidate_minus_control": -0.0026784605406504625,
+      "candidate_minus_prior": 0.3498806603589202
+    },
+    "ROI044": {
+      "candidate_minus_control": -0.0014474697358508593,
+      "candidate_minus_prior": 0.11936954781299391
+    },
+    "ROI067": {
+      "candidate_minus_control": -0.002978600364329509,
+      "candidate_minus_prior": 0.21099345361045607
+    },
+    "ROI074": {
+      "candidate_minus_control": -0.00993025869767905,
+      "candidate_minus_prior": 0.3009209071302621
+    },
+    "ROI078": {
+      "candidate_minus_control": 0.003642486635285991,
+      "candidate_minus_prior": 0.768238732881926
+    }
+  },
+  "HLA-DR": {
+    "overall": {
+      "candidate_minus_control": 0.010084033246627655,
+      "candidate_minus_prior": 0.5433620106878436
+    },
+    "fold0": {
+      "candidate_minus_control": 0.016224803310521452,
+      "candidate_minus_prior": -0.48958737034500643
+    },
+    "ROI005": {
+      "candidate_minus_control": 0.013829114375596419,
+      "candidate_minus_prior": -0.5189293736032283
+    },
+    "ROI052": {
+      "candidate_minus_control": 0.005017729325714981,
+      "candidate_minus_prior": -0.34732076725332206
+    },
+    "ROI087": {
+      "candidate_minus_control": 0.029827566230281377,
+      "candidate_minus_prior": -0.6025119701784831
+    },
+    "fold3": {
+      "candidate_minus_control": 0.005478455698735729,
+      "candidate_minus_prior": 1.318074046462499
+    },
+    "ROI044": {
+      "candidate_minus_control": -0.013709622451699488,
+      "candidate_minus_prior": 0.7686032919860679
+    },
+    "ROI067": {
+      "candidate_minus_control": 0.00568579736376762,
+      "candidate_minus_prior": 1.370007377840011
+    },
+    "ROI074": {
+      "candidate_minus_control": 0.004924923106372603,
+      "candidate_minus_prior": 1.4183941014112378
+    },
+    "ROI078": {
+      "candidate_minus_control": 0.02501272477647376,
+      "candidate_minus_prior": 1.7152914146126506
+    }
+  },
+  "Vimentin": {
+    "overall": {
+      "candidate_minus_control": 0.004553433144991459,
+      "candidate_minus_prior": 0.46423834943651343
+    },
+    "fold0": {
+      "candidate_minus_control": 0.01577778216672243,
+      "candidate_minus_prior": -0.14555644886850416
+    },
+    "ROI005": {
+      "candidate_minus_control": 0.02650445864087203,
+      "candidate_minus_prior": -0.18552191878902136
+    },
+    "ROI052": {
+      "candidate_minus_control": 0.004959360342581931,
+      "candidate_minus_prior": -0.0618348322065998
+    },
+    "ROI087": {
+      "candidate_minus_control": 0.015869527516741755,
+      "candidate_minus_prior": -0.18931259560990554
+    },
+    "fold3": {
+      "candidate_minus_control": -0.0038648286213174288,
+      "candidate_minus_prior": 0.9215844481652624
+    },
+    "ROI044": {
+      "candidate_minus_control": 0.0011521783897734394,
+      "candidate_minus_prior": 0.49206915971087994
+    },
+    "ROI067": {
+      "candidate_minus_control": -0.012360303730716282,
+      "candidate_minus_prior": 0.7348852004902966
+    },
+    "ROI074": {
+      "candidate_minus_control": -0.016735283293101588,
+      "candidate_minus_prior": 1.1262840531956329
+    },
+    "ROI078": {
+      "candidate_minus_control": 0.012484094148760505,
+      "candidate_minus_prior": 1.333099379264226
+    }
+  }
+}

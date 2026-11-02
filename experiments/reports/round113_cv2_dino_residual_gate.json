@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "protocol_name": "round113_cv2_dino_residual",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "dino_residual": {
+      "passed": false,
+      "candidate": "dinov2residual_context128",
+      "baseline": "officialauxiliary15_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": true,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.03837360086514252,
+      "overall_float_delta": 0.036817284159567976,
+      "fold_q95_deltas": {
+        "fold0": -0.01096070710798358,
+        "fold2": 0.0846002358951381
+      },
+      "positive_folds": [
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.2560827710323679,
+        "ROI001": -0.0067171350458465895,
+        "ROI007": -0.10658728724017408,
+        "ROI008": 0.13218811615824677,
+        "ROI011": -0.12313604903353337,
+        "ROI012": -0.09404326218704284,
+        "ROI014": -0.06307368229066412,
+        "ROI020": 0.16556338183616504,
+        "ROI022": 0.01244776343759213,
+        "ROI024": 0.19776255481050953
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI008",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.12313604903353337,
+      "thresholds": {
+        "candidate": "dinov2residual_context128",
+        "baseline": "officialauxiliary15_context128",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round113_cv2_dino_residual.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round113_cv2_dino_residual_oof.json",
+  "oof_report_sha256": "4ac8aec6655b2925b9e4a2cf0a7baff858cadc9959b51db08edea39cc56d198b"
+}

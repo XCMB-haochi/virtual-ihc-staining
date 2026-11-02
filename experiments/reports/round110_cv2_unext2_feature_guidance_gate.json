@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "protocol_name": "round110_cv2_unext2_feature_guidance",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "feature_guidance": {
+      "passed": false,
+      "candidate": "featureguidance15_context128",
+      "baseline": "officialauxiliary15_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.12471472324287447,
+      "overall_float_delta": -0.11797696653849243,
+      "fold_q95_deltas": {
+        "fold0": -0.21067614398867818,
+        "fold2": -0.044168195142432864
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": -0.09903290181637203,
+        "ROI001": -0.25453404710673055,
+        "ROI007": 0.0020131807825549686,
+        "ROI008": -0.19037616768511612,
+        "ROI011": -0.15488129918514915,
+        "ROI012": 0.011380430453627355,
+        "ROI014": -0.18648196493565194,
+        "ROI020": -0.4846344217153984,
+        "ROI022": -0.1597956901684796,
+        "ROI024": 0.23115542384735477
+      },
+      "positive_rois": [
+        "ROI007",
+        "ROI012",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.4846344217153984,
+      "thresholds": {
+        "candidate": "featureguidance15_context128",
+        "baseline": "officialauxiliary15_context128",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round110_cv2_unext2_feature_guidance.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round110_cv2_unext2_feature_guidance_oof.json",
+  "oof_report_sha256": "a765b737a173078b3ad666fba3f30dca6c7d74a77b3fe1f2f15e9a2b6d32fea6"
+}

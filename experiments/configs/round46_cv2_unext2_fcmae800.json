@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "name": "round46_cv2_unext2_fcmae800",
+  "marker": "CD68",
+  "roi_scope": "subset",
+  "expected_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022", "ROI008", "ROI000", "ROI007", "ROI024", "ROI014"],
+  "folds": [
+    {"name": "fold0", "val_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022"]},
+    {"name": "fold2", "val_rois": ["ROI008", "ROI000", "ROI007", "ROI024", "ROI014"]}
+  ],
+  "recipes": {
+    "round35base32": {"model_arch": "unet", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "round35base48": {"model_arch": "unet", "base_channels": 48, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "fcmae100": {"model_arch": "unext2-fcmae-tiny", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "train_stages": []},
+    "fcmae800": {"model_arch": "unext2-fcmae-tiny", "base_channels": 32, "block_type": "residual", "context_halo": 64, "train_target_context_halo": 64, "condition_mode": "spatial-thumbnail-film", "fcmae_encoder_init": true, "train_stages": [1, 2]}
+  },
+  "run_sources": {
+    "round35base32": {"protocol_name": "round31_cv5_thumbnail_ring_film", "recipe_name": "thumbnailcontinue", "stage": 2},
+    "round35base48": {"protocol_name": "round34_cv5_thumbnail_base48_continue", "recipe_name": "thumbnailbase48continue", "stage": 2},
+    "fcmae100": {"protocol_name": "round44_cv2_unext2_fcmae", "recipe_name": "unext2fcmae", "stage": 2},
+    "fcmae800": {"protocol_name": "round46_cv2_unext2_fcmae800", "recipe_name": "fcmae800", "stage": 2}
+  },
+  "fcmae_pretraining": {
+    "name": "dapi_fcmae800",
+    "epochs": 800,
+    "batch_size": 32,
+    "workers": 4,
+    "learning_rate": 0.0002,
+    "minimum_learning_rate": 0.000001,
+    "warmup_epochs": 10,
+    "weight_decay": 0.05,
+    "mask_ratio": 0.5,
+    "checkpoint_interval": 25,
+    "seed": 2044
+  },
+  "training": {
+    "epochs_per_stage": 14,
+    "stage1_learning_rate": 0.0003,
+    "stage2_learning_rate": 0.0001,
+    "batch_size": 16,
+    "workers": 4,
+    "seed": 2044,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95
+  },
+  "inference": {"context_halo": 64, "tta": "d4", "jpeg_quality": 95, "batch_size": 2, "checkpoint_filename": "best_global_mse.pt", "test_like_diagnostic": false},
+  "candidates": {
+    "round35": {"round35base32": 0.7, "round35base48": 0.3},
+    "fcmae100": {"fcmae100": 1.0},
+    "fcmae800": {"fcmae800": 1.0},
+    "round35_fcmae100_20": {"round35base32": 0.56, "round35base48": 0.24, "fcmae100": 0.2},
+    "round35_fcmae800_20": {"round35base32": 0.56, "round35base48": 0.24, "fcmae800": 0.2}
+  },
+  "baseline_candidate": "round35_fcmae100_20",
+  "primary_candidate": "round35_fcmae800_20",
+  "distribution_gates": {
+    "longer_pretraining": {"candidate": "fcmae800", "baseline": "fcmae100", "minimum_q95_gain": 0.10, "require_positive_float": true, "minimum_positive_folds": 2, "minimum_positive_rois": 7, "minimum_roi_q95_gain": -0.12},
+    "ensemble_increment": {"candidate": "round35_fcmae800_20", "baseline": "round35_fcmae100_20", "minimum_q95_gain": 0.02, "require_positive_float": true, "minimum_positive_folds": 2, "minimum_positive_rois": 7, "minimum_roi_q95_gain": -0.08, "requires": "longer_pretraining"},
+    "primary": {"candidate": "round35_fcmae800_20", "baseline": "round35", "minimum_q95_gain": 0.16, "require_positive_float": true, "minimum_positive_folds": 2, "minimum_positive_rois": 8, "minimum_roi_q95_gain": -0.08, "requires": "ensemble_increment"}
+  },
+  "distribution_promotion_order": ["primary"]
+}

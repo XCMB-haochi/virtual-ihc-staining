@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "name": "round112_cv2_dinov2",
+  "marker": "CD68",
+  "roi_scope": "subset",
+  "expected_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022", "ROI008", "ROI000", "ROI007", "ROI024", "ROI014"],
+  "folds": [
+    {"name": "fold0", "val_rois": ["ROI011", "ROI012", "ROI001", "ROI020", "ROI022"]},
+    {"name": "fold2", "val_rois": ["ROI008", "ROI000", "ROI007", "ROI024", "ROI014"]}
+  ],
+  "recipes": {
+    "auxiliary15": {
+      "model_arch": "unext2-fcmae-tiny", "context_halo": 64,
+      "train_target_context_halo": 64, "inference_context_halo": 128,
+      "condition_mode": "spatial-thumbnail-film", "train_stages": []
+    },
+    "dino": {
+      "model_arch": "dinov2-small-unet", "base_channels": 32, "block_type": "residual",
+      "context_halo": 64, "train_target_context_halo": 64, "inference_context_halo": 128,
+      "condition_mode": "spatial-thumbnail-film", "dinov2_encoder_init": true,
+      "encoder_learning_rate_multiplier": 0.1,
+      "batch_size": 8, "gradient_accumulation_steps": 2,
+      "training_markers": ["CD68", "CD45RO", "HLA-DR", "Vimentin"],
+      "marker_loss_weights": [0.85, 0.05, 0.05, 0.05], "train_stages": [1, 2]
+    }
+  },
+  "run_sources": {
+    "auxiliary15": {"protocol_name": "round55_cv2_unext2_official_auxiliary", "recipe_name": "officialauxiliary15", "stage": 2},
+    "dino": {"protocol_name": "round112_cv2_dinov2", "recipe_name": "dino", "stage": 2}
+  },
+  "training": {
+    "epochs_per_stage": 14, "stage1_learning_rate": 0.0003, "stage2_learning_rate": 0.0001,
+    "batch_size": 16, "workers": 4, "seed": 2044, "weight_decay": 0.0001,
+    "ssim_weight": 0.7, "l1_weight": 0.2, "mse_weight": 0.1,
+    "loss_profile": "hybrid", "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse", "selection_jpeg_quality": 95,
+    "save_every_epoch": false
+  },
+  "inference": {
+    "context_halo": 128, "tta": "d4", "jpeg_quality": 95, "batch_size": 2,
+    "checkpoint_filename": "best_global_mse.pt", "test_like_diagnostic": false
+  },
+  "candidate_output_source_offsets": {"baseline": [0, -1], "dino": [0, -1], "half_blend": [0, -1]},
+  "candidates": {"baseline": {"auxiliary15": 1.0}, "dino": {"dino": 1.0}, "half_blend": {"auxiliary15": 0.5, "dino": 0.5}},
+  "baseline_candidate": "baseline", "primary_candidate": "dino",
+  "distribution_gates": {
+    "direct": {
+      "candidate": "dino", "baseline": "baseline", "minimum_q95_gain": 0.05,
+      "require_positive_float": true, "minimum_positive_folds": 2,
+      "minimum_positive_rois": 7, "minimum_roi_q95_gain": -0.12
+    },
+    "diversity": {
+      "candidate": "half_blend", "baseline": "baseline", "minimum_q95_gain": 0.05,
+      "require_positive_float": true, "minimum_positive_folds": 2,
+      "minimum_positive_rois": 7, "minimum_roi_q95_gain": -0.12
+    }
+  },
+  "distribution_promotion_order": ["direct", "diversity"]
+}

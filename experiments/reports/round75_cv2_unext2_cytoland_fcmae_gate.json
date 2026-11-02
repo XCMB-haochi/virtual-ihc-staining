@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "protocol_name": "round75_cv2_unext2_cytoland_fcmae",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "cytoland_prior": {
+      "passed": false,
+      "candidate": "cytolandfcmae800",
+      "baseline": "officialfcmae800",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.2501449062949348,
+      "overall_float_delta": -0.24694438158088872,
+      "fold_q95_deltas": {
+        "fold0": -0.4211912819085484,
+        "fold2": -0.0898731055227131
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": -0.061094702132251655,
+        "ROI001": -1.1108554717959578,
+        "ROI007": -0.1556887410829546,
+        "ROI008": 0.4191606723003929,
+        "ROI011": -0.17587610773531992,
+        "ROI012": -0.794616922766707,
+        "ROI014": -0.39078834912054106,
+        "ROI020": -0.10959929179554706,
+        "ROI022": -0.04011122952660173,
+        "ROI024": -0.36367422157942997
+      },
+      "positive_rois": [
+        "ROI008"
+      ],
+      "minimum_roi_q95_gain": -1.1108554717959578,
+      "thresholds": {
+        "candidate": "cytolandfcmae800",
+        "baseline": "officialfcmae800",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    },
+    "cytoland_replacement": {
+      "passed": false,
+      "candidate": "t70_base_cytoland_replace_tiny",
+      "baseline": "t70_base_split",
+      "requires": "cytoland_prior",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": false
+      },
+      "overall_q95_delta": -0.04933873210872264,
+      "overall_float_delta": -0.04882633584020368,
+      "fold_q95_deltas": {
+        "fold0": -0.06836115595027081,
+        "fold2": -0.03151457118580936
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": -0.02060933882106042,
+        "ROI001": -0.17583969203104743,
+        "ROI007": -0.05492553938127287,
+        "ROI008": 0.07335376846113206,
+        "ROI011": -0.008971719076242834,
+        "ROI012": -0.13300400063410223,
+        "ROI014": -0.0780686129001964,
+        "ROI020": -0.039101983447665134,
+        "ROI022": -0.008608596634957166,
+        "ROI024": -0.09441506949075062
+      },
+      "positive_rois": [
+        "ROI008"
+      ],
+      "minimum_roi_q95_gain": -0.17583969203104743,
+      "thresholds": {
+        "candidate": "t70_base_cytoland_replace_tiny",
+        "baseline": "t70_base_split",
+        "minimum_q95_gain": 0.04,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08,
+        "requires": "cytoland_prior"
+      }
+    },
+    "cytoland_diversity": {
+      "passed": false,
+      "candidate": "t70_base_cytoland_split_tiny",
+      "baseline": "t70_base_split",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.013767169653249312,
+      "overall_float_delta": -0.013323859571428898,
+      "fold_q95_deltas": {
+        "fold0": -0.0227297458557274,
+        "fold2": -0.005369165179573088
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": -0.0006093956140063028,
+        "ROI001": -0.07883627158794582,
+        "ROI007": -0.01726673043420135,
+        "ROI008": 0.04870925723972164,
+        "ROI011": 0.005623253484330348,
+        "ROI012": -0.05459354911909031,
+        "ROI014": -0.028410527199767444,
+        "ROI020": -0.004241993879702477,
+        "ROI022": 0.00672759010311097,
+        "ROI024": -0.037987376649340376
+      },
+      "positive_rois": [
+        "ROI008",
+        "ROI011",
+        "ROI022"
+      ],
+      "minimum_roi_q95_gain": -0.07883627158794582,
+      "thresholds": {
+        "candidate": "t70_base_cytoland_split_tiny",
+        "baseline": "t70_base_split",
+        "minimum_q95_gain": 0.04,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round75_cv2_unext2_cytoland_fcmae.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round75_cv2_unext2_cytoland_fcmae_oof.json",
+  "oof_report_sha256": "0a53d7184f46952737cf275d15f313a37876dd307c8b7985c89efcc03791f4ec"
+}

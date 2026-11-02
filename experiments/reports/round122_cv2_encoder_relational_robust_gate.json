@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "protocol_name": "round122_cv2_encoder_relational_robust",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "feature_guidance": {
+      "passed": false,
+      "candidate": "encoderrelationalrobust15_context128",
+      "baseline": "officialauxiliary15_context128",
+      "requires": null,
+      "checks": {
+        "overall_q95": true,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": true,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": 0.20020903354190978,
+      "overall_float_delta": 0.20002969649625868,
+      "fold_q95_deltas": {
+        "fold0": 0.22759231231071908,
+        "fold2": 0.17455068571914012
+      },
+      "positive_folds": [
+        "fold0",
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 0.377110552728837,
+        "ROI001": 0.15579205357725812,
+        "ROI007": -0.1789341552394177,
+        "ROI008": 0.22397241723462002,
+        "ROI011": 0.18266449606066715,
+        "ROI012": 0.484061576396158,
+        "ROI014": -0.08875191169302354,
+        "ROI020": 0.17823550088510842,
+        "ROI022": 0.17150933397938672,
+        "ROI024": 0.5212469846723735
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI001",
+        "ROI008",
+        "ROI011",
+        "ROI012",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": -0.1789341552394177,
+      "thresholds": {
+        "candidate": "encoderrelationalrobust15_context128",
+        "baseline": "officialauxiliary15_context128",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/transfers/round122_runtime/configs/round122_cv2_encoder_relational_robust.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/transfers/round122_runtime/reports/round122_cv2_encoder_relational_robust_oof.json",
+  "oof_report_sha256": "35eec7fe0460a046b162d79f10b1bca2443392003fd49d7a4bdbe0a547a191b5"
+}

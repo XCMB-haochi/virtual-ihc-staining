@@ -1,0 +1,153 @@
+{
+  "protocol": "round123_fold1_relational_confirmation",
+  "source_commit": "a8a6c28bc1b1804a730526eb10ea80c91bf78c24",
+  "protocol_sha256": "409df1bf38a04a52003fb3fe82da1501c667429d76749dd8b2af92b9a8f6f645",
+  "smoke": {
+    "protocol_sha256": "409df1bf38a04a52003fb3fe82da1501c667429d76749dd8b2af92b9a8f6f645",
+    "stages": [
+      {
+        "stage": 1,
+        "seconds": 25.968997817952186,
+        "peak_gib": 26.58279037475586,
+        "init": {
+          "version": 1,
+          "mode": "fold-local-dapi-fcmae",
+          "scope": "encoder",
+          "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round52_cv2_unext2_official_fcmae_fold1_dapi_officialfcmae800_pretraining/final_encoder.pt",
+          "checkpoint_sha256": "55f821b76fbc7d257a2aebc02ad41736a3e130f08af6607fa6f698ac6030aaf6",
+          "pretraining_epoch": 800,
+          "pretraining_val_rois": [
+            "ROI002",
+            "ROI005",
+            "ROI009",
+            "ROI015",
+            "ROI018"
+          ],
+          "pretraining_markers": [
+            "DAPI"
+          ],
+          "encoder_spec": {
+            "version": 1,
+            "architecture": "convnext-v2-tiny-dense-fcmae",
+            "input_channels": 1,
+            "stem_kernel": 2,
+            "stem_stride": 2,
+            "stage_blocks": [
+              3,
+              3,
+              9,
+              3
+            ],
+            "stage_dims": [
+              96,
+              192,
+              384,
+              768
+            ],
+            "total_stride": 16,
+            "block": "convnext-v2-grn"
+          },
+          "state_tensors_loaded": 196
+        },
+        "parameters": 31753556,
+        "feature_guidance": {
+          "loss": 0.03939133509993553,
+          "teacher": {
+            "version": 1,
+            "mode": "frozen-fold-local-multimarker-fcmae-perceptual",
+            "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round123_fold1_teacher/final_encoder.pt",
+            "checkpoint_sha256": "09ad68e3f3d5d28377ed2033e06705e78dee8f9936a4ac8e1e3be0d51ae72341",
+            "pretraining_epoch": 160,
+            "pretraining_markers": [
+              "DAPI",
+              "CD68",
+              "CD45RO",
+              "HLA-DR",
+              "Vimentin"
+            ],
+            "excluded_val_rois": [
+              "ROI002",
+              "ROI005",
+              "ROI009",
+              "ROI015",
+              "ROI018"
+            ],
+            "parameters": 27860736,
+            "objective": "encoder-relational-robust"
+          }
+        }
+      },
+      {
+        "stage": 2,
+        "seconds": 24.894249405013397,
+        "peak_gib": 26.701102256774902,
+        "init": {
+          "version": 1,
+          "mode": "strict",
+          "source_markers": [
+            "CD68",
+            "CD45RO",
+            "HLA-DR",
+            "Vimentin"
+          ],
+          "target_markers": [
+            "CD68",
+            "CD45RO",
+            "HLA-DR",
+            "Vimentin"
+          ]
+        },
+        "parameters": 31753556,
+        "feature_guidance": {
+          "loss": 0.05192347336560488,
+          "teacher": {
+            "version": 1,
+            "mode": "frozen-fold-local-multimarker-fcmae-perceptual",
+            "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round123_fold1_teacher/final_encoder.pt",
+            "checkpoint_sha256": "09ad68e3f3d5d28377ed2033e06705e78dee8f9936a4ac8e1e3be0d51ae72341",
+            "pretraining_epoch": 160,
+            "pretraining_markers": [
+              "DAPI",
+              "CD68",
+              "CD45RO",
+              "HLA-DR",
+              "Vimentin"
+            ],
+            "excluded_val_rois": [
+              "ROI002",
+              "ROI005",
+              "ROI009",
+              "ROI015",
+              "ROI018"
+            ],
+            "parameters": 27860736,
+            "objective": "encoder-relational-robust"
+          }
+        }
+      }
+    ]
+  },
+  "gpu_candidates": [
+    1
+  ],
+  "pending_folds": [
+    "fold1"
+  ],
+  "wait_for_empty_gpu": true,
+  "source_sha256": {
+    "src/ihc_dinov2.py": "e8211d29201dc81bca0be10949f2abf4e91a3fc53b272f4cafd93e777c8aa9a1",
+    "src/ihc_dino_residual.py": "11c16ffe32304f9891e8adc8d2947965cb6a6146b237221515464f4e35c6dd59",
+    "src/ihc_dino_fusion.py": "69df4ffe5d710d74cb8fd7ae311c2e91e953b219a6efaf6c255b31fef93095d3",
+    "src/ihc_torch.py": "283954d16d61cd8777a7f5c6c0c26f53d47eaf5a22549a08fdb56755ce492686",
+    "tools/train_unet.py": "276de814995c744569167ca5b6f4c94672fe552d7faccf2d3186c7a171ad3ff4",
+    "tools/cv_protocol.py": "244f25ee777df87fa0a75df01c80ef2ecc0e7941d8815de31206a95af5403b60",
+    "tools/run_cv_training.py": "184c63020067d3a4c9f7620bad81ed10981072497989231af6613a68952bfe8d",
+    "tools/run_training_screen.py": "9cbf170fed6520e82b4fcbbe74b5b786fdc3159b24fa06a2835b68cd506ffbe6",
+    "tools/evaluate_cv_ensemble.py": "42b64eeb44f7e94f9ebcecade5fa46b86e4270ab31654974cc1d165d2b23f78e",
+    "tools/evaluate_distribution_gate.py": "aea993ac65def6dcd871c8e7ccfe5eb5aa9dfe68940ac96880ccac3167d87f21",
+    "src/ihc_gradient_projection.py": "432b0bb63f6030dc4a8dc8aed543c3b3c437c7c565222a567da4c1a1a35bbbc3",
+    "src/ihc_spatial.py": "1ed489d95cd1b802e3ee367dc65f1778e5e7532ac6a528c3a3db0379c96fdd27",
+    "src/ihc_unext2.py": "3315b95b1537564b536df2dab31b7b71d88c2f4c31b41f2f22b919cbf5dc7b7e",
+    "src/ihc_feature_guidance.py": "1b26f63de799ab41939769e578672f7e012f75b164a2fffd2cc7b942ab1da0c0"
+  }
+}

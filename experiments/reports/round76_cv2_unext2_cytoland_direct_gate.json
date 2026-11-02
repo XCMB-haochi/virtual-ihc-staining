@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "protocol_name": "round76_cv2_unext2_cytoland_direct",
+  "quality_variant": "jpeg_q95",
+  "gates": {
+    "cytoland_encoder_direct": {
+      "passed": true,
+      "candidate": "cytolandencoder",
+      "baseline": "unext2scratch",
+      "requires": null,
+      "checks": {
+        "overall_q95": true,
+        "overall_float": true,
+        "positive_folds": true,
+        "positive_rois": true,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": 1.2526197081217703,
+      "overall_float_delta": 1.2585436155275005,
+      "fold_q95_deltas": {
+        "fold0": 0.904946634215051,
+        "fold2": 1.5783921159555376
+      },
+      "positive_folds": [
+        "fold0",
+        "fold2"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": 1.6682963538667082,
+        "ROI001": 0.788727396616224,
+        "ROI007": 1.31509290211784,
+        "ROI008": 1.4339019302517642,
+        "ROI011": 1.1905660770989073,
+        "ROI012": 0.8678219733992307,
+        "ROI014": 1.469540835105434,
+        "ROI020": 1.026167563553443,
+        "ROI022": 0.6066004450830036,
+        "ROI024": 2.0203990907210567
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI001",
+        "ROI007",
+        "ROI008",
+        "ROI011",
+        "ROI012",
+        "ROI014",
+        "ROI020",
+        "ROI022",
+        "ROI024"
+      ],
+      "minimum_roi_q95_gain": 0.6066004450830036,
+      "thresholds": {
+        "candidate": "cytolandencoder",
+        "baseline": "unext2scratch",
+        "minimum_q95_gain": 0.1,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    },
+    "cytoland_decoder_effect": {
+      "passed": false,
+      "candidate": "cytolandtransfer",
+      "baseline": "cytolandencoder",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.08699461375681494,
+      "overall_float_delta": -0.0912666447621433,
+      "fold_q95_deltas": {
+        "fold0": 0.10169730812972944,
+        "fold2": -0.2638004303280326
+      },
+      "positive_folds": [
+        "fold0"
+      ],
+      "roi_q95_deltas": {
+        "ROI000": -0.5625121761863312,
+        "ROI001": 0.22802641826081071,
+        "ROI007": 0.23404796071545775,
+        "ROI008": -0.7012473849097205,
+        "ROI011": -0.054893202133897034,
+        "ROI012": 0.071620130517843,
+        "ROI014": -0.267568267695907,
+        "ROI020": 0.06659330750372305,
+        "ROI022": 0.22065819652141272,
+        "ROI024": -0.035946653344879564
+      },
+      "positive_rois": [
+        "ROI001",
+        "ROI007",
+        "ROI012",
+        "ROI020",
+        "ROI022"
+      ],
+      "minimum_roi_q95_gain": -0.7012473849097205,
+      "thresholds": {
+        "candidate": "cytolandtransfer",
+        "baseline": "cytolandencoder",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12
+      }
+    },
+    "cytoland_transfer_prior": {
+      "passed": false,
+      "candidate": "cytolandtransfer",
+      "baseline": "officialfcmae800",
+      "requires": "cytoland_decoder_effect",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": false
+      },
+      "overall_q95_delta": -0.22673510529455143,
+      "overall_float_delta": -0.22623965255303347,
+      "fold_q95_deltas": {
+        "fold0": -0.17736691759394319,
+        "fold2": -0.27299348589612293
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": 0.22793615860042848,
+        "ROI001": -0.4020193633858611,
+        "ROI007": -0.18674866203885188,
+        "ROI008": -0.5612278472532779,
+        "ROI011": -0.32687709748044824,
+        "ROI012": -0.09689056523508555,
+        "ROI014": -0.576583041610192,
+        "ROI020": -0.15542612213384643,
+        "ROI022": 0.10736608412800308,
+        "ROI024": -0.25445777059914576
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI022"
+      ],
+      "minimum_roi_q95_gain": -0.576583041610192,
+      "thresholds": {
+        "candidate": "cytolandtransfer",
+        "baseline": "officialfcmae800",
+        "minimum_q95_gain": 0.05,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 7,
+        "minimum_roi_q95_gain": -0.12,
+        "requires": "cytoland_decoder_effect"
+      }
+    },
+    "cytoland_transfer_replacement": {
+      "passed": false,
+      "candidate": "t70_base_cytoland_transfer_replace",
+      "baseline": "t70_base_split",
+      "requires": "cytoland_transfer_prior",
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": false,
+        "dependency": false
+      },
+      "overall_q95_delta": -0.038929790345420656,
+      "overall_float_delta": -0.038727586405400416,
+      "fold_q95_deltas": {
+        "fold0": -0.03249765995701637,
+        "fold2": -0.04495674716565645
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": 0.09130675701896962,
+        "ROI001": -0.0726038701343441,
+        "ROI007": -0.047747422378094484,
+        "ROI008": -0.10002603241984787,
+        "ROI011": -0.05366923374967314,
+        "ROI012": -0.027904794088300378,
+        "ROI014": -0.10709931493911995,
+        "ROI020": -0.03396435882346793,
+        "ROI022": 0.0257145274036219,
+        "ROI024": -0.05429648917517227
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI022"
+      ],
+      "minimum_roi_q95_gain": -0.10709931493911995,
+      "thresholds": {
+        "candidate": "t70_base_cytoland_transfer_replace",
+        "baseline": "t70_base_split",
+        "minimum_q95_gain": 0.04,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08,
+        "requires": "cytoland_transfer_prior"
+      }
+    },
+    "cytoland_transfer_diversity": {
+      "passed": false,
+      "candidate": "t70_base_cytoland_transfer_split",
+      "baseline": "t70_base_split",
+      "requires": null,
+      "checks": {
+        "overall_q95": false,
+        "overall_float": false,
+        "positive_folds": false,
+        "positive_rois": false,
+        "roi_floor": true,
+        "dependency": true
+      },
+      "overall_q95_delta": -0.008080115677827848,
+      "overall_float_delta": -0.008106027919055236,
+      "fold_q95_deltas": {
+        "fold0": -0.005197078225648966,
+        "fold2": -0.010781544471342386
+      },
+      "positive_folds": [],
+      "roi_q95_deltas": {
+        "ROI000": 0.06024967215488175,
+        "ROI001": -0.025795033874828732,
+        "ROI007": -0.013648628573832866,
+        "ROI008": -0.03856886498189738,
+        "ROI011": -0.01569462987310999,
+        "ROI012": -0.0024822932683719046,
+        "ROI014": -0.04139645498980826,
+        "ROI020": -0.006898570170108087,
+        "ROI022": 0.024885169680757713,
+        "ROI024": -0.016599325763110073
+      },
+      "positive_rois": [
+        "ROI000",
+        "ROI022"
+      ],
+      "minimum_roi_q95_gain": -0.04139645498980826,
+      "thresholds": {
+        "candidate": "t70_base_cytoland_transfer_split",
+        "baseline": "t70_base_split",
+        "minimum_q95_gain": 0.04,
+        "require_positive_float": true,
+        "minimum_positive_folds": 2,
+        "minimum_positive_rois": 8,
+        "minimum_roi_q95_gain": -0.08
+      }
+    }
+  },
+  "promotion": {
+    "allowed": false,
+    "gate": null,
+    "candidate": null
+  },
+  "protocol": "/workspace/virtual_ihc_staining_generation/configs/round76_cv2_unext2_cytoland_direct.json",
+  "oof_report": "/workspace/virtual_ihc_staining_generation/reports/round76_cv2_unext2_cytoland_direct_oof.json",
+  "oof_report_sha256": "1f7223566a654f730212fa23ac1436e20888cb9cf8f4fc9720c449af8e580312"
+}

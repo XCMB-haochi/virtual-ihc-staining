@@ -1,0 +1,91 @@
+{
+  "protocol": "round117_cv2_unext2_groupdro",
+  "source_commit": "26a4ac30c6d3938ae1fe08a8ae87b1f12ba92367",
+  "protocol_sha256": "e7ba226ecf3d7ff4795da29ced5d9fa1cbbf7e7b0000cfb42a1d98cee7a3cb77",
+  "smoke": {
+    "protocol_sha256": "e7ba226ecf3d7ff4795da29ced5d9fa1cbbf7e7b0000cfb42a1d98cee7a3cb77",
+    "stages": [
+      {
+        "stage": 1,
+        "seconds": 18.194562392076477,
+        "peak_gib": 13.012336254119873,
+        "init": {
+          "version": 1,
+          "mode": "fold-local-dapi-fcmae",
+          "scope": "encoder",
+          "checkpoint": "/workspace/virtual_ihc_staining_generation/runs/round52_cv2_unext2_official_fcmae_fold0_dapi_officialfcmae800_pretraining/final_encoder.pt",
+          "checkpoint_sha256": "50231215826b6d533975594030e48c7dca1316f0f2593f426bf02732ff33b0c9",
+          "pretraining_epoch": 800,
+          "pretraining_val_rois": [
+            "ROI001",
+            "ROI011",
+            "ROI012",
+            "ROI020",
+            "ROI022"
+          ],
+          "pretraining_markers": [
+            "DAPI"
+          ],
+          "encoder_spec": {
+            "version": 1,
+            "architecture": "convnext-v2-tiny-dense-fcmae",
+            "input_channels": 1,
+            "stem_kernel": 2,
+            "stem_stride": 2,
+            "stage_blocks": [
+              3,
+              3,
+              9,
+              3
+            ],
+            "stage_dims": [
+              96,
+              192,
+              384,
+              768
+            ],
+            "total_stride": 16,
+            "block": "convnext-v2-grn"
+          },
+          "state_tensors_loaded": 196
+        },
+        "parameters": 31746413
+      },
+      {
+        "stage": 2,
+        "seconds": 17.99681588599924,
+        "peak_gib": 13.130623817443848,
+        "init": {
+          "version": 1,
+          "mode": "strict",
+          "source_markers": [
+            "CD68"
+          ],
+          "target_markers": [
+            "CD68"
+          ]
+        },
+        "parameters": 31746413
+      }
+    ]
+  },
+  "gpu_candidates": [
+    1
+  ],
+  "pending_folds": [
+    "fold0",
+    "fold2"
+  ],
+  "source_sha256": {
+    "src/ihc_dinov2.py": "e8211d29201dc81bca0be10949f2abf4e91a3fc53b272f4cafd93e777c8aa9a1",
+    "src/ihc_dino_residual.py": "11c16ffe32304f9891e8adc8d2947965cb6a6146b237221515464f4e35c6dd59",
+    "src/ihc_dino_fusion.py": "69df4ffe5d710d74cb8fd7ae311c2e91e953b219a6efaf6c255b31fef93095d3",
+    "src/ihc_torch.py": "283954d16d61cd8777a7f5c6c0c26f53d47eaf5a22549a08fdb56755ce492686",
+    "tools/train_unet.py": "00d066442cd1174a27cc248efd1ec336237ca68ffc61d34388620cb647b24db0",
+    "tools/cv_protocol.py": "1ed1b3026d33e39a2178b7cdddc17ff5bc46eeaf1baf6778f4784119d868e9c6",
+    "tools/run_cv_training.py": "69c68b9d689ea4c2e5bbfd853b912132dc41872172fb1015c2ba8b6463514b0b",
+    "tools/run_training_screen.py": "13b22ee3fca53cbeb6f908f57792f085f632ac421aad3425260e2640f4af14df",
+    "tools/evaluate_cv_ensemble.py": "35e10d6e1d53ecf05f8dc5ea3ed875d8bb4f16e88b0a1716ee10b2db0ba957da",
+    "tools/evaluate_distribution_gate.py": "aea993ac65def6dcd871c8e7ccfe5eb5aa9dfe68940ac96880ccac3167d87f21"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "checkpoint": "E:\\Competition\\AIC2026TZ\\05_virtual_ihc_staining_generation\\runs\\unet_cd68_ssim_10e\\best.pt",
+  "marker": "CD68",
+  "validation_rois": [
+    "ROI020",
+    "ROI021",
+    "ROI022",
+    "ROI023",
+    "ROI024"
+  ],
+  "validation_images": 1320,
+  "tta": "d4",
+  "context_halo": 64,
+  "jpeg_quality": 95,
+  "profile": "calibration",
+  "roi_fit": {
+    "slope": 1.1745672483134126,
+    "intercept": -2.2087424050842417
+  },
+  "roi_details": {
+    "ROI020": {
+      "source_mean": 39.11138297416068,
+      "prediction_mean": 40.563805797385434,
+      "expected_mean": 43.730207072607726,
+      "scale": 1.0780597681351285
+    },
+    "ROI021": {
+      "source_mean": 29.192903173661477,
+      "prediction_mean": 30.97044702276028,
+      "expected_mean": 32.08028554588321,
+      "scale": 1.035835405356187
+    },
+    "ROI022": {
+      "source_mean": 39.15502453204868,
+      "prediction_mean": 36.21069901760626,
+      "expected_mean": 43.78146701716834,
+      "scale": 1.2090754446877992
+    },
+    "ROI023": {
+      "source_mean": 28.73277246556576,
+      "prediction_mean": 30.308587562416403,
+      "expected_mean": 31.53983108621072,
+      "scale": 1.040623586343598
+    },
+    "ROI024": {
+      "source_mean": 38.47715065214369,
+      "prediction_mean": 34.632589644855926,
+      "expected_mean": 42.9852585593448,
+      "scale": 1.2411794497651583
+    }
+  },
+  "ranking": [
+    {
+      "name": "roi_scale_0.5",
+      "ssim": 0.8001600828742963,
+      "psnr": 26.007955521439413,
+      "competition_score": 71.61597911406439,
+      "seconds": 4.389329400000861
+    },
+    {
+      "name": "roi_scale_0.75",
+      "ssim": 0.7999753430657636,
+      "psnr": 26.019532700782655,
+      "competition_score": 71.60999363507304,
+      "seconds": 4.345925800000259
+    },
+    {
+      "name": "roi_scale_sqrt",
+      "ssim": 0.8001250234635088,
+      "psnr": 26.00173262270559,
+      "competition_score": 71.60979121606897,
+      "seconds": 4.441363899997668
+    },
+    {
+      "name": "roi_scale_0.25",
+      "ssim": 0.7994550249982527,
+      "psnr": 25.90726082938955,
+      "competition_score": 71.50620824751141,
+      "seconds": 5.004704100003437
+    },
+    {
+      "name": "roi_scale_1",
+      "ssim": 0.7990138984009013,
+      "psnr": 25.942521584179072,
+      "competition_score": 71.49648583857054,
+      "seconds": 4.25486390000151
+    },
+    {
+      "name": "roi_scale_1.25",
+      "ssim": 0.7973539430150766,
+      "psnr": 25.786317014984558,
+      "competition_score": 71.28656622004608,
+      "seconds": 4.540596300001198
+    },
+    {
+      "name": "raw",
+      "ssim": 0.7977657646689646,
+      "psnr": 25.725308351913004,
+      "competition_score": 71.27878853797533,
+      "seconds": 4.631568900000275
+    }
+  ],
+  "elapsed_seconds": 177.83713089999947
+}

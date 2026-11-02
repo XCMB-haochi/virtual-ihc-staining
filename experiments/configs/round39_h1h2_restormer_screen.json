@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "name": "round39_h1h2_restormer_screen",
+  "marker": "CD68",
+  "roi_scope": "subset",
+  "expected_rois": [
+    "ROI015",
+    "ROI018",
+    "ROI019",
+    "ROI020",
+    "ROI022",
+    "ROI024"
+  ],
+  "folds": [
+    {
+      "name": "h2",
+      "val_rois": ["ROI020", "ROI022", "ROI024"]
+    },
+    {
+      "name": "h1",
+      "val_rois": ["ROI015", "ROI018", "ROI019"]
+    }
+  ],
+  "recipes": {
+    "freshunet": {
+      "model_arch": "unet",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "none",
+      "train_stages": [1]
+    },
+    "restormersmall": {
+      "model_arch": "restormer-small",
+      "base_channels": 32,
+      "block_type": "residual",
+      "context_halo": 64,
+      "train_target_context_halo": 64,
+      "condition_mode": "none",
+      "batch_size": 4,
+      "gradient_accumulation_steps": 2,
+      "train_stages": [1]
+    }
+  },
+  "run_sources": {
+    "freshunet": {
+      "protocol_name": "round39_h1h2_restormer_screen",
+      "recipe_name": "freshunet",
+      "stage": 1
+    },
+    "restormersmall": {
+      "protocol_name": "round39_h1h2_restormer_screen",
+      "recipe_name": "restormersmall",
+      "stage": 1
+    }
+  },
+  "training": {
+    "epochs_per_stage": 70,
+    "stage1_learning_rate": 0.0003,
+    "stage2_learning_rate": 0.0001,
+    "minimum_learning_rate": 0.000001,
+    "gradient_clip_norm": 1.0,
+    "batch_size": 8,
+    "workers": 4,
+    "seed": 2039,
+    "weight_decay": 0.0001,
+    "ssim_weight": 0.7,
+    "l1_weight": 0.2,
+    "mse_weight": 0.1,
+    "ssim_mode": "uniform7",
+    "selection_psnr_aggregation": "global-mse",
+    "selection_jpeg_quality": 95,
+    "save_every_epoch": false
+  },
+  "inference": {
+    "context_halo": 64,
+    "tta": "d4",
+    "jpeg_quality": 95,
+    "batch_size": 2
+  },
+  "candidates": {
+    "freshunet": {"freshunet": 1.0},
+    "restormerdirect": {"restormersmall": 1.0},
+    "fresh50": {
+      "freshunet": 0.5,
+      "restormersmall": 0.5
+    }
+  },
+  "baseline_candidate": "freshunet",
+  "primary_candidate": "fresh50",
+  "gates": {
+    "mechanism": {
+      "candidate": "restormerdirect",
+      "baseline": "freshunet",
+      "minimum_q95_gain": 0.05,
+      "require_positive_float": true,
+      "minimum_dual_positive_folds": 2,
+      "minimum_test_like_roi_q95_gain": -0.12,
+      "maximum_dual_negative_test_like_rois": 1
+    },
+    "primary": {
+      "candidate": "fresh50",
+      "baseline": "freshunet",
+      "minimum_q95_gain": 0.12,
+      "require_positive_float": true,
+      "minimum_dual_positive_folds": 2,
+      "minimum_test_like_roi_q95_gain": -0.08,
+      "maximum_dual_negative_test_like_rois": 1,
+      "requires": "mechanism"
+    },
+    "direct_diagnostic": {
+      "candidate": "restormerdirect",
+      "baseline": "freshunet",
+      "minimum_q95_gain": 0.2,
+      "require_positive_float": true,
+      "minimum_dual_positive_folds": 2,
+      "minimum_test_like_roi_q95_gain": -0.1,
+      "maximum_dual_negative_test_like_rois": 1
+    }
+  },
+  "promotion_gate_order": ["primary", "direct_diagnostic"]
+}

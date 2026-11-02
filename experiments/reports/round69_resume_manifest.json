@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": "round63-reboot-interrupted-base-pretraining",
+  "inherited": {
+    "fold1": {
+      "config_sha256": "cd861f525cebeac50a84070a8eba33ac2dbc3f2f67f5adaead9b790cf2bd4146",
+      "initial_latest_sha256": "f7ff4aacbaeaf0c278c063423b7b50bb74b3d9c8c3909288add42b50e332c2f8",
+      "initial_checkpoint_epoch": 125,
+      "initial_metric_rows": 136
+    },
+    "fold3": {
+      "config_sha256": "07346f1d343d1a14c1585014ed69200d137e15856925e07028d0fa62b476b6ce",
+      "initial_latest_sha256": "538cb4fb3a1e8a61b03ae570bca1f4eb44104aa5844595b8fb9ca7f20758e80c",
+      "initial_checkpoint_epoch": 125,
+      "initial_metric_rows": 139
+    }
+  }
+}
