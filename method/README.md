@@ -1,6 +1,6 @@
 # 半决赛代码运行说明
 
-队伍：AIC-2026-51865112 / 通信速通生物 / 团队成员  
+队伍：通信速通生物  
 结果：Round327，加权分74.0677；Colon73.1963、Liver78.7011、Stomach72.8684。  
 输出Marker：Colon/CD68、Liver/CD45RO、Stomach/CD68。
 
