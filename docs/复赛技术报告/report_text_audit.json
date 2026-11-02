@@ -1,0 +1,70 @@
+{
+  "pages": 12,
+  "equations_with_following_definitions": 26,
+  "references": 13,
+  "cjk_characters": 8200,
+  "page_checks": [
+    {
+      "page": 1,
+      "characters": 1775,
+      "out_of_page_words": 0
+    },
+    {
+      "page": 2,
+      "characters": 1351,
+      "out_of_page_words": 0
+    },
+    {
+      "page": 3,
+      "characters": 1799,
+      "out_of_page_words": 0
+    },
+    {
+      "page": 4,
+      "characters": 1835,
+      "out_of_page_words": 0
+    },
+    {
+      "page": 5,
+      "characters": 1501,
+      "out_of_page_words": 0
+    },
+    {
+      "page": 6,
+      "characters": 1447,
+      "out_of_page_words": 0
+    },
+    {
+      "page": 7,
+      "characters": 1906,
+      "out_of_page_words": 0
+    },
+    {
+      "page": 8,
+      "characters": 1689,
+      "out_of_page_words": 0
+    },
+    {
+      "page": 9,
+      "characters": 1476,
+      "out_of_page_words": 0
+    },
+    {
+      "page": 10,
+      "characters": 1674,
+      "out_of_page_words": 0
+    },
+    {
+      "page": 11,
+      "characters": 1148,
+      "out_of_page_words": 0
+    },
+    {
+      "page": 12,
+      "characters": 1963,
+      "out_of_page_words": 0
+    }
+  ],
+  "image_inspection": false,
+  "scope": "Text, compilation diagnostics and word bounding boxes only; no visual layout verification."
+}

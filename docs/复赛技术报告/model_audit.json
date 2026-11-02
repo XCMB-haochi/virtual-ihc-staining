@@ -1,0 +1,115 @@
+{
+  "checkpoint_sha256": "16a530ac9b0b8396592668bcaad4405b697083ad09a7b2e176b1e33ed36a17b1",
+  "total_parameters": 31753556,
+  "condition_dimension": 12901,
+  "modules": [
+    {
+      "module": "encoder.stem",
+      "parameters": 672
+    },
+    {
+      "module": "encoder.stage1",
+      "parameters": 239904
+    },
+    {
+      "module": "encoder.stage2",
+      "parameters": 996288
+    },
+    {
+      "module": "encoder.stage3",
+      "parameters": 11137152
+    },
+    {
+      "module": "encoder.stage4",
+      "parameters": 15486720
+    },
+    {
+      "module": "decoder.stage3",
+      "parameters": 2631936
+    },
+    {
+      "module": "decoder.stage2",
+      "parameters": 670848
+    },
+    {
+      "module": "decoder.stage1",
+      "parameters": 8784
+    },
+    {
+      "module": "condition.stats_input",
+      "parameters": 26112
+    },
+    {
+      "module": "condition.stats_output",
+      "parameters": 394752
+    },
+    {
+      "module": "condition.thumbnail_encoder",
+      "parameters": 60544
+    },
+    {
+      "module": "condition.thumbnail_output",
+      "parameters": 99840
+    },
+    {
+      "module": "output_bias",
+      "parameters": 4
+    }
+  ],
+  "forward_shapes_512": {
+    "encoder.stem": [
+      1,
+      96,
+      256,
+      256
+    ],
+    "encoder.stage1": [
+      1,
+      96,
+      256,
+      256
+    ],
+    "encoder.stage2": [
+      1,
+      192,
+      128,
+      128
+    ],
+    "encoder.stage3": [
+      1,
+      384,
+      64,
+      64
+    ],
+    "encoder.stage4": [
+      1,
+      768,
+      32,
+      32
+    ],
+    "decoder.stage3": [
+      1,
+      384,
+      64,
+      64
+    ],
+    "decoder.stage2": [
+      1,
+      192,
+      128,
+      128
+    ],
+    "decoder.stage1": [
+      1,
+      16,
+      256,
+      256
+    ]
+  },
+  "output_shape": [
+    1,
+    4,
+    512,
+    512
+  ]
+}

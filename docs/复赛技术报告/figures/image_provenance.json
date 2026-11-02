@@ -1,0 +1,66 @@
+{
+  "display": {
+    "window": [
+      0,
+      128
+    ],
+    "mapping": "linear, clipped to [0,255], identical for all images",
+    "crop_xyxy": [
+      96,
+      96,
+      160,
+      160
+    ],
+    "units": "pixels; physical pixel size not assumed"
+  },
+  "selection": "All 2380 training tiles ranked by mean true CD45RO intensity; nearest 25/50/75 percentiles, without prediction inspection.",
+  "qualitative_prediction": "PNG teacher cache used by final student; eight-view D4, halo128; not final-student held-out validation or JPEG-scored images.",
+  "training_examples": [
+    {
+      "filename": "ROI010_07_09.jpg",
+      "target_intensity_quantile": 0.25,
+      "roi": "ROI010",
+      "excluded_by_teacher": "fold1",
+      "teacher_sha256": "9bacb54941086e25148e3d25a99a9134fd2d762e5c52ab8fa638e03eb31db850",
+      "dapi_sha256": "66cf2319f42dbf6371c60e9a8ce926eaa4f5dc4c50008c881ef5f5a811e6ac7b",
+      "reference_sha256": "a27603acc531ee018a0a69fa14a2602bc71764f0da87aa9528894c2755442569",
+      "cached_prediction_sha256": "f80748350cc51b51a1460e1c70ba4e0b39ccb2f9a6980bd433f9b394ae5e3e32"
+    },
+    {
+      "filename": "ROI093_02_01.jpg",
+      "target_intensity_quantile": 0.5,
+      "roi": "ROI093",
+      "excluded_by_teacher": "fold1",
+      "teacher_sha256": "9bacb54941086e25148e3d25a99a9134fd2d762e5c52ab8fa638e03eb31db850",
+      "dapi_sha256": "71c2c472200373d820ad26e3667827af7c5133fee675e83c3171ec52ea66031b",
+      "reference_sha256": "fe2cbae8bdcf9a6d4b28c375b55147dd2c3821fc4a75f5b6b47b9772447fe1ca",
+      "cached_prediction_sha256": "7724e559e32702f171fee0c043f2daf543552921e8a82216876c7dcccc57e8de"
+    },
+    {
+      "filename": "ROI081_08_06.jpg",
+      "target_intensity_quantile": 0.75,
+      "roi": "ROI081",
+      "excluded_by_teacher": "fold4",
+      "teacher_sha256": "1dfa4ab2f007f3797efcff9d280bae78a97666b930d10bfe51cd46898cd7c86e",
+      "dapi_sha256": "1ca237846b340af942978c173393679d9aafe177ab377e6efe87e2e1292cbc11",
+      "reference_sha256": "6c76d028c24242ca62c1bded4211906634b7552a1149965cd59e9762778e5ed9",
+      "cached_prediction_sha256": "517bb1fc91d064aede007d17ec7c821873e893b652b33f0df17b7d86ed146564"
+    }
+  ],
+  "deployment_example": {
+    "filename": "ROI025_09_02.jpg",
+    "selection": "Median of all 560 test DAPI mean intensities",
+    "dapi_sha256": "9f2667f85d3b04ef9242a233b6ed95ab37eaf971e226eb22b5b3fd06b2579090",
+    "prediction_sha256": "e0a25b23fd9d6cad134da7199a39924d3d8d11c40106b97df5ee8ea769464f9d",
+    "model_sha256": "16a530ac9b0b8396592668bcaad4405b697083ad09a7b2e176b1e33ed36a17b1"
+  },
+  "mask_illustration": {
+    "seed": 2026,
+    "grid": [
+      16,
+      16
+    ],
+    "masked_fraction": 0.5,
+    "scope": "Illustrative mask, not a recorded training minibatch"
+  }
+}
